@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide · Imsfrane Cathédrale</title>
+    
+    <!-- META TAGS -->
+    <meta name="description" content="Guide complet pour visiter Imsfrane Cathédrale : comment venir, où dormir, tarifs, conseils pratiques et activités.">
+    <meta name="keywords" content="Imsfrane, Cathédrale, guide, visite, hébergement, camping, randonnée, Atlas">
+    <meta name="author" content="Imsfrane Cathédrale">
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+    
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* ===== STYLES SPÉCIFIQUES AU GUIDE ===== */
+        .guide-hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+        
+        .guide-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .guide-hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5);
+            transition: transform 10s ease;
+        }
+        
+        .guide-hero:hover .guide-hero-bg img {
+            transform: scale(1.1);
+        }
+        
+        .guide-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);
+            z-index: 2;
+        }
+        
+        .guide-hero-content {
+            position: relative;
+            z-index: 10;
+            animation: fadeInUp 1s ease;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+        
+        .guide-hero-content h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            text-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        
+        .guide-hero-content p {
+            font-size: 20px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* ===== GUIDE SECTION ===== */
+        .guide-section {
+            padding: 80px 0;
+            background: var(--light);
+        }
+        
+        .guide-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .guide-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(198,164,63,0.1);
+            transition: var(--transition);
+        }
+        
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--gold);
+        }
+        
+        .guide-card h2 {
+            font-size: 28px;
+            margin-bottom: 25px;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px solid rgba(198,164,63,0.2);
+            padding-bottom: 15px;
+        }
+        
+        .guide-card h2 i {
+            color: var(--gold);
+            font-size: 28px;
+        }
+        
+        .guide-card h3 {
+            font-size: 22px;
+            margin: 25px 0 15px;
+            color: var(--dark);
+        }
+        
+        .guide-intro {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        /* ===== INFO BOXES ===== */
+        .info-box {
+            background: #e8f4fd;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #28a745;
+        }
+        
+        /* ===== TABLES ===== */
+        .price-table {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .price-row:last-child {
+            border-bottom: none;
+        }
+        
+        .price-row span:first-child {
+            font-weight: 500;
+        }
+        
+        .price-row span:last-child {
+            font-weight: 700;
+            color: var(--gold);
+        }
+        
+        /* ===== ROUTE CARDS ===== */
+        .route-card {
+            background: linear-gradient(135deg, #f8f9fa, #fff);
+            border-left: 4px solid var(--gold);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 0 16px 16px 0;
+        }
+        
+        .route-card h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        /* ===== GRID ===== */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        /* ===== HEBERGEMENT CARDS ===== */
+        .hebergement-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px solid rgba(198,164,63,0.2);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .hebergement-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .hebergement-card i {
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+        
+        .hebergement-card h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .hebergement-card .price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 15px 0 5px;
+        }
+        
+        .hebergement-card .unit {
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        /* ===== LISTES ===== */
+        .guide-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .guide-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .guide-list li i {
+            color: var(--gold);
+            width: 20px;
+            font-size: 16px;
+        }
+        
+        .guide-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* ===== TABS ===== */
+        .tabs-container {
+            margin: 30px 0;
+        }
+        
+        .tabs-header {
+            display: flex;
+            gap: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 25px;
+            border: none;
+            background: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 50px;
+        }
+        
+        .tab-btn:hover {
+            color: var(--gold);
+        }
+        
+        .tab-btn.active {
+            background: var(--gold);
+            color: white;
+        }
+        
+        .tab-pane {
+            display: none;
+        }
+        
+        .tab-pane.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* ===== CONTACT CTA ===== */
+        .contact-cta {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .contact-cta h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .contact-cta p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+        
+        .contact-cta .btn {
+            background: white;
+            color: var(--gold);
+            margin: 0 10px;
+        }
+        
+        .contact-cta .btn:hover {
+            background: var(--dark);
+            color: white;
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .guide-hero-content h1 {
+                font-size: 48px;
+            }
+            
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .guide-hero-content h1 {
+                font-size: 42px;
+            }
+            
+            .guide-hero-content p {
+                font-size: 18px;
+            }
+            
+            .guide-card {
+                padding: 25px;
+            }
+            
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .tabs-header {
+                justify-content: center;
+            }
+            
+            .contact-cta {
+                padding: 30px 20px;
+            }
+            
+            .contact-cta .btn {
+                display: block;
+                margin: 10px auto;
+                width: 200px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .guide-hero-content h1 {
+                font-size: 36px;
+            }
+            
+            .guide-card h2 {
+                font-size: 24px;
+            }
+            
+            .tab-btn {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:0667772551" class="floating-btn phone"><i class="fas fa-phone-alt"></i></a>
+        <a href="booking.html" class="floating-btn booking"><i class="fas fa-calendar-check"></i></a>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                    <span class="logo-title">Imsfrane Cathédrale</span>
+                </a>
+                
+                <div class="nav-menu">
+                    <a href="index.html">Accueil</a>
+                    <!-- Dropdown Activités -->
+                    <div class="dropdown">
+                        <a href="activities.html" class="dropbtn">Activités <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="activities.html#camping"><i class="fas fa-campground"></i> Camping</a>
+                            <a href="activities.html#randonnee1"><i class="fas fa-mountain"></i> Sommet 1868m</a>
+                            <a href="activities.html#randonnee2"><i class="fas fa-water"></i> Gorges & Cascades</a>
+                            <a href="activities.html#randonnee3"><i class="fas fa-crown"></i> Le Grand Tour</a>
+                            <a href="activities.html#vtt"><i class="fas fa-bicycle"></i> VTT</a>
+                            <a href="activities.html#rafting"><i class="fas fa-water"></i> Rafting</a>
+                        </div>
+                    </div>
+                    <a href="memories.html">Mémoires</a>
+                    <a href="guide.html" class="active">Guide</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="booking.html">Réservation</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="tel:0667772551" class="nav-phone"><i class="fas fa-phone-alt"></i></a>
+                    <button class="search-toggle" id="searchToggle">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Popup -->
+    <div class="search-popup" id="searchPopup">
+        <div class="search-popup-content">
+            <div class="search-popup-header">
+                <h3>Rechercher une activité</h3>
+                <button class="search-popup-close" id="searchClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-popup-body">
+                <input type="text" class="search-popup-input" id="popupSearch" placeholder="Camping, Rafting, VTT, Randonnée...">
+            </div>
+        </div>
+    </div>
+
+<!-- MOBILE MENU PRO LEVEL -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="menu-backdrop"></div>
+    <div class="menu-panel">
+        <!-- Header مع لون ذهبي -->
+        <div class="menu-header">
+            <img src="images/logo.jpeg" alt="Imsfrane">
+            <span class="menu-brand-name">IMSFRANE</span>
+            <button class="menu-close" id="menuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <!-- روابط الصفحات مع تأثيرات حركية -->
+        <div class="menu-content">
+            <a href="index.html" class="menu-item active">
+                <div class="item-icon"><i class="fas fa-home"></i></div>
+                <div>
+                    <div class="item-title">Accueil</div>
+                    <div class="item-desc">Page principale</div>
+                </div>
+            </a>
+            <a href="activities.html" class="menu-item">
+                <div class="item-icon"><i class="fas fa-hiking"></i></div>
+                <div>
+                    <div class="item-title">Activités</div>
+                    <div class="item-desc">Camping, randonnée, VTT...</div>
+                </div>
+            </a>
+            <a href="memories.html" class="menu-item">
+                <div class="item-icon"><i class="fas fa-camera-retro"></i></div>
+                <div>
+                    <div class="item-title">Mémoires</div>
+                    <div class="item-desc">Galerie photos et vidéos</div>
+                </div>
+            </a>
+            <a href="guide.html" class="menu-item">
+                <div class="item-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <div>
+                    <div class="item-title">Guide</div>
+                    <div class="item-desc">Infos pratiques</div>
+                </div>
+            </a>
+            <a href="blog.html" class="menu-item">
+                <div class="item-icon"><i class="fas fa-pen-fancy"></i></div>
+                <div>
+                    <div class="item-title">Blog</div>
+                    <div class="item-desc">Articles et actualités</div>
+                </div>
+            </a>
+            <a href="booking.html" class="menu-item">
+                <div class="item-icon"><i class="fas fa-calendar-check"></i></div>
+                <div>
+                    <div class="item-title">Réservation</div>
+                    <div class="item-desc">Réserver une activité</div>
+                </div>
+            </a>
+            <a href="contact.html" class="menu-item">
+                <div class="item-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                    <div class="item-title">Contact</div>
+                    <div class="item-desc">Nous contacter</div>
+                </div>
+            </a>
+        </div>
+        
+        <!-- خط فاصل مع تأثير ذهبي -->
+        <div class="menu-divider">
+            <span class="divider-line"></span>
+            <span class="divider-text">RÉSEAUX</span>
+            <span class="divider-line"></span>
+        </div>
+        
+        <!-- شبكات التواصل الاجتماعي - أيقونات فقط بالعرض -->
+        <div class="menu-social-grid">
+            <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        
+        <!-- Footer صغير مع حقوق النشر -->
+        <div class="menu-footer">
+            <p>© 2026 Imsfrane Cathédrale</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Guide Hero -->
+    <section class="guide-hero">
+        <div class="guide-hero-bg">
+            <img src="images/hero.jpeg" alt="Imsfrane Cathédrale">
+            <div class="guide-hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="guide-hero-content">
+                <span class="section-badge">GUIDE COMPLET</span>
+                <h1>Guide d'Imsfrane</h1>
+                <p>Tout ce que vous devez savoir pour préparer votre visite</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide Content -->
+    <section class="guide-section">
+        <div class="guide-container">
+            
+            <!-- Introduction -->
+            <div class="guide-card">
+                <h2><i class="fas fa-book-open"></i> Bienvenue à Imsfrane</h2>
+                <p class="guide-intro">
+                    Imsfrane Cathédrale est l'un des sites naturels les plus remarquables de la province d'Azilal, 
+                    au cœur du Haut Atlas marocain. Surnommée "La Cathédrale" pour ses imposantes formations rocheuses,
+                    cette montagne sacrée culmine à 1 868 mètres d'altitude et offre des paysages à couper le souffle.
+                </p>
+                <div class="success-box">
+                    <i class="fas fa-check-circle" style="color: #28a745; margin-right: 10px;"></i>
+                    <strong>À savoir :</strong> Altitude 1 868m · Région Tilouguite, Azilal · Accès libre toute l'année
+                </div>
+            </div>
+
+            <!-- Localisation et accès -->
+            <div class="guide-card">
+                <h2><i class="fas fa-map-pin"></i> Où se situe Imsfrane ?</h2>
+                
+                <div class="grid-2">
+                    <div>
+                        <h3><i class="fas fa-map-marker-alt"></i> Coordonnées</h3>
+                        <p><strong>Tilouguite, Province d'Azilal</strong><br>Haut Atlas, Maroc</p>
+                        <p>À environ 90 km de Beni Mellal</p>
+                    </div>
+                    <div>
+                        <h3><i class="fas fa-language"></i> Différents noms</h3>
+                        <ul class="guide-list">
+                            <li><i class="fas fa-tag"></i> <strong>Msfrane</strong> (nom local)</li>
+                            <li><i class="fas fa-tag"></i> <strong>Imsfrane Cathédrale</strong> (nom officiel)</li>
+                            <li><i class="fas fa-tag"></i> <strong>La Cathédrale</strong> (surnom)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 25px;"><i class="fas fa-route"></i> Comment accéder ?</h3>
+                
+                <div class="tabs-container">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" onclick="showTab('beni-mellal')">Depuis Beni Mellal</button>
+                        <button class="tab-btn" onclick="showTab('azilal')">Depuis Azilal</button>
+                        <button class="tab-btn" onclick="showTab('transport')">Transports</button>
+                    </div>
+                    
+                    <div id="beni-mellal" class="tab-pane active">
+                        <div class="route-card">
+                            <h4>🚗 Itinéraire Beni Mellal → Imsfrane</h4>
+                            <p>Beni Mellal → Ouaouizeght (45 min) → Tilouguite (30 min) → Imsfrane (15 min)</p>
+                            <p><i class="fas fa-info-circle"></i> Route goudronnée jusqu'au parking</p>
+                        </div>
+                    </div>
+                    
+                    <div id="azilal" class="tab-pane">
+                        <div class="route-card">
+                            <h4>🚗 Itinéraire Azilal → Imsfrane</h4>
+                            <p>Azilal → Ouaouizeght (1h) → Tilouguite (30 min) → Imsfrane (15 min)</p>
+                            <p><i class="fas fa-info-circle"></i> Paysages magnifiques sur les gorges</p>
+                        </div>
+                    </div>
+                    
+                    <div id="transport" class="tab-pane">
+                        <div class="price-table">
+                            <h4>🚖 Tarifs taxi (par personne)</h4>
+                            <div class="price-row"><span>Beni Mellal → Ouaouizeght</span><span>25 MAD</span></div>
+                            <div class="price-row"><span>Ouaouizeght → Tilouguite</span><span>20 MAD</span></div>
+                            <div class="price-row"><span>Tilouguite → Imsfrane</span><span>10 MAD</span></div>
+                            <div class="price-row"><strong>Total aller</strong><strong style="color: var(--gold);">55 MAD</strong></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <strong>Astuce :</strong> Si vous arrivez tôt à Azilal (avant midi), vous pourrez peut-être trouver un transport direct pour Imsfrane.
+                </div>
+            </div>
+
+            <!-- Hébergement -->
+            <div class="guide-card">
+                <h2><i class="fas fa-bed"></i> Où dormir ?</h2>
+                
+                <div class="grid-3">
+                    <div class="hebergement-card">
+                        <i class="fas fa-hotel"></i>
+                        <h4>Auberges</h4>
+                        <div class="price">250-425 DH</div>
+                        <div class="unit">/nuit selon confort</div>
+                    </div>
+                    
+                    <div class="hebergement-card">
+                        <i class="fas fa-home"></i>
+                        <h4>Maison meublée</h4>
+                        <div class="price">200 DH</div>
+                        <div class="unit">/nuit · équipée</div>
+                    </div>
+                    
+                    <div class="hebergement-card">
+                        <i class="fas fa-campground"></i>
+                        <h4>Tente équipée</h4>
+                        <div class="price">60-100 DH</div>
+                        <div class="unit">/nuit · mfercha</div>
+                    </div>
+                </div>
+                
+                <div class="grid-3">
+                    <div class="hebergement-card">
+                        <i class="fas fa-tree"></i>
+                        <h4>Camping libre</h4>
+                        <div class="price">25 DH</div>
+                        <div class="unit">emplacement</div>
+                    </div>
+                    
+                    <div class="hebergement-card">
+                        <i class="fas fa-utensils"></i>
+                        <h4>Repas sur place</h4>
+                        <div class="price">40-50 DH</div>
+                        <div class="unit">par repas</div>
+                    </div>
+                    
+                    <div class="hebergement-card">
+                        <i class="fas fa-fire"></i>
+                        <h4>Feu de camp</h4>
+                        <div class="price">Inclus</div>
+                        <div class="unit">sur demande</div>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>Important :</strong> Pas d'électricité ni d'eau courante sur les emplacements de camping. Prévoyez lampes et eau.
+                </div>
+            </div>
+
+            <!-- Activités -->
+            <div class="guide-card">
+                <h2><i class="fas fa-hiking"></i> Activités et randonnées</h2>
+                
+                <div class="route-card">
+                    <h4><i class="fas fa-mountain"></i> Ascension du sommet (1 868m)</h4>
+                    <p><strong>Durée :</strong> 5-7 heures · <strong>Dénivelé :</strong> 668 m</p>
+                    <p><strong>Difficulté :</strong> Modérée · <strong>Tarif guide :</strong> 300 DH</p>
+                    <p>Départ possible de votre hébergement</p>
+                </div>
+                
+                <div class="route-card">
+                    <h4><i class="fas fa-water"></i> Gorges d'Ahansal et cascades</h4>
+                    <p><strong>Durée :</strong> 3-4 heures · <strong>Distance :</strong> 8 km</p>
+                    <p><strong>Difficulté :</strong> Facile · <strong>Tarif guide :</strong> 200 DH</p>
+                    <p>Visite du moulin ancien et du camion mythique</p>
+                </div>
+                
+                <div class="route-card">
+                    <h4><i class="fas fa-crown"></i> Le Grand Tour (complet)</h4>
+                    <p><strong>Durée :</strong> 8-10 heures · <strong>Distance :</strong> 24 km</p>
+                    <p><strong>Difficulté :</strong> Soutenue · <strong>Tarif guide :</strong> 400 DH</p>
+                    <p>Parcours 1 + 2 en une journée</p>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="route-card" style="border-left-color: #3498DB;">
+                        <h4><i class="fas fa-bicycle"></i> VTT</h4>
+                        <p><strong>Tarif :</strong> 150 DH/jour</p>
+                        <p>VTT double suspension + casque</p>
+                    </div>
+                    
+                    <div class="route-card" style="border-left-color: #27AE60;">
+                        <h4><i class="fas fa-water"></i> Rafting</h4>
+                        <p><strong>12 km :</strong> 400 DH/pers</p>
+                        <p><strong>Groupe 20+ :</strong> 350 DH/pers</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informations pratiques -->
+            <div class="guide-card">
+                <h2><i class="fas fa-clipboard-list"></i> Infos pratiques</h2>
+                
+                <div class="grid-2">
+                    <div>
+                        <h3><i class="fas fa-tshirt"></i> À prévoir</h3>
+                        <ul class="guide-list">
+                            <li><i class="fas fa-check-circle" style="color: #27AE60;"></i> Chaussures de randonnée</li>
+                            <li><i class="fas fa-check-circle" style="color: #27AE60;"></i> Vêtements chauds (nuit fraîche)</li>
+                            <li><i class="fas fa-check-circle" style="color: #27AE60;"></i> Eau (2L minimum)</li>
+                            <li><i class="fas fa-check-circle" style="color: #27AE60;"></i> Lampe frontale</li>
+                            <li><i class="fas fa-check-circle" style="color: #27AE60;"></i> Crème solaire</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3><i class="fas fa-clock"></i> Meilleure période</h3>
+                        <ul class="guide-list">
+                            <li><i class="fas fa-check" style="color: #27AE60;"></i> Printemps (mars-mai) : idéal</li>
+                            <li><i class="fas fa-check" style="color: #27AE60;"></i> Automne (sept-nov) : parfait</li>
+                            <li><i class="fas fa-times" style="color: #E74C3C;"></i> Été (juil-août) : très chaud</li>
+                            <li><i class="fas fa-times" style="color: #E74C3C;"></i> Hiver : froid, neige possible</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="grid-2" style="margin-top: 25px;">
+                    <div>
+                        <h3><i class="fas fa-phone-alt"></i> Contacts utiles</h3>
+                        <ul class="guide-list">
+                            <li><i class="fas fa-phone"></i> Farid : <strong>06 67 77 25 51</strong></li>
+                            <li><i class="fab fa-whatsapp"></i> WhatsApp : <strong>06 67 77 25 51</strong></li>
+                            <li><i class="fas fa-ambulance"></i> Urgences : <strong>15</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3><i class="fas fa-credit-card"></i> Paiement</h3>
+                        <ul class="guide-list">
+                            <li><i class="fas fa-money-bill"></i> Espèces (MAD, EUR)</li>
+                            <li><i class="fas fa-university"></i> Virement bancaire</li>
+                        </ul>
+                        <div class="rib-info" style="margin-top: 15px;">
+                            <strong>RIB :</strong> 022780000760004191778274<br>
+                            <small>Titulaire : FARID LAYDI</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Contact -->
+            <div class="contact-cta">
+                <h3>Prêt pour l'aventure ?</h3>
+                <p>Réservez maintenant ou contactez-nous pour plus d'informations</p>
+                <a href="booking.html" class="btn btn-gold">Réserver</a>
+                <a href="https://wa.me/212667772551" class="btn btn-gold" style="background: white; color: var(--gold);">WhatsApp</a>
+                <a href="tel:0667772551" class="btn btn-gold" style="background: white; color: var(--gold);">Appeler</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Premium -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="footer-founder">
+                <div class="founder-highlight">
+                    <div class="founder-image-large">
+                        <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                    </div>
+                    <div class="founder-info-premium">
+                        <span class="founder-tag">À PROPOS</span>
+                        <h2 class="founder-name">Imsfrane Cathédrale</h2>
+                        <p class="founder-desc">
+                            Découvrez la magie de l'Atlas à travers des expériences uniques et authentiques.
+                            Notre équipe de guides locaux vous accompagne pour des aventures inoubliables.
+                        </p>
+                        
+                        <div class="founder-stats-premium">
+                            <div class="stat-item">
+                                <span class="stat-number">+500</span>
+                                <span class="stat-label">Aventuriers</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8 ans</span>
+                                <span class="stat-label">d'expérience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">⭐ 4.9</span>
+                                <span class="stat-label">Avis</span>
+                            </div>
+                        </div>
+                        
+                        <div class="founder-social-premium">
+                            <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://wa.me/212667772551" class="social-icon whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom-premium">
+                <div class="footer-brand">
+                    <img src="images/logo.jpeg" alt="Imsfrane" class="footer-logo">
+                    <div class="footer-brand-text">
+                        <h3>Imsfrane Cathédrale</h3>
+                        <p>Montagne Sacrée de l'Atlas · 1 868m</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links-premium">
+                    <a href="index.html">Accueil</a>
+                    <a href="activities.html">Activités</a>
+                    <a href="memories.html">Mémoires</a>
+                    <a href="guide.html">Guide</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="booking.html">Réservation</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-contact-premium">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:0667772551">06 67 77 25 51</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/212667772551">WhatsApp</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Imsfrane Tilouguite, Azilal</span>
+                    </div>
+                 
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>© 2026 Imsfrane Cathédrale · Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Search Popup
+        document.getElementById('searchToggle').addEventListener('click', function() {
+            document.getElementById('searchPopup').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        document.getElementById('searchClose').addEventListener('click', function() {
+            document.getElementById('searchPopup').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Mobile Menu
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        document.getElementById('menuClose').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        document.querySelector('.menu-backdrop').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Tabs functionality
+        window.showTab = function(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        };
+    </script>
+</body>
+</html>
