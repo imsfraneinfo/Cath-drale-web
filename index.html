@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<title>Imsfrane Cathédrale - Randonnée, Rafting, Camping dans l'Atlas</title>
+<meta name="description" content="Découvrez Imsfrane Cathédrale, formation rocheuse unique dans l'Atlas à 1,868m. Randonnée, rafting, camping, VTT, quad au Maroc. Expériences authentiques.">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f7f3;
+            color: #2c3e50;
+        }
+
+        /* الهيدر */
+        header {
+            background-color: #1e3c2c;
+            color: white;
+            padding: 0.8rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        /* Logo دائري */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            border-radius: 50% !important;
+            overflow: hidden !important;
+            border: 3px solid #e6b12e;
+            transition: transform 0.3s;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo:hover .logo-img {
+            transform: scale(1.05);
+        }
+
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .logo-text h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            color: #e6b12e;
+            font-size: 0.75rem;
+            display: block;
+        }
+
+        /* أزرار اللغة */
+        .right-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .lang-buttons {
+            display: flex;
+            gap: 0.3rem;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 2px solid #e6b12e;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            min-width: 45px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .lang-btn.active {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        .lang-btn:hover {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        .menu-toggle {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-toggle:hover {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        /* القائمة الجانبية */
+        nav {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background-color: #1e3c2c;
+            padding: 5rem 1.5rem 2rem;
+            transition: right 0.3s ease;
+            z-index: 999;
+            overflow-y: auto;
+        }
+
+        nav.active {
+            right: 0;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e6b12e;
+            padding-left: 10px;
+        }
+
+        .submenu {
+            display: none;
+            list-style: none;
+            padding-right: 1.5rem;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+
+        .submenu.active {
+            display: block;
+        }
+
+        .has-submenu > a {
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .arrow.rotated {
+            transform: rotate(90deg);
+            color: #e6b12e;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 998;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* ===== HERO SLIDER ===== */
+        .hero-slider {
+            position: relative;
+            height: 60vh;
+            min-height: 600px;
+            overflow: hidden;
+        }
+
+        .slides-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease, visibility 1s ease;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(15,42,26,0.6) 0%, rgba(30,60,44,0.5) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 10;
+            width: 90%;
+            max-width: 800px;
+            pointer-events: none;
+            padding: 2rem;
+        }
+
+        .hero-content .badge {
+            display: inline-block;
+            background-color: #e6b12e;
+            color: #1e3c2c;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            pointer-events: auto;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 0.8rem;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .hero-content .btn {
+            pointer-events: auto;
+            font-size: 1rem;
+            padding: 0.8rem 2rem;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 20;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+        }
+
+        .slider-btn:hover {
+            background: #e6b12e;
+            border-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        .slider-btn.prev {
+            left: 20px;
+        }
+
+        .slider-btn.next {
+            right: 20px;
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .dot.active {
+            background: #e6b12e;
+            transform: scale(1.2);
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #e6b12e, #f4c542);
+            color: #1e3c2c;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(230,177,46,0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(230,177,46,0.4);
+        }
+
+        /* الأقسام */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section:nth-child(even) {
+            background-color: #f0e8d9;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.8rem;
+            color: #1e3c2c;
+            position: relative;
+            font-weight: 900;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #e6b12e, transparent);
+            margin: 1rem auto;
+        }
+
+        /* شبكة الأنشطة */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .activity-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .activity-img {
+            width: 100%;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .activity-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            transition: transform 0.5s;
+        }
+
+        .activity-card:hover .activity-img img {
+            transform: scale(1.02);
+        }
+
+        .activity-info {
+            padding: 2rem;
+            background: white;
+        }
+
+        .activity-info h3 {
+            font-size: 1.8rem;
+            color: #1e3c2c;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .activity-info p {
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .activity-price {
+            font-weight: 700;
+            color: #e6b12e;
+            font-size: 1.3rem;
+            display: inline-block;
+            padding: 0.4rem 1.2rem;
+            background: rgba(230,177,46,0.1);
+            border-radius: 30px;
+            border: 1px solid rgba(230,177,46,0.3);
+        }
+
+        /* بطاقة إحصائيات سريعة */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .stat-card i {
+            font-size: 3rem;
+            color: #e6b12e;
+            margin-bottom: 1rem;
+        }
+
+        .stat-card .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #1e3c2c;
+            line-height: 1.2;
+        }
+
+        .stat-card .stat-label {
+            color: #666;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn-large {
+            font-size: 1.3rem;
+            padding: 1.2rem 3rem;
+        }
+
+        /* ===== FOOTER PROFESSIONNEL ===== */
+        .footer-pro {
+            background: linear-gradient(135deg, #0f2a1a, #1e3c2c);
+            color: white;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+            position: relative;
+            border-top: 3px solid #e6b12e;
+        }
+
+        .footer-pro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,100 L0,100 Z" fill="rgba(230,177,46,0.02)"/></svg>');
+            background-size: cover;
+            pointer-events: none;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: #e6b12e;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #e6b12e;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #e6b12e;
+            object-fit: cover;
+        }
+
+        .footer-logo h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .footer-description {
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .social-icon.instagram { background: linear-gradient(45deg, #f09433, #d62976, #962fbf); }
+        .social-icon.facebook { background: #1877f2; }
+        .social-icon.tiktok { background: #000000; }
+        .social-icon.whatsapp { background: #25D366; }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .footer-links ul,
+        .footer-info ul,
+        .footer-contact ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li,
+        .footer-info ul li,
+        .footer-contact ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links ul li a,
+        .footer-info ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links ul li a:hover,
+        .footer-info ul li a:hover {
+            color: #e6b12e;
+            transform: translateX(5px);
+        }
+
+        .footer-links ul li a i {
+            font-size: 0.8rem;
+            color: #e6b12e;
+        }
+
+        .footer-contact ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .footer-contact ul li i {
+            color: #e6b12e;
+            font-size: 1.1rem;
+            margin-top: 0.2rem;
+        }
+
+        .footer-contact ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-contact ul li a:hover {
+            color: #e6b12e;
+        }
+
+        /* Footer Middle - Stats */
+        .footer-middle {
+            background: rgba(0,0,0,0.2);
+            border-radius: 50px;
+            padding: 2rem;
+            margin: 3rem 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+            border: 1px solid rgba(230,177,46,0.2);
+        }
+
+        .stat-item .stat-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #e6b12e;
+            line-height: 1.2;
+        }
+
+        .stat-item .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .copyright p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-bottom-links a:hover {
+            color: #e6b12e;
+        }
+
+        /* الترجمة */
+        [data-lang="en"] .lang-fr {
+            display: none !important;
+        }
+        [data-lang="fr"] .lang-en {
+            display: none !important;
+        }
+
+        @media screen and (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+            
+            .hero-content .badge {
+                font-size: 0.8rem;
+                padding: 0.4rem 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .activities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .logo-img {
+                width: 50px;
+                height: 50px;
+                min-width: 50px;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.1rem;
+            }
+            
+            .slider-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-middle {
+                grid-template-columns: repeat(2, 1fr);
+                border-radius: 20px;
+                padding: 1.5rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .footer-bottom-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .activity-info h3 {
+                font-size: 1.5rem;
+            }
+            
+            .logo-img {
+                width: 45px;
+                height: 45px;
+                min-width: 45px;
+            }
+            
+            .slider-dots {
+                bottom: 15px;
+            }
+        }
+       /* ===== FLOATING BUTTONS ===== */
+.floating-buttons {
+position: fixed;
+bottom: 30px;
+right: 30px;
+z-index: 9999;
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.floating-btn {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background-color: #1e3c2c;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.8rem;
+box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+transition: all 0.3s ease;
+position: relative;
+text-decoration: none;
+border: none;
+cursor: pointer;
+}
+
+.floating-btn:hover {
+transform: scale(1.1) translateY(-5px);
+}
+
+.floating-btn.whatsapp {
+background-color: #25D366;
+}
+
+.floating-btn.phone {
+background-color: #1e3c2c;
+}
+
+.floating-btn.booking {
+background-color: #e6b12e;
+color: #1e3c2c;
+}
+
+/* Tooltip */
+.floating-btn .tooltip {
+position: absolute;
+right: 70px;
+background-color: #1e3c2c;
+color: white;
+padding: 5px 12px;
+border-radius: 20px;
+font-size: 0.9rem;
+white-space: nowrap;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s;
+pointer-events: none;
+font-weight: 500;
+box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.floating-btn.whatsapp .tooltip {
+background-color: #25D366;
+}
+
+.floating-btn.phone .tooltip {
+background-color: #1e3c2c;
+}
+
+.floating-btn.booking .tooltip {
+background-color: #e6b12e;
+color: #1e3c2c;
+}
+
+.floating-btn:hover .tooltip {
+opacity: 1;
+visibility: visible;
+right: 75px;
+}
+
+/* للشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+.floating-buttons {
+bottom: 70px;
+right: 20px;
+gap: 10px;
+}
+
+.floating-btn {
+width: 50px;
+height: 50px;
+font-size: 1.5rem;
+}
+
+.floating-btn .tooltip {
+display: none;
+}
+}    
+</style>
+</head>
+<body data-lang="en">
+    <!-- طبقة التعتيم -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-img">
+                    <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                </div>
+                <div class="logo-text">
+                    <h1>Imsfrane Cathédrale</h1>
+                    <span class="lang-en">Nature Adventures</span>
+                    <span class="lang-fr">Aventures Nature</span>
+                </div>
+            </a>
+            
+            <div class="right-controls">
+                <div class="lang-buttons">
+                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <nav id="mainNav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">
+                    <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="rafting.html"><i class="fas fa-water"></i> Rafting</a></li>
+                    <li><a href="camping.html"><i class="fas fa-campground"></i> Camping</a></li>
+                    <li><a href="randonnee.html"><i class="fas fa-hiking"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                    <li><a href="vtt.html"><i class="fas fa-bicycle"></i> VTT</a></li>
+                    <li><a href="quad.html"><i class="fas fa-motorcycle"></i> Quad</a></li>
+                    <li><a href="hebergement.html"><i class="fas fa-bed"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                </ul>
+            </li>
+            <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+            <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> <span class="lang-en">Blog</span><span class="lang-fr">Blog</span></a></li>
+            <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slides-container">
+            <!-- Slide 1 - hero.jpeg -->
+            <div class="slide active" id="slide1">
+                <img src="images/hero.jpeg" alt="Imsfrane Cathédrale">
+            </div>
+
+            <!-- Slide 2 - IMG_4665.jpg -->
+            <div class="slide" id="slide2">
+                <img src="images/IMG_4665.jpg" alt="Vue panoramique Imsfrane">
+            </div>
+
+            <!-- Slide 3 - IMG_4826.jpg -->
+            <div class="slide" id="slide3">
+                <img src="images/IMG_4826.jpg" alt="Vallée d'Ahansal">
+            </div>
+
+            <!-- Slide 4 - IMG_5131.jpg -->
+            <div class="slide" id="slide4">
+                <img src="images/IMG_5131.jpg" alt="La Cathédrale">
+            </div>
+
+            <!-- Slide 5 - camping-1.jpg -->
+            <div class="slide" id="slide5">
+                <img src="images/camping-1.jpg" alt="Camping Imsfrane">
+            </div>
+        </div>
+
+        <!-- Hero Content - ثابت فوق كل الصور -->
+        <div class="hero-content">
+     
+            <p class="lang-en">Unique experiences at 1,868m altitude in the heart of Moroccan nature</p>
+            <p class="lang-fr">Expériences uniques à 1,868m d'altitude au cœur de la nature marocaine</p>
+            <a href="#activites" class="btn lang-en">Explore Activities</a>
+            <a href="#activites" class="btn lang-fr">Découvrir les Activités</a>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="slider-btn prev" onclick="changeSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="slider-btn next" onclick="changeSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <!-- Dots -->
+        <div class="slider-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+            <span class="dot" onclick="goToSlide(4)"></span>
+        </div>
+    </section>
+
+    <!-- Stats rapides -->
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-mountain"></i>
+                <div class="stat-number">1,868m</div>
+                <div class="stat-label lang-en">Altitude</div>
+                <div class="stat-label lang-fr">Altitude</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-route"></i>
+                <div class="stat-number">50+ km</div>
+                <div class="stat-label lang-en">Trails</div>
+                <div class="stat-label lang-fr">Sentiers</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <div class="stat-number">+500</div>
+                <div class="stat-label lang-en">Adventurers</div>
+                <div class="stat-label lang-fr">Aventuriers</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-star"></i>
+                <div class="stat-number">4.9</div>
+                <div class="stat-label lang-en">Reviews</div>
+                <div class="stat-label lang-fr">Avis</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activities section -->
+    <section id="activites" class="section">
+        <div class="container">
+            <h2 class="section-title lang-en">Our Activities</h2>
+            <h2 class="section-title lang-fr">Nos Activités</h2>
+            <div class="activities-grid">
+                <!-- Rafting -->
+                <a href="rafting.html" class="activity-card">
+                    <div class="activity-img">
+                        <img src="images/rafting.jpeg" alt="Rafting à Imsfrane">
+                    </div>
+                    <div class="activity-info">
+                        <h3>Rafting</h3>
+                        <p class="lang-en">Exciting water adventure on the Ahansal river</p>
+                        <p class="lang-fr">Aventure aquatique sur l'oued Ahansal</p>
+                        <div class="activity-price">from 400 DH</div>
+                    </div>
+                </a>
+
+                <!-- Camping -->
+                <a href="camping.html" class="activity-card">
+                    <div class="activity-img">
+                        <img src="images/camping-1.jpg" alt="Camping à Imsfrane">
+                    </div>
+                    <div class="activity-info">
+                        <h3>Camping</h3>
+                        <p class="lang-en">Traditional Berber tents under the stars</p>
+                        <p class="lang-fr">Tentes berbères traditionnelles sous les étoiles</p>
+                        <div class="activity-price">from 60 DH</div>
+                    </div>
+                </a>
+
+                <!-- Hiking -->
+                <a href="randonnee.html" class="activity-card">
+                    <div class="activity-img">
+                        <img src="images/randonnee.jpg" alt="Randonnée à Imsfrane">
+                    </div>
+                    <div class="activity-info">
+                        <h3 class="lang-en">Hiking</h3>
+                        <h3 class="lang-fr">Randonnée</h3>
+                        <p class="lang-en">Explore the summit (1,868m) and hidden waterfalls</p>
+                        <p class="lang-fr">Explorez le sommet (1,868m) et les cascades cachées</p>
+                        <div class="activity-price">from 200 DH</div>
+                    </div>
+                </a>
+
+                <!-- VTT -->
+                <a href="vtt.html" class="activity-card">
+                    <div class="activity-img">
+                        <img src="images/vtt.jpg" alt="VTT à Imsfrane">
+                    </div>
+                    <div class="activity-info">
+                        <h3 class="lang-en">Mountain Biking</h3>
+                        <h3 class="lang-fr">VTT</h3>
+                        <p class="lang-en">Full suspension bikes on Atlas trails</p>
+                        <p class="lang-fr">VTT tout suspendu sur les sentiers de l'Atlas</p>
+                        <div class="activity-price">150 DH/day</div>
+                    </div>
+                </a>
+
+                <!-- Quad -->
+                <a href="quad.html" class="activity-card">
+                    <div class="activity-img">
+                        <img src="images/quad.jpg" alt="Quad à Imsfrane">
+                    </div>
+                    <div class="activity-info">
+                        <h3>Quad</h3>
+                        <p class="lang-en">Self-drive adventure on rugged terrain</p>
+                        <p class="lang-fr">Conduite libre sur terrain accidenté</p>
+                        <div class="activity-price">from 250 DH/h</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title lang-en">Ready for an adventure?</h2>
+            <h2 class="cta-title lang-fr">Prêt pour l'aventure ?</h2>
+            <p class="cta-text lang-en">Book your activity now and discover the magic of Imsfrane Cathédrale</p>
+            <p class="cta-text lang-fr">Réservez votre activité maintenant et découvrez la magie d'Imsfrane Cathédrale</p>
+            <a href="booking.html" class="btn btn-large">
+                <i class="fas fa-calendar-check"></i> 
+                <span class="lang-en">Book Now</span>
+                <span class="lang-fr">Réserver</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER PROFESSIONNEL -->
+    <footer class="footer-pro">
+        <div class="container">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <!-- Logo + Description -->
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                        <h3>Imsfrane Cathédrale</h3>
+                    </div>
+                    <p class="footer-description">
+                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
+                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col footer-links">
+                    <h4>
+                        <span class="lang-en">Quick Links</span>
+                        <span class="lang-fr">Liens Rapides</span>
+                    </h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
+                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
+                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
+                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
+                    </ul>
+                </div>
+
+                <!-- Informations -->
+                <div class="footer-col footer-info">
+                    <h4>
+                        <span class="lang-en">Information</span>
+                        <span class="lang-fr">Informations</span>
+                    </h4>
+                    <ul>
+                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col footer-contact">
+                    <h4>
+                        <span class="lang-en">Contact Us</span>
+                        <span class="lang-fr">Contactez-nous</span>
+                    </h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:0667772551">+212 667-772551</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Middle - Stats -->
+            <div class="footer-middle">
+                <div class="stat-item">
+                    <div class="stat-number">1,868m</div>
+                    <div class="stat-label">Altitude</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+ km</div>
+                    <div class="stat-label">Sentiers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">+500</div>
+                    <div class="stat-label">Aventuriers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">⭐ 4.9</div>
+                    <div class="stat-label">Avis</div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // قائمة الجوال
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            mainNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Submenu toggle
+        window.toggleSubmenu = function(event) {
+            event.preventDefault();
+            const parent = event.currentTarget.closest('.has-submenu');
+            const submenu = parent.querySelector('.submenu');
+            const arrow = parent.querySelector('.arrow');
+            submenu.classList.toggle('active');
+            arrow.classList.toggle('rotated');
+        };
+
+        // إغلاق القائمة عند الضغط على الروابط
+        document.querySelectorAll('#mainNav ul li a:not(.has-submenu > a)').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) toggleMenu();
+            });
+        });
+
+        // دالة تغيير اللغة
+        window.setLanguage = function(lang) {
+            document.body.setAttribute('data-lang', lang);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.textContent.toLowerCase() === lang.toLowerCase()) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            localStorage.setItem('preferred-language', lang);
+        };
+
+        // تحميل اللغة المحفوظة
+        const savedLang = localStorage.getItem('preferred-language');
+        if (savedLang) {
+            setLanguage(savedLang);
+        } else {
+            setLanguage('en');
+        }
+
+        // Slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        window.changeSlide = function(direction) {
+            showSlide(currentSlide + direction);
+        };
+
+        window.goToSlide = function(index) {
+            showSlide(index);
+        };
+
+        // Auto slide change every 5 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    </script>
+    <!-- FLOATING BUTTONS -->
+<div class="floating-buttons">
+    <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">WhatsApp</span>
+    </a>
+    <a href="tel:0667772551" class="floating-btn phone">
+        <i class="fas fa-phone-alt"></i>
+        <span class="tooltip">Appeler</span>
+    </a>
+    <a href="booking.html" class="floating-btn booking">
+        <i class="fas fa-calendar-check"></i>
+        <span class="tooltip">Réserver</span>
+    </a>
+</div>
+</body>
+</html>

@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<title>Contactez Imsfrane Cathédrale - WhatsApp, Email, Téléphone</title>
+<meta name="description" content="Contactez Imsfrane Cathédrale par téléphone, WhatsApp, email. Suivez-nous sur Instagram, Facebook, TikTok. Réponse rapide.">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f7f3;
+            color: #2c3e50;
+        }
+
+        /* الهيدر */
+        header {
+            background-color: #1e3c2c;
+            color: white;
+            padding: 0.8rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        /* Logo دائري */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            border-radius: 50% !important;
+            overflow: hidden !important;
+            border: 3px solid #e6b12e;
+            transition: transform 0.3s;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo:hover .logo-img {
+            transform: scale(1.05);
+        }
+
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .logo-text h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            color: #e6b12e;
+            font-size: 0.75rem;
+            display: block;
+        }
+
+        /* أزرار اللغة */
+        .right-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .lang-buttons {
+            display: flex;
+            gap: 0.3rem;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 2px solid #e6b12e;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            min-width: 45px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .lang-btn.active {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        .lang-btn:hover {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        .menu-toggle {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-toggle:hover {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        /* القائمة الجانبية */
+        nav {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background-color: #1e3c2c;
+            padding: 5rem 1.5rem 2rem;
+            transition: right 0.3s ease;
+            z-index: 999;
+            overflow-y: auto;
+        }
+
+        nav.active {
+            right: 0;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e6b12e;
+            padding-left: 10px;
+        }
+
+        .submenu {
+            display: none;
+            list-style: none;
+            padding-right: 1.5rem;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+
+        .submenu.active {
+            display: block;
+        }
+
+        .has-submenu > a {
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .arrow.rotated {
+            transform: rotate(90deg);
+            color: #e6b12e;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 998;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Hero section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 500px;
+            background: linear-gradient(135deg, rgba(15,42,26,0.8) 0%, rgba(30,60,44,0.7) 100%), url('images/contact-hero.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        .hero-content .badge {
+            display: inline-block;
+            background-color: #e6b12e;
+            color: #1e3c2c;
+            padding: 0.5rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        /* المحتوى */
+        .page-content {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.8rem;
+            color: #1e3c2c;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #e6b12e, transparent);
+            margin: 1rem auto;
+        }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Contact Info Cards */
+        .contact-info {
+            background: white;
+            border-radius: 30px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .contact-info h2 {
+            color: #1e3c2c;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            border-bottom: 2px solid #e6b12e;
+            padding-bottom: 0.5rem;
+        }
+
+        .info-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f9f7f3;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+
+        .info-item:hover {
+            transform: translateX(5px);
+            background: rgba(230,177,46,0.1);
+        }
+
+        .info-item i {
+            font-size: 1.8rem;
+            color: #e6b12e;
+            width: 40px;
+            text-align: center;
+        }
+
+        .info-item .details h3 {
+            color: #1e3c2c;
+            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+        }
+
+        .info-item .details a,
+        .info-item .details p {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .info-item .details a:hover {
+            color: #e6b12e;
+        }
+
+        /* Social Media */
+        .social-section {
+            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
+            color: white;
+            border-radius: 30px;
+            padding: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-section h2 {
+            color: white;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            border-bottom: 2px solid #e6b12e;
+            padding-bottom: 0.5rem;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-item:hover {
+            background: #e6b12e;
+            color: #1e3c2c;
+            transform: translateY(-5px);
+        }
+
+        .social-item i {
+            font-size: 1.5rem;
+            width: 30px;
+            text-align: center;
+        }
+
+        .social-item span {
+            font-weight: 500;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            border-radius: 30px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .contact-form h2 {
+            color: #1e3c2c;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            border-bottom: 2px solid #e6b12e;
+            padding-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #1e3c2c;
+        }
+
+        .form-group label i {
+            color: #e6b12e;
+            margin-right: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #f0f0f0;
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #e6b12e;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, #e6b12e, #f4c542);
+            color: #1e3c2c;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(230,177,46,0.3);
+        }
+
+        .success-message {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            text-align: center;
+            display: none;
+        }
+
+        .error-message {
+            background: #f44336;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            text-align: center;
+            display: none;
+        }
+
+        /* Map */
+        .map-section {
+            margin: 4rem 0;
+        }
+
+        .map-container {
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .map-placeholder {
+            background: #1e3c2c;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+        }
+
+        .map-placeholder iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(30,60,44,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+            color: white;
+            text-align: center;
+            backdrop-filter: blur(2px);
+            pointer-events: none;
+        }
+
+        .map-overlay i {
+            font-size: 3rem;
+            color: #e6b12e;
+        }
+
+        .map-overlay p {
+            font-size: 1.2rem;
+            max-width: 400px;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: white;
+            border-radius: 30px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-top: 4rem;
+        }
+
+        .faq-section h2 {
+            color: #1e3c2c;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            border-bottom: 2px solid #e6b12e;
+            padding-bottom: 0.5rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #f0f0f0;
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-question h3 {
+            color: #1e3c2c;
+            font-size: 1.2rem;
+        }
+
+        .faq-question i {
+            color: #e6b12e;
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 1rem 0 0;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        /* ===== FOOTER PROFESSIONNEL ===== */
+        .footer-pro {
+            background: linear-gradient(135deg, #0f2a1a, #1e3c2c);
+            color: white;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+            position: relative;
+            border-top: 3px solid #e6b12e;
+        }
+
+        .footer-pro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,100 L0,100 Z" fill="rgba(230,177,46,0.02)"/></svg>');
+            background-size: cover;
+            pointer-events: none;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: #e6b12e;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #e6b12e;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #e6b12e;
+            object-fit: cover;
+        }
+
+        .footer-logo h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .footer-description {
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .social-icon.instagram { background: linear-gradient(45deg, #f09433, #d62976, #962fbf); }
+        .social-icon.facebook { background: #1877f2; }
+        .social-icon.tiktok { background: #000000; }
+        .social-icon.whatsapp { background: #25D366; }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .footer-links ul,
+        .footer-info ul,
+        .footer-contact ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li,
+        .footer-info ul li,
+        .footer-contact ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links ul li a,
+        .footer-info ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links ul li a:hover,
+        .footer-info ul li a:hover {
+            color: #e6b12e;
+            transform: translateX(5px);
+        }
+
+        .footer-links ul li a i {
+            font-size: 0.8rem;
+            color: #e6b12e;
+        }
+
+        .footer-contact ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .footer-contact ul li i {
+            color: #e6b12e;
+            font-size: 1.1rem;
+            margin-top: 0.2rem;
+        }
+
+        .footer-contact ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-contact ul li a:hover {
+            color: #e6b12e;
+        }
+
+        /* Footer Middle - Stats */
+        .footer-middle {
+            background: rgba(0,0,0,0.2);
+            border-radius: 50px;
+            padding: 2rem;
+            margin: 3rem 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+            border: 1px solid rgba(230,177,46,0.2);
+        }
+
+        .stat-item .stat-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #e6b12e;
+            line-height: 1.2;
+        }
+
+        .stat-item .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .copyright p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-bottom-links a:hover {
+            color: #e6b12e;
+        }
+
+        /* الترجمة */
+        [data-lang="en"] .lang-fr {
+            display: none !important;
+        }
+        [data-lang="fr"] .lang-en {
+            display: none !important;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .contact-info,
+            .contact-form,
+            .faq-section {
+                padding: 1.5rem;
+            }
+            
+            .map-placeholder {
+                height: 300px;
+            }
+            
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-middle {
+                grid-template-columns: repeat(2, 1fr);
+                border-radius: 20px;
+                padding: 1.5rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .footer-bottom-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+         /* ===== FLOATING BUTTONS ===== */
+       .floating-buttons {
+           position: fixed;
+           bottom: 30px;
+           right: 30px;
+           z-index: 9999;
+           display: flex;
+           flex-direction: column;
+           gap: 15px;
+       }
+       
+       .floating-btn {
+           width: 60px;
+           height: 60px;
+           border-radius: 50%;
+           background-color: #1e3c2c;
+           color: white;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           font-size: 1.8rem;
+           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+           transition: all 0.3s ease;
+           position: relative;
+           text-decoration: none;
+           border: none;
+           cursor: pointer;
+       }
+       
+       .floating-btn:hover {
+           transform: scale(1.1) translateY(-5px);
+       }
+       
+       .floating-btn.whatsapp {
+           background-color: #25D366;
+       }
+       
+       .floating-btn.phone {
+           background-color: #1e3c2c;
+       }
+       
+       .floating-btn.booking {
+           background-color: #e6b12e;
+           color: #1e3c2c;
+       }
+       
+       /* Tooltip */
+       .floating-btn .tooltip {
+           position: absolute;
+           right: 70px;
+           background-color: #1e3c2c;
+           color: white;
+           padding: 5px 12px;
+           border-radius: 20px;
+           font-size: 0.9rem;
+           white-space: nowrap;
+           opacity: 0;
+           visibility: hidden;
+           transition: all 0.3s;
+           pointer-events: none;
+           font-weight: 500;
+           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+       }
+       
+       .floating-btn.whatsapp .tooltip {
+           background-color: #25D366;
+       }
+       
+       .floating-btn.phone .tooltip {
+           background-color: #1e3c2c;
+       }
+       
+       .floating-btn.booking .tooltip {
+           background-color: #e6b12e;
+           color: #1e3c2c;
+       }
+       
+       .floating-btn:hover .tooltip {
+           opacity: 1;
+           visibility: visible;
+           right: 75px;
+       }
+       
+       /* للشاشات الصغيرة */
+       @media screen and (max-width: 768px) {
+           .floating-buttons {
+               bottom: 70px;
+               right: 20px;
+               gap: 10px;
+           }
+           
+           .floating-btn {
+               width: 50px;
+               height: 50px;
+               font-size: 1.5rem;
+           }
+           
+           .floating-btn .tooltip {
+               display: none;
+           }
+       }
+    </style>
+</head>
+<body data-lang="en">
+    <!-- طبقة التعتيم -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-img">
+                    <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                </div>
+                <div class="logo-text">
+                    <h1>Imsfrane Cathédrale</h1>
+                    <span class="lang-en">Nature Adventures</span>
+                    <span class="lang-fr">Aventures Nature</span>
+                </div>
+            </a>
+            
+            <div class="right-controls">
+                <div class="lang-buttons">
+                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <nav id="mainNav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">
+                    <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="rafting.html"><i class="fas fa-water"></i> Rafting</a></li>
+                    <li><a href="camping.html"><i class="fas fa-campground"></i> Camping</a></li>
+                    <li><a href="randonnee.html"><i class="fas fa-hiking"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                    <li><a href="vtt.html"><i class="fas fa-bicycle"></i> VTT</a></li>
+                    <li><a href="quad.html"><i class="fas fa-motorcycle"></i> Quad</a></li>
+                    <li><a href="hebergement.html"><i class="fas fa-bed"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                </ul>
+            </li>
+            <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+            <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> <span class="lang-en">Blog</span><span class="lang-fr">Blog</span></a></li>
+            <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <span class="lang-en">CONTACT US</span>
+                <span class="lang-fr">CONTACTEZ-NOUS</span>
+            </div>
+            <h1 class="lang-en">Get in Touch</h1>
+            <h1 class="lang-fr">Prenez Contact</h1>
+            <p class="lang-en">We're here to answer your questions and help you plan your adventure</p>
+            <p class="lang-fr">Nous sommes là pour répondre à vos questions et vous aider à planifier votre aventure</p>
+        </div>
+    </section>
+
+    <!-- محتوى الصفحة -->
+    <div class="container page-content">
+        <!-- Contact Grid -->
+        <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2 class="lang-en">Contact Information</h2>
+                <h2 class="lang-fr">Informations de Contact</h2>
+
+                <div class="info-items">
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="details">
+                            <h3 class="lang-en">Phone</h3>
+                            <h3 class="lang-fr">Téléphone</h3>
+                            <a href="tel:0667772551">+212 667-772551</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="details">
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="details">
+                            <h3>Email</h3>
+                            <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="details">
+                            <h3 class="lang-en">Location</h3>
+                            <h3 class="lang-fr">Emplacement</h3>
+                            <p>Tilouguite, Imsfrane<br>Azilal, Morocco</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="details">
+                            <h3 class="lang-en">Opening Hours</h3>
+                            <h3 class="lang-fr">Horaires</h3>
+                            <p class="lang-en">Daily · 8:00 AM - 8:00 PM</p>
+                            <p class="lang-fr">Tous les jours · 8h00 - 20h00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="social-section">
+                    <h2 class="lang-en">Follow Us</h2>
+                    <h2 class="lang-fr">Suivez-nous</h2>
+
+                    <div class="social-grid">
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-item">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-item">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-item">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://wa.me/212667772551" target="_blank" class="social-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2 class="lang-en">Send a Message</h2>
+                <h2 class="lang-fr">Envoyer un Message</h2>
+
+                <!-- نموذج Formspree -->
+                <form id="contactForm" action="https://formspree.io/f/xojnelwz" method="POST">
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> <span class="lang-en">Name *</span><span class="lang-fr">Nom *</span></label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-envelope"></i> <span class="lang-en">Email *</span><span class="lang-fr">Email *</span></label>
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-phone-alt"></i> <span class="lang-en">Phone</span><span class="lang-fr">Téléphone</span></label>
+                        <input type="tel" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-tag"></i> <span class="lang-en">Subject *</span><span class="lang-fr">Sujet *</span></label>
+                        <input type="text" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-comment"></i> <span class="lang-en">Message *</span><span class="lang-fr">Message *</span></label>
+                        <textarea name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> 
+                        <span class="lang-en">Send Message</span>
+                        <span class="lang-fr">Envoyer</span>
+                    </button>
+
+                    <!-- رسائل النجاح والخطأ -->
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i> 
+                        <span class="lang-en">Message sent successfully! We'll get back to you soon.</span>
+                        <span class="lang-fr">Message envoyé avec succès ! Nous vous répondrons bientôt.</span>
+                    </div>
+                    
+                    <div class="error-message" id="errorMessage">
+                        <i class="fas fa-exclamation-circle"></i> 
+                        <span class="lang-en">Error sending message. Please try again.</span>
+                        <span class="lang-fr">Erreur lors de l'envoi. Veuillez réessayer.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-section">
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53940.4479964455!2d-6.366666!3d32.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDAwJzAwLjAiTiA2wrAyMicwMC4wIlc!5e0!3m2!1sfr!2sma!4v1700000000000" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="map-overlay">
+                        <i class="fas fa-map-pin"></i>
+                        <p>Imsfrane Cathédrale<br>Tilouguite, Imsfrane, Azilal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+            <h2 class="lang-en">Frequently Asked Questions</h2>
+            <h2 class="lang-fr">Questions Fréquentes</h2>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3 class="lang-en">How do I book an activity?</h3>
+                    <h3 class="lang-fr">Comment réserver une activité ?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p class="lang-en">You can book directly through our website using the booking page, or contact us via WhatsApp or phone.</p>
+                    <p class="lang-fr">Vous pouvez réserver directement sur notre site via la page de réservation, ou nous contacter par WhatsApp ou téléphone.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3 class="lang-en">What payment methods do you accept?</h3>
+                    <h3 class="lang-fr">Quels modes de paiement acceptez-vous ?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p class="lang-en">We accept PayPal and bank transfers. Payment details are provided during booking.</p>
+                    <p class="lang-fr">Nous acceptons PayPal et les virements bancaires. Les détails de paiement sont fournis lors de la réservation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3 class="lang-en">Is there accommodation available?</h3>
+                    <h3 class="lang-fr">Y a-t-il un hébergement disponible ?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p class="lang-en">Yes, we offer a furnished house for daily rental near the rafting finish point.</p>
+                    <p class="lang-fr">Oui, nous proposons une maison meublée à louer à la journée près du point d'arrivée du rafting.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3 class="lang-en">What should I bring for hiking?</h3>
+                    <h3 class="lang-fr">Que dois-je apporter pour la randonnée ?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p class="lang-en">Comfortable hiking shoes, warm clothes, water (2L minimum), sunscreen, and a headlamp for camping.</p>
+                    <p class="lang-fr">Chaussures de randonnée confortables, vêtements chauds, eau (2L minimum), crème solaire, et une lampe frontale pour le camping.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER PROFESSIONNEL -->
+    <footer class="footer-pro">
+        <div class="container">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <!-- Logo + Description -->
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                        <h3>Imsfrane Cathédrale</h3>
+                    </div>
+                    <p class="footer-description">
+                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
+                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col footer-links">
+                    <h4>
+                        <span class="lang-en">Quick Links</span>
+                        <span class="lang-fr">Liens Rapides</span>
+                    </h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
+                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
+                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
+                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
+                    </ul>
+                </div>
+
+                <!-- Informations -->
+                <div class="footer-col footer-info">
+                    <h4>
+                        <span class="lang-en">Information</span>
+                        <span class="lang-fr">Informations</span>
+                    </h4>
+                    <ul>
+                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col footer-contact">
+                    <h4>
+                        <span class="lang-en">Contact Us</span>
+                        <span class="lang-fr">Contactez-nous</span>
+                    </h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:0667772551">+212 667-772551</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Middle - Stats -->
+            <div class="footer-middle">
+                <div class="stat-item">
+                    <div class="stat-number">1,868m</div>
+                    <div class="stat-label">Altitude</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+ km</div>
+                    <div class="stat-label">Sentiers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">+500</div>
+                    <div class="stat-label">Aventuriers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">⭐ 4.9</div>
+                    <div class="stat-label">Avis</div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // قائمة الجوال
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            mainNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Submenu toggle
+        window.toggleSubmenu = function(event) {
+            event.preventDefault();
+            const parent = event.currentTarget.closest('.has-submenu');
+            const submenu = parent.querySelector('.submenu');
+            const arrow = parent.querySelector('.arrow');
+            submenu.classList.toggle('active');
+            arrow.classList.toggle('rotated');
+        };
+
+        // إغلاق القائمة عند الضغط على الروابط
+        document.querySelectorAll('#mainNav ul li a:not(.has-submenu > a)').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) toggleMenu();
+            });
+        });
+
+        // دالة تغيير اللغة
+        window.setLanguage = function(lang) {
+            document.body.setAttribute('data-lang', lang);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.textContent.toLowerCase() === lang.toLowerCase()) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            localStorage.setItem('preferred-language', lang);
+        };
+
+        // تحميل اللغة المحفوظة
+        const savedLang = localStorage.getItem('preferred-language');
+        if (savedLang) {
+            setLanguage(savedLang);
+        } else {
+            setLanguage('en');
+        }
+
+        // FAQ toggle
+        window.toggleFAQ = function(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            answer.classList.toggle('show');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        };
+
+        // Form handling with Formspree
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const formData = new FormData(form);
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            // إخفاء الرسائل السابقة
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // نجاح
+                    form.reset();
+                    successMsg.style.display = 'block';
+                    setTimeout(() => {
+                        successMsg.style.display = 'none';
+                    }, 5000);
+                } else {
+                    // خطأ
+                    errorMsg.style.display = 'block';
+                    setTimeout(() => {
+                        errorMsg.style.display = 'none';
+                    }, 5000);
+                }
+            } catch (error) {
+                errorMsg.style.display = 'block';
+                setTimeout(() => {
+                    errorMsg.style.display = 'none';
+                }, 5000);
+            }
+        });
+    </script>
+    <!-- FLOATING BUTTONS -->
+<div class="floating-buttons">
+    <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">WhatsApp</span>
+    </a>
+    <a href="tel:0667772551" class="floating-btn phone">
+        <i class="fas fa-phone-alt"></i>
+        <span class="tooltip">Appeler</span>
+    </a>
+    <a href="booking.html" class="floating-btn booking">
+        <i class="fas fa-calendar-check"></i>
+        <span class="tooltip">Réserver</span>
+    </a>
+</div>
+</body>
+</html>
