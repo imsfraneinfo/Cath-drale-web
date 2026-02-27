@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Blog - Imsfrane Cathédrale | Randonnées, nature, culture amazighe</title>
+    <meta name="description" content="Blog d'Imsfrane Cathédrale. Articles sur la montagne, les randonnées, les cascades, les villages amazighs et la nature de l'Atlas marocain.">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f7f3;
+            color: #2c3e50;
+        }
+
+        /* الهيدر */
+        header {
+            background-color: #1e3c2c;
+            color: white;
+            padding: 0.8rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        /* Logo دائري */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            border-radius: 50% !important;
+            overflow: hidden !important;
+            border: 3px solid #e6b12e;
+            transition: transform 0.3s;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo:hover .logo-img {
+            transform: scale(1.05);
+        }
+
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .logo-text h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            color: #e6b12e;
+            font-size: 0.75rem;
+            display: block;
+        }
+
+        /* أزرار اللغة */
+        .right-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .lang-buttons {
+            display: flex;
+            gap: 0.3rem;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 2px solid #e6b12e;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            min-width: 45px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .lang-btn.active {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        .lang-btn:hover {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        .menu-toggle {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-toggle:hover {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        /* القائمة الجانبية */
+        nav {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background-color: #1e3c2c;
+            padding: 5rem 1.5rem 2rem;
+            transition: right 0.3s ease;
+            z-index: 999;
+            overflow-y: auto;
+        }
+
+        nav.active {
+            right: 0;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e6b12e;
+            padding-left: 10px;
+        }
+
+        .submenu {
+            display: none;
+            list-style: none;
+            padding-right: 1.5rem;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+
+        .submenu.active {
+            display: block;
+        }
+
+        .has-submenu > a {
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .arrow.rotated {
+            transform: rotate(90deg);
+            color: #e6b12e;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 998;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Hero section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 500px;
+            background: linear-gradient(135deg, rgba(15,42,26,0.8) 0%, rgba(30,60,44,0.7) 100%), url('images/blog-hero.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        .hero-content .badge {
+            display: inline-block;
+            background-color: #e6b12e;
+            color: #1e3c2c;
+            padding: 0.5rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        /* المحتوى */
+        .page-content {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.8rem;
+            color: #1e3c2c;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #e6b12e, transparent);
+            margin: 1rem auto;
+        }
+
+        /* تصفية المقالات */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 2px solid #1e3c2c;
+            color: #1e3c2c;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #1e3c2c;
+            color: white;
+        }
+
+        /* شبكة المقالات - بدون خطوط فاصلة */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: none;
+            margin-bottom: 0;
+            position: relative;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .blog-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .blog-card:hover .blog-image img {
+            transform: scale(1.1);
+        }
+
+        .blog-content {
+            padding: 2rem;
+            border: none;
+        }
+
+        .blog-title {
+            font-size: 1.8rem;
+            color: #1e3c2c;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blog-excerpt {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .blog-full {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 1rem 0;
+            padding: 1rem 0;
+            border-top: 1px dashed #e6b12e;
+            border-bottom: 1px dashed #e6b12e;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #999;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        .blog-meta i {
+            color: #e6b12e;
+            margin-right: 0.3rem;
+        }
+
+        .read-more {
+            color: #e6b12e;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .read-more:hover {
+            color: #1e3c2c;
+        }
+
+        /* ===== SUPPRESSION DES LIGNES ENTRE ARTICLES ===== */
+        .blog-card::after {
+            display: none;
+        }
+
+        .blog-card:not(:last-child) {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .blog-grid > * + * {
+            margin-top: 0;
+        }
+
+        hr, .separator {
+            display: none !important;
+        }
+
+        /* ===== FOOTER PROFESSIONNEL ===== */
+        .footer-pro {
+            background: linear-gradient(135deg, #0f2a1a, #1e3c2c);
+            color: white;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+            position: relative;
+            border-top: 3px solid #e6b12e;
+        }
+
+        .footer-pro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,100 L0,100 Z" fill="rgba(230,177,46,0.02)"/></svg>');
+            background-size: cover;
+            pointer-events: none;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: #e6b12e;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #e6b12e;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #e6b12e;
+            object-fit: cover;
+        }
+
+        .footer-logo h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .footer-description {
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .social-icon.instagram { background: linear-gradient(45deg, #f09433, #d62976, #962fbf); }
+        .social-icon.facebook { background: #1877f2; }
+        .social-icon.tiktok { background: #000000; }
+        .social-icon.whatsapp { background: #25D366; }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .footer-links ul,
+        .footer-info ul,
+        .footer-contact ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li,
+        .footer-info ul li,
+        .footer-contact ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links ul li a,
+        .footer-info ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links ul li a:hover,
+        .footer-info ul li a:hover {
+            color: #e6b12e;
+            transform: translateX(5px);
+        }
+
+        .footer-links ul li a i {
+            font-size: 0.8rem;
+            color: #e6b12e;
+        }
+
+        .footer-contact ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .footer-contact ul li i {
+            color: #e6b12e;
+            font-size: 1.1rem;
+            margin-top: 0.2rem;
+        }
+
+        .footer-contact ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-contact ul li a:hover {
+            color: #e6b12e;
+        }
+
+        /* Footer Middle - Stats */
+        .footer-middle {
+            background: rgba(0,0,0,0.2);
+            border-radius: 50px;
+            padding: 2rem;
+            margin: 3rem 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+            border: 1px solid rgba(230,177,46,0.2);
+        }
+
+        .stat-item .stat-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #e6b12e;
+            line-height: 1.2;
+        }
+
+        .stat-item .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .copyright p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-bottom-links a:hover {
+            color: #e6b12e;
+        }
+
+        /* ===== FLOATING BUTTONS ===== */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #1e3c2c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1) translateY(-5px);
+        }
+
+        .floating-btn.whatsapp {
+            background-color: #25D366;
+        }
+
+        .floating-btn.phone {
+            background-color: #1e3c2c;
+        }
+
+        .floating-btn.booking {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        /* Tooltip */
+        .floating-btn .tooltip {
+            position: absolute;
+            right: 70px;
+            background-color: #1e3c2c;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            pointer-events: none;
+        }
+
+        .floating-btn.whatsapp .tooltip {
+            background-color: #25D366;
+        }
+
+        .floating-btn.phone .tooltip {
+            background-color: #1e3c2c;
+        }
+
+        .floating-btn.booking .tooltip {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        .floating-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .floating-buttons {
+                bottom: 20px;
+                right: 20px;
+                gap: 10px;
+            }
+            
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .floating-btn .tooltip {
+                display: none;
+            }
+        }
+
+        /* الترجمة */
+        [data-lang="en"] .lang-fr {
+            display: none !important;
+        }
+        [data-lang="fr"] .lang-en {
+            display: none !important;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .filter-btn {
+                width: 200px;
+            }
+            
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-middle {
+                grid-template-columns: repeat(2, 1fr);
+                border-radius: 20px;
+                padding: 1.5rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .footer-bottom-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body data-lang="en">
+    <!-- طبقة التعتيم -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-img">
+                    <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                </div>
+                <div class="logo-text">
+                    <h1>Imsfrane Cathédrale</h1>
+                    <span class="lang-en">Nature Adventures</span>
+                    <span class="lang-fr">Aventures Nature</span>
+                </div>
+            </a>
+            
+            <div class="right-controls">
+                <div class="lang-buttons">
+                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <nav id="mainNav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">
+                    <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="rafting.html"><i class="fas fa-water"></i> Rafting</a></li>
+                    <li><a href="camping.html"><i class="fas fa-campground"></i> Camping</a></li>
+                    <li><a href="randonnee.html"><i class="fas fa-hiking"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                    <li><a href="vtt.html"><i class="fas fa-bicycle"></i> VTT</a></li>
+                    <li><a href="quad.html"><i class="fas fa-motorcycle"></i> Quad</a></li>
+                    <li><a href="hebergement.html"><i class="fas fa-bed"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                </ul>
+            </li>
+            <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+            <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> <span class="lang-en">Blog</span><span class="lang-fr">Blog</span></a></li>
+            <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <span class="lang-en">OUR BLOG</span>
+                <span class="lang-fr">NOTRE BLOG</span>
+            </div>
+            <h1 class="lang-en">Stories from Imsfrane</h1>
+            <h1 class="lang-fr">Récits d'Imsfrane</h1>
+            <p class="lang-en">Discover articles about the mountain, hikes and local life</p>
+            <p class="lang-fr">Découvrez des articles sur la montagne, les randonnées et la vie locale</p>
+        </div>
+    </section>
+
+    <!-- محتوى الصفحة -->
+    <div class="container page-content">
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterPosts('all')">
+                <span class="lang-en">All</span>
+                <span class="lang-fr">Tous</span>
+            </button>
+            <button class="filter-btn" onclick="filterPosts('mountain')">
+                <span class="lang-en">Mountains</span>
+                <span class="lang-fr">Montagnes</span>
+            </button>
+            <button class="filter-btn" onclick="filterPosts('waterfall')">
+                <span class="lang-en">Waterfalls</span>
+                <span class="lang-fr">Cascades</span>
+            </button>
+            <button class="filter-btn" onclick="filterPosts('valley')">
+                <span class="lang-en">Valleys</span>
+                <span class="lang-fr">Vallées</span>
+            </button>
+            <button class="filter-btn" onclick="filterPosts('village')">
+                <span class="lang-en">Villages</span>
+                <span class="lang-fr">Villages</span>
+            </button>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid" id="blog-grid">
+            <!-- Article 1: Jebel Msfrane - La Cathédrale -->
+            <div class="blog-card" data-category="mountain">
+                <div class="blog-image">
+                    <img src="images/blog-msfrane.jpg" alt="Jebel Msfrane">
+                </div>
+                <div class="blog-content">
+                    <h2 class="blog-title lang-en">⛰️ Jebel Msfrane – "The Cathedral"</h2>
+                    <h2 class="blog-title lang-fr">⛰️ Jebel Msfrane – "La Cathédrale"</h2>
+                    
+                    <!-- Excerpt -->
+                    <div class="blog-excerpt lang-en">
+                        Located in the Tilouguite commune in the Azilal province, Jebel Msfrane is one of the most remarkable natural landmarks in the region, rising to approximately 1868 meters above sea level. The summit is locally known as "The Cathedral" because its rocks resemble a giant church.
+                    </div>
+                    <div class="blog-excerpt lang-fr">
+                        Situé dans la commune de Tilouguite dans la province d'Azilal, le Jebel Msfrane est l'un des sites naturels les plus remarquables de la région, s'élevant à environ 1868 mètres d'altitude. Le sommet est localement connu sous le nom de "La Cathédrale" car ses rochers ressemblent à une église géante.
+                    </div>
+                    
+                    <!-- Full text -->
+                    <div class="blog-full" id="full-0" style="display: none;">
+                        <p class="lang-en">
+                            Surrounded on all sides by dense forests and deep valleys, it forms a magnificent natural canvas for hiking, camping, and photography. The panoramic view from the summit offers an unforgettable sight of the entire Atlas range. Local Amazigh guides can take you on paths that reveal the mountain's secrets, including ancient caves and rock formations shaped by time. The area is also home to diverse flora and fauna, making it a paradise for nature lovers. Whether you're an experienced hiker or a beginner, the trails around Jebel Msfrane offer something for everyone. Don't miss the chance to witness the breathtaking sunrise from the summit – a truly magical experience.
+                            
+                            The mountain holds spiritual significance for local Amazigh communities, who have lived in its shadow for centuries. Their stories and traditions are woven into the landscape, adding a cultural dimension to any visit. The best time to hike is spring (March to May) when the weather is mild and wildflowers carpet the slopes. Autumn (September to November) is also beautiful, with clear skies and comfortable temperatures.
+                        </p>
+                        <p class="lang-fr">
+                            Entouré de tous côtés par des forêts denses et des vallées profondes, il forme une toile naturelle magnifique pour la randonnée, le camping et la photographie. La vue panoramique du sommet offre un spectacle inoubliable sur toute la chaîne de l'Atlas. Des guides amazighs locaux peuvent vous emmener sur des sentiers qui révèlent les secrets de la montagne, y compris des grottes anciennes et des formations rocheuses façonnées par le temps. La région abrite également une flore et une faune diversifiées, ce qui en fait un paradis pour les amoureux de la nature. Que vous soyez un randonneur expérimenté ou débutant, les sentiers autour du Jebel Msfrane offrent quelque chose pour tout le monde. Ne manquez pas l'occasion d'assister au lever du soleil à couper le souffle depuis le sommet – une expérience vraiment magique.
+                            
+                            La montagne revêt une signification spirituelle pour les communautés amazighes locales, qui vivent à son ombre depuis des siècles. Leurs histoires et traditions sont tissées dans le paysage, ajoutant une dimension culturelle à toute visite. La meilleure période pour la randonnée est le printemps (mars à mai) lorsque le temps est doux et que les fleurs sauvages tapissent les pentes. L'automne (septembre à novembre) est également magnifique, avec un ciel dégagé et des températures agréables.
+                        </p>
+                    </div>
+                    
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> 23/02/2026</span>
+                        <span class="read-more" onclick="toggleReadMore(0)">
+                            <span class="lang-en">Read more</span>
+                            <span class="lang-fr">Lire la suite</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 2: Cascades Wakoudene -->
+            <div class="blog-card" data-category="waterfall">
+                <div class="blog-image">
+                    <img src="images/blog-cascades.jpg" alt="Cascades Wakoudene">
+                </div>
+                <div class="blog-content">
+                    <h2 class="blog-title lang-en">💦 Wakoudene Waterfalls</h2>
+                    <h2 class="blog-title lang-fr">💦 Cascades Wakoudene</h2>
+                    
+                    <div class="blog-excerpt lang-en">
+                        One of the most beautiful natural surprises near Jebel Msfrane are the Wakoudene waterfalls, scattered between the villages of Imi N'Ouarg and Tamega. These waterfalls flow from the High Atlas mountains, offering a stunning natural spectacle.
+                    </div>
+                    <div class="blog-excerpt lang-fr">
+                        L'une des plus belles surprises naturelles près du Jebel Msfrane sont les cascades de Wakoudene, dispersées entre les villages d'Imi N'Ouarg et Tamega. Ces cascades coulent des montagnes du Haut Atlas, offrant un spectacle naturel époustouflant.
+                    </div>
+                    
+                    <div class="blog-full" id="full-1" style="display: none;">
+                        <p class="lang-en">
+                            The sound of water cascading between the rocks creates a peaceful atmosphere, making it an ideal spot for picnics, photography, and contemplating the beauty of nature. The pools at the base of the falls are perfect for a refreshing dip on hot summer days. The surrounding area is rich in wild herbs and flowers, adding to the sensory experience. The waterfalls are especially impressive in spring when the snow melts and the water flow is at its peak. Local guides can take you to hidden spots that most tourists never see, including smaller waterfalls and natural pools tucked away in the forest. It's a place where you can truly connect with nature and escape the hustle and bustle of daily life.
+                        </p>
+                        <p class="lang-fr">
+                            Le bruit de l'eau cascadant entre les rochers crée une atmosphère paisible, ce qui en fait un endroit idéal pour les pique-niques, la photographie et la contemplation de la beauté de la nature. Les bassins au pied des chutes sont parfaits pour une baignade rafraîchissante lors des chaudes journées d'été. Les environs sont riches en herbes sauvages et en fleurs, ajoutant à l'expérience sensorielle. Les cascades sont particulièrement impressionnantes au printemps lorsque la neige fond et que le débit d'eau est à son maximum. Des guides locaux peuvent vous emmener vers des endroits cachés que la plupart des touristes ne voient jamais, y compris des cascades plus petites et des piscines naturelles nichées dans la forêt. C'est un endroit où vous pouvez vraiment vous connecter avec la nature et échapper à l'agitation de la vie quotidienne.
+                        </p>
+                    </div>
+                    
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> 20/02/2026</span>
+                        <span class="read-more" onclick="toggleReadMore(1)">
+                            <span class="lang-en">Read more</span>
+                            <span class="lang-fr">Lire la suite</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 3: Gorges d'Ahansal -->
+            <div class="blog-card" data-category="valley">
+                <div class="blog-image">
+                    <img src="images/blog-gorges.jpg" alt="Gorges d'Ahansal">
+                </div>
+                <div class="blog-content">
+                    <h2 class="blog-title lang-en">🏞️ Ahansal River Gorges</h2>
+                    <h2 class="blog-title lang-fr">🏞️ Gorges de l'Oued Ahansal</h2>
+                    
+                    <div class="blog-excerpt lang-en">
+                        Formed over thousands of years by water flowing through the riverbed, the Ahansal gorges offer a rocky spectacle worth visiting. This place is characterized by high cliffs and steep slopes.
+                    </div>
+                    <div class="blog-excerpt lang-fr">
+                        Formées sur des milliers d'années par l'écoulement de l'eau dans le lit de la rivière, les gorges d'Ahansal offrent un spectacle rocheux qui mérite d'être visité. Ce lieu est caractérisé par de hautes falaises et des pentes abruptes.
+                    </div>
+                    
+                    <div class="blog-full" id="full-2" style="display: none;">
+                        <p class="lang-en">
+                            Making hiking through these gorges a unique adventure for nature lovers and long-distance hikers. Additionally, there is diverse vegetation and small wildlife that give the area a rich ecological character. The play of light and shadow on the rock walls creates ever-changing patterns, making it a paradise for photographers and nature enthusiasts alike. The gorges are also home to several species of birds and small mammals. Hiking through the gorges requires a good level of fitness, but the reward is spectacular views at every turn. Along the way, you'll encounter ancient rock paintings and remnants of traditional Amazigh dwellings, adding a historical dimension to your adventure.
+                        </p>
+                        <p class="lang-fr">
+                            Faisant de la randonnée dans ces gorges une aventure unique pour les amoureux de la nature et les randonneurs de longue distance. De plus, on y trouve une végétation diversifiée et une petite faune qui donnent à la région un caractère écologique riche. Le jeu de lumière et d'ombre sur les parois rocheuses crée des motifs en constante évolution, ce qui en fait un paradis pour les photographes et les amoureux de la nature. Les gorges abritent également plusieurs espèces d'oiseaux et de petits mammifères. La randonnée à travers les gorges nécessite un bon niveau de condition physique, mais la récompense est des vues spectaculaires à chaque détour. En chemin, vous rencontrerez d'anciennes peintures rupestres et des vestiges d'habitations amazighs traditionnelles, ajoutant une dimension historique à votre aventure.
+                        </p>
+                    </div>
+                    
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> 18/02/2026</span>
+                        <span class="read-more" onclick="toggleReadMore(2)">
+                            <span class="lang-en">Read more</span>
+                            <span class="lang-fr">Lire la suite</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 4: Tilouguite -->
+            <div class="blog-card" data-category="village">
+                <div class="blog-image">
+                    <img src="images/blog-tilouguite.jpg" alt="Tilouguite">
+                </div>
+                <div class="blog-content">
+                    <h2 class="blog-title lang-en">🏡 Tilouguite – Mountain Hub</h2>
+                    <h2 class="blog-title lang-fr">🏡 Tilouguite – Centre Montagnard</h2>
+                    
+                    <div class="blog-excerpt lang-en">
+                        Tilouguite is a mountain commune in the Azilal province, a true natural hub with its unique charm. Its territory is crossed by several watercourses and mountains like Msfrane and valleys like Ahansal.
+                    </div>
+                    <div class="blog-excerpt lang-fr">
+                        Tilouguite est une commune montagnarde de la province d'Azilal, un véritable centre naturel avec son charme unique. Son territoire est traversé par plusieurs cours d'eau et montagnes comme Msfrane et des vallées comme Ahansal.
+                    </div>
+                    
+                    <div class="blog-full" id="full-3" style="display: none;">
+                        <p class="lang-en">
+                            And it also hosts natural waterfalls and mountain trails that offer visiting opportunities in every season. Tilouguite is characterized by its authentic Amazigh character and traditional agriculture, and serves as a starting point for many tourist trails within the High Atlas mountains, whether for hiking, camping, or enjoying fresh air and pristine nature. The weekly souk is a vibrant mix of colors, sounds, and local products. The village offers a glimpse into traditional Amazigh life, with its terraced fields, stone houses, and warm hospitality. Staying overnight in Tilouguite allows you to experience the rhythm of mountain life and enjoy delicious home-cooked meals prepared with local ingredients. It's the perfect base for exploring the surrounding natural wonders.
+                        </p>
+                        <p class="lang-fr">
+                            Et abrite également des cascades naturelles et des sentiers de montagne qui offrent des opportunités de visite à chaque saison. Tilouguite se caractérise par son caractère amazigh authentique et son agriculture traditionnelle, et sert de point de départ pour de nombreux sentiers touristiques dans les montagnes du Haut Atlas, que ce soit pour la randonnée, le camping ou pour profiter de l'air frais et de la nature préservée. Le souk hebdomadaire est un mélange vibrant de couleurs, de sons et de produits locaux. Le village offre un aperçu de la vie amazighe traditionnelle, avec ses champs en terrasses, ses maisons en pierre et son hospitalité chaleureuse. Passer une nuit à Tilouguite vous permet de vivre le rythme de la vie montagnarde et de déguster de délicieux repas faits maison préparés avec des ingrédients locaux. C'est la base idéale pour explorer les merveilles naturelles des environs.
+                        </p>
+                    </div>
+                    
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> 15/02/2026</span>
+                        <span class="read-more" onclick="toggleReadMore(3)">
+                            <span class="lang-en">Read more</span>
+                            <span class="lang-fr">Lire la suite</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 5: Oued Ahansal -->
+            <div class="blog-card" data-category="valley">
+                <div class="blog-image">
+                    <img src="images/blog-oued-ahansal.jpg" alt="Oued Ahansal">
+                </div>
+                <div class="blog-content">
+                    <h2 class="blog-title lang-en">💧 Oued Ahansal – Lifeline of the Atlas</h2>
+                    <h2 class="blog-title lang-fr">💧 Oued Ahansal – Artère de l'Atlas</h2>
+                    
+                    <div class="blog-excerpt lang-en">
+                        Oued Ahansal is one of the most important mountain rivers in the High Atlas, flowing from Taghia and the surrounding mountainous areas, then passing through Zaouiat Ahansal which is known for its history and mountain nature.
+                    </div>
+                    <div class="blog-excerpt lang-fr">
+                        L'Oued Ahansal est l'une des rivières de montagne les plus importantes du Haut Atlas, coulant de Taghia et des zones montagneuses environnantes, puis traversant Zaouiat Ahansal qui est connue pour son histoire et sa nature montagnarde.
+                    </div>
+                    
+                    <div class="blog-full" id="full-4" style="display: none;">
+                        <p class="lang-en">
+                            Along its course, the river cuts through rocky mountains, forming spectacular gorges and landscapes, eventually flowing into Bin El Ouidane, one of the largest artificial lakes in Morocco and an important destination for tourism, fishing, and water sports. Oued Ahansal is characterized by its strong waters in certain periods, making it suitable for adventure activities such as rafting and mountain hiking, in addition to being a natural artery connecting the villages of the High Atlas and giving the region a distinctive environmental beauty. The river supports a rich ecosystem and provides water for irrigation, sustaining the traditional agriculture of the region. In spring, the river is at its most powerful, offering excellent conditions for rafting. The surrounding valleys are dotted with traditional villages and terraced fields, creating a landscape of extraordinary beauty.
+                        </p>
+                        <p class="lang-fr">
+                            Tout au long de son cours, la rivière traverse des montagnes rocheuses, formant des gorges et des paysages spectaculaires, pour finalement se jeter dans Bin El Ouidane, l'un des plus grands lacs artificiels du Maroc et une destination importante pour le tourisme, la pêche et les sports nautiques. L'Oued Ahansal se caractérise par ses eaux puissantes à certaines périodes, ce qui le rend adapté aux activités d'aventure telles que le rafting et la randonnée en montagne, en plus d'être une artère naturelle reliant les villages du Haut Atlas et donnant à la région une beauté environnementale distinctive. La rivière soutient un écosystème riche et fournit de l'eau pour l'irrigation, soutenant l'agriculture traditionnelle de la région. Au printemps, la rivière est à son maximum, offrant d'excellentes conditions pour le rafting. Les vallées environnantes sont parsemées de villages traditionnels et de champs en terrasses, créant un paysage d'une beauté extraordinaire.
+                        </p>
+                    </div>
+                    
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> 12/02/2026</span>
+                        <span class="read-more" onclick="toggleReadMore(4)">
+                            <span class="lang-en">Read more</span>
+                            <span class="lang-fr">Lire la suite</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER PROFESSIONNEL -->
+    <footer class="footer-pro">
+        <div class="container">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <!-- Logo + Description -->
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                        <h3>Imsfrane Cathédrale</h3>
+                    </div>
+                    <p class="footer-description">
+                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
+                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col footer-links">
+                    <h4>
+                        <span class="lang-en">Quick Links</span>
+                        <span class="lang-fr">Liens Rapides</span>
+                    </h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
+                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
+                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
+                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
+                    </ul>
+                </div>
+
+                <!-- Informations -->
+                <div class="footer-col footer-info">
+                    <h4>
+                        <span class="lang-en">Information</span>
+                        <span class="lang-fr">Informations</span>
+                    </h4>
+                    <ul>
+                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col footer-contact">
+                    <h4>
+                        <span class="lang-en">Contact Us</span>
+                        <span class="lang-fr">Contactez-nous</span>
+                    </h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:0667772551">+212 667-772551</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Middle - Stats -->
+            <div class="footer-middle">
+                <div class="stat-item">
+                    <div class="stat-number">1,868m</div>
+                    <div class="stat-label">Altitude</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+ km</div>
+                    <div class="stat-label">Sentiers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">+500</div>
+                    <div class="stat-label">Aventuriers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">⭐ 4.9</div>
+                    <div class="stat-label">Avis</div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">WhatsApp</span>
+        </a>
+        <a href="tel:0667772551" class="floating-btn phone">
+            <i class="fas fa-phone-alt"></i>
+            <span class="tooltip">Appeler</span>
+        </a>
+        <a href="booking.html" class="floating-btn booking">
+            <i class="fas fa-calendar-check"></i>
+            <span class="tooltip">Réserver</span>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // قائمة الجوال
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            mainNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Submenu toggle
+        window.toggleSubmenu = function(event) {
+            event.preventDefault();
+            const parent = event.currentTarget.closest('.has-submenu');
+            const submenu = parent.querySelector('.submenu');
+            const arrow = parent.querySelector('.arrow');
+            submenu.classList.toggle('active');
+            arrow.classList.toggle('rotated');
+        };
+
+        // إغلاق القائمة عند الضغط على الروابط
+        document.querySelectorAll('#mainNav ul li a:not(.has-submenu > a)').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) toggleMenu();
+            });
+        });
+
+        // دالة تغيير اللغة
+        window.setLanguage = function(lang) {
+            document.body.setAttribute('data-lang', lang);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.textContent.toLowerCase() === lang.toLowerCase()) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            localStorage.setItem('preferred-language', lang);
+        };
+
+        // تحميل اللغة المحفوظة
+        const savedLang = localStorage.getItem('preferred-language');
+        if (savedLang) {
+            setLanguage(savedLang);
+        } else {
+            setLanguage('en');
+        }
+
+        // Filter posts
+        window.filterPosts = function(category) {
+            const posts = document.querySelectorAll('.blog-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            posts.forEach(post => {
+                if (category === 'all' || post.dataset.category === category) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        };
+
+        // Toggle Read More / Read Less
+        window.toggleReadMore = function(index) {
+            const fullText = document.getElementById('full-' + index);
+            const button = event.currentTarget;
+            const icon = button.querySelector('i');
+            
+            if (fullText.style.display === 'none') {
+                fullText.style.display = 'block';
+                button.querySelector('.lang-en').textContent = 'Read less';
+                button.querySelector('.lang-fr').textContent = 'Lire moins';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                fullText.style.display = 'none';
+                button.querySelector('.lang-en').textContent = 'Read more';
+                button.querySelector('.lang-fr').textContent = 'Lire la suite';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        };
+    </script>
+</body>
+</html>
