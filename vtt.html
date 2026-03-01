@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
    <title>VTT dans l'Atlas - Location VTT tout suspendu | Imsfrane</title>
    <meta name="description" content="VTT dans l'Atlas. VTT tout suspendu 150 DH/jour. Parcours de 25km à travers villages berbères, forêts et montagnes. Casque et accompagnement inclus.">
-    <!-- Open Graph Meta Tags -->
+   <!-- Open Graph Meta Tags -->
 <meta property="og:title" content="VTT dans l'Atlas - Location VTT tout suspendu">
 <meta property="og:description" content="VTT dans l'Atlas. VTT tout suspendu 150 DH/jour. Parcours de 25km à travers villages et forêts. Casque et accompagnement inclus.">
 <meta property="og:image" content="https://imsfrane.com/images/vtt.jpg">
 <meta property="og:url" content="https://imsfrane.com/vtt.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Imsfrane Cathédrale">
-   <!-- Font Awesome -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -235,66 +235,157 @@
             display: block;
         }
 
-        /* Hero section */
+        /* ===== HERO PRO ===== */
         .hero {
             position: relative;
-            height: 80vh;
-            min-height: 600px;
-            background: linear-gradient(rgba(15,42,26,0.7), rgba(30,60,44,0.6)), url('images/vtt.jpg') no-repeat center center;
+            height: 90vh;
+            min-height: 700px;
+            background: linear-gradient(135deg, rgba(15,42,26,0.85) 0%, rgba(30,60,44,0.75) 100%), url('images/vtt.jpg') no-repeat center center;
             background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
+            margin-top: 0;
         }
 
-        .hero-content h1 {
-            font-size: 5rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        .hero-content {
+            max-width: 900px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out;
         }
 
-        .hero-content .location {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero-badge {
             display: inline-block;
-            background-color: #e6b12e;
+            background: linear-gradient(135deg, #e6b12e, #f4c542);
             color: #1e3c2c;
-            padding: 0.6rem 2rem;
+            padding: 0.5rem 2rem;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             margin-bottom: 1.5rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(230,177,46,0.3);
+            border: none;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        .hero-content .location {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
         .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #e6b12e, #f4c542);
-            color: #1e3c2c;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
             padding: 1rem 2.5rem;
             border-radius: 50px;
-            text-decoration: none;
             font-weight: 700;
             transition: all 0.3s;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(230,177,46,0.3);
-            border: none;
+            font-size: 1rem;
+            text-decoration: none;
             cursor: pointer;
+            border: none;
         }
 
-        .btn:hover {
+        .btn-primary {
+            background: linear-gradient(135deg, #e6b12e, #f4c542);
+            color: #1e3c2c;
+            box-shadow: 0 4px 15px rgba(230,177,46,0.3);
+        }
+
+        .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(230,177,46,0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #1e3c2c;
+            transform: translateY(-3px);
+        }
+
+        .btn i {
+            font-size: 1.1rem;
+        }
+
+        @media screen and (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+            .hero-content .location {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero {
+                min-height: 600px;
+            }
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            .hero-content .location {
+                font-size: 1.1rem;
+            }
+            .btn {
+                padding: 0.8rem 2rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .hero-actions {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .btn {
+                width: 100%;
+            }
         }
 
         /* المحتوى */
@@ -596,6 +687,14 @@
             color: #e6b12e;
         }
 
+        /* الترجمة */
+        [data-lang="en"] .lang-fr {
+            display: none !important;
+        }
+        [data-lang="fr"] .lang-en {
+            display: none !important;
+        }
+
         /* ===== FOOTER PROFESSIONNEL ===== */
         .footer-pro {
             background: linear-gradient(135deg, #0f2a1a, #1e3c2c);
@@ -810,12 +909,105 @@
             color: #e6b12e;
         }
 
-        /* الترجمة */
-        [data-lang="en"] .lang-fr {
-            display: none !important;
+        /* ===== FLOATING BUTTONS ===== */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
-        [data-lang="fr"] .lang-en {
-            display: none !important;
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #1e3c2c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1) translateY(-5px);
+        }
+
+        .floating-btn.whatsapp {
+            background-color: #25D366;
+        }
+
+        .floating-btn.phone {
+            background-color: #1e3c2c;
+        }
+
+        .floating-btn.booking {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        /* Tooltip */
+        .floating-btn .tooltip {
+            position: absolute;
+            right: 70px;
+            background-color: #1e3c2c;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            pointer-events: none;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .floating-btn.whatsapp .tooltip {
+            background-color: #25D366;
+        }
+
+        .floating-btn.phone .tooltip {
+            background-color: #1e3c2c;
+        }
+
+        .floating-btn.booking .tooltip {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        .floating-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .floating-buttons {
+                bottom: 70px;
+                right: 20px;
+                gap: 10px;
+            }
+            
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .floating-btn .tooltip {
+                display: none;
+            }
         }
 
         /* Responsive */
@@ -835,19 +1027,6 @@
         }
 
         @media screen and (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-            
-            .hero-content .location {
-                font-size: 1.2rem;
-            }
-            
-            .hero-badge {
-                font-size: 0.9rem;
-                padding: 0.5rem 1.5rem;
-            }
-            
             .section-title {
                 font-size: 2rem;
             }
@@ -903,108 +1082,7 @@
                 justify-content: center;
             }
         }
-           /* ===== FLOATING BUTTONS ===== */
-       .floating-buttons {
-       position: fixed;
-       bottom: 30px;
-       right: 30px;
-       z-index: 9999;
-       display: flex;
-       flex-direction: column;
-       gap: 15px;
-       }
-       
-       .floating-btn {
-       width: 60px;
-       height: 60px;
-       border-radius: 50%;
-       background-color: #1e3c2c;
-       color: white;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       font-size: 1.8rem;
-       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-       transition: all 0.3s ease;
-       position: relative;
-       text-decoration: none;
-       border: none;
-       cursor: pointer;
-       }
-       
-       .floating-btn:hover {
-       transform: scale(1.1) translateY(-5px);
-       }
-       
-       .floating-btn.whatsapp {
-       background-color: #25D366;
-       }
-       
-       .floating-btn.phone {
-       background-color: #1e3c2c;
-       }
-       
-       .floating-btn.booking {
-       background-color: #e6b12e;
-       color: #1e3c2c;
-       }
-       
-       /* Tooltip */
-       .floating-btn .tooltip {
-       position: absolute;
-       right: 70px;
-       background-color: #1e3c2c;
-       color: white;
-       padding: 5px 12px;
-       border-radius: 20px;
-       font-size: 0.9rem;
-       white-space: nowrap;
-       opacity: 0;
-       visibility: hidden;
-       transition: all 0.3s;
-       pointer-events: none;
-       font-weight: 500;
-       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-       }
-       
-       .floating-btn.whatsapp .tooltip {
-       background-color: #25D366;
-       }
-       
-       .floating-btn.phone .tooltip {
-       background-color: #1e3c2c;
-       }
-       
-       .floating-btn.booking .tooltip {
-       background-color: #e6b12e;
-       color: #1e3c2c;
-       }
-       
-       .floating-btn:hover .tooltip {
-       opacity: 1;
-       visibility: visible;
-       right: 75px;
-       }
-       
-       /* للشاشات الصغيرة */
-       @media screen and (max-width: 768px) {
-       .floating-buttons {
-       bottom: 70px;
-       right: 20px;
-       gap: 10px;
-       }
-       
-       .floating-btn {
-       width: 50px;
-       height: 50px;
-       font-size: 1.5rem;
-       }
-       
-       .floating-btn .tooltip {
-       display: none;
-       }
-       }
-       </style>
+    </style>
 </head>
 <body data-lang="en">
     <!-- طبقة التعتيم -->
@@ -1062,7 +1140,7 @@
         </ul>
     </nav>
 
-    <!-- Hero section -->
+    <!-- Hero section PRO -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">
@@ -1073,6 +1151,18 @@
             <h1 class="lang-fr">VTT à Imsfrane</h1>
             <div class="location">
                 <i class="fas fa-map-pin"></i> Imsfrane, Morocco <i class="fas fa-bicycle"></i>
+            </div>
+            <div class="hero-actions">
+                <a href="booking.html" class="btn btn-primary">
+                    <i class="fas fa-calendar-check"></i> 
+                    <span class="lang-en">Book Now</span>
+                    <span class="lang-fr">Réserver</span>
+                </a>
+                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20avoir%20plus%20d%27informations%20sur%20le%20VTT%20à%20Imsfrane." class="btn btn-outline" target="_blank">
+                    <i class="fab fa-whatsapp"></i> 
+                    <span class="lang-en">More info</span>
+                    <span class="lang-fr">En savoir plus</span>
+                </a>
             </div>
         </div>
     </section>
@@ -1174,7 +1264,7 @@
                     <div class="point">
                         <i class="fas fa-village"></i>
                         <h4>Anergui</h4>
-                        <p><span class="lang-en">Amazigh village</span><span class="lang-fr">Village berbère</span></p>
+                        <p><span class="lang-en">Berber village</span><span class="lang-fr">Village berbère</span></p>
                     </div>
                     <div class="point">
                         <i class="fas fa-mosque"></i>
@@ -1185,7 +1275,7 @@
 
                 <div class="guide-info">
                     <i class="fas fa-user-tie"></i> 
-                    <span class="lang-en">Accompanied by a local guide throughout the tour</span>
+                    <span class="lang-en">Accompanied by a local Berber guide throughout the tour</span>
                     <span class="lang-fr">Accompagné par un guide local berbère tout au long du parcours</span>
                 </div>
             </div>
@@ -1214,7 +1304,7 @@
             </div>
 
             <div style="text-align: center;">
-                <a href="booking.html" class="btn">
+                <a href="booking.html" class="btn btn-primary" style="display: inline-block; text-decoration: none;">
                     <i class="fas fa-calendar-check"></i> <span class="lang-en">Book Your VTT</span><span class="lang-fr">Réserver</span>
                 </a>
             </div>
@@ -1403,20 +1493,21 @@
             setLanguage('en');
         }
     </script>
+
     <!-- FLOATING BUTTONS -->
-<div class="floating-buttons">
-    <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span class="tooltip">WhatsApp</span>
-    </a>
-    <a href="tel:0667772551" class="floating-btn phone">
-        <i class="fas fa-phone-alt"></i>
-        <span class="tooltip">Appeler</span>
-    </a>
-    <a href="booking.html" class="floating-btn booking">
-        <i class="fas fa-calendar-check"></i>
-        <span class="tooltip">Réserver</span>
-    </a>
-</div>
+    <div class="floating-buttons">
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">WhatsApp</span>
+        </a>
+        <a href="tel:0667772551" class="floating-btn phone">
+            <i class="fas fa-phone-alt"></i>
+            <span class="tooltip">Appeler</span>
+        </a>
+        <a href="booking.html" class="floating-btn booking">
+            <i class="fas fa-calendar-check"></i>
+            <span class="tooltip">Réserver</span>
+        </a>
+    </div>
 </body>
 </html>
