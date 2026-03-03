@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Quad dans l'Atlas - Location Quad solo ou biplace | Imsfrane</title>
-  <meta name="description" content="Quad solo 250 DH/h, quad biplace 300 DH/h. Conduite libre dans les sentiers de l'Atlas. Casque et carburant inclus. Permis obligatoire.">
-  <!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Quad à Imsfrane - Aventure en conduite libre">
-<meta property="og:description" content="Quad solo 250 DH/h, quad biplace 300 DH/h. Conduite libre dans les sentiers de l'Atlas. Casque et carburant inclus.">
-<meta property="og:image" content="https://imsfrane.com/images/quad.jpg">
-<meta property="og:url" content="https://imsfrane.com/quad.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Imsfrane Cathédrale">
-    <!-- Font Awesome -->
+    <title>Quad dans l'Atlas - Location Quad solo ou biplace | Imsfrane</title>
+    <meta name="description" content="Quad solo 250 DH/h, quad biplace 300 DH/h. Conduite libre dans les sentiers de l'Atlas. Casque et carburant inclus. Permis obligatoire.">
+    <meta property="og:title" content="Quad à Imsfrane - Aventure en conduite libre">
+    <meta property="og:description" content="Quad solo 250 DH/h, quad biplace 300 DH/h. Conduite libre dans les sentiers de l'Atlas. Casque et carburant inclus.">
+    <meta property="og:image" content="https://imsfrane.com/images/quad-hero.jpg">
+    <meta property="og:url" content="https://imsfrane.com/quad.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Imsfrane Cathédrale">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -27,7 +25,6 @@
             color: #2c3e50;
         }
 
-        /* الهيدر */
         header {
             background-color: #1e3c2c;
             color: white;
@@ -48,15 +45,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: nowrap;
         }
 
-        /* Logo دائري */
         .logo {
             display: flex;
             align-items: center;
             gap: 1rem;
-            cursor: pointer;
             text-decoration: none;
             color: white;
         }
@@ -64,15 +58,10 @@
         .logo-img {
             width: 50px;
             height: 50px;
-            min-width: 50px;
-            border-radius: 50% !important;
-            overflow: hidden !important;
+            border-radius: 50%;
+            overflow: hidden;
             border: 3px solid #e6b12e;
             transition: transform 0.3s;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .logo:hover .logo-img {
@@ -83,26 +72,23 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
         }
 
         .logo-text h1 {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 700;
-            line-height: 1.2;
         }
 
         .logo-text span {
             color: #e6b12e;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             display: block;
         }
 
-        /* أزرار اللغة */
         .right-controls {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1rem;
         }
 
         .lang-buttons {
@@ -143,10 +129,10 @@
             height: 40px;
             border-radius: 50%;
             cursor: pointer;
-            transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: all 0.3s;
         }
 
         .menu-toggle:hover {
@@ -154,7 +140,6 @@
             color: #1e3c2c;
         }
 
-        /* القائمة الجانبية */
         nav {
             position: fixed;
             top: 0;
@@ -235,448 +220,292 @@
             display: block;
         }
 
-        /* ===== HERO PRO ===== */
-        .hero {
-            position: relative;
-            height: 90vh;
-            min-height: 700px;
-            background: linear-gradient(135deg, rgba(15,42,26,0.85) 0%, rgba(30,60,44,0.75) 100%), url('images/quad.jpg') no-repeat center center;
+        .hero-image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('images/quad.jpg') no-repeat;
             background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-position: 50% 100%;
+            position: relative;
+        }
+
+        .page-title {
             text-align: center;
-            color: white;
-            margin-top: 0;
+            margin: 3rem 0 2rem;
         }
 
-        .hero-content {
-            max-width: 900px;
-            padding: 2rem;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #e6b12e, #f4c542);
+        .page-title h1 {
+            font-size: 2.5rem;
             color: #1e3c2c;
-            padding: 0.5rem 2rem;
-            border-radius: 50px;
             font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 15px rgba(230,177,46,0.3);
-            border: none;
+            margin-bottom: 0.5rem;
         }
 
-        .hero-content h1 {
-            font-size: 4.5rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
-            line-height: 1.2;
-        }
-
-        .hero-content .location {
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-            opacity: 0.95;
-            font-weight: 300;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-
-        .hero-actions {
+        .page-title .location {
+            color: #e6b12e;
+            font-size: 1rem;
             display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .btn {
-            display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 700;
-            transition: all 0.3s;
-            font-size: 1rem;
-            text-decoration: none;
-            cursor: pointer;
-            border: none;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, #e6b12e, #f4c542);
-            color: #1e3c2c;
-            box-shadow: 0 4px 15px rgba(230,177,46,0.3);
+        .intro-text {
+            max-width: 800px;
+            margin: 2rem auto 3rem;
+            text-align: center;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(230,177,46,0.4);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-            backdrop-filter: blur(5px);
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: #1e3c2c;
-            transform: translateY(-3px);
-        }
-
-        .btn i {
+        .intro-text p {
             font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 1rem;
         }
 
-        @media screen and (max-width: 992px) {
-            .hero-content h1 {
-                font-size: 3.5rem;
-            }
-            .hero-content .location {
-                font-size: 1.2rem;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .hero {
-                min-height: 600px;
-            }
-            .hero-content h1 {
-                font-size: 2.8rem;
-            }
-            .hero-content .location {
-                font-size: 1.1rem;
-            }
-            .btn {
-                padding: 0.8rem 2rem;
-                font-size: 0.95rem;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-            .hero-actions {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-            .btn {
-                width: 100%;
-            }
-        }
-
-        /* المحتوى */
-        .page-content {
-            padding: 4rem 0;
+        .intro-icon {
+            font-size: 2rem;
+            color: #e6b12e;
+            margin-bottom: 1rem;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.8rem;
+            margin: 4rem 0 2rem;
+            font-size: 2rem;
             color: #1e3c2c;
-            position: relative;
-            font-weight: 900;
+            font-weight: 700;
         }
 
         .section-title::after {
-            content: "";
+            content: '';
             display: block;
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, transparent, #e6b12e, transparent);
-            margin: 1rem auto;
-        }
-
-        .intro-box {
-            background: white;
-            border-radius: 30px;
-            padding: 3rem;
-            margin-bottom: 4rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            text-align: center;
-            font-size: 1.3rem;
-            line-height: 1.8;
-            border-left: 5px solid #e6b12e;
-        }
-
-        .intro-box i {
-            color: #e6b12e;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        /* بطاقات الأسعار */
-        .quads-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
-            margin: 4rem 0;
+            width: 60px;
+            height: 3px;
+            background: #e6b12e;
+            margin: 0.5rem auto;
         }
 
         .quad-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
             background: white;
-            border-radius: 30px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            transition: all 0.3s;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
         .quad-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
 
         .quad-image {
-            width: 100%;
-            background: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 250px;
+            height: 100%;
+            min-height: 400px;
+            overflow: hidden;
         }
 
         .quad-image img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             display: block;
-            object-fit: contain;
-            transition: transform 0.5s;
-        }
-
-        .quad-card:hover .quad-image img {
-            transform: scale(1.02);
         }
 
         .quad-content {
             padding: 2.5rem;
-        }
-
-        .quad-header {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-            gap: 1rem;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        .quad-header h2 {
+        .quad-badge {
+            display: inline-block;
+            background: rgba(230,177,46,0.1);
+            color: #e6b12e;
+            padding: 0.3rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(230,177,46,0.3);
+            align-self: flex-start;
+        }
+
+        .quad-content h2 {
             font-size: 2.2rem;
             color: #1e3c2c;
-        }
-
-        .quad-header h2 i {
-            color: #e6b12e;
-            margin-right: 0.5rem;
-        }
-
-        .quad-price {
-            background: #e6b12e;
-            color: #1e3c2c;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
+            margin-bottom: 1rem;
             font-weight: 700;
-            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .quad-price small {
-            font-size: 1rem;
-            font-weight: 400;
+        .quad-content h2 i {
+            color: #e6b12e;
         }
 
-        .quad-description {
-            font-size: 1.2rem;
+        .quad-content p {
+            color: #555;
             line-height: 1.8;
-            color: #666;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
-        .quad-features {
+        .quad-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            background: #f9f7f3;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1e3c2c;
+            font-weight: 600;
+        }
+
+        .meta-item i {
+            color: #e6b12e;
+        }
+
+        .meta-item small {
+            font-weight: 400;
+            color: #777;
+        }
+
+        .features-list {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
         }
 
-        .feature {
+        .feature-item {
             display: flex;
             align-items: center;
             gap: 0.8rem;
             background: #f9f7f3;
-            padding: 1rem;
-            border-radius: 15px;
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
         }
 
-        .feature i {
+        .feature-item i {
             color: #e6b12e;
-            font-size: 1.2rem;
         }
 
-        .driver-info {
-            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
-            color: white;
-            border-radius: 20px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            text-align: center;
-            font-size: 1.3rem;
-        }
-
-        .driver-info i {
-            color: #e6b12e;
-            margin-right: 0.5rem;
-        }
-
-        /* بطاقة معلومات إضافية */
         .info-card {
-            background: linear-gradient(135deg, #f9f7f3, #f0e8d9);
-            border-radius: 30px;
-            padding: 3rem;
-            margin: 4rem 0;
-            text-align: center;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s;
         }
 
-        .info-card h3 {
-            font-size: 2rem;
-            color: #1e3c2c;
-            margin-bottom: 2rem;
+        .info-card:hover {
+            border-color: #e6b12e;
+            transform: translateY(-5px);
         }
 
-        .info-items {
+        .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
+            margin: 3rem 0;
         }
 
         .info-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
         }
 
         .info-item i {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #e6b12e;
-            margin-bottom: 1rem;
-        }
-
-        .info-item h4 {
-            font-size: 1.3rem;
-            color: #1e3c2c;
             margin-bottom: 0.5rem;
         }
 
-        /* معلومات الاتصال */
+        .info-item h4 {
+            color: #1e3c2c;
+            margin-bottom: 0.3rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #e6b12e;
+            color: #1e3c2c;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background: #f4c542;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(230,177,46,0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #1e3c2c;
+            color: #1e3c2c;
+        }
+
+        .btn-outline:hover {
+            background: #1e3c2c;
+            color: white;
+        }
+
         .contact-section {
             background: white;
             border-radius: 30px;
             padding: 3rem;
-            margin-top: 4rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin: 4rem 0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
         }
 
-        .contact-section h2 {
-            color: #1e3c2c;
-            margin-bottom: 2rem;
-            text-align: center;
-            font-size: 2.5rem;
-        }
-
-        .contact-details {
+        .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
         }
 
         .contact-item {
             text-align: center;
-            padding: 2rem;
-            background: #f9f7f3;
-            border-radius: 20px;
-            transition: all 0.3s;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
         .contact-item i {
-            font-size: 3rem;
+            font-size: 2rem;
             color: #e6b12e;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
-        .contact-item h3 {
-            color: #1e3c2c;
-            margin-bottom: 0.8rem;
-            font-size: 1.5rem;
-        }
-
-        .contact-item a, .contact-item p {
-            color: #2c3e50;
+        .contact-item a {
+            color: #555;
             text-decoration: none;
-            font-size: 1.2rem;
-            line-height: 1.5;
         }
 
-        .contact-item a:hover {
-            color: #e6b12e;
-        }
-
-        /* الترجمة */
-        [data-lang="en"] .lang-fr {
-            display: none !important;
-        }
-        [data-lang="fr"] .lang-en {
-            display: none !important;
-        }
-
-        /* ===== FOOTER PROFESSIONNEL ===== */
         .footer-pro {
             background: linear-gradient(135deg, #0f2a1a, #1e3c2c);
             color: white;
             padding: 4rem 0 2rem;
             margin-top: 4rem;
-            position: relative;
             border-top: 3px solid #e6b12e;
-        }
-
-        .footer-pro::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,100 L0,100 Z" fill="rgba(230,177,46,0.02)"/></svg>');
-            background-size: cover;
-            pointer-events: none;
         }
 
         .footer-top {
@@ -690,18 +519,6 @@
             color: #e6b12e;
             font-size: 1.3rem;
             margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .footer-col h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: #e6b12e;
         }
 
         .footer-logo {
@@ -716,19 +533,6 @@
             height: 60px;
             border-radius: 50%;
             border: 2px solid #e6b12e;
-            object-fit: cover;
-        }
-
-        .footer-logo h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        .footer-description {
-            line-height: 1.8;
-            opacity: 0.9;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
         }
 
         .footer-social {
@@ -745,7 +549,6 @@
             justify-content: center;
             color: white;
             transition: all 0.3s;
-            font-size: 1.2rem;
             text-decoration: none;
         }
 
@@ -753,11 +556,6 @@
         .social-icon.facebook { background: #1877f2; }
         .social-icon.tiktok { background: #000000; }
         .social-icon.whatsapp { background: #25D366; }
-
-        .social-icon:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
 
         .footer-links ul,
         .footer-info ul,
@@ -788,11 +586,6 @@
             transform: translateX(5px);
         }
 
-        .footer-links ul li a i {
-            font-size: 0.8rem;
-            color: #e6b12e;
-        }
-
         .footer-contact ul li {
             display: flex;
             align-items: flex-start;
@@ -802,21 +595,8 @@
 
         .footer-contact ul li i {
             color: #e6b12e;
-            font-size: 1.1rem;
-            margin-top: 0.2rem;
         }
 
-        .footer-contact ul li a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-contact ul li a:hover {
-            color: #e6b12e;
-        }
-
-        /* Footer Middle - Stats */
         .footer-middle {
             background: rgba(0,0,0,0.2);
             border-radius: 50px;
@@ -826,22 +606,14 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
             text-align: center;
-            border: 1px solid rgba(230,177,46,0.2);
         }
 
         .stat-item .stat-number {
             font-size: 2rem;
             font-weight: 900;
             color: #e6b12e;
-            line-height: 1.2;
         }
 
-        .stat-item .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        /* Footer Bottom */
         .footer-bottom {
             display: flex;
             justify-content: space-between;
@@ -871,7 +643,6 @@
             color: #e6b12e;
         }
 
-        /* ===== FLOATING BUTTONS ===== */
         .floating-buttons {
             position: fixed;
             bottom: 30px;
@@ -892,36 +663,24 @@
             align-items: center;
             justify-content: center;
             font-size: 1.8rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            position: relative;
             text-decoration: none;
-            border: none;
-            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            position: relative;
         }
 
         .floating-btn:hover {
             transform: scale(1.1) translateY(-5px);
         }
 
-        .floating-btn.whatsapp {
-            background-color: #25D366;
-        }
+        .floating-btn.whatsapp { background: #25D366; }
+        .floating-btn.phone { background: #1e3c2c; }
+        .floating-btn.booking { background: #e6b12e; color: #1e3c2c; }
 
-        .floating-btn.phone {
-            background-color: #1e3c2c;
-        }
-
-        .floating-btn.booking {
-            background-color: #e6b12e;
-            color: #1e3c2c;
-        }
-
-        /* Tooltip */
         .floating-btn .tooltip {
             position: absolute;
             right: 70px;
-            background-color: #1e3c2c;
+            background: #1e3c2c;
             color: white;
             padding: 5px 12px;
             border-radius: 20px;
@@ -931,22 +690,11 @@
             visibility: hidden;
             transition: all 0.3s;
             pointer-events: none;
-            font-weight: 500;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
-        .floating-btn.whatsapp .tooltip {
-            background-color: #25D366;
-        }
-
-        .floating-btn.phone .tooltip {
-            background-color: #1e3c2c;
-        }
-
-        .floating-btn.booking .tooltip {
-            background-color: #e6b12e;
-            color: #1e3c2c;
-        }
+        .floating-btn.whatsapp .tooltip { background: #25D366; }
+        .floating-btn.phone .tooltip { background: #1e3c2c; }
+        .floating-btn.booking .tooltip { background: #e6b12e; color: #1e3c2c; }
 
         .floating-btn:hover .tooltip {
             opacity: 1;
@@ -954,103 +702,69 @@
             right: 75px;
         }
 
-        @media screen and (max-width: 768px) {
+        @media (max-width: 768px) {
             .floating-buttons {
-                bottom: 70px;
+                bottom: 20px;
                 right: 20px;
-                gap: 10px;
             }
-            
             .floating-btn {
                 width: 50px;
                 height: 50px;
                 font-size: 1.5rem;
             }
-            
-            .floating-btn .tooltip {
-                display: none;
-            }
+            .floating-btn .tooltip { display: none; }
         }
 
-        /* Responsive */
-        @media screen and (max-width: 992px) {
-            .hero-content h1 {
-                font-size: 4rem;
-            }
-            
-            .hero-content .location {
-                font-size: 1.5rem;
-            }
-            
-            .quads-grid {
+        [data-lang="en"] .lang-fr { display: none !important; }
+        [data-lang="fr"] .lang-en { display: none !important; }
+
+        @media (max-width: 992px) {
+            .quad-card {
                 grid-template-columns: 1fr;
             }
-            
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .footer-top {
                 grid-template-columns: 1fr 1fr;
-                gap: 2rem;
             }
         }
 
-        @media screen and (max-width: 768px) {
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .intro-box {
-                padding: 1.5rem;
-                font-size: 1.1rem;
-            }
-            
-            .quad-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .quad-header h2 {
-                font-size: 1.8rem;
-            }
-            
-            .quad-price {
-                font-size: 1.5rem;
-            }
-            
-            .quad-features {
+        @media (max-width: 768px) {
+            .info-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .info-items {
+            .contact-grid {
                 grid-template-columns: 1fr;
             }
-            
             .footer-top {
                 grid-template-columns: 1fr;
             }
-            
             .footer-middle {
                 grid-template-columns: repeat(2, 1fr);
-                border-radius: 20px;
-                padding: 1.5rem;
             }
-            
-            .footer-bottom {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
+            .hero-image {
+                height: 350px;
             }
-            
-            .footer-bottom-links {
-                flex-wrap: wrap;
-                justify-content: center;
+        }
+
+        @media (max-width: 480px) {
+            .footer-middle {
+                grid-template-columns: 1fr;
             }
+        }
+        #img-quad1 {
+            object-position: 50% 50%;
+        }
+        #img-quad2 {
+            object-position: 50% 50%;
         }
     </style>
 </head>
 <body data-lang="en">
-    <!-- طبقة التعتيم -->
+
     <div class="overlay" id="overlay"></div>
 
-    <!-- الهيدر -->
     <header>
         <div class="container header-content">
             <a href="index.html" class="logo">
@@ -1076,7 +790,6 @@
         </div>
     </header>
 
-    <!-- القائمة الجانبية -->
     <nav id="mainNav">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
@@ -1102,165 +815,161 @@
         </ul>
     </nav>
 
-    <!-- Hero section PRO -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="lang-en">QUAD</span>
-                <span class="lang-fr">QUAD</span>
-            </div>
+    <div class="hero-image"></div>
+
+    <div class="container">
+        <div class="page-title">
             <h1 class="lang-en">Quad Adventure in Imsfrane</h1>
             <h1 class="lang-fr">Aventure en Quad à Imsfrane</h1>
             <div class="location">
-                <i class="fas fa-map-pin"></i> Imsfrane, Morocco <i class="fas fa-motorcycle"></i>
+                <i class="fas fa-map-pin"></i> Imsfrane, Morocco
             </div>
-            <div class="hero-actions">
-                <a href="booking.html" class="btn btn-primary">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-icon">
+                <i class="fas fa-motorcycle"></i>
+            </div>
+            <p class="lang-en">Rent a quad and explore the beautiful landscapes of Imsfrane at your own pace. Self-drive adventure for an unforgettable experience through mountains, valleys and Berber villages.</p>
+            <p class="lang-fr">Louez un quad et explorez les magnifiques paysages d'Imsfrane à votre rythme. Aventure en conduite libre pour une expérience inoubliable à travers montagnes, vallées et villages berbères.</p>
+        </div>
+    </div>
+
+    <!-- QUAD SOLO -->
+    <div class="container">
+        <div class="quad-card">
+            <div class="quad-image">
+                <img src="images/quad-solo.jpg" alt="Quad Solo" id="img-quad1">
+            </div>
+            <div class="quad-content">
+                <span class="quad-badge">SOLO</span>
+                <h2>
+                    <i class="fas fa-user"></i> 
+                    <span class="lang-en">Quad Solo</span>
+                    <span class="lang-fr">Quad Seul</span>
+                </h2>
+                <p class="lang-en">For solo adventurers. Drive your own quad and explore the trails at your own pace. Perfect for those seeking independence and adrenaline.</p>
+                <p class="lang-fr">Pour les aventuriers solos. Conduisez votre propre quad et explorez les sentiers à votre rythme. Parfait pour ceux qui recherchent l'indépendance et l'adrénaline.</p>
+                
+                <div class="quad-meta">
+                    <div class="meta-item"><i class="fas fa-clock"></i> <span class="lang-en">1 hour</span><span class="lang-fr">1 heure</span></div>
+                    <div class="meta-item"><i class="fas fa-tag"></i> 250 DH <small>/h</small></div>
+                </div>
+
+                <div class="features-list">
+                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Self-drive</span><span class="lang-fr">Conduite libre</span></div>
+                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Helmet included</span><span class="lang-fr">Casque inclus</span></div>
+                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Fuel included</span><span class="lang-fr">Carburant inclus</span></div>
+                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Safety briefing</span><span class="lang-fr">Instructions de sécurité</span></div>
+                </div>
+
+                <a href="booking.html" class="btn">
                     <i class="fas fa-calendar-check"></i> 
-                    <span class="lang-en">Book Now</span>
-                    <span class="lang-fr">Réserver</span>
-                </a>
-                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20avoir%20plus%20d%27informations%20sur%20le%20Quad%20à%20Imsfrane." class="btn btn-outline" target="_blank">
-                    <i class="fab fa-whatsapp"></i> 
-                    <span class="lang-en">More info</span>
-                    <span class="lang-fr">En savoir plus</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- محتوى الصفحة -->
-    <div class="container page-content">
-        <!-- Introduction -->
-        <div class="intro-box">
-            <i class="fas fa-motorcycle"></i>
-            <p><span class="lang-en">Rent a quad and explore the beautiful landscapes of Imsfrane at your own pace. Self-drive adventure for an unforgettable experience.</span><span class="lang-fr">Louez un quad et explorez les magnifiques paysages d'Imsfrane à votre rythme. Aventure en conduite libre pour une expérience inoubliable.</span></p>
-        </div>
-
-        <!-- Quad Options -->
-        <div class="quads-grid">
-            <!-- Quad Solo -->
-            <div class="quad-card">
-                <div class="quad-image">
-                    <img src="images/quad-solo.jpg" alt="Quad Solo">
-                </div>
-                <div class="quad-content">
-                    <div class="quad-header">
-                        <h2><i class="fas fa-user"></i> <span class="lang-en">Quad Solo</span><span class="lang-fr">Quad Seul</span></h2>
-                        <div class="quad-price">250 <small>DH/<span class="lang-en">hour</span><span class="lang-fr">heure</span></small></div>
-                    </div>
-                    
-                    <p class="quad-description">
-                        <span class="lang-en">For solo adventurers. Drive your own quad and explore the trails at your own pace.</span>
-                        <span class="lang-fr">Pour les aventuriers solos. Conduisez votre propre quad et explorez les sentiers à votre rythme.</span>
-                    </p>
-
-                    <div class="quad-features">
-                        <div class="feature"><i class="fas fa-check-circle"></i> <span class="lang-en">Self-drive</span><span class="lang-fr">Conduite libre</span></div>
-                        <div class="feature"><i class="fas fa-check-circle"></i> <span class="lang-en">Helmet included</span><span class="lang-fr">Casque inclus</span></div>
-                        <div class="feature"><i class="fas fa-check-circle"></i> <span class="lang-en">Fuel included</span><span class="lang-fr">Carburant inclus</span></div>
-                        <div class="feature"><i class="fas fa-check-circle"></i> <span class="lang-en">Safety briefing</span><span class="lang-fr">Instructions de sécurité</span></div>
-                    </div>
-
-                    <div class="driver-info">
-                        <i class="fas fa-user-check"></i> <span class="lang-en">Drive it yourself!</span><span class="lang-fr">Conduisez-le vous-même !</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quad Biplace -->
-            <div class="quad-card">
-                <div class="quad-image">
-                    <img src="images/quad-biplace.jpg" alt="Quad Biplace">
-                </div>
-                <div class="quad-content">
-                    <div class="quad-header">
-                        <h2><i class="fas fa-user-friends"></i> <span class="lang-en">Quad Biplace</span><span class="lang-fr">Quad Biplace</span></h2>
-                        <div class="quad-price">300 <small>DH/<span class="lang-en">hour</span><span class="lang-fr">heure</span></small></div>
-                    </div>
-                    
-                    <p class="quad-description">
-                        <span class="lang-en">For two people. Share the adventure with a friend or partner on one quad.</span>
-                        <span class="lang-fr">Pour deux personnes. Partagez l'aventure avec un ami ou un partenaire sur un seul quad.</span>
-                    </p>
-
-                    <div class="quad-features">
-                        <div class="feature"><i class="fas fa-check-circle"></i> <span class="lang-en">Self-drive</span><span class="lang-fr">Conduite libre</span></div>
-                        <div class="feature"><i class="fas fa-check-circle"></i> <span class="lang-en">Two helmets</span><span class="lang-fr">Deux casques</span></div>
-                        <div class="feature"><i class="fas fa-check-circle"></i> <span class="lang-en">Fuel included</span><span class="lang-fr">Carburant inclus</span></div>
-                        <div class="feature"><i class="fas fa-check-circle"></i> <span class="lang-en">Safety briefing</span><span class="lang-fr">Instructions de sécurité</span></div>
-                    </div>
-
-                    <div class="driver-info">
-                        <i class="fas fa-users"></i> <span class="lang-en">Perfect for couples or friends!</span><span class="lang-fr">Parfait pour les couples ou amis !</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Additional Info -->
-        <div class="info-card">
-            <h3><i class="fas fa-info-circle"></i> <span class="lang-en">Important Information</span><span class="lang-fr">Informations importantes</span></h3>
-            <div class="info-items">
-                <div class="info-item">
-                    <i class="fas fa-id-card"></i>
-                    <h4><span class="lang-en">License</span><span class="lang-fr">Permis</span></h4>
-                    <p><span class="lang-en">Driver's license required</span><span class="lang-fr">Permis de conduire obligatoire</span></p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <h4><span class="lang-en">Minimum age</span><span class="lang-fr">Âge minimum</span></h4>
-                    <p>18 <span class="lang-en">years</span><span class="lang-fr">ans</span></p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4><span class="lang-en">Safety</span><span class="lang-fr">Sécurité</span></h4>
-                    <p><span class="lang-en">Helmet mandatory</span><span class="lang-fr">Casque obligatoire</span></p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <h4><span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></h4>
-                    <p><span class="lang-en">24h in advance</span><span class="lang-fr">24h à l'avance</span></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Booking & Contact -->
-        <div class="contact-section">
-            <h2>📌 <span class="lang-en">Booking & Contact</span><span class="lang-fr">Réservation & Contact</span></h2>
-            
-            <div class="contact-details">
-                <div class="contact-item">
-                    <i class="fas fa-globe"></i>
-                    <h3><span class="lang-en">Website</span><span class="lang-fr">Site Web</span></h3>
-                    <a href="https://imsfrane.com" target="_blank">imsfrane.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3><span class="lang-en">Location</span><span class="lang-fr">Emplacement</span></h3>
-                    <p>Imsfrane, Azilal<br>Morocco</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <h3><span class="lang-en">Phone / WhatsApp</span><span class="lang-fr">Téléphone / WhatsApp</span></h3>
-                    <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
-                </div>
-            </div>
-
-            <div style="text-align: center;">
-                <a href="booking.html" class="btn btn-primary" style="display: inline-block; text-decoration: none;">
-                    <i class="fas fa-calendar-check"></i> <span class="lang-en">Book Your Quad</span><span class="lang-fr">Réserver</span>
+                    <span class="lang-en">Book now</span><span class="lang-fr">Réserver</span>
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- FOOTER PROFESSIONNEL -->
+    <!-- QUAD BIPLACE -->
+    <div class="container">
+        <div class="quad-card">
+            <div class="quad-image">
+                <img src="images/quad-biplace.jpg" alt="Quad Biplace" id="img-quad2">
+            </div>
+            <div class="quad-content">
+                <span class="quad-badge">BIPLACE</span>
+                <h2>
+                    <i class="fas fa-user-friends"></i> 
+                    <span class="lang-en">Quad Biplace</span>
+                    <span class="lang-fr">Quad Biplace</span>
+                </h2>
+                <p class="lang-en">For two people. Share the adventure with a friend or partner on one quad. Double the fun, double the memories.</p>
+                <p class="lang-fr">Pour deux personnes. Partagez l'aventure avec un ami ou un partenaire sur un seul quad. Deux fois plus de fun, deux fois plus de souvenirs.</p>
+                
+                <div class="quad-meta">
+                    <div class="meta-item"><i class="fas fa-clock"></i> <span class="lang-en">1 hour</span><span class="lang-fr">1 heure</span></div>
+                    <div class="meta-item"><i class="fas fa-tag"></i> 300 DH <small>/h</small></div>
+                </div>
+
+                <div class="features-list">
+                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Self-drive</span><span class="lang-fr">Conduite libre</span></div>
+                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Two helmets</span><span class="lang-fr">Deux casques</span></div>
+                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Fuel included</span><span class="lang-fr">Carburant inclus</span></div>
+                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Safety briefing</span><span class="lang-fr">Instructions de sécurité</span></div>
+                </div>
+
+                <a href="booking.html" class="btn">
+                    <i class="fas fa-calendar-check"></i> 
+                    <span class="lang-en">Book now</span><span class="lang-fr">Réserver</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+  <!-- INFO PRATIQUES -->
+<div class="container">
+    <h2 class="section-title">
+        <span class="lang-en">Practical Information</span>
+        <span class="lang-fr">Informations pratiques</span>
+    </h2>
+    
+    <div class="info-grid">
+        <div class="info-item">
+            <i class="fas fa-id-card"></i>
+            <h4><span class="lang-en">License</span><span class="lang-fr">Permis</span></h4>
+            <p><span class="lang-en">License not mandatory but recommended</span><span class="lang-fr">Permis non obligatoire mais recommandé</span></p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <h4><span class="lang-en">Minimum age</span><span class="lang-fr">Âge minimum</span></h4>
+            <p>18 <span class="lang-en">years</span><span class="lang-fr">ans</span></p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-shield-alt"></i>
+            <h4><span class="lang-en">Safety</span><span class="lang-fr">Sécurité</span></h4>
+            <p><span class="lang-en">Helmet mandatory</span><span class="lang-fr">Casque obligatoire</span></p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <h4><span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></h4>
+            <p><span class="lang-en">24h in advance</span><span class="lang-fr">24h à l'avance</span></p>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="contact-section">
+            <h2 class="section-title" style="margin-top: 0;">
+                <span class="lang-en">Book Your Quad</span>
+                <span class="lang-fr">Réserver Votre Quad</span>
+            </h2>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <h4>Website</h4>
+                    <a href="https://imsfrane.com" target="_blank">imsfrane.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4><span class="lang-en">Location</span><span class="lang-fr">Emplacement</span></h4>
+                    <p>Imsfrane, Azilal, Morocco</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer-pro">
         <div class="container">
-            <!-- Footer Top -->
             <div class="footer-top">
-                <!-- Logo + Description -->
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
                         <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
@@ -1271,27 +980,15 @@
                         <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- Quick Links -->
                 <div class="footer-col footer-links">
-                    <h4>
-                        <span class="lang-en">Quick Links</span>
-                        <span class="lang-fr">Liens Rapides</span>
-                    </h4>
+                    <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
                     <ul>
                         <li><a href="index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
                         <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
@@ -1302,12 +999,8 @@
                     </ul>
                 </div>
 
-                <!-- Informations -->
                 <div class="footer-col footer-info">
-                    <h4>
-                        <span class="lang-en">Information</span>
-                        <span class="lang-fr">Informations</span>
-                    </h4>
+                    <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
                     <ul>
                         <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
                         <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
@@ -1318,54 +1011,24 @@
                     </ul>
                 </div>
 
-                <!-- Contact -->
                 <div class="footer-col footer-contact">
-                    <h4>
-                        <span class="lang-en">Contact Us</span>
-                        <span class="lang-fr">Contactez-nous</span>
-                    </h4>
+                    <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
                     <ul>
-                        <li>
-                            <i class="fas fa-phone-alt"></i>
-                            <a href="tel:0667772551">+212 667-772551</a>
-                        </li>
-                        <li>
-                            <i class="fab fa-whatsapp"></i>
-                            <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span>
-                        </li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Footer Middle - Stats -->
             <div class="footer-middle">
-                <div class="stat-item">
-                    <div class="stat-number">1,868m</div>
-                    <div class="stat-label">Altitude</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">50+ km</div>
-                    <div class="stat-label">Sentiers</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">+500</div>
-                    <div class="stat-label">Aventuriers</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">⭐ 4.9</div>
-                    <div class="stat-label">Avis</div>
-                </div>
+                <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
+                <div class="stat-item"><div class="stat-number">50+ km</div><div class="stat-label">Sentiers</div></div>
+                <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
+                <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
             </div>
 
-            <!-- Footer Bottom -->
             <div class="footer-bottom">
                 <div class="copyright">
                     <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
@@ -1379,9 +1042,22 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">WhatsApp</span>
+        </a>
+        <a href="tel:0667772551" class="floating-btn phone">
+            <i class="fas fa-phone-alt"></i>
+            <span class="tooltip">Appeler</span>
+        </a>
+        <a href="booking.html" class="floating-btn booking">
+            <i class="fas fa-calendar-check"></i>
+            <span class="tooltip">Réserver</span>
+        </a>
+    </div>
+
     <script>
-        // قائمة الجوال
         const menuToggle = document.getElementById('menuToggle');
         const mainNav = document.getElementById('mainNav');
         const overlay = document.getElementById('overlay');
@@ -1397,7 +1073,6 @@
         menuToggle.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', toggleMenu);
 
-        // Submenu toggle
         window.toggleSubmenu = function(event) {
             event.preventDefault();
             const parent = event.currentTarget.closest('.has-submenu');
@@ -1407,29 +1082,20 @@
             arrow.classList.toggle('rotated');
         };
 
-        // إغلاق القائمة عند الضغط على الروابط
         document.querySelectorAll('#mainNav ul li a:not(.has-submenu > a)').forEach(link => {
             link.addEventListener('click', () => {
                 if (mainNav.classList.contains('active')) toggleMenu();
             });
         });
 
-        // دالة تغيير اللغة
         window.setLanguage = function(lang) {
             document.body.setAttribute('data-lang', lang);
-            
             document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.textContent.toLowerCase() === lang.toLowerCase()) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang.toLowerCase());
             });
-
             localStorage.setItem('preferred-language', lang);
         };
 
-        // تحميل اللغة المحفوظة
         const savedLang = localStorage.getItem('preferred-language');
         if (savedLang) {
             setLanguage(savedLang);
@@ -1437,21 +1103,5 @@
             setLanguage('en');
         }
     </script>
-
-    <!-- FLOATING BUTTONS -->
-    <div class="floating-buttons">
-        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-            <span class="tooltip">WhatsApp</span>
-        </a>
-        <a href="tel:0667772551" class="floating-btn phone">
-            <i class="fas fa-phone-alt"></i>
-            <span class="tooltip">Appeler</span>
-        </a>
-        <a href="booking.html" class="floating-btn booking">
-            <i class="fas fa-calendar-check"></i>
-            <span class="tooltip">Réserver</span>
-        </a>
-    </div>
 </body>
 </html>
