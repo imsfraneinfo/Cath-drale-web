@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-   <title>Rafting dans l'Atlas - Oued Ahansal | Imsfrane Cathédrale</title>
-   <meta name="description" content="Rafting sur l'Oued Ahansal et Oued Melloul. Parcours 12km, 30km, 50km. Encadrement par guides locaux. Réservez votre descente.">
-   <!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Rafting à Imsfrane - Descente de l'Oued Ahansal">
-<meta property="og:description" content="Rafting sur l'Oued Ahansal. Parcours 12km, 30km et 50km avec guides professionnels. Vivez une aventure inoubliable dans l'Atlas.">
-<meta property="og:image" content="https://imsfrane.com/images/rafting.jpeg">
-<meta property="og:url" content="https://imsfrane.com/rafting.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Imsfrane Cathédrale">
+    <title>Rafting dans l'Atlas - Oued Ahansal | Imsfrane Cathédrale</title>
+    <meta name="description" content="Rafting sur l'Oued Ahansal et Oued Melloul. Parcours 12km, 30km, 50km. Encadrement par guides locaux. Réservez votre descente.">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Rafting à Imsfrane - Descente de l'Oued Ahansal">
+    <meta property="og:description" content="Rafting sur l'Oued Ahansal. Parcours 12km, 30km et 50km avec guides professionnels. Vivez une aventure inoubliable dans l'Atlas.">
+    <meta property="og:image" content="https://imsfrane.com/images/14.jpeg">
+    <meta property="og:url" content="https://imsfrane.com/rafting.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Imsfrane Cathédrale">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -27,7 +27,7 @@
             color: #2c3e50;
         }
 
-        /* الهيدر */
+        /* ===== HEADER ===== */
         header {
             background-color: #1e3c2c;
             color: white;
@@ -48,15 +48,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: nowrap;
         }
 
-        /* Logo دائري */
         .logo {
             display: flex;
             align-items: center;
             gap: 1rem;
-            cursor: pointer;
             text-decoration: none;
             color: white;
         }
@@ -64,15 +61,10 @@
         .logo-img {
             width: 50px;
             height: 50px;
-            min-width: 50px;
-            border-radius: 50% !important;
-            overflow: hidden !important;
+            border-radius: 50%;
+            overflow: hidden;
             border: 3px solid #e6b12e;
             transition: transform 0.3s;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .logo:hover .logo-img {
@@ -83,26 +75,23 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
         }
 
         .logo-text h1 {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 700;
-            line-height: 1.2;
         }
 
         .logo-text span {
             color: #e6b12e;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             display: block;
         }
 
-        /* أزرار اللغة */
         .right-controls {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1rem;
         }
 
         .lang-buttons {
@@ -143,10 +132,10 @@
             height: 40px;
             border-radius: 50%;
             cursor: pointer;
-            transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: all 0.3s;
         }
 
         .menu-toggle:hover {
@@ -154,521 +143,280 @@
             color: #1e3c2c;
         }
 
-        /* القائمة الجانبية */
-        nav {
-            position: fixed;
-            top: 0;
-            right: -300px;
-            width: 280px;
-            height: 100vh;
-            background-color: #1e3c2c;
-            padding: 5rem 1.5rem 2rem;
-            transition: right 0.3s ease;
-            z-index: 999;
-            overflow-y: auto;
-        }
-
-        nav.active {
-            right: 0;
-        }
-
-        nav ul {
-            list-style: none;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #e6b12e;
-            padding-left: 10px;
-        }
-
-        .submenu {
-            display: none;
-            list-style: none;
-            padding-right: 1.5rem;
-            background: rgba(0,0,0,0.2);
-            border-radius: 10px;
-        }
-
-        .submenu.active {
-            display: block;
-        }
-
-        .has-submenu > a {
-            display: flex;
-            justify-content: space-between;
-            cursor: pointer;
-        }
-
-        .arrow {
-            transition: transform 0.3s;
-        }
-
-        .arrow.rotated {
-            transform: rotate(90deg);
-            color: #e6b12e;
-        }
-
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
+        /* ===== HERO ===== */
+        .hero-image {
             width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            z-index: 998;
-        }
-
-        .overlay.active {
-            display: block;
-        }
-
-        /* ===== HERO PRO ===== */
-        .hero {
+            height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('images/14.jpeg') center/cover no-repeat;
             position: relative;
-            height: 90vh;
-            min-height: 700px;
-            background: linear-gradient(135deg, rgba(15,42,26,0.85) 0%, rgba(30,60,44,0.75) 100%), url('images/rafting.jpeg') no-repeat center center;
-            background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        }
+
+        .page-title {
             text-align: center;
-            color: white;
-            margin-top: 0;
+            margin: 3rem 0 4rem;
         }
 
-        .hero-content {
-            max-width: 900px;
-            padding: 2rem;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #e6b12e, #f4c542);
+        .page-title h1 {
+            font-size: 3rem;
             color: #1e3c2c;
-            padding: 0.5rem 2rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 15px rgba(230,177,46,0.3);
-            border: none;
-        }
-
-        .hero-content h1 {
-            font-size: 4.5rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
-            line-height: 1.2;
-        }
-
-        .hero-content .location {
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-            opacity: 0.95;
-            font-weight: 300;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 700;
-            transition: all 0.3s;
-            font-size: 1rem;
-            text-decoration: none;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #e6b12e, #f4c542);
-            color: #1e3c2c;
-            box-shadow: 0 4px 15px rgba(230,177,46,0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(230,177,46,0.4);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-            backdrop-filter: blur(5px);
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: #1e3c2c;
-            transform: translateY(-3px);
-        }
-
-        .btn i {
-            font-size: 1.1rem;
-        }
-
-        @media screen and (max-width: 992px) {
-            .hero-content h1 {
-                font-size: 3.5rem;
-            }
-            .hero-content .location {
-                font-size: 1.2rem;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .hero {
-                min-height: 600px;
-            }
-            .hero-content h1 {
-                font-size: 2.8rem;
-            }
-            .hero-content .location {
-                font-size: 1.1rem;
-            }
-            .btn {
-                padding: 0.8rem 2rem;
-                font-size: 0.95rem;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-            .hero-actions {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-            .btn {
-                width: 100%;
-            }
-        }
-
-        /* المحتوى */
-        .page-content {
-            padding: 4rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.8rem;
-            color: #1e3c2c;
-            position: relative;
-            font-weight: 900;
-        }
-
-        .section-title::after {
-            content: "";
-            display: block;
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, transparent, #e6b12e, transparent);
-            margin: 1rem auto;
-        }
-
-        .overview-box {
-            background: white;
-            border-radius: 30px;
-            padding: 3rem;
-            margin-bottom: 4rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            text-align: center;
-            font-size: 1.3rem;
-            line-height: 1.8;
-            border-left: 5px solid #e6b12e;
-        }
-
-        /* بطاقات المسافات */
-        .routes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 4rem;
-        }
-
-        .route-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-        }
-
-        .route-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
-        }
-
-        .route-header {
-            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .route-header i {
-            font-size: 3.5rem;
-            color: #e6b12e;
-            margin-bottom: 1rem;
-        }
-
-        .route-header h3 {
-            font-size: 2rem;
+            font-weight: 800;
             margin-bottom: 0.5rem;
         }
 
-        .route-distance {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #e6b12e;
-        }
-
-        .route-body {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .route-description {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .route-price {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #1e3c2c;
-            margin-bottom: 1rem;
-        }
-
-        .route-price small {
-            font-size: 1rem;
-            font-weight: 400;
-            color: #999;
-        }
-
-        .route-badge {
-            display: inline-block;
-            background-color: #e6b12e;
-            color: #1e3c2c;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        /* Activities & Safety */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2.5rem;
-            margin: 4rem 0;
-        }
-
-        .info-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .info-card h2 {
-            color: #1e3c2c;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            border-bottom: 3px solid #e6b12e;
-            padding-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .info-card h2 i {
-            color: #e6b12e;
-        }
-
-        .info-card ul {
-            list-style: none;
-        }
-
-        .info-card ul li {
-            margin-bottom: 1.2rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            font-size: 1.1rem;
-            line-height: 1.5;
-        }
-
-        .info-card ul li i {
+        .page-title .location {
             color: #e6b12e;
             font-size: 1.2rem;
-            margin-top: 0.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
         }
 
-        /* بطاقة البيت المفروش */
-        .house-card {
-            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
-            color: white;
-            border-radius: 30px;
-            padding: 3rem;
-            margin: 4rem 0;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        /* ===== BLOC IMAGE + TEXTE ===== */
+        .route-block {
+            margin-bottom: 4rem;
         }
 
-        .house-card h2 {
-            font-size: 2.5rem;
+        .route-image {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
             margin-bottom: 1.5rem;
         }
 
-        .house-card h2 i {
+        .route-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            display: block;
+        }
+
+        .route-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .route-location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #e6b12e;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .route-location i {
+            font-size: 1rem;
+        }
+
+        .route-content h2 {
+            font-size: 2.5rem;
+            color: #1e3c2c;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .route-content h2 i {
             color: #e6b12e;
             margin-right: 0.5rem;
         }
 
-        .house-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 2.5rem 0;
+        .route-content p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
         }
 
-        .house-features span {
+        .route-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1e3c2c;
+            font-weight: 600;
+        }
+
+        .meta-item i {
+            color: #e6b12e;
+            font-size: 1.1rem;
+        }
+
+        .meta-item small {
+            font-weight: 400;
+            color: #777;
+            margin-left: 0.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #e6b12e;
+            color: #1e3c2c;
+            padding: 0.9rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background: #f4c542;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(230,177,46,0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #1e3c2c;
+            color: #1e3c2c;
+        }
+
+        .btn-outline:hover {
+            background: #1e3c2c;
+            color: white;
+        }
+
+        .btn i {
+            margin-right: 0.5rem;
+        }
+
+        /* ===== EXPEDITION DETAILS SECTION ===== */
+        .expedition-title {
+            font-size: 2.5rem;
+            color: #1e3c2c;
+            margin: 5rem 0 3rem;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .expedition-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .expedition-item {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s;
+        }
+
+        .expedition-item:hover {
+            border-color: #e6b12e;
+            transform: translateY(-5px);
+        }
+
+        .expedition-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(230,177,46,0.1);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.8rem;
-            font-size: 1.2rem;
-            background: rgba(255,255,255,0.1);
-            padding: 1rem;
-            border-radius: 50px;
-        }
-
-        .house-features i {
-            color: #e6b12e;
             font-size: 1.5rem;
+            color: #e6b12e;
+            margin-bottom: 1.5rem;
         }
 
-        .house-request {
-            background: rgba(230,177,46,0.2);
-            padding: 1rem 2rem;
+        .expedition-item h3 {
+            font-size: 1.3rem;
+            color: #1e3c2c;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .expedition-item ul {
+            list-style: none;
+        }
+
+        .expedition-item li {
+            margin: 0.6rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .expedition-item li i {
+            color: #e6b12e;
+            font-size: 0.9rem;
+        }
+
+        .note-box {
+            background: #f9f7f3;
+            border: 2px dashed #e6b12e;
             border-radius: 50px;
-            display: inline-block;
-            font-size: 1.1rem;
-            border: 2px solid #e6b12e;
+            padding: 1.2rem 2rem;
+            text-align: center;
+            margin: 2rem 0 4rem;
+            font-weight: 500;
+            color: #1e3c2c;
         }
 
-        /* معلومات الاتصال */
+        .note-box i {
+            color: #e6b12e;
+            margin-right: 0.5rem;
+        }
+
+        /* ===== CONTACT SECTION ===== */
         .contact-section {
             background: white;
             border-radius: 30px;
             padding: 3rem;
-            margin-top: 4rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin: 4rem 0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
         }
 
-        .contact-section h2 {
-            color: #1e3c2c;
-            margin-bottom: 2rem;
-            text-align: center;
-            font-size: 2.5rem;
-        }
-
-        .contact-details {
+        .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
         }
 
         .contact-item {
             text-align: center;
-            padding: 2rem;
-            background: #f9f7f3;
-            border-radius: 20px;
-            transition: all 0.3s;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
         .contact-item i {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: #e6b12e;
-            margin-bottom: 1rem;
-        }
-
-        .contact-item h3 {
-            color: #1e3c2c;
             margin-bottom: 0.8rem;
-            font-size: 1.5rem;
         }
 
-        .contact-item a, .contact-item p {
-            color: #2c3e50;
+        .contact-item h4 {
+            color: #1e3c2c;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-item a {
+            color: #555;
             text-decoration: none;
-            font-size: 1.2rem;
-            line-height: 1.5;
+            transition: color 0.3s;
         }
 
         .contact-item a:hover {
             color: #e6b12e;
-        }
-
-        /* الترجمة */
-        [data-lang="en"] .lang-fr {
-            display: none !important;
-        }
-        [data-lang="fr"] .lang-en {
-            display: none !important;
         }
 
         /* ===== FOOTER PROFESSIONNEL ===== */
@@ -830,7 +578,6 @@
             color: #e6b12e;
         }
 
-        /* Footer Middle - Stats */
         .footer-middle {
             background: rgba(0,0,0,0.2);
             border-radius: 50px;
@@ -855,7 +602,6 @@
             opacity: 0.8;
         }
 
-        /* Footer Bottom */
         .footer-bottom {
             display: flex;
             justify-content: space-between;
@@ -885,7 +631,7 @@
             color: #e6b12e;
         }
 
-        /* ===== FLOATING BUTTONS ===== */
+        /* ===== FLOATING BUTTONS - نسخة index ===== */
         .floating-buttons {
             position: fixed;
             bottom: 30px;
@@ -968,6 +714,7 @@
             right: 75px;
         }
 
+        /* للشاشات الصغيرة */
         @media screen and (max-width: 768px) {
             .floating-buttons {
                 bottom: 70px;
@@ -986,33 +733,40 @@
             }
         }
 
-        /* Responsive */
-        @media screen and (max-width: 992px) {
-            .hero-content h1 {
-                font-size: 4rem;
-            }
-            
-            .hero-content .location {
-                font-size: 1.5rem;
+        /* ===== LANGUAGE ORDER: EN, FR ===== */
+        [data-lang="en"] .lang-fr {
+            display: none !important;
+        }
+        [data-lang="fr"] .lang-en {
+            display: none !important;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .expedition-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .footer-top {
                 grid-template-columns: 1fr 1fr;
                 gap: 2rem;
             }
-        }
-
-        @media screen and (max-width: 768px) {
-            .section-title {
+            
+            .page-title h1 {
+                font-size: 2.5rem;
+            }
+            
+            .route-content h2 {
                 font-size: 2rem;
             }
-            
-            .overview-box {
-                padding: 1.5rem;
-                font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .expedition-grid {
+                grid-template-columns: 1fr;
             }
             
-            .info-grid {
+            .contact-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -1036,40 +790,38 @@
                 flex-wrap: wrap;
                 justify-content: center;
             }
+            
+            .page-title h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-image {
+                height: 350px;
+            }
+            
+            .route-image {
+                height: 300px;
+            }
+            
+            .route-meta {
+                gap: 1rem;
+            }
         }
 
-        @media screen and (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
+        @media (max-width: 480px) {
+            .footer-middle {
+                grid-template-columns: 1fr;
             }
             
-            .route-header h3 {
-                font-size: 1.5rem;
-            }
-            
-            .route-distance {
-                font-size: 2rem;
-            }
-            
-            .route-price {
-                font-size: 2rem;
-            }
-            
-            .house-card {
-                padding: 1.5rem;
-            }
-            
-            .house-card h2 {
-                font-size: 1.8rem;
+            .route-meta {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body data-lang="en">
-    <!-- طبقة التعتيم -->
-    <div class="overlay" id="overlay"></div>
 
-    <!-- الهيدر -->
+    <!-- HEADER -->
     <header>
         <div class="container header-content">
             <a href="index.html" class="logo">
@@ -1095,174 +847,194 @@
         </div>
     </header>
 
-    <!-- القائمة الجانبية -->
-    <nav id="mainNav">
-        <ul>
-            <li><a href="index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
-            <li class="has-submenu">
-                <a href="#" onclick="toggleSubmenu(event)">
-                    <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </a>
-                <ul class="submenu">
-                    <li><a href="rafting.html"><i class="fas fa-water"></i> Rafting</a></li>
-                    <li><a href="camping.html"><i class="fas fa-campground"></i> Camping</a></li>
-                    <li><a href="randonnee.html"><i class="fas fa-hiking"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
-                    <li><a href="vtt.html"><i class="fas fa-bicycle"></i> VTT</a></li>
-                    <li><a href="quad.html"><i class="fas fa-motorcycle"></i> Quad</a></li>
-                    <li><a href="hebergement.html"><i class="fas fa-bed"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
-                </ul>
-            </li>
-            <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
-            <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
-            <li><a href="blog.html"><i class="fas fa-blog"></i> <span class="lang-en">Blog</span><span class="lang-fr">Blog</span></a></li>
-            <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
-            <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
-        </ul>
-    </nav>
+    <!-- IMAGE PLEINE LARGEUR (HERO) -->
+    <div class="hero-image"></div>
 
-    <!-- Hero section PRO -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="lang-en">RAFTING ADVENTURE</span>
-                <span class="lang-fr">AVENTURE DE RAFTING</span>
-            </div>
+    <!-- TITRE DE PAGE -->
+    <div class="container">
+        <div class="page-title">
             <h1 class="lang-en">Rafting on Ahansal River</h1>
             <h1 class="lang-fr">Rafting sur l'Oued Ahansal</h1>
             <div class="location">
-                <i class="fas fa-map-pin"></i> Imsfrane, Morocco <i class="fas fa-water"></i>
+                <i class="fas fa-map-pin"></i> Imsfrane, Morocco
             </div>
-            <div class="hero-actions">
-                <a href="booking.html" class="btn btn-primary">
+        </div>
+    </div>
+
+    <!-- OFFRE 12KM - IMAGE + TEXTE -->
+    <section class="container">
+        <div class="route-block">
+            <div class="route-image">
+                <img src="images/13.jpeg" alt="Rafting 12km">
+            </div>
+            <div class="route-content">
+                <div class="route-location">
+                    <i class="fas fa-map-pin"></i> 
+                    <span class="lang-en">Ahansal River</span>
+                    <span class="lang-fr">Oued Ahansal</span>
+                </div>
+                <h2>
+                    <span class="lang-en">Discovery Route - 12km</span>
+                    <span class="lang-fr">Parcours Découverte - 12km</span>
+                </h2>
+                <p class="lang-en">Depart from base camp. Reach the spectacular confluence of Ahansal and Melloul. Safety briefing, navigation through stunning landscapes, swimming, photos, picnic. Arrival at Tilouguite Bridge. Return by kayak. Shower and rest.</p>
+                <p class="lang-fr">Départ du camp de base. Rejoignez le confluent spectaculaire de l'Ahansal et Melloul. Briefing sécurité, navigation dans des paysages époustouflants, baignade, photos, pique-nique. Arrivée au Pont de Tilouguite. Retour en kayak. Douche et repos.</p>
+                
+                <div class="route-meta">
+                    <div class="meta-item"><i class="fas fa-clock"></i> <span>2-3h</span></div>
+                    <div class="meta-item"><i class="fas fa-route"></i> <span>12km</span></div>
+                    <div class="meta-item"><i class="fas fa-tag"></i> <span>400 DH</span> <small>/pers</small></div>
+                </div>
+
+                <a href="booking.html" class="btn">
                     <i class="fas fa-calendar-check"></i> 
                     <span class="lang-en">Book Now</span>
                     <span class="lang-fr">Réserver</span>
                 </a>
-                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20avoir%20plus%20d%27informations%20sur%20l%27activité%20Rafting%20à%20Imsfrane." class="btn btn-outline" target="_blank">
-                    <i class="fab fa-whatsapp"></i> 
-                    <span class="lang-en">More info</span>
-                    <span class="lang-fr">En savoir plus</span>
+            </div>
+        </div>
+
+        <!-- OFFRE 30KM - IMAGE + TEXTE -->
+        <div class="route-block">
+            <div class="route-image">
+                <img src="images/15.jpeg" alt="Rafting 30km">
+            </div>
+            <div class="route-content">
+                <div class="route-location">
+                    <i class="fas fa-map-pin"></i> 
+                    <span class="lang-en">Ahansal River</span>
+                    <span class="lang-fr">Oued Ahansal</span>
+                </div>
+                <h2>
+                    <span class="lang-en">Adventure Route - 30km</span>
+                    <span class="lang-fr">Parcours Aventure - 30km</span>
+                </h2>
+                <p class="lang-en">Start from Anergui. Extended navigation through the gorges, discovery of perched Berber villages. Arrival at Tilouguite Bridge. Return by kayak. Shower and rest.</p>
+                <p class="lang-fr">Départ d'Anergui. Navigation prolongée à travers les gorges, découverte de villages berbères perchés. Arrivée au Pont de Tilouguite. Retour en kayak. Douche et repos.</p>
+                
+                <div class="route-meta">
+                    <div class="meta-item"><i class="fas fa-clock"></i> <span>4-5h</span></div>
+                    <div class="meta-item"><i class="fas fa-route"></i> <span>30km</span></div>
+                    <div class="meta-item"><i class="fas fa-tag"></i> <span>800 DH</span> <small>/pers</small></div>
+                </div>
+
+                <a href="booking.html" class="btn">
+                    <i class="fas fa-calendar-check"></i> 
+                    <span class="lang-en">Book Now</span>
+                    <span class="lang-fr">Réserver</span>
                 </a>
             </div>
         </div>
+
+        <!-- OFFRE 50KM - IMAGE + TEXTE -->
+        <div class="route-block">
+            <div class="route-image">
+                <img src="images/14.jpeg" alt="Rafting 50km Expedition">
+            </div>
+            <div class="route-content">
+                <div class="route-location">
+                    <i class="fas fa-map-pin"></i> 
+                    <span class="lang-en">Ahansal River</span>
+                    <span class="lang-fr">Oued Ahansal</span>
+                </div>
+                <h2>
+                    <span class="lang-en">Expedition - 50km (2 days)</span>
+                    <span class="lang-fr">Expédition - 50km (2 jours)</span>
+                </h2>
+                <p class="lang-en">Same start as 12km. Overnight in a bivouac by the river (traditional tents, dinner & breakfast included). Visit of Aït Hssain village: ancient Amazigh architecture and traditional olive press. Continue to Bin El Ouidane Dam. Return by kayak.</p>
+                <p class="lang-fr">Même départ que le 12km. Nuit en bivouac au bord de l'oued (tentes traditionnelles, dîner & petit-déjeuner inclus). Visite du village d'Aït Hssain : architecture amazighe ancienne et pressoir à olives traditionnel. Continuation jusqu'au Barrage Bin El Ouidane. Retour en kayak.</p>
+                
+                <div class="route-meta">
+                    <div class="meta-item"><i class="fas fa-clock"></i> <span>2 <span class="lang-en">days</span><span class="lang-fr">jours</span></span></div>
+                    <div class="meta-item"><i class="fas fa-route"></i> <span>50km</span></div>
+                    <div class="meta-item"><i class="fas fa-tag"></i> <span>2500 DH</span> <small>/pers</small></div>
+                </div>
+
+                <a href="booking.html" class="btn">
+                    <i class="fas fa-calendar-check"></i> 
+                    <span class="lang-en">Book Now</span>
+                    <span class="lang-fr">Réserver</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- EXPEDITION DETAILS SECTION -->
+        <h2 class="expedition-title">
+            <span class="lang-en">The 50km Expedition Experience</span>
+            <span class="lang-fr">L'Expérience 50km</span>
+        </h2>
+
+        <div class="expedition-grid">
+            <div class="expedition-item">
+                <div class="expedition-icon"><i class="fas fa-campground"></i></div>
+                <h3><span class="lang-en">Bivouac</span><span class="lang-fr">Bivouac</span></h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Traditional tents</span><span class="lang-fr">Tentes traditionnelles</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Dinner included</span><span class="lang-fr">Dîner inclus</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Breakfast included</span><span class="lang-fr">Petit-déjeuner inclus</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">By the river</span><span class="lang-fr">Au bord de l'oued</span></li>
+                </ul>
+            </div>
+
+            <div class="expedition-item">
+                <div class="expedition-icon"><i class="fas fa-landmark"></i></div>
+                <h3>Aït Hssain <span class="lang-en">Village</span><span class="lang-fr">Village</span></h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Ancient Amazigh architecture</span><span class="lang-fr">Architecture amazighe ancienne</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Traditional olive press</span><span class="lang-fr">Pressoir à olives traditionnel</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Cultural discovery</span><span class="lang-fr">Découverte culturelle</span></li>
+                </ul>
+            </div>
+
+            <div class="expedition-item">
+                <div class="expedition-icon"><i class="fas fa-water"></i></div>
+                <h3>Bin El Ouidane</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Spectacular dam</span><span class="lang-fr">Barrage spectaculaire</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Panoramic view</span><span class="lang-fr">Vue panoramique</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">End of expedition</span><span class="lang-fr">Fin de l'expédition</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="note-box">
+            <i class="fas fa-star"></i>
+            <span class="lang-en">✨ All inclusive: traditional tents, meals, guide, equipment</span>
+            <span class="lang-fr">✨ Tout inclus : tentes traditionnelles, repas, guide, matériel</span>
+        </div>
     </section>
 
-    <!-- محتوى الصفحة -->
-    <div class="container page-content">
-        <!-- Overview -->
-        <div class="overview-box">
-            <p><span class="lang-en">Experience the ultimate rafting adventure on the pristine rivers of Ouad Ahnsal and Ouad Melloul, with the stunning Imsfrane Mountains as your backdrop. Perfect for thrill-seekers and nature enthusiasts alike.</span><span class="lang-fr">Vivez l'aventure ultime du rafting sur les rivières préservées de Ouad Ahnsal et Ouad Melloul, avec les magnifiques montagnes d'Imsfrane en toile de fond. Parfait pour les amateurs de sensations fortes et les amoureux de la nature.</span></p>
-        </div>
-
-        <!-- Rafting Routes -->
-        <h2 class="section-title"><span class="lang-en">Rafting Routes & Distances</span><span class="lang-fr">Parcours de Rafting & Distances</span></h2>
-        <div class="routes-grid">
-            <!-- 12km Route -->
-            <div class="route-card">
-                <div class="route-header">
-                    <i class="fas fa-route"></i>
-                    <h3><span class="lang-en">Short Route</span><span class="lang-fr">Parcours Court</span></h3>
-                    <div class="route-distance">12 km</div>
-                </div>
-                <div class="route-body">
-                    <p class="route-description"><span class="lang-en">From Imsfrane to Tilouguite Bridge</span><span class="lang-fr">D'Imsfrane au Pont de Tilouguite</span></p>
-                    <div class="route-price">400 <small>DH</small></div>
-                    <span class="route-badge"><i class="fas fa-clock"></i> <span class="lang-en">2-3 hours</span><span class="lang-fr">2-3 heures</span></span>
-                </div>
-            </div>
-
-            <!-- 30km Route -->
-            <div class="route-card">
-                <div class="route-header">
-                    <i class="fas fa-route"></i>
-                    <h3><span class="lang-en">Medium Route</span><span class="lang-fr">Parcours Moyen</span></h3>
-                    <div class="route-distance">30 km</div>
-                </div>
-                <div class="route-body">
-                    <p class="route-description"><span class="lang-en">From Isgli Bridge to Tilouguite Bridge</span><span class="lang-fr">Du Pont d'Isgli au Pont de Tilouguite</span></p>
-                    <div class="route-price">800 <small>DH</small></div>
-                    <span class="route-badge"><i class="fas fa-clock"></i> <span class="lang-en">4-5 hours</span><span class="lang-fr">4-5 heures</span></span>
-                </div>
-            </div>
-
-            <!-- 50km Route -->
-            <div class="route-card">
-                <div class="route-header">
-                    <i class="fas fa-route"></i>
-                    <h3><span class="lang-en">Long Route</span><span class="lang-fr">Parcours Long</span></h3>
-                    <div class="route-distance">50 km</div>
-                </div>
-                <div class="route-body">
-                    <p class="route-description"><span class="lang-en">From Imsfrane to Dam Beni Elouidane</span><span class="lang-fr">D'Imsfrane au Barrage Beni Elouidane</span></p>
-                    <div class="route-price">2500 <small>DH</small></div>
-                    <span class="route-badge"><i class="fas fa-clock"></i> <span class="lang-en">Full day</span><span class="lang-fr">Journée complète</span></span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Activities & Safety -->
-        <div class="info-grid">
-            <div class="info-card">
-                <h2><i class="fas fa-list-check"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></h2>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> <span class="lang-en">Navigate exciting rapids under the guidance of certified instructors</span><span class="lang-fr">Naviguez sur des rapides excitants avec des instructeurs certifiés</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span class="lang-en">Enjoy panoramic views of Imsfrane Mountain and lush surrounding forests</span><span class="lang-fr">Profitez de vues panoramiques sur le mont Imsfrane et les forêts environnantes</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span class="lang-en">Short breaks for photos and refreshments along the river</span><span class="lang-fr">Pauses pour photos et rafraîchissements le long de la rivière</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span class="lang-en">Experience an adrenaline-filled adventure in turquoise waters</span><span class="lang-fr">Vivez une aventure pleine d'adrénaline dans des eaux turquoises</span></li>
-                </ul>
-            </div>
-            <div class="info-card">
-                <h2><i class="fas fa-shield-alt"></i> <span class="lang-en">Safety Guidelines</span><span class="lang-fr">Consignes de Sécurité</span></h2>
-                <ul>
-                    <li><i class="fas fa-life-ring"></i> <span class="lang-en">Life jackets and helmets must be worn at all times</span><span class="lang-fr">Les gilets de sauvetage et les casques doivent être portés en tout temps</span></li>
-                    <li><i class="fas fa-users"></i> <span class="lang-en">Follow the instructions of your rafting guides carefully</span><span class="lang-fr">Suivez attentivement les instructions de vos guides</span></li>
-                    <li><i class="fas fa-bag"></i> <span class="lang-en">Store valuables in waterproof bags</span><span class="lang-fr">Rangez vos objets de valeur dans des sacs étanches</span></li>
-                    <li><i class="fas fa-shirt"></i> <span class="lang-en">Wear quick-dry clothes and appropriate footwear</span><span class="lang-fr">Portez des vêtements à séchage rapide et des chaussures appropriées</span></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Furnished House Option -->
-        <div class="house-card">
-            <h2><i class="fas fa-home"></i> <span class="lang-en">Furnished House Available</span><span class="lang-fr">Maison Meublée Disponible</span></h2>
-            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;"><span class="lang-en">We also have a furnished house available for daily rental near the rafting finish point, for those who are interested.</span><span class="lang-fr">Nous avons également une maison meublée disponible à la location journalière près du point d'arrivée du rafting, pour ceux qui sont intéressés.</span></p>
-            <div class="house-features">
-                <span><i class="fas fa-shower"></i> <span class="lang-en">Shower & Hot Water</span><span class="lang-fr">Douche & Eau Chaude</span></span>
-                <span><i class="fas fa-map-pin"></i> <span class="lang-en">Near rafting finish point</span><span class="lang-fr">Près de l'arrivée du rafting</span></span>
-                <span><i class="fas fa-couch"></i> <span class="lang-en">Fully furnished</span><span class="lang-fr">Entièrement meublée</span></span>
-                <span><i class="fas fa-spa"></i> <span class="lang-en">Ideal for relaxation</span><span class="lang-fr">Idéal pour la détente</span></span>
-            </div>
-            <div class="house-request">
-                <i class="fas fa-info-circle"></i> <span class="lang-en">400 DH/night · Available upon request</span><span class="lang-fr">400 DH/nuit · Disponible sur demande</span>
-            </div>
-        </div>
-
-        <!-- Booking & Contact -->
+    <!-- CONTACT SECTION -->
+    <div class="container">
         <div class="contact-section">
-            <h2>📌 <span class="lang-en">Booking & Contact</span><span class="lang-fr">Réservation & Contact</span></h2>
-            
-            <div class="contact-details">
+            <h2 class="expedition-title" style="margin-top: 0;">
+                <span class="lang-en">Book Your Adventure</span>
+                <span class="lang-fr">Réservez Votre Aventure</span>
+            </h2>
+
+            <div class="contact-grid">
                 <div class="contact-item">
                     <i class="fas fa-globe"></i>
-                    <h3><span class="lang-en">Website</span><span class="lang-fr">Site Web</span></h3>
+                    <h4>Website</h4>
                     <a href="https://imsfrane.com" target="_blank">imsfrane.com</a>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3><span class="lang-en">Location</span><span class="lang-fr">Emplacement</span></h3>
-                    <p>Imsfrane, Azilal<br>Morocco</p>
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <h3><span class="lang-en">Phone / WhatsApp</span><span class="lang-fr">Téléphone / WhatsApp</span></h3>
-                    <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4><span class="lang-en">Location</span><span class="lang-fr">Emplacement</span></h4>
+                    <p>Imsfrane, Azilal, Morocco</p>
                 </div>
             </div>
 
             <div style="text-align: center;">
-                <a href="booking.html" class="btn btn-primary" style="display: inline-block; text-decoration: none;">
-                    <i class="fas fa-calendar-check"></i> <span class="lang-en">Book Your Adventure</span><span class="lang-fr">Réserver</span>
+                <a href="booking.html" class="btn">
+                    <i class="fas fa-calendar-check"></i> 
+                    <span class="lang-en">Book Now</span>
+                    <span class="lang-fr">Réserver</span>
                 </a>
             </div>
         </div>
@@ -1392,65 +1164,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // قائمة الجوال
-        const menuToggle = document.getElementById('menuToggle');
-        const mainNav = document.getElementById('mainNav');
-        const overlay = document.getElementById('overlay');
-
-        function toggleMenu() {
-            mainNav.classList.toggle('active');
-            overlay.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        }
-
-        menuToggle.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
-
-        // Submenu toggle
-        window.toggleSubmenu = function(event) {
-            event.preventDefault();
-            const parent = event.currentTarget.closest('.has-submenu');
-            const submenu = parent.querySelector('.submenu');
-            const arrow = parent.querySelector('.arrow');
-            submenu.classList.toggle('active');
-            arrow.classList.toggle('rotated');
-        };
-
-        // إغلاق القائمة عند الضغط على الروابط
-        document.querySelectorAll('#mainNav ul li a:not(.has-submenu > a)').forEach(link => {
-            link.addEventListener('click', () => {
-                if (mainNav.classList.contains('active')) toggleMenu();
-            });
-        });
-
-        // دالة تغيير اللغة
-        window.setLanguage = function(lang) {
-            document.body.setAttribute('data-lang', lang);
-            
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.textContent.toLowerCase() === lang.toLowerCase()) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-
-            localStorage.setItem('preferred-language', lang);
-        };
-
-        // تحميل اللغة المحفوظة
-        const savedLang = localStorage.getItem('preferred-language');
-        if (savedLang) {
-            setLanguage(savedLang);
-        } else {
-            setLanguage('en');
-        }
-    </script>
-
     <!-- FLOATING BUTTONS -->
     <div class="floating-buttons">
         <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
@@ -1466,5 +1179,33 @@
             <span class="tooltip">Réserver</span>
         </a>
     </div>
+
+    <script>
+        function setLanguage(lang) {
+            document.body.setAttribute('data-lang', lang);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.textContent.toLowerCase() === lang.toLowerCase()) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        const savedLang = localStorage.getItem('preferred-language');
+        if (savedLang) {
+            setLanguage(savedLang);
+        } else {
+            setLanguage('en');
+        }
+
+        // Menu toggle (placeholder)
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            alert('Menu functionality to be implemented');
+        });
+    </script>
 </body>
 </html>
