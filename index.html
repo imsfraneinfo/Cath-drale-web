@@ -1928,6 +1928,100 @@ display: none;
     10%, 30%, 50%, 70%, 90% { transform: rotate(10deg); }
     20%, 40%, 60%, 80% { transform: rotate(-10deg); }
 }
+/* ===== SOCIAL MEDIA UNDER HERO ===== */
+.social-under-hero {
+    padding: 2rem 0 1rem;
+    background: linear-gradient(to bottom, transparent, rgba(230,177,46,0.05));
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.social-circle:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.social-circle::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.social-circle:hover::after {
+    border-color: currentColor;
+    transform: scale(1.15);
+    opacity: 0.6;
+}
+
+/* Couleurs des réseaux */
+.social-circle.instagram {
+    background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
+}
+
+.social-circle.facebook {
+    background: #1877f2;
+}
+
+.social-circle.tiktok {
+    background: #000000;
+}
+
+.social-circle.whatsapp {
+    background: #25D366;
+}
+
+.social-circle.email {
+    background: #1e3c2c;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .social-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .social-links {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .social-circle {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}
 </style>
 </head>
 <body data-lang="en">
@@ -2041,7 +2135,28 @@ display: none;
             <span class="dot" onclick="goToSlide(4)"></span>
         </div>
     </section>
-
+<!-- SOCIAL MEDIA ICONS UNDER HERO -->
+<div class="social-under-hero">
+    <div class="container">
+        <div class="social-links">
+            <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-circle instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-circle facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-circle tiktok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://wa.me/212667772551" target="_blank" class="social-circle whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:imsfraninfo@gmail.com" target="_blank" class="social-circle email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</div>
 <!-- ACTIVITIES SECTION PRO MAX -->
 <section class="activities-promax" id="activites">
     <div class="container">
