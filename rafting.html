@@ -143,6 +143,87 @@
             color: #1e3c2c;
         }
 
+        /* ===== القائمة الجانبية ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background-color: #1e3c2c;
+            padding: 5rem 1.5rem 2rem;
+            transition: right 0.3s ease;
+            z-index: 999;
+            overflow-y: auto;
+        }
+
+        nav.active {
+            right: 0;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e6b12e;
+            padding-left: 10px;
+        }
+
+        .submenu {
+            display: none;
+            list-style: none;
+            padding-right: 1.5rem;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+
+        .submenu.active {
+            display: block;
+        }
+
+        .has-submenu > a {
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .arrow.rotated {
+            transform: rotate(90deg);
+            color: #e6b12e;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 998;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
         /* ===== HERO ===== */
         .hero-image {
             width: 100%;
@@ -631,7 +712,7 @@
             color: #e6b12e;
         }
 
-        /* ===== FLOATING BUTTONS - نسخة index ===== */
+        /* ===== FLOATING BUTTONS ===== */
         .floating-buttons {
             position: fixed;
             bottom: 30px;
@@ -821,7 +902,10 @@
 </head>
 <body data-lang="en">
 
-    <!-- HEADER -->
+    <!-- طبقة التعتيم -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- الهيدر -->
     <header>
         <div class="container header-content">
             <a href="index.html" class="logo">
@@ -846,6 +930,32 @@
             </div>
         </div>
     </header>
+
+    <!-- القائمة الجانبية -->
+    <nav id="mainNav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">
+                    <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="rafting.html"><i class="fas fa-water"></i> Rafting</a></li>
+                    <li><a href="camping.html"><i class="fas fa-campground"></i> Camping</a></li>
+                    <li><a href="randonnee.html"><i class="fas fa-hiking"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                    <li><a href="vtt.html"><i class="fas fa-bicycle"></i> VTT</a></li>
+                    <li><a href="quad.html"><i class="fas fa-motorcycle"></i> Quad</a></li>
+                    <li><a href="hebergement.html"><i class="fas fa-bed"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                </ul>
+            </li>
+            <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+            <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> <span class="lang-en">Blog</span><span class="lang-fr">Blog</span></a></li>
+            <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+        </ul>
+    </nav>
 
     <!-- IMAGE PLEINE LARGEUR (HERO) -->
     <div class="hero-image"></div>
@@ -1181,7 +1291,41 @@
     </div>
 
     <script>
-        function setLanguage(lang) {
+        // قائمة الجوال
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            mainNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Submenu toggle
+        window.toggleSubmenu = function(event) {
+            event.preventDefault();
+            const parent = event.currentTarget.closest('.has-submenu');
+            const submenu = parent.querySelector('.submenu');
+            const arrow = parent.querySelector('.arrow');
+            submenu.classList.toggle('active');
+            arrow.classList.toggle('rotated');
+        };
+
+        // إغلاق القائمة عند الضغط على الروابط
+        document.querySelectorAll('#mainNav ul li a:not(.has-submenu > a)').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) toggleMenu();
+            });
+        });
+
+        // دالة تغيير اللغة
+        window.setLanguage = function(lang) {
             document.body.setAttribute('data-lang', lang);
             
             document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -1193,19 +1337,15 @@
             });
 
             localStorage.setItem('preferred-language', lang);
-        }
+        };
 
+        // تحميل اللغة المحفوظة
         const savedLang = localStorage.getItem('preferred-language');
         if (savedLang) {
             setLanguage(savedLang);
         } else {
             setLanguage('en');
         }
-
-        // Menu toggle (placeholder)
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            alert('Menu functionality to be implemented');
-        });
     </script>
 </body>
 </html>
