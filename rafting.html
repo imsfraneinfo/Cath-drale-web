@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rafting dans l'Atlas - Oued Ahansal | Imsfrane Cathédrale</title>
     <meta name="description" content="Rafting sur l'Oued Ahansal et Oued Melloul. Parcours 12km, 30km, 50km. Encadrement par guides locaux. Réservez votre descente.">
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Rafting à Imsfrane - Descente de l'Oued Ahansal">
     <meta property="og:description" content="Rafting sur l'Oued Ahansal. Parcours 12km, 30km et 50km avec guides professionnels. Vivez une aventure inoubliable dans l'Atlas.">
@@ -12,8 +13,10 @@
     <meta property="og:url" content="https://imsfrane.com/rafting.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Imsfrane Cathédrale">
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -143,7 +146,7 @@
             color: #1e3c2c;
         }
 
-        /* ===== القائمة الجانبية ===== */
+        /* ===== MENU LATÉRAL ===== */
         nav {
             position: fixed;
             top: 0;
@@ -758,7 +761,6 @@
             color: #1e3c2c;
         }
 
-        /* Tooltip */
         .floating-btn .tooltip {
             position: absolute;
             right: 70px;
@@ -795,7 +797,6 @@
             right: 75px;
         }
 
-        /* للشاشات الصغيرة */
         @media screen and (max-width: 768px) {
             .floating-buttons {
                 bottom: 70px;
@@ -902,15 +903,15 @@
 </head>
 <body data-lang="en">
 
-    <!-- طبقة التعتيم -->
+    <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
 
-    <!-- الهيدر -->
+    <!-- Header -->
     <header>
         <div class="container header-content">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="Accueil">
                 <div class="logo-img">
-                    <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                    <img src="images/logo.jpeg" alt="Imsfrane Cathédrale" width="50" height="50">
                 </div>
                 <div class="logo-text">
                     <h1>Imsfrane Cathédrale</h1>
@@ -921,22 +922,22 @@
             
             <div class="right-controls">
                 <div class="lang-buttons">
-                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
+                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
                 </div>
-                <button class="menu-toggle" id="menuToggle">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- القائمة الجانبية -->
-    <nav id="mainNav">
+    <!-- Menu latéral -->
+    <nav id="mainNav" aria-label="Menu principal">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
             <li class="has-submenu">
-                <a href="#" onclick="toggleSubmenu(event)">
+                <a href="#" onclick="toggleSubmenu(event)" aria-expanded="false">
                     <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
                     <i class="fas fa-chevron-right arrow"></i>
                 </a>
@@ -957,10 +958,10 @@
         </ul>
     </nav>
 
-    <!-- IMAGE PLEINE LARGEUR (HERO) -->
+    <!-- Hero Image -->
     <div class="hero-image"></div>
 
-    <!-- TITRE DE PAGE -->
+    <!-- Page Title -->
     <div class="container">
         <div class="page-title">
             <h1 class="lang-en">Rafting on Ahansal River</h1>
@@ -971,11 +972,11 @@
         </div>
     </div>
 
-    <!-- OFFRE 12KM - IMAGE + TEXTE -->
+    <!-- OFFRE 12KM -->
     <section class="container">
         <div class="route-block">
             <div class="route-image">
-                <img src="images/13.jpeg" alt="Rafting 12km">
+                <img src="images/13.jpeg" alt="Rafting 12km" width="800" height="400" loading="lazy">
             </div>
             <div class="route-content">
                 <div class="route-location">
@@ -996,7 +997,7 @@
                     <div class="meta-item"><i class="fas fa-tag"></i> <span>400 DH</span> <small>/pers</small></div>
                 </div>
 
-                <a href="booking.html" class="btn">
+                <a href="booking.html" class="btn" aria-label="Réserver l'activité 12km">
                     <i class="fas fa-calendar-check"></i> 
                     <span class="lang-en">Book Now</span>
                     <span class="lang-fr">Réserver</span>
@@ -1004,10 +1005,10 @@
             </div>
         </div>
 
-        <!-- OFFRE 30KM - IMAGE + TEXTE -->
+        <!-- OFFRE 30KM -->
         <div class="route-block">
             <div class="route-image">
-                <img src="images/15.jpeg" alt="Rafting 30km">
+                <img src="images/15.jpeg" alt="Rafting 30km" width="800" height="400" loading="lazy">
             </div>
             <div class="route-content">
                 <div class="route-location">
@@ -1019,16 +1020,8 @@
                     <span class="lang-en">Adventure Route - 30km</span>
                     <span class="lang-fr">Parcours Aventure - 30km</span>
                 </h2>
-                <p class="lang-en">Departure from Pont d'Isgli.
-Rafting adventure through the natural gorges surrounded by breathtaking mountain landscapes.
-Arrival at Pont de Tilouguite.
-Return by 4×4 vehicle to the starting point.
-Shower and rest.</p>
-                <p class="lang-fr">Départ du Pont d'Isgli.
-Aventure rafting à travers les gorges naturelles au cœur de paysages montagneux spectaculaires.
-Arrivée au Pont de Tilouguite.
-Retour en véhicule 4×4 vers le point de départ.
-Douche et repos.</p>
+                <p class="lang-en">Departure from Pont d'Isgli. Rafting adventure through the natural gorges surrounded by breathtaking mountain landscapes. Arrival at Pont de Tilouguite. Return by 4×4 vehicle to the starting point. Shower and rest.</p>
+                <p class="lang-fr">Départ du Pont d'Isgli. Aventure rafting à travers les gorges naturelles au cœur de paysages montagneux spectaculaires. Arrivée au Pont de Tilouguite. Retour en véhicule 4×4 vers le point de départ. Douche et repos.</p>
                 
                 <div class="route-meta">
                     <div class="meta-item"><i class="fas fa-clock"></i> <span>4-5h</span></div>
@@ -1036,7 +1029,7 @@ Douche et repos.</p>
                     <div class="meta-item"><i class="fas fa-tag"></i> <span>800 DH</span> <small>/pers</small></div>
                 </div>
 
-                <a href="booking.html" class="btn">
+                <a href="booking.html" class="btn" aria-label="Réserver l'activité 30km">
                     <i class="fas fa-calendar-check"></i> 
                     <span class="lang-en">Book Now</span>
                     <span class="lang-fr">Réserver</span>
@@ -1044,10 +1037,10 @@ Douche et repos.</p>
             </div>
         </div>
 
-        <!-- OFFRE 50KM - IMAGE + TEXTE -->
+        <!-- OFFRE 50KM -->
         <div class="route-block">
             <div class="route-image">
-                <img src="images/14.jpeg" alt="Rafting 50km Expedition">
+                <img src="images/14.jpeg" alt="Rafting 50km Expedition" width="800" height="400" loading="lazy">
             </div>
             <div class="route-content">
                 <div class="route-location">
@@ -1068,7 +1061,7 @@ Douche et repos.</p>
                     <div class="meta-item"><i class="fas fa-tag"></i> <span>2500 DH</span> <small>/pers</small></div>
                 </div>
 
-                <a href="booking.html" class="btn">
+                <a href="booking.html" class="btn" aria-label="Réserver l'expédition 50km">
                     <i class="fas fa-calendar-check"></i> 
                     <span class="lang-en">Book Now</span>
                     <span class="lang-fr">Réserver</span>
@@ -1076,7 +1069,7 @@ Douche et repos.</p>
             </div>
         </div>
 
-        <!-- EXPEDITION DETAILS SECTION -->
+        <!-- EXPEDITION DETAILS -->
         <h2 class="expedition-title">
             <span class="lang-en">The 50km Expedition Experience</span>
             <span class="lang-fr">L'Expérience 50km</span>
@@ -1134,12 +1127,12 @@ Douche et repos.</p>
                 <div class="contact-item">
                     <i class="fas fa-globe"></i>
                     <h4>Website</h4>
-                    <a href="https://imsfrane.com" target="_blank">imsfrane.com</a>
+                    <a href="https://imsfrane.com" target="_blank" rel="noopener">imsfrane.com</a>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-whatsapp"></i>
                     <h4>WhatsApp</h4>
-                    <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
+                    <a href="https://wa.me/212667772551" target="_blank" rel="noopener">+212 667-772551</a>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
@@ -1149,7 +1142,7 @@ Douche et repos.</p>
             </div>
 
             <div style="text-align: center;">
-                <a href="booking.html" class="btn">
+                <a href="booking.html" class="btn" aria-label="Réserver">
                     <i class="fas fa-calendar-check"></i> 
                     <span class="lang-en">Book Now</span>
                     <span class="lang-fr">Réserver</span>
@@ -1158,7 +1151,7 @@ Douche et repos.</p>
         </div>
     </div>
 
-    <!-- FOOTER PROFESSIONNEL -->
+    <!-- FOOTER -->
     <footer class="footer-pro">
         <div class="container">
             <!-- Footer Top -->
@@ -1166,7 +1159,7 @@ Douche et repos.</p>
                 <!-- Logo + Description -->
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                        <img src="images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
                     <p class="footer-description">
@@ -1174,18 +1167,10 @@ Douche et repos.</p>
                         <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" rel="noopener" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" rel="noopener" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -1234,7 +1219,7 @@ Douche et repos.</p>
                         </li>
                         <li>
                             <i class="fab fa-whatsapp"></i>
-                            <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a>
+                            <a href="https://wa.me/212667772551" target="_blank" rel="noopener">WhatsApp</a>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
@@ -1284,22 +1269,22 @@ Douche et repos.</p>
 
     <!-- FLOATING BUTTONS -->
     <div class="floating-buttons">
-        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
             <span class="tooltip">WhatsApp</span>
         </a>
-        <a href="tel:0667772551" class="floating-btn phone">
+        <a href="tel:0667772551" class="floating-btn phone" aria-label="Téléphone">
             <i class="fas fa-phone-alt"></i>
             <span class="tooltip">Appeler</span>
         </a>
-        <a href="booking.html" class="floating-btn booking">
+        <a href="booking.html" class="floating-btn booking" aria-label="Réservation">
             <i class="fas fa-calendar-check"></i>
             <span class="tooltip">Réserver</span>
         </a>
     </div>
 
     <script>
-        // قائمة الجوال
+        // Menu toggle
         const menuToggle = document.getElementById('menuToggle');
         const mainNav = document.getElementById('mainNav');
         const overlay = document.getElementById('overlay');
@@ -1325,14 +1310,14 @@ Douche et repos.</p>
             arrow.classList.toggle('rotated');
         };
 
-        // إغلاق القائمة عند الضغط على الروابط
+        // Close menu on link click
         document.querySelectorAll('#mainNav ul li a:not(.has-submenu > a)').forEach(link => {
             link.addEventListener('click', () => {
                 if (mainNav.classList.contains('active')) toggleMenu();
             });
         });
 
-        // دالة تغيير اللغة
+        // Language
         window.setLanguage = function(lang) {
             document.body.setAttribute('data-lang', lang);
             
@@ -1347,7 +1332,6 @@ Douche et repos.</p>
             localStorage.setItem('preferred-language', lang);
         };
 
-        // تحميل اللغة المحفوظة
         const savedLang = localStorage.getItem('preferred-language');
         if (savedLang) {
             setLanguage(savedLang);
