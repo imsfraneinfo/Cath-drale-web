@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VTT dans l'Atlas - Location VTT tout suspendu | Imsfrane</title>
     <meta name="description" content="VTT dans l'Atlas. VTT tout suspendu 150 DH/jour. Parcours de 18km à travers villages berbères, forêts et montagnes. Casque et accompagnement inclus.">
+    
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="VTT à Imsfrane - Location VTT tout suspendu">
     <meta property="og:description" content="VTT dans l'Atlas. VTT tout suspendu 150 DH/jour. Parcours de 18km à travers villages et forêts. Casque et accompagnement inclus.">
-    <meta property="og:image" content="https://imsfrane.com/images/vtt-hero.jpg">
+    <meta property="og:image" content="https://imsfrane.com/images/IMG_4850.jpg">
     <meta property="og:url" content="https://imsfrane.com/vtt.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Imsfrane Cathédrale">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -25,6 +30,7 @@
             color: #2c3e50;
         }
 
+        /* ===== HEADER (موحد مع index.html) ===== */
         header {
             background-color: #1e3c2c;
             color: white;
@@ -45,23 +51,30 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: nowrap;
         }
 
         .logo {
             display: flex;
             align-items: center;
             gap: 1rem;
+            cursor: pointer;
             text-decoration: none;
             color: white;
         }
 
         .logo-img {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
             border-radius: 50%;
             overflow: hidden;
             border: 3px solid #e6b12e;
             transition: transform 0.3s;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .logo:hover .logo-img {
@@ -72,23 +85,25 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
 
         .logo-text h1 {
-            font-size: 0.9rem;
+            font-size: 1.3rem;
             font-weight: 700;
+            line-height: 1.2;
         }
 
         .logo-text span {
             color: #e6b12e;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             display: block;
         }
 
         .right-controls {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.8rem;
         }
 
         .lang-buttons {
@@ -129,10 +144,10 @@
             height: 40px;
             border-radius: 50%;
             cursor: pointer;
+            transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s;
         }
 
         .menu-toggle:hover {
@@ -140,6 +155,7 @@
             color: #1e3c2c;
         }
 
+        /* ===== MENU LATÉRAL ===== */
         nav {
             position: fixed;
             top: 0;
@@ -220,14 +236,16 @@
             display: block;
         }
 
-   .hero-image {
-    width: 100%;
-    height: 500px;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('images/IMG_4850.jpg') no-repeat;
-    background-size: cover;
-    background-position: 50% 80%;
-    position: relative;
-}
+        /* ===== HERO ===== */
+        .hero-image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('images/IMG_4850.jpg') no-repeat;
+            background-size: cover;
+            background-position: 50% 80%;
+            position: relative;
+        }
+
         .page-title {
             text-align: center;
             margin: 3rem 0 4rem;
@@ -261,7 +279,6 @@
             color: #2c3e50;
             font-weight: 400;
             margin-bottom: 1.5rem;
-            position: relative;
             padding: 0 1rem;
         }
 
@@ -546,6 +563,7 @@
             color: #e6b12e;
         }
 
+        /* ===== FOOTER ===== */
         .footer-pro {
             background: linear-gradient(135deg, #0f2a1a, #1e3c2c);
             color: white;
@@ -757,6 +775,7 @@
             color: #e6b12e;
         }
 
+        /* ===== FLOATING BUTTONS ===== */
         .floating-buttons {
             position: fixed;
             bottom: 30px;
@@ -815,11 +834,22 @@
             visibility: hidden;
             transition: all 0.3s;
             pointer-events: none;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
-        .floating-btn.whatsapp .tooltip { background-color: #25D366; }
-        .floating-btn.phone .tooltip { background-color: #1e3c2c; }
-        .floating-btn.booking .tooltip { background-color: #e6b12e; color: #1e3c2c; }
+        .floating-btn.whatsapp .tooltip {
+            background-color: #25D366;
+        }
+
+        .floating-btn.phone .tooltip {
+            background-color: #1e3c2c;
+        }
+
+        .floating-btn.booking .tooltip {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
 
         .floating-btn:hover .tooltip {
             opacity: 1;
@@ -827,27 +857,49 @@
             right: 75px;
         }
 
-        @media screen and (max-width: 768px) {
-            .floating-buttons {
-                bottom: 70px;
-                right: 20px;
-                gap: 10px;
-            }
-            .floating-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-            }
-            .floating-btn .tooltip {
-                display: none;
-            }
-        }
-
+        /* ===== LANGUAGE ===== */
         [data-lang="en"] .lang-fr {
             display: none !important;
         }
         [data-lang="fr"] .lang-en {
             display: none !important;
+        }
+
+        /* ===== RESPONSIVE HEADER (comme index) ===== */
+        @media screen and (max-width: 768px) {
+            .logo-img {
+                width: 50px;
+                height: 50px;
+                min-width: 50px;
+            }
+            
+            .logo-text h1 {
+                font-size: 0.9rem;
+            }
+            
+            .hero-image {
+                height: 350px;
+            }
+            
+            .route-image {
+                height: 300px;
+            }
+            
+            .floating-buttons {
+                bottom: 70px;
+                right: 20px;
+                gap: 10px;
+            }
+            
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .floating-btn .tooltip {
+                display: none;
+            }
         }
 
         @media (max-width: 992px) {
@@ -875,12 +927,6 @@
             .footer-middle {
                 grid-template-columns: repeat(2, 1fr);
             }
-            .route-image {
-                height: 300px;
-            }
-            .hero-image {
-                height: 350px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -890,15 +936,17 @@
         }
     </style>
 </head>
-<body data-lang="fr">
+<body data-lang="en">
 
+    <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
 
+    <!-- Header (موحد مع index.html) -->
     <header>
         <div class="container header-content">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="Accueil">
                 <div class="logo-img">
-                    <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                    <img src="images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60">
                 </div>
                 <div class="logo-text">
                     <h1>Imsfrane Cathédrale</h1>
@@ -909,21 +957,22 @@
             
             <div class="right-controls">
                 <div class="lang-buttons">
-                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
+                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
                 </div>
-                <button class="menu-toggle" id="menuToggle">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <nav id="mainNav">
+    <!-- Menu -->
+    <nav id="mainNav" aria-label="Menu principal">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
             <li class="has-submenu">
-                <a href="#" onclick="toggleSubmenu(event)">
+                <a href="#" onclick="toggleSubmenu(event)" aria-expanded="false">
                     <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
                     <i class="fas fa-chevron-right arrow"></i>
                 </a>
@@ -944,8 +993,10 @@
         </ul>
     </nav>
 
+    <!-- Hero Image -->
     <div class="hero-image"></div>
 
+    <!-- Page Title -->
     <div class="container">
         <div class="page-title">
             <h1 class="lang-en">Mountain Biking in Imsfrane</h1>
@@ -956,6 +1007,7 @@
         </div>
     </div>
 
+    <!-- Introduction -->
     <div class="container">
         <div class="intro-text">
             <div class="intro-icon">
@@ -970,10 +1022,11 @@
         </div>
     </div>
 
+    <!-- Bloc 1 -->
     <section class="container">
         <div class="route-block">
             <div class="route-image">
-                <img src="images/vtt.jpg" alt="VTT Imsfrane" id="img-vtt1">
+                <img src="images/vtt.jpg" alt="VTT Imsfrane" id="img-vtt1" width="800" height="450" loading="lazy">
             </div>
             <div class="route-content">
                 <div class="route-location">
@@ -998,10 +1051,11 @@
         </div>
     </section>
 
+    <!-- Bloc 2 -->
     <section class="container">
         <div class="route-block">
             <div class="route-image">
-                <img src="images/IMG_4832.jpg" alt="VTT paysage" id="img-vtt2">
+                <img src="images/IMG_4832.jpg" alt="VTT paysage" id="img-vtt2" width="800" height="450" loading="lazy">
             </div>
             <div class="route-content">
                 <div class="route-location">
@@ -1020,10 +1074,11 @@
         </div>
     </section>
 
+    <!-- Bloc 3 -->
     <section class="container">
         <div class="route-block">
             <div class="route-image">
-                <img src="images/1.jpg" alt="VTT expérience" id="img-vtt3">
+                <img src="images/1.jpg" alt="VTT expérience" id="img-vtt3" width="800" height="450" loading="lazy">
             </div>
             <div class="route-content">
                 <div class="route-location">
@@ -1042,6 +1097,7 @@
         </div>
     </section>
 
+    <!-- Info Cards -->
     <div class="container">
         <div class="info-cards">
             <div class="info-card">
@@ -1077,21 +1133,23 @@
         </div>
     </div>
 
+    <!-- Price Card -->
     <div class="container">
         <div class="price-card">
             <h2><i class="fas fa-bicycle"></i> <span class="lang-en">VTT Rental</span><span class="lang-fr">Location VTT</span></h2>
             <div class="price">150 <small>DH/<span class="lang-en">person</span><span class="lang-fr">personne</span></small></div>
             <p><span class="lang-en">Starting from 150 DH per person (depending on number of participants)</span><span class="lang-fr">À partir de 150 DH par personne (selon le nombre de participants)</span></p>
-            <a href="booking.html" class="btn" style="background: #e6b12e; color: #1e3c2c; margin-top: 2rem;">
+            <a href="booking.html" class="btn" style="background: #e6b12e; color: #1e3c2c; margin-top: 2rem;" aria-label="Réserver">
                 <i class="fas fa-calendar-check"></i> 
                 <span class="lang-en">Book now</span><span class="lang-fr">Réserver</span>
             </a>
         </div>
     </div>
 
+    <!-- Contact -->
     <div class="container">
         <div class="contact-section">
-            <h2 class="expedition-title" style="margin-top: 0;">
+            <h2 class="section-title" style="margin-top: 0; font-size: 2.5rem; color: #1e3c2c; font-weight: 800; text-align: center;">
                 <span class="lang-en">Book Your VTT Adventure</span>
                 <span class="lang-fr">Réserver Votre Aventure VTT</span>
             </h2>
@@ -1100,12 +1158,12 @@
                 <div class="contact-item">
                     <i class="fas fa-globe"></i>
                     <h4>Website</h4>
-                    <a href="https://imsfrane.com" target="_blank">imsfrane.com</a>
+                    <a href="https://imsfrane.com" target="_blank" rel="noopener">imsfrane.com</a>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-whatsapp"></i>
                     <h4>WhatsApp</h4>
-                    <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
+                    <a href="https://wa.me/212667772551" target="_blank" rel="noopener">+212 667-772551</a>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
@@ -1116,12 +1174,13 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer-pro">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                        <img src="images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
                     <p class="footer-description">
@@ -1129,10 +1188,10 @@
                         <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" rel="noopener" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" rel="noopener" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -1164,7 +1223,7 @@
                     <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
                     <ul>
                         <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank" rel="noopener">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
                         <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
                     </ul>
@@ -1191,16 +1250,17 @@
         </div>
     </footer>
 
+    <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
             <span class="tooltip">WhatsApp</span>
         </a>
-        <a href="tel:0667772551" class="floating-btn phone">
+        <a href="tel:0667772551" class="floating-btn phone" aria-label="Téléphone">
             <i class="fas fa-phone-alt"></i>
             <span class="tooltip">Appeler</span>
         </a>
-        <a href="booking.html" class="floating-btn booking">
+        <a href="booking.html" class="floating-btn booking" aria-label="Réservation">
             <i class="fas fa-calendar-check"></i>
             <span class="tooltip">Réserver</span>
         </a>
