@@ -2,19 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
- <title>Réserver vos activités - Rafting, Camping, Randonnée | Imsfrane</title>
- <meta name="description" content="Réservez vos activités à Imsfrane: rafting, camping, randonnée, VTT, quad. Paiement sécurisé par PayPal ou virement. Confirmation par WhatsApp.">
-    <!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Réservation - Imsfrane Cathédrale">
-<meta property="og:description" content="Réservez vos activités à Imsfrane: rafting, camping, randonnée, VTT, quad. Paiement sécurisé par PayPal ou virement. Confirmation par WhatsApp.">
-<meta property="og:image" content="https://imsfrane.com/images/booking-hero.jpg">
-<meta property="og:url" content="https://imsfrane.com/booking.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Imsfrane Cathédrale">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réserver vos activités - Rafting, Camping, Randonnée | Imsfrane</title>
+    <meta name="description" content="Réservez vos activités à Imsfrane: rafting, camping, randonnée, VTT, quad. Paiement sécurisé par PayPal ou virement. Confirmation par WhatsApp.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Réservation - Imsfrane Cathédrale">
+    <meta property="og:description" content="Réservez vos activités à Imsfrane: rafting, camping, randonnée, VTT, quad. Paiement sécurisé par PayPal ou virement.">
+    <meta property="og:image" content="https://imsfrane.com/images/booking-hero.jpg">
+    <meta property="og:url" content="https://imsfrane.com/booking.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Font Awesome avec optimisation PageSpeed -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    
     <style>
+        /* جميع الأنماط الموجودة كما هي */
         * {
             margin: 0;
             padding: 0;
@@ -65,8 +70,8 @@
             width: 50px;
             height: 50px;
             min-width: 50px;
-            border-radius: 50% !important;
-            overflow: hidden !important;
+            border-radius: 50%;
+            overflow: hidden;
             border: 3px solid #e6b12e;
             transition: transform 0.3s;
             background: white;
@@ -124,11 +129,7 @@
             transition: all 0.3s;
         }
 
-        .lang-btn.active {
-            background-color: #e6b12e;
-            color: #1e3c2c;
-        }
-
+        .lang-btn.active,
         .lang-btn:hover {
             background-color: #e6b12e;
             color: #1e3c2c;
@@ -196,7 +197,7 @@
         .submenu {
             display: none;
             list-style: none;
-            padding-right: 1.5rem;
+            padding-left: 1.5rem;
             background: rgba(0,0,0,0.2);
             border-radius: 10px;
         }
@@ -595,7 +596,7 @@
             cursor: not-allowed;
         }
 
-        /* ===== FOOTER PROFESSIONNEL ===== */
+        /* ===== FOOTER ===== */
         .footer-pro {
             background: linear-gradient(135deg, #0f2a1a, #1e3c2c);
             color: white;
@@ -655,11 +656,6 @@
             border-radius: 50%;
             border: 2px solid #e6b12e;
             object-fit: cover;
-        }
-
-        .footer-logo h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
         }
 
         .footer-description {
@@ -754,7 +750,6 @@
             color: #e6b12e;
         }
 
-        /* Footer Middle - Stats */
         .footer-middle {
             background: rgba(0,0,0,0.2);
             border-radius: 50px;
@@ -779,7 +774,6 @@
             opacity: 0.8;
         }
 
-        /* Footer Bottom */
         .footer-bottom {
             display: flex;
             justify-content: space-between;
@@ -809,7 +803,85 @@
             color: #e6b12e;
         }
 
-        /* الترجمة */
+        /* ===== FLOATING BUTTONS ===== */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #1e3c2c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1) translateY(-5px);
+        }
+
+        .floating-btn.whatsapp {
+            background-color: #25D366;
+        }
+
+        .floating-btn.phone {
+            background-color: #1e3c2c;
+        }
+
+        .floating-btn.booking {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        .floating-btn .tooltip {
+            position: absolute;
+            right: 70px;
+            background-color: #1e3c2c;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            pointer-events: none;
+        }
+
+        .floating-btn.whatsapp .tooltip {
+            background-color: #25D366;
+        }
+
+        .floating-btn.phone .tooltip {
+            background-color: #1e3c2c;
+        }
+
+        .floating-btn.booking .tooltip {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        .floating-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
+
+        /* ===== LANGUAGE ===== */
         [data-lang="en"] .lang-fr {
             display: none !important;
         }
@@ -817,177 +889,39 @@
             display: none !important;
         }
 
-        /* Responsive */
+        /* ===== RESPONSIVE ===== */
         @media screen and (max-width: 992px) {
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-            
-            .hero-content p {
-                font-size: 1.2rem;
-            }
-            
-            .footer-top {
-                grid-template-columns: 1fr 1fr;
-                gap: 2rem;
-            }
+            .hero-content h1 { font-size: 3rem; }
+            .hero-content p { font-size: 1.2rem; }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
         }
 
         @media screen and (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-content p {
-                font-size: 1rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .booking-container {
-                padding: 1.5rem;
-            }
-            
-            .payment-options {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-top {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-middle {
-                grid-template-columns: repeat(2, 1fr);
-                border-radius: 20px;
-                padding: 1.5rem;
-            }
-            
-            .footer-bottom {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-            
-            .footer-bottom-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content p { font-size: 1rem; }
+            .section-title { font-size: 2rem; }
+            .booking-container { padding: 1.5rem; }
+            .payment-options { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr; }
+            .footer-middle { grid-template-columns: repeat(2, 1fr); border-radius: 20px; padding: 1.5rem; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+            .footer-bottom-links { flex-wrap: wrap; justify-content: center; }
+            .floating-buttons { bottom: 70px; right: 20px; gap: 10px; }
+            .floating-btn { width: 50px; height: 50px; font-size: 1.5rem; }
+            .floating-btn .tooltip { display: none; }
         }
-         /* ===== FLOATING BUTTONS ===== */
-       .floating-buttons {
-           position: fixed;
-           bottom: 30px;
-           right: 30px;
-           z-index: 9999;
-           display: flex;
-           flex-direction: column;
-           gap: 15px;
-       }
-       
-       .floating-btn {
-           width: 60px;
-           height: 60px;
-           border-radius: 50%;
-           background-color: #1e3c2c;
-           color: white;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           font-size: 1.8rem;
-           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-           transition: all 0.3s ease;
-           position: relative;
-           text-decoration: none;
-           border: none;
-           cursor: pointer;
-       }
-       
-       .floating-btn:hover {
-           transform: scale(1.1) translateY(-5px);
-       }
-       
-       .floating-btn.whatsapp {
-           background-color: #25D366;
-       }
-       
-       .floating-btn.phone {
-           background-color: #1e3c2c;
-       }
-       
-       .floating-btn.booking {
-           background-color: #e6b12e;
-           color: #1e3c2c;
-       }
-       
-       /* Tooltip */
-       .floating-btn .tooltip {
-           position: absolute;
-           right: 70px;
-           background-color: #1e3c2c;
-           color: white;
-           padding: 5px 12px;
-           border-radius: 20px;
-           font-size: 0.9rem;
-           white-space: nowrap;
-           opacity: 0;
-           visibility: hidden;
-           transition: all 0.3s;
-           pointer-events: none;
-           font-weight: 500;
-           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-       }
-       
-       .floating-btn.whatsapp .tooltip {
-           background-color: #25D366;
-       }
-       
-       .floating-btn.phone .tooltip {
-           background-color: #1e3c2c;
-       }
-       
-       .floating-btn.booking .tooltip {
-           background-color: #e6b12e;
-           color: #1e3c2c;
-       }
-       
-       .floating-btn:hover .tooltip {
-           opacity: 1;
-           visibility: visible;
-           right: 75px;
-       }
-       
-       /* للشاشات الصغيرة */
-       @media screen and (max-width: 768px) {
-           .floating-buttons {
-               bottom: 70px;
-               right: 20px;
-               gap: 10px;
-           }
-           
-           .floating-btn {
-               width: 50px;
-               height: 50px;
-               font-size: 1.5rem;
-           }
-           
-           .floating-btn .tooltip {
-               display: none;
-           }
-       }
     </style>
 </head>
 <body data-lang="en">
-    <!-- طبقة التعتيم -->
+    <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
 
-    <!-- الهيدر -->
+    <!-- HEADER -->
     <header>
         <div class="container header-content">
             <a href="index.html" class="logo">
                 <div class="logo-img">
-                    <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                    <img src="images/logo.jpeg" alt="Imsfrane Cathédrale" width="50" height="50">
                 </div>
                 <div class="logo-text">
                     <h1>Imsfrane Cathédrale</h1>
@@ -1008,7 +942,7 @@
         </div>
     </header>
 
-    <!-- القائمة الجانبية -->
+    <!-- MENU -->
     <nav id="mainNav">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
@@ -1018,12 +952,12 @@
                     <i class="fas fa-chevron-right arrow"></i>
                 </a>
                 <ul class="submenu">
-                    <li><a href="rafting.html"><i class="fas fa-water"></i> Rafting</a></li>
-                    <li><a href="camping.html"><i class="fas fa-campground"></i> Camping</a></li>
-                    <li><a href="randonnee.html"><i class="fas fa-hiking"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
-                    <li><a href="vtt.html"><i class="fas fa-bicycle"></i> VTT</a></li>
-                    <li><a href="quad.html"><i class="fas fa-motorcycle"></i> Quad</a></li>
-                    <li><a href="hebergement.html"><i class="fas fa-bed"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                    <li><a href="rafting.html">Rafting</a></li>
+                    <li><a href="camping.html">Camping</a></li>
+                    <li><a href="randonnee.html"><span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                    <li><a href="vtt.html">VTT</a></li>
+                    <li><a href="quad.html">Quad</a></li>
+                    <li><a href="hebergement.html"><span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
                 </ul>
             </li>
             <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
@@ -1034,7 +968,7 @@
         </ul>
     </nav>
 
-    <!-- Hero section -->
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
             <div class="badge">
@@ -1048,7 +982,7 @@
         </div>
     </section>
 
-    <!-- محتوى الصفحة -->
+    <!-- CONTENU -->
     <div class="container page-content">
         <div class="booking-container">
             <h2 class="section-title" style="margin-bottom: 2rem;">
@@ -1056,7 +990,6 @@
                 <span class="lang-fr">Sélectionnez vos activités</span>
             </h2>
 
-            <!-- Status Message -->
             <div id="statusMessage" class="status-message"></div>
 
             <form id="bookingForm">
@@ -1064,61 +997,42 @@
                 <div class="form-group">
                     <label><i class="fas fa-hiking"></i> <span class="lang-en">Activities *</span><span class="lang-fr">Activités *</span></label>
                     <div class="activities-list">
-                        <!-- Rafting -->
                         <div class="activity-item">
                             <input type="checkbox" id="act-rafting" class="activity-checkbox" data-prix="400" data-nom="🌊 Rafting 12km - 400 DH /personne">
                             <label for="act-rafting">🌊 Rafting 12km - <span class="activity-price">400 DH</span> /personne</label>
                         </div>
-
-                        <!-- Camping 1 personne -->
                         <div class="activity-item">
                             <input type="checkbox" id="act-camping1" class="activity-checkbox" data-prix="60" data-nom="🏕️ Camping (Tente 1 pers.) - 60 DH /nuit">
                             <label for="act-camping1">🏕️ Camping (Tente 1 pers.) - <span class="activity-price">60 DH</span> /nuit</label>
                         </div>
-
-                        <!-- Camping 2 personnes -->
                         <div class="activity-item">
                             <input type="checkbox" id="act-camping2" class="activity-checkbox" data-prix="100" data-nom="🏕️ Camping (Tente 2 pers.) - 100 DH /nuit">
                             <label for="act-camping2">🏕️ Camping (Tente 2 pers.) - <span class="activity-price">100 DH</span> /nuit</label>
                         </div>
-
-                        <!-- Randonnée Sommet -->
                         <div class="activity-item">
                             <input type="checkbox" id="act-rando1" class="activity-checkbox" data-prix="300" data-nom="🥾 Randonnée - Sommet 1868m - 300 DH (groupe)" data-est-rando="true">
                             <label for="act-rando1">🥾 Randonnée - Sommet 1868m - <span class="activity-price">300 DH</span> (groupe)</label>
                         </div>
-
-                        <!-- Randonnée Gorges -->
                         <div class="activity-item">
                             <input type="checkbox" id="act-rando2" class="activity-checkbox" data-prix="200" data-nom="🥾 Randonnée - Gorges & Cascades - 200 DH (groupe)" data-est-rando="true">
                             <label for="act-rando2">🥾 Randonnée - Gorges & Cascades - <span class="activity-price">200 DH</span> (groupe)</label>
                         </div>
-
-                        <!-- Randonnée Grand Tour -->
                         <div class="activity-item">
                             <input type="checkbox" id="act-rando3" class="activity-checkbox" data-prix="400" data-nom="🥾 Randonnée - Grand Tour - 400 DH (groupe)" data-est-rando="true">
                             <label for="act-rando3">🥾 Randonnée - Grand Tour - <span class="activity-price">400 DH</span> (groupe)</label>
                         </div>
-
-                        <!-- VTT -->
                         <div class="activity-item">
                             <input type="checkbox" id="act-vtt" class="activity-checkbox" data-prix="150" data-nom="🚵 VTT - 150 DH /personne">
                             <label for="act-vtt">🚵 VTT - <span class="activity-price">150 DH</span> /personne</label>
                         </div>
-
-                        <!-- Quad 1 personne -->
                         <div class="activity-item">
                             <input type="checkbox" id="act-quad1" class="activity-checkbox" data-prix="250" data-nom="🚙 Quad 1 personne - 250 DH /heure">
                             <label for="act-quad1">🚙 Quad 1 personne - <span class="activity-price">250 DH</span> /heure</label>
                         </div>
-
-                        <!-- Quad 2 personnes -->
                         <div class="activity-item">
                             <input type="checkbox" id="act-quad2" class="activity-checkbox" data-prix="300" data-nom="🚙 Quad 2 personnes - 300 DH /heure">
                             <label for="act-quad2">🚙 Quad 2 personnes - <span class="activity-price">300 DH</span> /heure</label>
                         </div>
-
-                        <!-- Hébergement -->
                         <div class="activity-item">
                             <input type="checkbox" id="act-hebergement" class="activity-checkbox" data-prix="400" data-nom="🏠 Hébergement - Maison meublée - 400 DH /nuit">
                             <label for="act-hebergement">🏠 Hébergement - Maison meublée - <span class="activity-price">400 DH</span> /nuit</label>
@@ -1195,15 +1109,13 @@
         </div>
     </div>
 
-    <!-- FOOTER PROFESSIONNEL -->
+    <!-- FOOTER -->
     <footer class="footer-pro">
         <div class="container">
-            <!-- Footer Top -->
             <div class="footer-top">
-                <!-- Logo + Description -->
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="images/logo.jpeg" alt="Imsfrane Cathédrale">
+                        <img src="images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
                     <p class="footer-description">
@@ -1211,27 +1123,15 @@
                         <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" rel="noopener" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" rel="noopener" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- Quick Links -->
                 <div class="footer-col footer-links">
-                    <h4>
-                        <span class="lang-en">Quick Links</span>
-                        <span class="lang-fr">Liens Rapides</span>
-                    </h4>
+                    <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
                     <ul>
                         <li><a href="index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
                         <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
@@ -1242,12 +1142,8 @@
                     </ul>
                 </div>
 
-                <!-- Informations -->
                 <div class="footer-col footer-info">
-                    <h4>
-                        <span class="lang-en">Information</span>
-                        <span class="lang-fr">Informations</span>
-                    </h4>
+                    <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
                     <ul>
                         <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
                         <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
@@ -1258,54 +1154,24 @@
                     </ul>
                 </div>
 
-                <!-- Contact -->
                 <div class="footer-col footer-contact">
-                    <h4>
-                        <span class="lang-en">Contact Us</span>
-                        <span class="lang-fr">Contactez-nous</span>
-                    </h4>
+                    <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
                     <ul>
-                        <li>
-                            <i class="fas fa-phone-alt"></i>
-                            <a href="tel:0667772551">+212 667-772551</a>
-                        </li>
-                        <li>
-                            <i class="fab fa-whatsapp"></i>
-                            <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span>
-                        </li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Footer Middle - Stats -->
             <div class="footer-middle">
-                <div class="stat-item">
-                    <div class="stat-number">1,868m</div>
-                    <div class="stat-label">Altitude</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">50+ km</div>
-                    <div class="stat-label">Sentiers</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">+500</div>
-                    <div class="stat-label">Aventuriers</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">⭐ 4.9</div>
-                    <div class="stat-label">Avis</div>
-                </div>
+                <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
+                <div class="stat-item"><div class="stat-number">50+ km</div><div class="stat-label">Sentiers</div></div>
+                <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
+                <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
             </div>
 
-            <!-- Footer Bottom -->
             <div class="footer-bottom">
                 <div class="copyright">
                     <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
@@ -1319,9 +1185,15 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- FLOATING BUTTONS -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
+        <a href="tel:0667772551" class="floating-btn phone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
+        <a href="booking.html" class="floating-btn booking"><i class="fas fa-calendar-check"></i><span class="tooltip">Réserver</span></a>
+    </div>
+
     <script>
-        // قائمة الجوال
+        // Menu
         const menuToggle = document.getElementById('menuToggle');
         const mainNav = document.getElementById('mainNav');
         const overlay = document.getElementById('overlay');
@@ -1337,7 +1209,6 @@
         menuToggle.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', toggleMenu);
 
-        // Submenu toggle
         window.toggleSubmenu = function(event) {
             event.preventDefault();
             const parent = event.currentTarget.closest('.has-submenu');
@@ -1347,37 +1218,26 @@
             arrow.classList.toggle('rotated');
         };
 
-        // إغلاق القائمة عند الضغط على الروابط
         document.querySelectorAll('#mainNav ul li a:not(.has-submenu > a)').forEach(link => {
             link.addEventListener('click', () => {
                 if (mainNav.classList.contains('active')) toggleMenu();
             });
         });
 
-        // دالة تغيير اللغة
+        // Language
         window.setLanguage = function(lang) {
             document.body.setAttribute('data-lang', lang);
-            
             document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.textContent.toLowerCase() === lang.toLowerCase()) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang.toLowerCase());
             });
-
             localStorage.setItem('preferred-language', lang);
         };
 
-        // تحميل اللغة المحفوظة
         const savedLang = localStorage.getItem('preferred-language');
-        if (savedLang) {
-            setLanguage(savedLang);
-        } else {
-            setLanguage('en');
-        }
+        if (savedLang) setLanguage(savedLang);
+        else setLanguage('en');
 
-        // ===== حساب السعر الإجمالي =====
+        // Calcul total
         let modePaiement = 'paypal';
 
         function calculerTotal() {
@@ -1398,24 +1258,17 @@
                 }
             });
             
-            // التحكم في ظهور حقل عدد الأشخاص
-            if (aDesActivitesAvecPersonnes) {
-                document.getElementById('groupe-personnes').style.display = 'block';
-            } else {
-                document.getElementById('groupe-personnes').style.display = 'none';
-            }
-            
+            document.getElementById('groupe-personnes').style.display = aDesActivitesAvecPersonnes ? 'block' : 'none';
             document.getElementById('totalAffiche').textContent = total + ' DH';
             return total;
         }
 
-        // ربط التغييرات
         document.querySelectorAll('.activity-checkbox').forEach(cb => {
             cb.addEventListener('change', calculerTotal);
         });
         document.getElementById('personnes').addEventListener('input', calculerTotal);
 
-        // ===== اختيار طريقة الدفع =====
+        // Payment selection
         window.selectPayment = function(mode) {
             modePaiement = mode;
             document.getElementById('option-paypal').classList.remove('selected');
@@ -1430,7 +1283,7 @@
             }
         };
 
-        // ===== تأكيد الحجز =====
+        // Confirm booking
         document.getElementById('btn-confirmer').addEventListener('click', function() {
             let checkboxes = document.querySelectorAll('.activity-checkbox:checked');
             if (checkboxes.length === 0) {
@@ -1477,11 +1330,7 @@
             checkboxes.forEach(cb => {
                 let nom = cb.getAttribute('data-nom');
                 let estRandonnee = cb.hasAttribute('data-est-rando');
-                
-                if (!estRandonnee) {
-                    aDesActivitesAvecPersonnes = true;
-                }
-                
+                if (!estRandonnee) aDesActivitesAvecPersonnes = true;
                 message += `- ${nom}\n`;
             });
             
@@ -1504,26 +1353,11 @@
             window.open(`https://wa.me/212667772551?text=${encodeURIComponent(message)}`, '_blank');
         });
 
-        // ===== تشغيل أولي =====
+        // Initialisation
         document.addEventListener('DOMContentLoaded', function() {
             selectPayment('paypal');
             document.getElementById('date').valueAsDate = new Date();
         });
     </script>
-    <!-- FLOATING BUTTONS -->
-<div class="floating-buttons">
-    <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span class="tooltip">WhatsApp</span>
-    </a>
-    <a href="tel:0667772551" class="floating-btn phone">
-        <i class="fas fa-phone-alt"></i>
-        <span class="tooltip">Appeler</span>
-    </a>
-    <a href="booking.html" class="floating-btn booking">
-        <i class="fas fa-calendar-check"></i>
-        <span class="tooltip">Réserver</span>
-    </a>
-</div>
 </body>
 </html>
