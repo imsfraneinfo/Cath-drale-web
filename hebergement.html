@@ -2,11 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Hébergement à Imsfrane - Maison meublée près du rafting</title>
-  <meta name="description" content="Maison meublée à louer près du point d'arrivée du rafting. Douche, eau chaude, cuisine équipée. Idéal pour se détendre après l'aventure.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hébergement à Imsfrane - Maison meublée près du rafting</title>
+    <meta name="description" content="Maison meublée à louer près du point d'arrivée du rafting. Douche, eau chaude, cuisine équipée. Idéal pour se détendre après l'aventure.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Hébergement à Imsfrane - Maison meublée">
+    <meta property="og:description" content="Maison meublée à louer près du point d'arrivée du rafting. Douche, eau chaude, cuisine équipée. Idéal pour se détendre après l'aventure.">
+    <meta property="og:image" content="https://imsfrane.com/images/hebergement.jpg">
+    <meta property="og:url" content="https://imsfrane.com/hebergement.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Imsfrane Cathédrale">
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -23,11 +33,11 @@
             flex-direction: column;
         }
 
-        /* الهيدر */
+        /* ===== HEADER (موحد مع index.html) ===== */
         header {
             background-color: #1e3c2c;
             color: white;
-            padding: 0.5rem 0;
+            padding: 0.8rem 0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
@@ -47,23 +57,27 @@
             flex-wrap: nowrap;
         }
 
-        /* Logo دائري */
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1rem;
             cursor: pointer;
             text-decoration: none;
             color: white;
         }
 
         .logo-img {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
             border-radius: 50%;
             overflow: hidden;
-            border: 2px solid #e6b12e;
+            border: 3px solid #e6b12e;
             transition: transform 0.3s;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .logo:hover .logo-img {
@@ -74,20 +88,21 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
 
         .logo-text h1 {
-            font-size: 0.8rem;
+            font-size: 1.3rem;
             font-weight: 700;
+            line-height: 1.2;
         }
 
         .logo-text span {
             color: #e6b12e;
-            font-size: 0.65rem;
+            font-size: 0.75rem;
             display: block;
         }
 
-        /* أزرار اللغة */
         .right-controls {
             display: flex;
             align-items: center;
@@ -133,6 +148,9 @@
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .menu-toggle:hover {
@@ -140,7 +158,7 @@
             color: #1e3c2c;
         }
 
-        /* القائمة الجانبية */
+        /* ===== MENU LATÉRAL ===== */
         nav {
             position: fixed;
             top: 0;
@@ -221,7 +239,7 @@
             display: block;
         }
 
-        /* قسم "قريباً" */
+        /* ===== PAGE COMING SOON ===== */
         .coming-soon {
             flex: 1;
             display: flex;
@@ -266,15 +284,9 @@
         }
 
         @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(230,177,46,0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(230,177,46,0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(230,177,46,0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(230,177,46,0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(230,177,46,0); }
+            100% { box-shadow: 0 0 0 0 rgba(230,177,46,0); }
         }
 
         .icon-wrapper i {
@@ -305,7 +317,6 @@
             line-height: 1.8;
         }
 
-        /* شريط التقدم */
         .progress-bar {
             width: 100%;
             height: 10px;
@@ -324,18 +335,11 @@
         }
 
         @keyframes progress {
-            0% {
-                width: 75%;
-            }
-            50% {
-                width: 85%;
-            }
-            100% {
-                width: 75%;
-            }
+            0% { width: 75%; }
+            50% { width: 85%; }
+            100% { width: 75%; }
         }
 
-        /* العد التنازلي */
         .countdown {
             display: flex;
             justify-content: center;
@@ -361,7 +365,6 @@
             letter-spacing: 1px;
         }
 
-        /* زر العودة */
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, #e6b12e, #f4c542);
@@ -372,7 +375,7 @@
             font-weight: 700;
             transition: all 0.3s;
             font-size: 1.2rem;
-            margin-top: 2rem;
+            margin: 0.5rem;
             border: none;
             cursor: pointer;
             box-shadow: 0 5px 15px rgba(230,177,46,0.3);
@@ -391,7 +394,6 @@
             background: transparent;
             border: 2px solid #1e3c2c;
             color: #1e3c2c;
-            margin-left: 1rem;
         }
 
         .btn-back:hover {
@@ -399,15 +401,122 @@
             color: white;
         }
 
+        /* ===== FOOTER ===== */
         footer {
-            background-color: #1e3c2c;
+            background: linear-gradient(135deg, #0f2a1a, #1e3c2c);
             color: white;
             text-align: center;
             padding: 2rem 0;
             margin-top: 4rem;
+            border-top: 3px solid #e6b12e;
+            position: relative;
         }
 
-        /* الترجمة */
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,100 L0,100 Z" fill="rgba(230,177,46,0.02)"/></svg>');
+            background-size: cover;
+            pointer-events: none;
+        }
+
+        footer .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        footer p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        /* ===== FLOATING BUTTONS ===== */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #1e3c2c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1) translateY(-5px);
+        }
+
+        .floating-btn.whatsapp {
+            background-color: #25D366;
+        }
+
+        .floating-btn.phone {
+            background-color: #1e3c2c;
+        }
+
+        .floating-btn.booking {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        .floating-btn .tooltip {
+            position: absolute;
+            right: 70px;
+            background-color: #1e3c2c;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            pointer-events: none;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .floating-btn.whatsapp .tooltip {
+            background-color: #25D366;
+        }
+
+        .floating-btn.phone .tooltip {
+            background-color: #1e3c2c;
+        }
+
+        .floating-btn.booking .tooltip {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+
+        .floating-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
+
+        /* ===== LANGUAGE ===== */
         [data-lang="en"] .lang-fr {
             display: none !important;
         }
@@ -415,7 +524,18 @@
             display: none !important;
         }
 
+        /* ===== RESPONSIVE HEADER (comme index) ===== */
         @media screen and (max-width: 768px) {
+            .logo-img {
+                width: 50px;
+                height: 50px;
+                min-width: 50px;
+            }
+            
+            .logo-text h1 {
+                font-size: 0.9rem;
+            }
+            
             .coming-soon-content {
                 padding: 2rem 1.5rem;
             }
@@ -452,123 +572,39 @@
             .icon-wrapper i {
                 font-size: 2.5rem;
             }
+            
+            .floating-buttons {
+                bottom: 70px;
+                right: 20px;
+                gap: 10px;
+            }
+            
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .floating-btn .tooltip {
+                display: none;
+            }
         }
-       /* ===== FLOATING BUTTONS ===== */
-       .floating-buttons {
-           position: fixed;
-           bottom: 30px;
-           right: 30px;
-           z-index: 9999;
-           display: flex;
-           flex-direction: column;
-           gap: 15px;
-       }
-       
-       .floating-btn {
-           width: 60px;
-           height: 60px;
-           border-radius: 50%;
-           background-color: #1e3c2c;
-           color: white;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           font-size: 1.8rem;
-           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-           transition: all 0.3s ease;
-           position: relative;
-           text-decoration: none;
-           border: none;
-           cursor: pointer;
-       }
-       
-       .floating-btn:hover {
-           transform: scale(1.1) translateY(-5px);
-       }
-       
-       .floating-btn.whatsapp {
-           background-color: #25D366;
-       }
-       
-       .floating-btn.phone {
-           background-color: #1e3c2c;
-       }
-       
-       .floating-btn.booking {
-           background-color: #e6b12e;
-           color: #1e3c2c;
-       }
-       
-       /* Tooltip */
-       .floating-btn .tooltip {
-           position: absolute;
-           right: 70px;
-           background-color: #1e3c2c;
-           color: white;
-           padding: 5px 12px;
-           border-radius: 20px;
-           font-size: 0.9rem;
-           white-space: nowrap;
-           opacity: 0;
-           visibility: hidden;
-           transition: all 0.3s;
-           pointer-events: none;
-           font-weight: 500;
-           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-       }
-       
-       .floating-btn.whatsapp .tooltip {
-           background-color: #25D366;
-       }
-       
-       .floating-btn.phone .tooltip {
-           background-color: #1e3c2c;
-       }
-       
-       .floating-btn.booking .tooltip {
-           background-color: #e6b12e;
-           color: #1e3c2c;
-       }
-       
-       .floating-btn:hover .tooltip {
-           opacity: 1;
-           visibility: visible;
-           right: 75px;
-       }
-       
-       /* للشاشات الصغيرة */
-       @media screen and (max-width: 768px) {
-           .floating-buttons {
-               bottom: 70px;
-               right: 20px;
-               gap: 10px;
-           }
-           
-           .floating-btn {
-               width: 50px;
-               height: 50px;
-               font-size: 1.5rem;
-           }
-           
-           .floating-btn .tooltip {
-               display: none;
-           }
-       }
     </style>
 </head>
 <body data-lang="en">
-    <!-- طبقة التعتيم -->
+
+    <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
 
-    <!-- الهيدر -->
+    <!-- Header (موحد مع index.html) -->
     <header>
         <div class="container header-content">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="Accueil">
                 <div class="logo-img">
-                    <img src="images/logo.jpeg" alt="Imsfrane">
+                    <img src="images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60">
                 </div>
                 <div class="logo-text">
-                    <h1>Imsfrane</h1>
+                    <h1>Imsfrane Cathédrale</h1>
                     <span class="lang-en">Nature Adventures</span>
                     <span class="lang-fr">Aventures Nature</span>
                 </div>
@@ -576,22 +612,22 @@
             
             <div class="right-controls">
                 <div class="lang-buttons">
-                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
+                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
                 </div>
-                <button class="menu-toggle" id="menuToggle">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- القائمة الجانبية -->
-    <nav id="mainNav">
+    <!-- Menu -->
+    <nav id="mainNav" aria-label="Menu principal">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
             <li class="has-submenu">
-                <a href="#" onclick="toggleSubmenu(event)">
+                <a href="#" onclick="toggleSubmenu(event)" aria-expanded="false">
                     <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
                     <i class="fas fa-chevron-right arrow"></i>
                 </a>
@@ -612,7 +648,7 @@
         </ul>
     </nav>
 
-    <!-- قسم قريباً -->
+    <!-- Coming Soon Section -->
     <section class="coming-soon">
         <div class="coming-soon-content">
             <div class="icon-wrapper">
@@ -636,12 +672,12 @@
                 Notre page d'hébergement sera bientôt disponible avec des maisons confortables près d'Ouad Ahansal.
             </p>
 
-            <!-- شريط التقدم -->
+            <!-- Progress Bar -->
             <div class="progress-bar">
                 <div class="progress-fill"></div>
             </div>
 
-            <!-- العد التنازلي (مثال: 5 أيام) -->
+            <!-- Countdown -->
             <div class="countdown">
                 <div class="countdown-item">
                     <div class="countdown-number" id="days">05</div>
@@ -665,27 +701,41 @@
                 </div>
             </div>
 
-            <div style="margin-top: 2rem;">
-                <a href="index.html" class="btn">
+            <div>
+                <a href="index.html" class="btn" aria-label="Retour à l'accueil">
                     <i class="fas fa-home"></i> <span class="lang-en">Back to Home</span><span class="lang-fr">Retour à l'Accueil</span>
                 </a>
-                <a href="contact.html" class="btn btn-back">
+                <a href="contact.html" class="btn btn-back" aria-label="Nous contacter">
                     <i class="fas fa-envelope"></i> <span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- الفوتر -->
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>© 2026 Imsfrane - <span class="lang-en">All Rights Reserved</span><span class="lang-fr">Tous Droits Réservés</span></p>
+            <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">WhatsApp</span>
+        </a>
+        <a href="tel:0667772551" class="floating-btn phone" aria-label="Téléphone">
+            <i class="fas fa-phone-alt"></i>
+            <span class="tooltip">Appeler</span>
+        </a>
+        <a href="booking.html" class="floating-btn booking" aria-label="Réservation">
+            <i class="fas fa-calendar-check"></i>
+            <span class="tooltip">Réserver</span>
+        </a>
+    </div>
+
     <script>
-        // قائمة الجوال
         const menuToggle = document.getElementById('menuToggle');
         const mainNav = document.getElementById('mainNav');
         const overlay = document.getElementById('overlay');
@@ -701,7 +751,6 @@
         menuToggle.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', toggleMenu);
 
-        // Submenu toggle
         window.toggleSubmenu = function(event) {
             event.preventDefault();
             const parent = event.currentTarget.closest('.has-submenu');
@@ -711,29 +760,20 @@
             arrow.classList.toggle('rotated');
         };
 
-        // إغلاق القائمة عند الضغط على الروابط
         document.querySelectorAll('#mainNav ul li a:not(.has-submenu > a)').forEach(link => {
             link.addEventListener('click', () => {
                 if (mainNav.classList.contains('active')) toggleMenu();
             });
         });
 
-        // دالة تغيير اللغة
         window.setLanguage = function(lang) {
             document.body.setAttribute('data-lang', lang);
-            
             document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.textContent.toLowerCase() === lang.toLowerCase()) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang.toLowerCase());
             });
-
             localStorage.setItem('preferred-language', lang);
         };
 
-        // تحميل اللغة المحفوظة
         const savedLang = localStorage.getItem('preferred-language');
         if (savedLang) {
             setLanguage(savedLang);
@@ -741,9 +781,8 @@
             setLanguage('en');
         }
 
-        // عد تنازلي بسيط (مثال: 5 أيام من الآن)
+        // Countdown
         function updateCountdown() {
-            // نحدد تاريخ الهدف (5 أيام من الآن)
             const targetDate = new Date();
             targetDate.setDate(targetDate.getDate() + 5);
             
@@ -770,20 +809,5 @@
 
         updateCountdown();
     </script>
-    <!-- FLOATING BUTTONS -->
-<div class="floating-buttons">
-    <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span class="tooltip">WhatsApp</span>
-    </a>
-    <a href="tel:0667772551" class="floating-btn phone">
-        <i class="fas fa-phone-alt"></i>
-        <span class="tooltip">Appeler</span>
-    </a>
-    <a href="booking.html" class="floating-btn booking">
-        <i class="fas fa-calendar-check"></i>
-        <span class="tooltip">Réserver</span>
-    </a>
-</div>
 </body>
 </html>
