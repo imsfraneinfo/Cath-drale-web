@@ -1,6 +1,3 @@
 User-agent: *
 Allow: /
 Sitemap: https://imsfrane.com/sitemap.xml
-
-# منع الوصول لمجلد الصور
-Disallow: /images/
