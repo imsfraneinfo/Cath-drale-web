@@ -990,7 +990,7 @@ nav ul li a:hover {
 
 .footer-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(255,255,255,0.1);
@@ -1104,4 +1104,42 @@ nav ul li a:hover {
     .floating-buttons { bottom: 20px; right: 20px; }
     .floating-btn { width: 50px; height: 50px; font-size: 1.5rem; }
     .floating-btn .tooltip { display: none; }
-}""
+}
+/* ===== AMÉLIORATION DU CONTRASTE ===== */
+.card-category-promax {
+    color: #b38f2a !important;
+    font-weight: 700 !important;
+}
+
+.section-subtitle {
+    color: #b38f2a !important;
+}
+
+.testimonial-activity {
+    background: #b38f2a !important;
+    color: white !important;
+}
+
+.price, .price-unit, .card-price-promax .price, .card-price-promax .price-unit {
+    color: #b38f2a !important;
+    font-weight: 700 !important;
+}
+
+.gold-text {
+    color: #b38f2a !important;
+}
+
+.btn-details-promax {
+    border-color: #b38f2a !important;
+    color: #b38f2a !important;
+}
+
+.btn-details-promax:hover {
+    background: #b38f2a !important;
+    color: white !important;
+}
+
+.badge-new, .badge-hot {
+    background: #b38f2a !important;
+    color: white !important;
+}
