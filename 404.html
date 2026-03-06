@@ -1,14 +1,320 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Imsfrane Cathédrale</title>
+    <meta name="description" content="Page not found - Imsfrane Cathédrale">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .error-page {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f9f7f3 0%, #f0e8d9 100%);
+        }
+        
+        .error-content {
+            text-align: center;
+            max-width: 600px;
+            background: white;
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 1px solid rgba(230,177,46,0.3);
+            animation: fadeInUp 0.5s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .error-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            border: 3px solid #e6b12e;
+        }
+        
+        .error-icon i {
+            font-size: 4rem;
+            color: #e6b12e;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            color: #1e3c2c;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 #e6b12e;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            color: #1e3c2c;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .error-message {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #e6b12e, #f4c542);
+            color: #1e3c2c;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(230,177,46,0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #1e3c2c;
+            color: #1e3c2c;
+        }
+        
+        .btn-outline:hover {
+            background: #1e3c2c;
+            color: white;
+        }
+        
+        .btn i {
+            margin-right: 0.5rem;
+        }
+        
+        .suggestions {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .suggestions h3 {
+            color: #1e3c2c;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .suggestions-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .suggestions-links a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .suggestions-links a:hover {
+            color: #e6b12e;
+        }
+        
+        .suggestions-links i {
+            color: #e6b12e;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .error-content {
+                padding: 2rem;
+            }
+            
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-message {
+                font-size: 1rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+<body data-lang="en">
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
 
-<body>
-  
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo" aria-label="Accueil">
+                <div class="logo-img">
+                    <img src="images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60">
+                </div>
+                <div class="logo-text">
+                    <h1>Imsfrane Cathédrale</h1>
+                    <span class="lang-en">Nature Adventures</span>
+                    <span class="lang-fr">Aventures Nature</span>
+                </div>
+            </a>
+            
+            <div class="right-controls">
+                <div class="lang-buttons">
+                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <nav id="mainNav" aria-label="Menu principal">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)" aria-expanded="false">
+                    <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="pages/rafting.html"><i class="fas fa-water"></i> Rafting</a></li>
+                    <li><a href="pages/camping.html"><i class="fas fa-campground"></i> Camping</a></li>
+                    <li><a href="pages/randonnee.html"><i class="fas fa-hiking"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                    <li><a href="pages/vtt.html"><i class="fas fa-bicycle"></i> VTT</a></li>
+                    <li><a href="pages/quad.html"><i class="fas fa-motorcycle"></i> Quad</a></li>
+                    <li><a href="pages/hebergement.html"><i class="fas fa-bed"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                </ul>
+            </li>
+            <li><a href="pages/memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+            <li><a href="pages/guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+            <li><a href="pages/blog.html"><i class="fas fa-blog"></i> <span class="lang-en">Blog</span><span class="lang-fr">Blog</span></a></li>
+            <li><a href="pages/booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+            <li><a href="pages/contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Error Page Content -->
+    <div class="error-page">
+        <div class="error-content">
+            <div class="error-icon">
+                <i class="fas fa-compass"></i>
+            </div>
+            
+            <div class="error-code">404</div>
+            
+            <h1 class="error-title lang-en">Page Not Found</h1>
+            <h1 class="error-title lang-fr">Page Non Trouvée</h1>
+            
+            <p class="error-message lang-en">
+                Oops! The page you're looking for seems to have wandered off into the mountains. 
+                Don't worry, even the best guides get lost sometimes.
+            </p>
+            <p class="error-message lang-fr">
+                Oups! La page que vous cherchez semble s'être égarée dans les montagnes. 
+                Ne vous inquiétez pas, même les meilleurs guides se perdent parfois.
+            </p>
+            
+            <div class="error-actions">
+                <a href="index.html" class="btn">
+                    <i class="fas fa-home"></i>
+                    <span class="lang-en">Back to Home</span>
+                    <span class="lang-fr">Retour à l'Accueil</span>
+                </a>
+                <a href="pages/contact.html" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i>
+                    <span class="lang-en">Contact Us</span>
+                    <span class="lang-fr">Contactez-nous</span>
+                </a>
+            </div>
+            
+            <div class="suggestions">
+                <h3 class="lang-en">You might be looking for:</h3>
+                <h3 class="lang-fr">Vous cherchez peut-être :</h3>
+                
+                <div class="suggestions-links">
+                    <a href="pages/rafting.html">
+                        <i class="fas fa-water"></i> Rafting
+                    </a>
+                    <a href="pages/camping.html">
+                        <i class="fas fa-campground"></i> Camping
+                    </a>
+                    <a href="pages/randonnee.html">
+                        <i class="fas fa-hiking"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span>
+                    </a>
+                    <a href="pages/memories.html">
+                        <i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (بسيط) -->
+    <footer class="footer-pro" style="margin-top: 0;">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none;">
+                <div class="copyright">
+                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>
