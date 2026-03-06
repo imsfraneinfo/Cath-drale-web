@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randonnée dans l'Atlas - Sommet 1868m, Gorges, Cascades | Imsfrane</title>
+    <meta name="description" content="Randonnée à Imsfrane: Sommet 1868m, Gorges d'Ahansal, cascades cachées. 3 parcours avec guides berbères.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Randonnée à Imsfrane - Sommet 1868m et cascades">
+    <meta property="og:description" content="Randonnée à Imsfrane: Sommet 1868m, Gorges d'Ahansal, cascades cachées. 3 parcours avec guides locaux.">
+    <meta property="og:image" content="https://imsfrane.com/images/randonnee-hero.jpg">
+    <meta property="og:url" content="https://imsfrane.com/pages/randonnee.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Imsfrane Cathédrale">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        /* Page specific styles */
+        .page-hero {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('../images/IMG_7431.jpg') center/cover no-repeat;
+            background-position: 50% 93%;
+            position: relative;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin: 3rem 0 2rem;
+        }
+        
+        .page-title h1 {
+            font-size: 2.5rem;
+            color: #1e3c2c;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title .location {
+            color: #e6b12e;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .intro-text {
+            max-width: 800px;
+            margin: 2rem auto 3rem;
+            text-align: center;
+        }
+        
+        .intro-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        .intro-icon {
+            font-size: 2rem;
+            color: #e6b12e;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin: 4rem 0 2rem;
+            font-size: 2rem;
+            color: #1e3c2c;
+            font-weight: 700;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #e6b12e;
+            margin: 0.5rem auto;
+        }
+        
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+        
+        .slider-slide {
+            min-width: 100%;
+            height: 100%;
+        }
+        
+        .slider-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.3);
+            border: 2px solid white;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s;
+        }
+        
+        .slider-btn:hover {
+            background: #e6b12e;
+            border-color: #e6b12e;
+            color: #1e3c2c;
+        }
+        
+        .slider-btn.prev { left: 20px; }
+        .slider-btn.next { right: 20px; }
+        
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+        
+        .slider-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .slider-dot.active {
+            background: #e6b12e;
+            transform: scale(1.2);
+        }
+        
+        .program-content {
+            max-width: 800px;
+            margin: 2rem auto 4rem;
+        }
+        
+        .program-title {
+            font-size: 1.8rem;
+            color: #1e3c2c;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .program-title i {
+            color: #e6b12e;
+        }
+        
+        .program-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            background: #f9f7f3;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1e3c2c;
+            font-weight: 600;
+        }
+        
+        .meta-item i {
+            color: #e6b12e;
+        }
+        
+        .meta-item small {
+            font-weight: 400;
+            color: #777;
+        }
+        
+        .program-text {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .program-text strong {
+            color: #1e3c2c;
+        }
+        
+        .program-list {
+            list-style: none;
+            margin: 1rem 0 1.5rem;
+        }
+        
+        .program-list li {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            color: #555;
+        }
+        
+        .program-list li i {
+            color: #e6b12e;
+            margin-top: 0.2rem;
+        }
+        
+        .guide-role {
+            background: #f0f8f0;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+        }
+        
+        .guide-role h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1e3c2c;
+            margin-bottom: 1rem;
+        }
+        
+        .guide-role h4 i {
+            color: #e6b12e;
+        }
+        
+        .guide-role ul {
+            list-style: none;
+        }
+        
+        .guide-role li {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            color: #555;
+        }
+        
+        .guide-role li i {
+            color: #e6b12e;
+            font-size: 0.9rem;
+        }
+        
+        .contact-section {
+            background: white;
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 4rem 0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .contact-item {
+            text-align: center;
+        }
+        
+        .contact-item i {
+            font-size: 2rem;
+            color: #e6b12e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: #e6b12e;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #e6b12e;
+            color: #1e3c2c;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background: #f4c542;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(230,177,46,0.3);
+        }
+        
+        /* Slider 1 - 3 images */
+        #slider1 .slider-slide:nth-child(1) img {
+            object-position: 50% 86%;
+        }
+        
+        #slider1 .slider-slide:nth-child(2) img {
+            object-position: 50% 90%;
+        }
+        
+        #slider1 .slider-slide:nth-child(3) img {
+            object-position: 50% 90%;
+        }
+        
+        /* Slider 2 - 4 images */
+        #slider2 .slider-slide:nth-child(1) img {
+            object-position: 50% 30%;
+        }
+        
+        #slider2 .slider-slide:nth-child(2) img {
+            object-position: 50% 50%;
+        }
+        
+        #slider2 .slider-slide:nth-child(3) img {
+            object-position: 50% 60%;
+        }
+        
+        #slider2 .slider-slide:nth-child(4) img {
+            object-position: 50% 80%;
+        }
+        
+        /* Slider 3 - 2 images */
+        #slider3 .slider-slide:nth-child(1) img {
+            object-position: 50% 80%;
+        }
+        
+        #slider3 .slider-slide:nth-child(2) img {
+            object-position: 50% 90%;
+        }
+        
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-hero {
+                height: 350px;
+            }
+            .slider-container {
+                height: 350px;
+            }
+            .program-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body data-lang="en">
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="../index.html" class="logo" aria-label="Accueil">
+                <div class="logo-img">
+                    <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60">
+                </div>
+                <div class="logo-text">
+                    <h1>Imsfrane Cathédrale</h1>
+                    <span class="lang-en">Nature Adventures</span>
+                    <span class="lang-fr">Aventures Nature</span>
+                </div>
+            </a>
+            
+            <div class="right-controls">
+                <div class="lang-buttons">
+                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <nav id="mainNav" aria-label="Menu principal">
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)" aria-expanded="false">
+                    <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="rafting.html"><i class="fas fa-water"></i> Rafting</a></li>
+                    <li><a href="camping.html"><i class="fas fa-campground"></i> Camping</a></li>
+                    <li><a href="randonnee.html"><i class="fas fa-hiking"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                    <li><a href="vtt.html"><i class="fas fa-bicycle"></i> VTT</a></li>
+                    <li><a href="quad.html"><i class="fas fa-motorcycle"></i> Quad</a></li>
+                    <li><a href="hebergement.html"><i class="fas fa-bed"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                </ul>
+            </li>
+            <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+            <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> <span class="lang-en">Blog</span><span class="lang-fr">Blog</span></a></li>
+            <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Image -->
+    <div class="page-hero"></div>
+
+    <!-- Page Title -->
+    <div class="container">
+        <div class="page-title">
+            <h1 class="lang-en">Hiking in Imsfrane</h1>
+            <h1 class="lang-fr">Randonnée à Imsfrane</h1>
+            <div class="location">
+                <i class="fas fa-map-pin"></i> Imsfrane, Morocco
+            </div>
+        </div>
+    </div>
+
+    <!-- Introduction -->
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-icon">
+                <i class="fas fa-mountain"></i>
+            </div>
+            <p class="lang-en">Discover the most beautiful hiking trails in Imsfrane, in the heart of the Atlas Mountains. Whether you're looking for a sporting challenge or a peaceful walk in nature, we have the right program for you. Accompanied by a local guide, you will explore breathtaking landscapes: majestic summits, deep gorges, hidden waterfalls and historical sites.</p>
+            <p class="lang-fr">Découvrez les plus beaux sentiers de randonnée d'Imsfrane, au cœur des montagnes de l'Atlas. Que vous soyez à la recherche d'un défi sportif ou d'une balade tranquille dans la nature, nous avons le programme qu'il vous faut. Accompagné par un guide local, vous explorerez des paysages à couper le souffle : sommets majestueux, gorges profondes, cascades cachées et sites historiques.</p>
+        </div>
+    </div>
+
+    <!-- PROGRAMME 1 - 3 photos -->
+    <div class="container">
+        <h2 class="section-title">
+            <span class="lang-en">Program 1: Summit Ascent (1868m)</span>
+            <span class="lang-fr">Programme 1 : Ascension du Sommet (1868m)</span>
+        </h2>
+
+        <div class="slider-container" id="slider1">
+            <div class="slider-wrapper">
+                <div class="slider-slide"><img src="../images/17.jpeg" alt="Sommet 1" width="800" height="450" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/19.jpeg" alt="Sommet 2" width="800" height="450" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/20.jpeg" alt="Sommet 3" width="800" height="450" loading="lazy"></div>
+            </div>
+            <button class="slider-btn prev" onclick="moveSlide(-1, 'slider1')" aria-label="Image précédente">❮</button>
+            <button class="slider-btn next" onclick="moveSlide(1, 'slider1')" aria-label="Image suivante">❯</button>
+            <div class="slider-dots" id="dots1">
+                <span class="slider-dot active" onclick="goToSlide(0, 'slider1')"></span>
+                <span class="slider-dot" onclick="goToSlide(1, 'slider1')"></span>
+                <span class="slider-dot" onclick="goToSlide(2, 'slider1')"></span>
+            </div>
+        </div>
+
+        <div class="program-content">
+            <div class="program-meta">
+                <div class="meta-item"><i class="fas fa-clock"></i> 4-5h</div>
+                <div class="meta-item"><i class="fas fa-signal"></i> <span class="lang-en">Medium</span><span class="lang-fr">Moyenne</span></div>
+                <div class="meta-item"><i class="fas fa-tag"></i> 300 DH <small>/groupe</small></div>
+            </div>
+
+            <p class="program-text"><strong>🎯 <span class="lang-en">This program is ideal for those looking for a sporting challenge and an incredible panoramic view of the Atlas Mountains.</span><span class="lang-fr">Ce programme est idéal pour ceux qui cherchent un défi sportif et une vue panoramique incroyable sur les montagnes de l'Atlas.</span></strong></p>
+
+            <div class="guide-role">
+                <h4><i class="fas fa-user-tie"></i> <span class="lang-en">My role as a guide</span><span class="lang-fr">Mon rôle comme guide</span></h4>
+                <ul>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">I welcome the group at the starting point.</span><span class="lang-fr">J'accueille le groupe au point de départ.</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">I accompany them step by step to the summit.</span><span class="lang-fr">Je les accompagne pas à pas jusqu'au sommet.</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">I explain the region and nature.</span><span class="lang-fr">Je leur explique la région et la nature.</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">I help on the climbs.</span><span class="lang-fr">J'aide dans les passages en montée.</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">I take breaks at panoramic viewpoints for photos.</span><span class="lang-fr">Je fais des pauses aux points panoramiques pour les photos.</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">I bring you back safely to the starting point.</span><span class="lang-fr">Je vous ramène en toute sécurité au point de départ.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROGRAMME 2 - 4 photos -->
+    <div class="container">
+        <h2 class="section-title">
+            <span class="lang-en">Program 2: Gorges & Waterfalls</span>
+            <span class="lang-fr">Programme 2 : Gorges & Cascades</span>
+        </h2>
+
+        <div class="slider-container" id="slider2">
+            <div class="slider-wrapper">
+                <div class="slider-slide"><img src="../images/12.jpeg" alt="Gorges 1" width="800" height="450" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/blog-article2.jpg" alt="Gorges 2" width="800" height="450" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/blog-cascades.jpg" alt="Cascades 1" width="800" height="450" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/IMG_7430.jpg" alt="Cascades 2" width="800" height="450" loading="lazy"></div>
+            </div>
+            <button class="slider-btn prev" onclick="moveSlide(-1, 'slider2')" aria-label="Image précédente">❮</button>
+            <button class="slider-btn next" onclick="moveSlide(1, 'slider2')" aria-label="Image suivante">❯</button>
+            <div class="slider-dots" id="dots2">
+                <span class="slider-dot active" onclick="goToSlide(0, 'slider2')"></span>
+                <span class="slider-dot" onclick="goToSlide(1, 'slider2')"></span>
+                <span class="slider-dot" onclick="goToSlide(2, 'slider2')"></span>
+                <span class="slider-dot" onclick="goToSlide(3, 'slider2')"></span>
+            </div>
+        </div>
+
+        <div class="program-content">
+            <div class="program-meta">
+                <div class="meta-item"><i class="fas fa-clock"></i> 3-4h</div>
+                <div class="meta-item"><i class="fas fa-route"></i> 8km</div>
+                <div class="meta-item"><i class="fas fa-signal"></i> <span class="lang-en">Easy</span><span class="lang-fr">Facile</span></div>
+                <div class="meta-item"><i class="fas fa-tag"></i> 200 DH <small>/groupe</small></div>
+            </div>
+
+            <p class="program-text"><strong>🎯 <span class="lang-en">Suitable for families, beginners and those who want a nature walk without great effort.</span><span class="lang-fr">Adapté aux familles, aux débutants et à ceux qui veulent une balade nature sans grand effort.</span></strong></p>
+
+            <p class="program-text"><span class="lang-en"><strong>What it includes:</strong></span><span class="lang-fr"><strong>Ce qu'il comprend :</strong></span></p>
+            <ul class="program-list">
+                <li><i class="fas fa-check"></i> <span class="lang-en">Visit of the Ahansal River gorges</span><span class="lang-fr">Visite des gorges d'Oued Ahansal</span></li>
+                <li><i class="fas fa-check"></i> <span class="lang-en">Discovery of waterfalls and natural pools</span><span class="lang-fr">Découverte de cascades et de bassins naturels</span></li>
+                <li><i class="fas fa-check"></i> <span class="lang-en">Visit of the old mill</span><span class="lang-fr">Visite de l'ancien moulin</span></li>
+                <li><i class="fas fa-check"></i> <span class="lang-en">Stop at the famous historic truck</span><span class="lang-fr">Arrêt au camion historique célèbre</span></li>
+                <li><i class="fas fa-check"></i> <span class="lang-en">Mythical photo spot with view of Imsfrane</span><span class="lang-fr">Spot photo mythique avec vue sur Imsfrane</span></li>
+            </ul>
+
+            <div class="guide-role">
+                <h4><i class="fas fa-user-tie"></i> <span class="lang-en">My role as a guide</span><span class="lang-fr">Mon rôle comme guide</span></h4>
+                <ul>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Present the route in a simple and safe way</span><span class="lang-fr">Présenter le parcours de manière simple et sécurisée</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Explain the history of the mill and the region</span><span class="lang-fr">Expliquer l'histoire du moulin et de la région</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Show the best photo spots</span><span class="lang-fr">Montrer les meilleurs spots photo</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Make the experience pleasant and light</span><span class="lang-fr">Rendre l'expérience agréable et légère</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROGRAMME 3 - 2 photos -->
+    <div class="container">
+        <h2 class="section-title">
+            <span class="lang-en">Program 3: The Grand Tour (Complete Experience)</span>
+            <span class="lang-fr">Programme 3 : Le Grand Tour (Expérience complète)</span>
+        </h2>
+
+        <div class="slider-container" id="slider3">
+            <div class="slider-wrapper">
+                <div class="slider-slide"><img src="../images/guide.jpg" alt="Grand Tour 1" width="800" height="450" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/IMG_7422.jpg" alt="Grand Tour 2" width="800" height="450" loading="lazy"></div>
+            </div>
+            <button class="slider-btn prev" onclick="moveSlide(-1, 'slider3')" aria-label="Image précédente">❮</button>
+            <button class="slider-btn next" onclick="moveSlide(1, 'slider3')" aria-label="Image suivante">❯</button>
+            <div class="slider-dots" id="dots3">
+                <span class="slider-dot active" onclick="goToSlide(0, 'slider3')"></span>
+                <span class="slider-dot" onclick="goToSlide(1, 'slider3')"></span>
+            </div>
+        </div>
+
+        <div class="program-content">
+            <div class="program-meta">
+                <div class="meta-item"><i class="fas fa-clock"></i> 8-10h</div>
+                <div class="meta-item"><i class="fas fa-route"></i> 26km+</div>
+                <div class="meta-item"><i class="fas fa-signal"></i> <span class="lang-en">Challenging</span><span class="lang-fr">Soutenu</span></div>
+                <div class="meta-item"><i class="fas fa-tag"></i> 400 DH <small>/groupe</small></div>
+            </div>
+
+            <p class="program-text"><strong>🎯 <span class="lang-en">This program is for those who want to experience Imsfrane fully in one day.</span><span class="lang-fr">Ce programme est destiné à ceux qui veulent vivre Imsfrane entièrement en une seule journée.</span></strong></p>
+
+            <p class="program-text"><span class="lang-en"><strong>What it includes:</strong></span><span class="lang-fr"><strong>Ce qu'il comprend :</strong></span></p>
+            <ul class="program-list">
+                <li><i class="fas fa-check"></i> <span class="lang-en">Summit ascent</span><span class="lang-fr">Ascension du sommet</span></li>
+                <li><i class="fas fa-check"></i> <span class="lang-en">Visit of the gorges and waterfalls</span><span class="lang-fr">Visite des gorges et cascades</span></li>
+                <li><i class="fas fa-check"></i> <span class="lang-en">Photos at all remarkable points</span><span class="lang-fr">Photos dans tous les points remarquables</span></li>
+                <li><i class="fas fa-check"></i> <span class="lang-en">Full day of adventure in the wilderness</span><span class="lang-fr">Journée complète d'aventure en pleine nature</span></li>
+            </ul>
+
+            <div class="guide-role">
+                <h4><i class="fas fa-user-tie"></i> <span class="lang-en">My role as a guide</span><span class="lang-fr">Mon rôle comme guide</span></h4>
+                <ul>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Complete organization of the day</span><span class="lang-fr">Organisation complète de la journée</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Energy management and breaks</span><span class="lang-fr">Gestion de l'énergie et des pauses</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Securing the itinerary</span><span class="lang-fr">Sécurisation de l'itinéraire</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Complete explanations about the region</span><span class="lang-fr">Explications complètes sur la région</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Accompaniment until the end</span><span class="lang-fr">Accompagnement jusqu'à la fin</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="container">
+        <div class="contact-section">
+            <h2 class="section-title" style="margin-top: 0;">
+                <span class="lang-en">Book Your Hike</span>
+                <span class="lang-fr">Réserver Votre Randonnée</span>
+            </h2>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <h4>Website</h4>
+                    <a href="https://imsfrane.com" target="_blank" rel="noopener">imsfrane.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/212667772551" target="_blank" rel="noopener">+212 667-772551</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4><span class="lang-en">Location</span><span class="lang-fr">Emplacement</span></h4>
+                    <p>Imsfrane, Azilal, Morocco</p>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="booking.html" class="btn" aria-label="Réserver">
+                    <i class="fas fa-calendar-check"></i> 
+                    <span class="lang-en">Book now</span>
+                    <span class="lang-fr">Réserver</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-pro">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60" loading="lazy">
+                        <h3>Imsfrane Cathédrale</h3>
+                    </div>
+                    <p class="footer-description">
+                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
+                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" rel="noopener" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" rel="noopener" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-links">
+                    <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
+                    <ul>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
+                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
+                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
+                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-info">
+                    <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
+                    <ul>
+                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-contact">
+                    <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
+                <div class="stat-item"><div class="stat-number">50+ km</div><div class="stat-label">Sentiers</div></div>
+                <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
+                <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">WhatsApp</span>
+        </a>
+        <a href="tel:0667772551" class="floating-btn phone" aria-label="Téléphone">
+            <i class="fas fa-phone-alt"></i>
+            <span class="tooltip">Appeler</span>
+        </a>
+        <a href="booking.html" class="floating-btn booking" aria-label="Réservation">
+            <i class="fas fa-calendar-check"></i>
+            <span class="tooltip">Réserver</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/script.js"></script>
+    
+    <script>
+        // Back to Top Button functionality
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Infinite sliders
+        const sliders = {};
+
+        function initSlider(sliderId, totalSlides) {
+            sliders[sliderId] = {
+                current: 0,
+                total: totalSlides,
+                wrapper: document.querySelector(`#${sliderId} .slider-wrapper`),
+                dots: document.querySelectorAll(`#${sliderId} .slider-dot`)
+            };
+
+            const wrapper = sliders[sliderId].wrapper;
+            const slides = wrapper.children;
+            
+            for (let i = 0; i < totalSlides; i++) {
+                const clone = slides[i].cloneNode(true);
+                wrapper.appendChild(clone);
+            }
+        }
+
+        function updateSlider(sliderId, newIndex) {
+            const slider = sliders[sliderId];
+            if (!slider) return;
+
+            slider.current = newIndex;
+            slider.wrapper.style.transform = `translateX(-${slider.current * 100}%)`;
+
+            let dotIndex = slider.current % slider.total;
+            slider.dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === dotIndex);
+            });
+
+            if (slider.current >= slider.total) {
+                setTimeout(() => {
+                    slider.wrapper.style.transition = 'none';
+                    slider.current = 0;
+                    slider.wrapper.style.transform = `translateX(0)`;
+                    setTimeout(() => {
+                        slider.wrapper.style.transition = 'transform 0.5s ease';
+                    }, 50);
+                }, 500);
+            }
+        }
+
+        window.moveSlide = function(direction, sliderId) {
+            const slider = sliders[sliderId];
+            if (slider) {
+                updateSlider(sliderId, slider.current + direction);
+            }
+        };
+
+        window.goToSlide = function(index, sliderId) {
+            updateSlider(sliderId, index);
+        };
+
+        initSlider('slider1', 3);
+        initSlider('slider2', 4);
+        initSlider('slider3', 2);
+
+        setInterval(() => {
+            if (sliders['slider1']) {
+                updateSlider('slider1', sliders['slider1'].current + 1);
+            }
+            if (sliders['slider2']) {
+                updateSlider('slider2', sliders['slider2'].current + 1);
+            }
+            if (sliders['slider3']) {
+                updateSlider('slider3', sliders['slider3'].current + 1);
+            }
+        }, 4000);
+    </script>
+</body>
+</html>

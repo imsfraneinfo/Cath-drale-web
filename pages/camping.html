@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camping sauvage dans l'Atlas - Tentes traditionnelles | Imsfrane</title>
+    <meta name="description" content="Camping sauvage à Imsfrane. Tentes berbères traditionnelles (mfercha) avec matelas. Repas sur commande. Nuit sous les étoiles dans l'Atlas.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Camping à Imsfrane - Nuit sous les étoiles">
+    <meta property="og:description" content="Camping sauvage à Imsfrane. Tentes traditionnelles, matelas, couvertures. Repas sur commande. Nuit inoubliable dans l'Atlas.">
+    <meta property="og:image" content="https://imsfrane.com/images/camping-1.jpg">
+    <meta property="og:url" content="https://imsfrane.com/pages/camping.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Imsfrane Cathédrale">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        /* Page specific styles */
+        .page-hero {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('../images/camping-1.jpg') center/cover no-repeat;
+            position: relative;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin: 3rem 0 2rem;
+        }
+        
+        .page-title h1 {
+            font-size: 2.5rem;
+            color: #1e3c2c;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title .location {
+            color: #e6b12e;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .intro-text {
+            max-width: 900px;
+            margin: 2rem auto 4rem;
+            text-align: center;
+        }
+        
+        .intro-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .intro-icon {
+            font-size: 3rem;
+            color: #e6b12e;
+            margin-bottom: 1.5rem;
+        }
+        
+        .nature-badge {
+            display: inline-block;
+            background: rgba(230,177,46,0.1);
+            color: #1e3c2c;
+            padding: 0.5rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 1px solid rgba(230,177,46,0.3);
+            margin-top: 1rem;
+        }
+        
+        .nature-badge i {
+            color: #e6b12e;
+            margin: 0 0.3rem;
+        }
+        
+        .route-block {
+            margin-bottom: 5rem;
+        }
+        
+        .route-image {
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            border-radius: 20px;
+        }
+        
+        .route-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .route-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .route-location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #e6b12e;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .route-content h2 {
+            font-size: 2.5rem;
+            color: #1e3c2c;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        
+        .route-content h2 i {
+            color: #e6b12e;
+            margin-right: 0.5rem;
+        }
+        
+        .route-content p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .route-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1e3c2c;
+            font-weight: 600;
+        }
+        
+        .meta-item i {
+            color: #e6b12e;
+            font-size: 1.1rem;
+        }
+        
+        .meta-item small {
+            font-weight: 400;
+            color: #777;
+            margin-left: 0.2rem;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        
+        .pricing-header {
+            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .pricing-header i {
+            font-size: 3rem;
+            color: #e6b12e;
+            margin-bottom: 1rem;
+        }
+        
+        .pricing-header h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-body {
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #1e3c2c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .price small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #999;
+        }
+        
+        .tent-desc {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .meals-section {
+            background: linear-gradient(135deg, #f9f7f3, #f0e8d9);
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .meals-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .meal-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .meal-card i {
+            font-size: 2.5rem;
+            color: #e6b12e;
+            margin-bottom: 1rem;
+        }
+        
+        .meal-card h4 {
+            font-size: 1.5rem;
+            color: #1e3c2c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .meal-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e3c2c;
+        }
+        
+        .custom-service {
+            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
+            color: white;
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+        
+        .custom-service h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .custom-service h2 i {
+            color: #e6b12e;
+        }
+        
+        .custom-service p {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .order-note {
+            background: rgba(230,177,46,0.2);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 1.1rem;
+            border: 2px solid #e6b12e;
+        }
+        
+        .contact-section {
+            background: white;
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 4rem 0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .contact-item {
+            text-align: center;
+        }
+        
+        .contact-item i {
+            font-size: 2.5rem;
+            color: #e6b12e;
+            margin-bottom: 0.8rem;
+        }
+        
+        .contact-item h4 {
+            color: #1e3c2c;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-item a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: #e6b12e;
+        }
+        
+        /* Object position for specific images */
+        #img-camping1 {
+            object-position: 50% 50%;
+        }
+        
+        #img-camping2 {
+            object-position: 50% 50%;
+        }
+        
+        #img-camping3 {
+            object-position: 50% 80%;
+        }
+        
+        @media (max-width: 992px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .meals-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-hero {
+                height: 350px;
+            }
+            .route-image {
+                height: 300px;
+            }
+            .intro-text p {
+                font-size: 1.1rem;
+            }
+            .meals-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .route-content h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body data-lang="en">
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="../index.html" class="logo" aria-label="Accueil">
+                <div class="logo-img">
+                    <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60">
+                </div>
+                <div class="logo-text">
+                    <h1>Imsfrane Cathédrale</h1>
+                    <span class="lang-en">Nature Adventures</span>
+                    <span class="lang-fr">Aventures Nature</span>
+                </div>
+            </a>
+            
+            <div class="right-controls">
+                <div class="lang-buttons">
+                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <nav id="mainNav" aria-label="Menu principal">
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)" aria-expanded="false">
+                    <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="rafting.html"><i class="fas fa-water"></i> Rafting</a></li>
+                    <li><a href="camping.html"><i class="fas fa-campground"></i> Camping</a></li>
+                    <li><a href="randonnee.html"><i class="fas fa-hiking"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                    <li><a href="vtt.html"><i class="fas fa-bicycle"></i> VTT</a></li>
+                    <li><a href="quad.html"><i class="fas fa-motorcycle"></i> Quad</a></li>
+                    <li><a href="hebergement.html"><i class="fas fa-bed"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                </ul>
+            </li>
+            <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+            <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> <span class="lang-en">Blog</span><span class="lang-fr">Blog</span></a></li>
+            <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Image -->
+    <div class="page-hero"></div>
+
+    <!-- Page Title -->
+    <div class="container">
+        <div class="page-title">
+            <h1 class="lang-en">Camping Under the Stars</h1>
+            <h1 class="lang-fr">Camping Sous les Étoiles</h1>
+            <div class="location">
+                <i class="fas fa-map-pin"></i> Imsfrane, Morocco
+            </div>
+        </div>
+    </div>
+
+    <!-- Introduction -->
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-icon">
+                <i class="fas fa-campground"></i>
+            </div>
+            <p class="lang-en">🏕️ Leave everything behind and dive into the wild. Here, no walls, no noise, no 5-star hotel... just you, the river, the mountain, and a sky full of stars. We provide the traditional tent (mfercha), mattresses, and blankets. You bring your soul of an adventurer. An authentic experience, raw and unforgettable, by the water, facing the majestic Imsfrane.</p>
+            <p class="lang-fr">🏕️ Laissez tout derrière vous et plongez dans le sauvage. Ici, pas de murs, pas de bruit, pas d'hôtel 5 étoiles... juste vous, la rivière, la montagne, et un ciel plein d'étoiles. On vous fournit la tente traditionnelle (mfercha), les matelas, et les couvertures. Vous, vous amenez votre âme d'aventurier. Une expérience authentique, brute et inoubliable, au bord de l'eau, face au majestueux Imsfrane.</p>
+            
+            <div class="nature-badge">
+                <i class="fas fa-leaf"></i> 100% Wild Nature <i class="fas fa-tree"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bloc 1 -->
+    <section class="container">
+        <div class="route-block">
+            <div class="route-image">
+                <img src="../images/camping-1.jpg" alt="Camping Imsfrane" id="img-camping1" width="800" height="450" loading="lazy">
+            </div>
+            <div class="route-content">
+                <div class="route-location">
+                    <i class="fas fa-map-pin"></i> 
+                    <span class="lang-en">By the river</span>
+                    <span class="lang-fr">Bord de l'oued</span>
+                </div>
+                <h2>
+                    <i class="fas fa-campground"></i> 
+                    <span class="lang-en">An experience in the heart of nature</span>
+                    <span class="lang-fr">Une expérience au cœur de la nature</span>
+                </h2>
+                <p class="lang-en">Camp in the wild, right by the river, with a breathtaking view of the Imsfrane rock. A return to basics, far from everything, close to everything. We provide you with all the necessary equipment so you can fully enjoy this unique experience.</p>
+                <p class="lang-fr">Campez en pleine nature, au bord de la rivière, avec une vue imprenable sur le rocher d'Imsfrane. Un retour à l'essentiel, loin de tout, proche de tout. Nous mettons à votre disposition tout le matériel nécessaire pour profiter pleinement de cette expérience unique.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloc 2 -->
+    <section class="container">
+        <div class="route-block">
+            <div class="route-image">
+                <img src="../images/IMG_7364.jpg" alt="Camping vue montagne" id="img-camping2" width="800" height="450" loading="lazy">
+            </div>
+            <div class="route-content">
+                <div class="route-location">
+                    <i class="fas fa-map-pin"></i> 
+                    <span class="lang-en">Mountain view</span>
+                    <span class="lang-fr">Vue montagne</span>
+                </div>
+                <h2>
+                    <i class="fas fa-shield-alt"></i> 
+                    <span class="lang-en">Safety & Comfort</span>
+                    <span class="lang-fr">Sécurité & Confort</span>
+                </h2>
+                <p class="lang-en">We take care of you! Mattresses, blankets, pillows, and traditional tents. If you have your own equipment, you are welcome to bring it. We will guide you to the best spot to install your tent safely.</p>
+                <p class="lang-fr">On s'occupe de vous ! Matelas, couvertures, coussins, et tentes traditionnelles. Si vous avez votre propre matériel, vous êtes les bienvenus pour l'apporter. Nous vous guiderons vers le meilleur endroit pour installer votre tente en toute sécurité.</p>
+                
+                <div class="route-meta">
+                    <div class="meta-item"><i class="fas fa-user"></i> <span class="lang-en">1 person</span><span class="lang-fr">1 personne</span> <small>60 DH</small></div>
+                    <div class="meta-item"><i class="fas fa-user-friends"></i> <span class="lang-en">2 persons</span><span class="lang-fr">2 personnes</span> <small>100 DH</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloc 3 -->
+    <section class="container">
+        <div class="route-block">
+            <div class="route-image">
+                <img src="../images/IMG_7733.jpg" alt="Camping nuit étoilée" id="img-camping3" width="800" height="450" loading="lazy">
+            </div>
+            <div class="route-content">
+                <div class="route-location">
+                    <i class="fas fa-map-pin"></i> 
+                    <span class="lang-en">Under the stars</span>
+                    <span class="lang-fr">Sous les étoiles</span>
+                </div>
+                <h2>
+                    <i class="fas fa-fire"></i> 
+                    <span class="lang-en">Campfire & Evening</span>
+                    <span class="lang-fr">Feu de camp & Soirée</span>
+                </h2>
+                <p class="lang-en">As night falls, gather around the campfire. Share stories, enjoy the warmth of the fire, and gaze at the starry sky. An unforgettable moment of conviviality and sharing.</p>
+                <p class="lang-fr">À la tombée de la nuit, rassemblez-vous autour du feu de camp. Partagez des histoires, profitez de la chaleur du feu et contemplez le ciel étoilé. Un moment inoubliable de convivialité et de partage.</p>
+                
+                <div class="route-meta">
+                    <div class="meta-item"><i class="fas fa-clock"></i> <span class="lang-en">Free for campers</span><span class="lang-fr">Gratuit pour les campeurs</span></div>
+                    <div class="meta-item"><i class="fas fa-moon"></i> <span class="lang-en">Night included</span><span class="lang-fr">Nuit incluse</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prix des tentes -->
+    <div class="container">
+        <h2 class="expedition-title">
+            <span class="lang-en">Tent Prices</span>
+            <span class="lang-fr">Prix des Tentes</span>
+        </h2>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <i class="fas fa-user"></i>
+                    <h3 class="lang-en">1 Person Tent</h3>
+                    <h3 class="lang-fr">Tente 1 Personne</h3>
+                </div>
+                <div class="pricing-body">
+                    <div class="tent-desc">Mfercha + Mattress + Blankets</div>
+                    <div class="price">60 <small>DH</small></div>
+                    <p class="lang-en">per night</p>
+                    <p class="lang-fr">par nuit</p>
+                </div>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <i class="fas fa-user-friends"></i>
+                    <h3 class="lang-en">2 Persons Tent</h3>
+                    <h3 class="lang-fr">Tente 2 Personnes</h3>
+                </div>
+                <div class="pricing-body">
+                    <div class="tent-desc">Mfercha + Mattresses + Blankets</div>
+                    <div class="price">100 <small>DH</small></div>
+                    <p class="lang-en">per night</p>
+                    <p class="lang-fr">par nuit</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Repas -->
+    <div class="container">
+        <div class="meals-section">
+            <h2 class="expedition-title" style="margin-top: 0;">
+                <span class="lang-en">Meals on Order</span>
+                <span class="lang-fr">Repas sur Commande</span>
+            </h2>
+            
+            <div class="meals-grid">
+                <div class="meal-card">
+                    <i class="fas fa-coffee"></i>
+                    <h4 class="lang-en">Breakfast</h4>
+                    <h4 class="lang-fr">Petit-déjeuner</h4>
+                    <div class="meal-price">40 DH</div>
+                </div>
+                <div class="meal-card">
+                    <i class="fas fa-utensils"></i>
+                    <h4 class="lang-en">Lunch</h4>
+                    <h4 class="lang-fr">Déjeuner</h4>
+                    <div class="meal-price">50 DH</div>
+                </div>
+                <div class="meal-card">
+                    <i class="fas fa-moon"></i>
+                    <h4 class="lang-en">Dinner</h4>
+                    <h4 class="lang-fr">Dîner</h4>
+                    <div class="meal-price">50 DH</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service sur mesure -->
+    <div class="container">
+        <div class="custom-service">
+            <h2><i class="fas fa-concierge-bell"></i> <span class="lang-en">Custom Service</span><span class="lang-fr">Service sur Mesure</span></h2>
+            <p class="lang-en">Have a special request? We can buy it and prepare it for you! Everything to make your experience unforgettable.</p>
+            <p class="lang-fr">Vous avez une envie particulière ? Nous pouvons l'acheter et la préparer pour vous ! Tout pour rendre votre expérience inoubliable.</p>
+            <div class="order-note">
+                <i class="fas fa-clock"></i> <span class="lang-en">Order 24 hours in advance</span><span class="lang-fr">Commander 24h à l'avance</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="container">
+        <div class="contact-section">
+            <h2 class="expedition-title" style="margin-top: 0;">
+                <span class="lang-en">Book Your Camping</span>
+                <span class="lang-fr">Réserver Votre Camping</span>
+            </h2>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <h4>Website</h4>
+                    <a href="https://imsfrane.com" target="_blank" rel="noopener">imsfrane.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/212667772551" target="_blank" rel="noopener">+212 667-772551</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4><span class="lang-en">Location</span><span class="lang-fr">Emplacement</span></h4>
+                    <p>Imsfrane, Azilal, Morocco</p>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="booking.html" class="btn" aria-label="Réserver">
+                    <i class="fas fa-calendar-check"></i> 
+                    <span class="lang-en">Book Now</span>
+                    <span class="lang-fr">Réserver</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-pro">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60" loading="lazy">
+                        <h3>Imsfrane Cathédrale</h3>
+                    </div>
+                    <p class="footer-description">
+                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
+                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" rel="noopener" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" rel="noopener" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-links">
+                    <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
+                    <ul>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
+                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
+                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
+                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-info">
+                    <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
+                    <ul>
+                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-contact">
+                    <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
+                <div class="stat-item"><div class="stat-number">50+ km</div><div class="stat-label">Sentiers</div></div>
+                <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
+                <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">WhatsApp</span>
+        </a>
+        <a href="tel:0667772551" class="floating-btn phone" aria-label="Téléphone">
+            <i class="fas fa-phone-alt"></i>
+            <span class="tooltip">Appeler</span>
+        </a>
+        <a href="booking.html" class="floating-btn booking" aria-label="Réservation">
+            <i class="fas fa-calendar-check"></i>
+            <span class="tooltip">Réserver</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/script.js"></script>
+    
+    <script>
+        // Back to Top Button functionality
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
