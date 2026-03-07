@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quad dans l'Atlas - Location Quad solo ou biplace | Imsfrane</title>
-    <meta name="description" content="Quad solo 250 DH/h, quad biplace 300 DH/h. Conduite libre dans les sentiers de l'Atlas. Casque et carburant inclus. Permis obligatoire.">
+    <title>Quad dans l'Atlas à Imsfrane | Location quad solo 250 DH/h ou biplace 300 DH/h</title>
+    <meta name="description" content="Quad à Imsfrane. Conduite libre dans les sentiers de l'Atlas. Quad solo 250 DH/h, quad biplace 300 DH/h. Casque et carburant inclus. Permis recommandé.">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Quad à Imsfrane - Aventure en conduite libre">
@@ -12,7 +12,6 @@
     <meta property="og:image" content="https://imsfrane.com/images/quad.jpg">
     <meta property="og:url" content="https://imsfrane.com/pages/quad.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Imsfrane Cathédrale">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -276,43 +275,21 @@
             color: #e6b12e;
         }
         
-        /* Object position for specific images */
-        #img-quad1 {
-            object-position: 50% 50%;
-        }
-        
-        #img-quad2 {
-            object-position: 50% 50%;
-        }
+        #img-quad1 { object-position: 50% 50%; }
+        #img-quad2 { object-position: 50% 50%; }
         
         @media (max-width: 992px) {
-            .quad-card {
-                grid-template-columns: 1fr;
-            }
-            .info-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .quad-card { grid-template-columns: 1fr; }
+            .info-grid { grid-template-columns: repeat(2, 1fr); }
         }
         
         @media (max-width: 768px) {
-            .page-hero {
-                height: 350px;
-            }
-            .quad-image {
-                min-height: 300px;
-            }
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .quad-content h2 {
-                font-size: 1.8rem;
-            }
-            .features-list {
-                grid-template-columns: 1fr;
-            }
+            .page-hero { height: 350px; }
+            .quad-image { min-height: 300px; }
+            .info-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .quad-content h2 { font-size: 1.8rem; }
+            .features-list { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -325,7 +302,7 @@
         <div class="container header-content">
             <a href="../index.html" class="logo" aria-label="Accueil">
                 <div class="logo-img">
-                    <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60">
+                    <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
                 </div>
                 <div class="logo-text">
                     <h1>Imsfrane Cathédrale</h1>
@@ -340,8 +317,8 @@
                     <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
                 </div>
                 <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
-    <i class="fas fa-bars"></i>
-</button>
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -371,6 +348,7 @@
             <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
+    
 <main>
     <!-- Hero Image -->
     <div class="page-hero"></div>
@@ -401,7 +379,7 @@
     <div class="container">
         <div class="quad-card">
             <div class="quad-image">
-                <img src="../images/quad-solo.jpg" alt="Quad Solo" id="img-quad1" width="600" height="400" loading="lazy">
+                <img src="../images/quad-solo.jpg" alt="Quad solo pour une personne dans les sentiers de l'Atlas à Imsfrane" id="img-quad1" width="600" height="400" loading="lazy">
             </div>
             <div class="quad-content">
                 <span class="quad-badge">SOLO</span>
@@ -437,7 +415,7 @@
     <div class="container">
         <div class="quad-card">
             <div class="quad-image">
-                <img src="../images/quad-biplace.jpg" alt="Quad Biplace" id="img-quad2" width="600" height="400" loading="lazy">
+                <img src="../images/quad-biplace.jpg" alt="Quad biplace pour deux personnes dans les montagnes de l'Atlas" id="img-quad2" width="600" height="400" loading="lazy">
             </div>
             <div class="quad-content">
                 <span class="quad-badge">BIPLACE</span>
@@ -528,13 +506,14 @@
         </div>
     </div>
 </main>
+
     <!-- Footer -->
     <footer class="footer-pro">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60" loading="lazy">
+                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
                     <p class="footer-description">
@@ -627,21 +606,12 @@
     <script>
         // Back to Top Button functionality
         const backToTop = document.getElementById('backToTop');
-
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
+            backToTop.classList.toggle('show', window.scrollY > 300);
         });
-
         backToTop.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
