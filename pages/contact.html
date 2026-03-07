@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactez Imsfrane Cathédrale - WhatsApp, Email, Téléphone</title>
-    <meta name="description" content="Contactez Imsfrane Cathédrale par téléphone, WhatsApp, email. Suivez-nous sur Instagram, Facebook, TikTok. Réponse rapide.">
+    <title>Contactez Imsfrane Cathédrale | WhatsApp, email, téléphone, réseaux sociaux</title>
+    <meta name="description" content="Contactez Imsfrane Cathédrale par téléphone (+212 667-772551), WhatsApp, email (imsfraninfo@gmail.com). Suivez-nous sur Instagram, Facebook et TikTok.">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Contact - Imsfrane Cathédrale">
@@ -439,7 +439,7 @@
         <div class="container header-content">
             <a href="../index.html" class="logo" aria-label="Accueil">
                 <div class="logo-img">
-                    <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60">
+                    <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
                 </div>
                 <div class="logo-text">
                     <h1>Imsfrane Cathédrale</h1>
@@ -454,8 +454,8 @@
                     <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
                 </div>
                 <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
-    <i class="fas fa-bars"></i>
-</button>
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -485,6 +485,7 @@
             <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
+    
 <main>
     <!-- Hero Image -->
     <div class="page-hero"></div>
@@ -718,13 +719,14 @@
         </div>
     </div>
 </main>
+
     <!-- Footer -->
     <footer class="footer-pro">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60" loading="lazy">
+                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
                     <p class="footer-description">
@@ -819,19 +821,12 @@
         const backToTop = document.getElementById('backToTop');
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
+            backToTop.classList.toggle('show', window.scrollY > 300);
         });
 
         backToTop.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         // FAQ toggle
