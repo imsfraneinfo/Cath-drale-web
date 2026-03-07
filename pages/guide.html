@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guide pratique - Imsfrane Cathédrale</title>
-    <meta name="description" content="Guide complet pour visiter Imsfrane: accès, hébergement, activités, tarifs taxi, équipement, meilleure période.">
+    <title>Guide complet pour visiter Imsfrane | Accès, hébergement, activités, tarifs</title>
+    <meta name="description" content="Guide pratique d'Imsfrane: comment s'y rendre (taxi 55 DH), hébergement (camping 60 DH, maison 400 DH), activités (rafting, randonnée, VTT, quad) et meilleure période.">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Guide pratique - Imsfrane Cathédrale">
@@ -346,7 +346,7 @@
         <div class="container header-content">
             <a href="../index.html" class="logo" aria-label="Accueil">
                 <div class="logo-img">
-                    <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60">
+                    <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
                 </div>
                 <div class="logo-text">
                     <h1>Imsfrane Cathédrale</h1>
@@ -361,8 +361,8 @@
                     <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
                 </div>
                 <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
-    <i class="fas fa-bars"></i>
-</button>
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -392,6 +392,7 @@
             <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
+    
 <main>
     <!-- Hero Image -->
     <div class="page-hero"></div>
@@ -422,7 +423,7 @@
     <div class="container">
         <div class="welcome-block">
             <div class="welcome-image">
-                <img src="../images/IMG_3772.jpg" alt="Paysage d'Imsfrane" loading="lazy">
+                <img src="../images/IMG_3772.jpg" alt="Paysage de la Cathédrale Imsfrane dans l'Atlas marocain" loading="lazy">
             </div>
             <div class="welcome-content">
                 <h2 class="lang-en">Welcome to Imsfrane</h2>
@@ -640,13 +641,14 @@
         </div>
     </div>
 </main>
+
     <!-- Footer -->
     <footer class="footer-pro">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60" loading="lazy">
+                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
                     <p class="footer-description">
@@ -739,21 +741,12 @@
     <script>
         // Back to Top Button functionality
         const backToTop = document.getElementById('backToTop');
-
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
+            backToTop.classList.toggle('show', window.scrollY > 300);
         });
-
         backToTop.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
