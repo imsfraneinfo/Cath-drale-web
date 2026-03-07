@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hébergement à Imsfrane - Maison meublée près du rafting</title>
-    <meta name="description" content="Maison meublée à louer près du point d'arrivée du rafting. Douche, eau chaude, cuisine équipée. Idéal pour se détendre après l'aventure.">
+    <title>Hébergement à Imsfrane | Maison meublée près du rafting (ouverture prochaine)</title>
+    <meta name="description" content="Hébergement à Imsfrane: maison meublée à louer près du point d'arrivée du rafting. Douche, eau chaude, cuisine équipée. Ouverture prochaine - 400 DH/nuit.">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Hébergement à Imsfrane - Maison meublée">
@@ -12,7 +12,6 @@
     <meta property="og:image" content="https://imsfrane.com/images/hebergement.jpg">
     <meta property="og:url" content="https://imsfrane.com/pages/hebergement.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Imsfrane Cathédrale">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -355,7 +354,7 @@
         <div class="container header-content">
             <a href="../index.html" class="logo" aria-label="Accueil">
                 <div class="logo-img">
-                    <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60">
+                    <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
                 </div>
                 <div class="logo-text">
                     <h1>Imsfrane Cathédrale</h1>
@@ -370,8 +369,8 @@
                     <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
                 </div>
                 <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
-    <i class="fas fa-bars"></i>
-</button>
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -401,6 +400,7 @@
             <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
+    
 <main> 
     <!-- Hero Image -->
     <div class="page-hero"></div>
@@ -540,13 +540,14 @@
         </div>
     </div>
 </main>
+
     <!-- Footer -->
     <footer class="footer-pro">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60" loading="lazy">
+                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
                     <p class="footer-description">
@@ -641,23 +642,17 @@
         const backToTop = document.getElementById('backToTop');
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
+            backToTop.classList.toggle('show', window.scrollY > 300);
         });
 
         backToTop.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         // Countdown
         function updateCountdown() {
+            // تاريخ الافتتاح المتوقع (بعد 5 أيام من اليوم)
             const targetDate = new Date();
             targetDate.setDate(targetDate.getDate() + 5);
             
