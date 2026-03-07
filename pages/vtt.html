@@ -3,25 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VTT dans l'Atlas - Location VTT tout suspendu | Imsfrane</title>
-    <meta name="description" content="VTT dans l'Atlas. VTT tout suspendu 150 DH/jour. Parcours de 18km à travers villages berbères, forêts et montagnes. Casque et accompagnement inclus.">
+    <title>VTT dans l'Atlas à Imsfrane | Location VTT tout suspendu 150 DH/jour</title>
+    <meta name="description" content="VTT à Imsfrane dans l'Atlas. Parcours 18km à travers villages berbères et forêts. Location VTT tout suspendu 150 DH/jour. Casque et accompagnement inclus.">
     
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="VTT à Imsfrane - Location VTT tout suspendu">
     <meta property="og:description" content="VTT dans l'Atlas. VTT tout suspendu 150 DH/jour. Parcours de 18km à travers villages et forêts. Casque et accompagnement inclus.">
     <meta property="og:image" content="https://imsfrane.com/images/IMG_4850.jpg">
     <meta property="og:url" content="https://imsfrane.com/pages/vtt.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Imsfrane Cathédrale">
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- CSS Files -->
     <link rel="stylesheet" href="../css/style.css">
     
     <style>
-        /* Page specific styles */
         .page-hero {
             width: 100%;
             height: 500px;
@@ -29,370 +23,83 @@
             background-position: 50% 80%;
             position: relative;
         }
-        
-        .page-title {
-            text-align: center;
-            margin: 3rem 0 4rem;
-        }
-        
-        .page-title h1 {
-            font-size: 3rem;
-            color: #1e3c2c;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-        
-        .page-title .location {
-            color: #e6b12e;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-        
-        .intro-text {
-            max-width: 900px;
-            margin: 2rem auto 4rem;
-            text-align: center;
-        }
-        
-        .intro-text p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-        }
-        
-        .intro-icon {
-            font-size: 3rem;
-            color: #e6b12e;
-            margin-bottom: 1.5rem;
-        }
-        
-        .nature-badge {
-            display: inline-block;
-            background: rgba(230,177,46,0.1);
-            color: #1e3c2c;
-            padding: 0.5rem 2rem;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            border: 1px solid rgba(230,177,46,0.3);
-            margin-top: 1rem;
-        }
-        
-        .nature-badge i {
-            color: #e6b12e;
-            margin: 0 0.3rem;
-        }
-        
-        .route-block {
-            margin-bottom: 5rem;
-        }
-        
-        .route-image {
-            width: 100%;
-            height: 450px;
-            overflow: hidden;
-            margin-bottom: 1.5rem;
-            border-radius: 20px;
-        }
-        
-        .route-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .route-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .route-location {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #e6b12e;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
-        
-        .route-content h2 {
-            font-size: 2.5rem;
-            color: #1e3c2c;
-            margin-bottom: 1rem;
-            font-weight: 800;
-            line-height: 1.2;
-        }
-        
-        .route-content h2 i {
-            color: #e6b12e;
-            margin-right: 0.5rem;
-        }
-        
-        .route-content p {
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-        
-        .route-meta {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin: 1.5rem 0;
-        }
-        
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #1e3c2c;
-            font-weight: 600;
-        }
-        
-        .meta-item i {
-            color: #e6b12e;
-            font-size: 1.1rem;
-        }
-        
-        .meta-item small {
-            font-weight: 400;
-            color: #777;
-            margin-left: 0.2rem;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: #e6b12e;
-            color: #1e3c2c;
-            padding: 0.9rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            margin-top: 1rem;
-        }
-        
-        .btn:hover {
-            background: #f4c542;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(230,177,46,0.3);
-        }
-        
-        .info-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin: 4rem 0;
-        }
-        
-        .info-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            border: 1px solid #f0f0f0;
-            transition: all 0.3s;
-        }
-        
-        .info-card:hover {
-            border-color: #e6b12e;
-            transform: translateY(-5px);
-        }
-        
-        .info-card i {
-            font-size: 2.5rem;
-            color: #e6b12e;
-            margin-bottom: 1rem;
-        }
-        
-        .info-card h3 {
-            font-size: 1.5rem;
-            color: #1e3c2c;
-            margin-bottom: 1rem;
-        }
-        
-        .info-card ul {
-            list-style: none;
-        }
-        
-        .info-card li {
-            margin: 0.8rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            color: #555;
-        }
-        
-        .info-card li i {
-            font-size: 1rem;
-            margin-bottom: 0;
-        }
-        
-        .price-card {
-            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
-            color: white;
-            border-radius: 30px;
-            padding: 3rem;
-            margin: 4rem 0;
-            text-align: center;
-        }
-        
-        .price-card h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .price-card h2 i {
-            color: #e6b12e;
-        }
-        
-        .price {
-            font-size: 4rem;
-            font-weight: 900;
-            color: #e6b12e;
-            margin: 1rem 0;
-        }
-        
-        .price small {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: rgba(255,255,255,0.8);
-        }
-        
-        .contact-section {
-            background: white;
-            border-radius: 30px;
-            padding: 3rem;
-            margin: 4rem 0;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .contact-item {
-            text-align: center;
-        }
-        
-        .contact-item i {
-            font-size: 2.5rem;
-            color: #e6b12e;
-            margin-bottom: 0.8rem;
-        }
-        
-        .contact-item h4 {
-            color: #1e3c2c;
-            margin-bottom: 0.3rem;
-        }
-        
-        .contact-item a {
-            color: #555;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .contact-item a:hover {
-            color: #e6b12e;
-        }
-        
-        /* Object position for specific images */
-        #img-vtt1 {
-            object-position: 50% 40%;
-        }
-        
-        #img-vtt2 {
-            object-position: 50% 80%;
-        }
-        
-        #img-vtt3 {
-            object-position: 50% 80%;
-        }
-        
-        @media (max-width: 992px) {
-            .info-cards {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
+        .page-title { text-align: center; margin: 3rem 0 4rem; }
+        .page-title h1 { font-size: 3rem; color: #1e3c2c; font-weight: 800; margin-bottom: 0.5rem; }
+        .page-title .location { color: #e6b12e; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+        .intro-text { max-width: 900px; margin: 2rem auto 4rem; text-align: center; }
+        .intro-text p { font-size: 1.2rem; line-height: 1.8; color: #2c3e50; margin-bottom: 1.5rem; }
+        .intro-icon { font-size: 3rem; color: #e6b12e; margin-bottom: 1.5rem; }
+        .nature-badge { display: inline-block; background: rgba(230,177,46,0.1); color: #1e3c2c; padding: 0.5rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 600; border: 1px solid rgba(230,177,46,0.3); margin-top: 1rem; }
+        .nature-badge i { color: #e6b12e; margin: 0 0.3rem; }
+        .route-block { margin-bottom: 5rem; }
+        .route-image { width: 100%; height: 450px; overflow: hidden; margin-bottom: 1.5rem; border-radius: 20px; }
+        .route-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .route-content { max-width: 800px; margin: 0 auto; }
+        .route-location { display: flex; align-items: center; gap: 0.5rem; color: #e6b12e; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+        .route-content h2 { font-size: 2.5rem; color: #1e3c2c; margin-bottom: 1rem; font-weight: 800; line-height: 1.2; }
+        .route-content h2 i { color: #e6b12e; margin-right: 0.5rem; }
+        .route-content p { color: #555; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .route-meta { display: flex; gap: 2rem; flex-wrap: wrap; margin: 1.5rem 0; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; color: #1e3c2c; font-weight: 600; }
+        .meta-item i { color: #e6b12e; font-size: 1.1rem; }
+        .meta-item small { font-weight: 400; color: #777; margin-left: 0.2rem; }
+        .btn { display: inline-block; background: #e6b12e; color: #1e3c2c; padding: 0.9rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s; border: none; cursor: pointer; margin-top: 1rem; }
+        .btn:hover { background: #f4c542; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(230,177,46,0.3); }
+        .info-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 4rem 0; }
+        .info-card { background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #f0f0f0; transition: all 0.3s; }
+        .info-card:hover { border-color: #e6b12e; transform: translateY(-5px); }
+        .info-card i { font-size: 2.5rem; color: #e6b12e; margin-bottom: 1rem; }
+        .info-card h3 { font-size: 1.5rem; color: #1e3c2c; margin-bottom: 1rem; }
+        .info-card ul { list-style: none; }
+        .info-card li { margin: 0.8rem 0; display: flex; align-items: center; gap: 0.8rem; color: #555; }
+        .info-card li i { font-size: 1rem; margin-bottom: 0; }
+        .price-card { background: linear-gradient(135deg, #1e3c2c, #2a5a3a); color: white; border-radius: 30px; padding: 3rem; margin: 4rem 0; text-align: center; }
+        .price-card h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .price-card h2 i { color: #e6b12e; }
+        .price { font-size: 4rem; font-weight: 900; color: #e6b12e; margin: 1rem 0; }
+        .price small { font-size: 1.5rem; font-weight: 400; color: rgba(255,255,255,0.8); }
+        .contact-section { background: white; border-radius: 30px; padding: 3rem; margin: 4rem 0; box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+        .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 3rem 0; }
+        .contact-item { text-align: center; }
+        .contact-item i { font-size: 2.5rem; color: #e6b12e; margin-bottom: 0.8rem; }
+        .contact-item h4 { color: #1e3c2c; margin-bottom: 0.3rem; }
+        .contact-item a { color: #555; text-decoration: none; transition: color 0.3s; }
+        .contact-item a:hover { color: #e6b12e; }
+        #img-vtt1 { object-position: 50% 40%; }
+        #img-vtt2 { object-position: 50% 80%; }
+        #img-vtt3 { object-position: 50% 80%; }
+        @media (max-width: 992px) { .info-cards { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) {
-            .page-hero {
-                height: 350px;
-            }
-            .page-title h1 {
-                font-size: 2rem;
-            }
-            .route-image {
-                height: 300px;
-            }
-            .intro-text p {
-                font-size: 1.1rem;
-            }
-            .info-cards {
-                grid-template-columns: 1fr;
-            }
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .route-content h2 {
-                font-size: 2rem;
-            }
-            .price {
-                font-size: 3rem;
-            }
+            .page-hero { height: 350px; }
+            .page-title h1 { font-size: 2rem; }
+            .route-image { height: 300px; }
+            .intro-text p { font-size: 1.1rem; }
+            .info-cards { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .route-content h2 { font-size: 2rem; }
+            .price { font-size: 3rem; }
         }
     </style>
 </head>
 <body data-lang="en">
-    <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
-
-    <!-- Header -->
     <header>
         <div class="container header-content">
-            <a href="../index.html" class="logo" aria-label="Accueil">
-                <div class="logo-img">
-                    <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60">
-                </div>
-                <div class="logo-text">
-                    <h1>Imsfrane Cathédrale</h1>
-                    <span class="lang-en">Nature Adventures</span>
-                    <span class="lang-fr">Aventures Nature</span>
-                </div>
+            <a href="../index.html" class="logo">
+                <div class="logo-img"><img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60"></div>
+                <div class="logo-text"><h1>Imsfrane Cathédrale</h1><span class="lang-en">Nature Adventures</span><span class="lang-fr">Aventures Nature</span></div>
             </a>
-            
             <div class="right-controls">
-                <div class="lang-buttons">
-                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
-                </div>
-                <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
-    <i class="fas fa-bars"></i>
-</button>
+                <div class="lang-buttons"><button class="lang-btn active" onclick="setLanguage('en')">EN</button><button class="lang-btn" onclick="setLanguage('fr')">FR</button></div>
+                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
             </div>
         </div>
     </header>
-
-    <!-- Menu -->
-    <nav id="mainNav" aria-label="Menu principal">
+    <nav id="mainNav">
         <ul>
             <li><a href="../index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
             <li class="has-submenu">
-                <a href="#" onclick="toggleSubmenu(event)" aria-expanded="false">
+                <a href="#" onclick="toggleSubmenu(event)">
                     <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
                     <i class="fas fa-chevron-right arrow"></i>
                 </a>
@@ -413,55 +120,30 @@
         </ul>
     </nav>
 <main>
-    <!-- Hero Image -->
     <div class="page-hero"></div>
-
-    <!-- Page Title -->
     <div class="container">
         <div class="page-title">
             <h1 class="lang-en">Mountain Biking in Imsfrane</h1>
             <h1 class="lang-fr">VTT à Imsfrane</h1>
-            <div class="location">
-                <i class="fas fa-map-pin"></i> Imsfrane, Morocco
-            </div>
+            <div class="location"><i class="fas fa-map-pin"></i> Imsfrane, Morocco</div>
         </div>
     </div>
-
-    <!-- Introduction -->
     <div class="container">
         <div class="intro-text">
-            <div class="intro-icon">
-                <i class="fas fa-bicycle"></i>
-            </div>
-            <p class="lang-en">🚵 Discover mountain biking in Imsfrane – between mountains and valleys. Located in the heart of the Atlas Mountains, Imsfrane is one of the most beautiful destinations for adventure and nature lovers. We offer you a VTT experience on natural trails through mountains, valleys and forests, with breathtaking panoramic views. Whether you are a beginner or a professional, our trails are suitable for all levels.</p>
-            <p class="lang-fr">🚵 Découvrez le VTT à Imsfrane – entre montagnes et vallées. Située au cœur des montagnes de l'Atlas, Imsfrane est l'une des plus belles destinations pour les amateurs d'aventure et de nature. Nous vous proposons une expérience VTT sur des sentiers naturels à travers montagnes, vallées et forêts, avec des vues panoramiques à couper le souffle. Que vous soyez débutant ou professionnel, nos sentiers sont adaptés à tous les niveaux.</p>
-            
-            <div class="nature-badge">
-                <i class="fas fa-bicycle"></i> 18km - 3h <i class="fas fa-mountain"></i>
-            </div>
+            <div class="intro-icon"><i class="fas fa-bicycle"></i></div>
+            <p class="lang-en">🚵 Discover mountain biking in Imsfrane – between mountains and valleys. Located in the heart of the Atlas Mountains, Imsfrane is one of the most beautiful destinations for adventure and nature lovers. We offer you a VTT experience on natural trails through mountains, valleys and forests, with breathtaking panoramic views.</p>
+            <p class="lang-fr">🚵 Découvrez le VTT à Imsfrane – entre montagnes et vallées. Située au cœur des montagnes de l'Atlas, Imsfrane est l'une des plus belles destinations pour les amateurs d'aventure et de nature. Nous vous proposons une expérience VTT sur des sentiers naturels à travers montagnes, vallées et forêts, avec des vues panoramiques à couper le souffle.</p>
+            <div class="nature-badge"><i class="fas fa-bicycle"></i> 18km - 3h <i class="fas fa-mountain"></i></div>
         </div>
     </div>
-
-    <!-- Bloc 1 -->
     <section class="container">
         <div class="route-block">
-            <div class="route-image">
-                <img src="../images/vtt.jpg" alt="VTT Imsfrane" id="img-vtt1" width="800" height="450" loading="lazy">
-            </div>
+            <div class="route-image"><img src="../images/vtt.jpg" alt="Parcours VTT dans les montagnes de l'Atlas à Imsfrane" id="img-vtt1" width="800" height="450" loading="lazy"></div>
             <div class="route-content">
-                <div class="route-location">
-                    <i class="fas fa-map-pin"></i> 
-                    <span class="lang-en">Starting point</span>
-                    <span class="lang-fr">Point de départ</span>
-                </div>
-                <h2>
-                    <i class="fas fa-route"></i> 
-                    <span class="lang-en">The proposed trail (medium level)</span>
-                    <span class="lang-fr">Le tracé proposé (niveau moyen)</span>
-                </h2>
+                <div class="route-location"><i class="fas fa-map-pin"></i> <span class="lang-en">Starting point</span><span class="lang-fr">Point de départ</span></div>
+                <h2><i class="fas fa-route"></i> <span class="lang-en">The proposed trail (medium level)</span><span class="lang-fr">Le tracé proposé (niveau moyen)</span></h2>
                 <p class="lang-en">Distance: 18 km | Duration: 3 to 4 hours | Level: Medium | Start: Imsfrane center</p>
                 <p class="lang-fr">Distance: 18 km | Durée: 3 à 4 heures | Niveau: Moyen | Départ: Centre d'Imsfrane</p>
-                
                 <div class="route-meta">
                     <div class="meta-item"><i class="fas fa-clock"></i> 3-4h</div>
                     <div class="meta-item"><i class="fas fa-route"></i> 18km</div>
@@ -470,245 +152,83 @@
             </div>
         </div>
     </section>
-
-    <!-- Bloc 2 -->
     <section class="container">
         <div class="route-block">
-            <div class="route-image">
-                <img src="../images/IMG_4832.jpg" alt="VTT paysage" id="img-vtt2" width="800" height="450" loading="lazy">
-            </div>
+            <div class="route-image"><img src="../images/IMG_4832.jpg" alt="VTT traversant les villages berbères de l'Atlas" id="img-vtt2" width="800" height="450" loading="lazy"></div>
             <div class="route-content">
-                <div class="route-location">
-                    <i class="fas fa-map-pin"></i> 
-                    <span class="lang-en">Route details</span>
-                    <span class="lang-fr">Détails du parcours</span>
-                </div>
-                <h2>
-                    <i class="fas fa-list"></i> 
-                    <span class="lang-en">Trail details</span>
-                    <span class="lang-fr">Détails du parcours</span>
-                </h2>
+                <div class="route-location"><i class="fas fa-map-pin"></i> <span class="lang-en">Route details</span><span class="lang-fr">Détails du parcours</span></div>
+                <h2><i class="fas fa-list"></i> <span class="lang-en">Trail details</span><span class="lang-fr">Détails du parcours</span></h2>
                 <p class="lang-en">1. Start from the village center<br>2. Gradual climb on a mountain road with panoramic view<br>3. Pass through natural trails in the middle of trees<br>4. Fun and fast descent to the valley<br>5. Break at a natural viewpoint for photos<br>6. Return to the starting point</p>
                 <p class="lang-fr">1. Départ du centre du village<br>2. Montée progressive sur une route de montagne avec vue panoramique<br>3. Passage par des sentiers naturels au milieu des arbres<br>4. Descente amusante et rapide vers la vallée<br>5. Pause à un point de vue naturel pour des photos<br>6. Retour au point de départ</p>
             </div>
         </div>
     </section>
-
-    <!-- Bloc 3 -->
     <section class="container">
         <div class="route-block">
-            <div class="route-image">
-                <img src="../images/1.jpg" alt="VTT expérience" id="img-vtt3" width="800" height="450" loading="lazy">
-            </div>
+            <div class="route-image"><img src="../images/1.jpg" alt="Vue panoramique depuis les sentiers VTT de l'Atlas" id="img-vtt3" width="800" height="450" loading="lazy"></div>
             <div class="route-content">
-                <div class="route-location">
-                    <i class="fas fa-map-pin"></i> 
-                    <span class="lang-en">The experience</span>
-                    <span class="lang-fr">L'expérience</span>
-                </div>
-                <h2>
-                    <i class="fas fa-heart"></i> 
-                    <span class="lang-en">What will you experience?</span>
-                    <span class="lang-fr">Que vivrez-vous ?</span>
-                </h2>
+                <div class="route-location"><i class="fas fa-map-pin"></i> <span class="lang-en">The experience</span><span class="lang-fr">L'expérience</span></div>
+                <h2><i class="fas fa-heart"></i> <span class="lang-en">What will you experience?</span><span class="lang-fr">Que vivrez-vous ?</span></h2>
                 <p class="lang-en">🔥 Fresh and pure air<br>🔥 Enchanting landscapes<br>🔥 Fun sporting adventure<br>🔥 Discovering the culture of the region and its inhabitants<br>🔥 Great photos of unique natural sites</p>
                 <p class="lang-fr">🔥 Air frais et pur<br>🔥 Paysages enchanteurs<br>🔥 Aventure sportive amusante<br>🔥 Découverte de la culture de la région et de ses habitants<br>🔥 Superbes photos de sites naturels uniques</p>
             </div>
         </div>
     </section>
-
-    <!-- Info Cards -->
     <div class="container">
         <div class="info-cards">
-            <div class="info-card">
-                <i class="fas fa-bicycle"></i>
-                <h3><span class="lang-en">We provide</span><span class="lang-fr">Nous fournissons</span></h3>
-                <ul>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Professional mountain bikes</span><span class="lang-fr">VTT professionnels</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Helmets and safety equipment</span><span class="lang-fr">Casques et équipements de sécurité</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Local guide who knows the area</span><span class="lang-fr">Guide local connaissant la région</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Organized breaks</span><span class="lang-fr">Pauses organisées</span></li>
-                </ul>
-            </div>
-
-            <div class="info-card">
-                <i class="fas fa-campground"></i>
-                <h3><span class="lang-en">Combined packages</span><span class="lang-fr">Packages combinés</span></h3>
-                <ul>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">VTT + Camping</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">VTT + Rafting</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">VTT + Rafting + Camping</span></li>
-                </ul>
-            </div>
-
-            <div class="info-card">
-                <i class="fas fa-clock"></i>
-                <h3><span class="lang-en">Practical info</span><span class="lang-fr">Infos pratiques</span></h3>
-                <ul>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Duration: 3-4h</span><span class="lang-fr">Durée: 3-4h</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Distance: 18km</span><span class="lang-fr">Distance: 18km</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Level: Medium</span><span class="lang-fr">Niveau: Moyen</span></li>
-                </ul>
-            </div>
+            <div class="info-card"><i class="fas fa-bicycle"></i><h3><span class="lang-en">We provide</span><span class="lang-fr">Nous fournissons</span></h3><ul><li><i class="fas fa-check"></i> <span class="lang-en">Professional mountain bikes</span><span class="lang-fr">VTT professionnels</span></li><li><i class="fas fa-check"></i> <span class="lang-en">Helmets and safety equipment</span><span class="lang-fr">Casques et équipements de sécurité</span></li><li><i class="fas fa-check"></i> <span class="lang-en">Local guide who knows the area</span><span class="lang-fr">Guide local connaissant la région</span></li></ul></div>
+            <div class="info-card"><i class="fas fa-campground"></i><h3><span class="lang-en">Combined packages</span><span class="lang-fr">Packages combinés</span></h3><ul><li><i class="fas fa-check"></i> VTT + Camping</li><li><i class="fas fa-check"></i> VTT + Rafting</li><li><i class="fas fa-check"></i> VTT + Rafting + Camping</li></ul></div>
+            <div class="info-card"><i class="fas fa-clock"></i><h3><span class="lang-en">Practical info</span><span class="lang-fr">Infos pratiques</span></h3><ul><li><i class="fas fa-check"></i> <span class="lang-en">Duration: 3-4h</span><span class="lang-fr">Durée: 3-4h</span></li><li><i class="fas fa-check"></i> <span class="lang-en">Distance: 18km</span><span class="lang-fr">Distance: 18km</span></li><li><i class="fas fa-check"></i> <span class="lang-en">Level: Medium</span><span class="lang-fr">Niveau: Moyen</span></li></ul></div>
         </div>
     </div>
-
-    <!-- Price Card -->
     <div class="container">
         <div class="price-card">
             <h2><i class="fas fa-bicycle"></i> <span class="lang-en">VTT Rental</span><span class="lang-fr">Location VTT</span></h2>
             <div class="price">150 <small>DH/<span class="lang-en">person</span><span class="lang-fr">personne</span></small></div>
             <p><span class="lang-en">Starting from 150 DH per person (depending on number of participants)</span><span class="lang-fr">À partir de 150 DH par personne (selon le nombre de participants)</span></p>
-            <a href="booking.html" class="btn" style="background: #e6b12e; color: #1e3c2c; margin-top: 2rem;" aria-label="Réserver">
-                <i class="fas fa-calendar-check"></i> 
-                <span class="lang-en">Book now</span><span class="lang-fr">Réserver</span>
-            </a>
+            <a href="booking.html" class="btn"><i class="fas fa-calendar-check"></i> <span class="lang-en">Book now</span><span class="lang-fr">Réserver</span></a>
         </div>
     </div>
-
-    <!-- Contact -->
     <div class="container">
         <div class="contact-section">
-            <h2 class="section-title" style="margin-top: 0; font-size: 2.5rem; color: #1e3c2c; font-weight: 800; text-align: center;">
-                <span class="lang-en">Book Your VTT Adventure</span>
-                <span class="lang-fr">Réserver Votre Aventure VTT</span>
-            </h2>
-
+            <h2 class="section-title"><span class="lang-en">Book Your VTT Adventure</span><span class="lang-fr">Réserver Votre Aventure VTT</span></h2>
             <div class="contact-grid">
-                <div class="contact-item">
-                    <i class="fas fa-globe"></i>
-                    <h4>Website</h4>
-                    <a href="https://imsfrane.com" target="_blank" rel="noopener">imsfrane.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <h4>WhatsApp</h4>
-                    <a href="https://wa.me/212667772551" target="_blank" rel="noopener">+212 667-772551</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h4><span class="lang-en">Location</span><span class="lang-fr">Emplacement</span></h4>
-                    <p>Imsfrane, Azilal, Morocco</p>
-                </div>
+                <div class="contact-item"><i class="fas fa-globe"></i><h4>Website</h4><a href="https://imsfrane.com" target="_blank">imsfrane.com</a></div>
+                <div class="contact-item"><i class="fab fa-whatsapp"></i><h4>WhatsApp</h4><a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a></div>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><h4><span class="lang-en">Location</span><span class="lang-fr">Emplacement</span></h4><p>Imsfrane, Azilal, Morocco</p></div>
             </div>
         </div>
     </div>
 </main>
-    <!-- Footer -->
     <footer class="footer-pro">
         <div class="container">
             <div class="footer-top">
-                <div class="footer-col footer-about">
-                    <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60" loading="lazy">
-                        <h3>Imsfrane Cathédrale</h3>
-                    </div>
-                    <p class="footer-description">
-                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
-                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
-                    </p>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" rel="noopener" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://wa.me/212667772551" target="_blank" rel="noopener" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-col footer-links">
-                    <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
-                    <ul>
-                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
-                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
-                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
-                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
-                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
-                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col footer-info">
-                    <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
-                    <ul>
-                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
-                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
-                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
-                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
-                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col footer-contact">
-                    <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
-                    <ul>
-                        <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank" rel="noopener">WhatsApp</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
-                    </ul>
-                </div>
+                <div class="footer-col footer-about"><div class="footer-logo"><img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60" loading="lazy"><h3>Imsfrane Cathédrale</h3></div><p class="footer-description"><span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span><span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span></p><div class="footer-social"><a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a><a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a><a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a></div></div>
+                <div class="footer-col footer-links"><h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4><ul><li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li><li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li><li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li><li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li><li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li><li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li></ul></div>
+                <div class="footer-col footer-info"><h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4><ul><li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li><li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li><li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li><li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li><li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li><li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li></ul></div>
+                <div class="footer-col footer-contact"><h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4><ul><li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li><li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li><li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li></ul></div>
             </div>
-
             <div class="footer-middle">
                 <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
                 <div class="stat-item"><div class="stat-number">50+ km</div><div class="stat-label">Sentiers</div></div>
                 <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
                 <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
             </div>
-
-            <div class="footer-bottom">
-                <div class="copyright">
-                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
-                </div>
-            </div>
+            <div class="footer-bottom"><div class="copyright"><p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p></div></div>
         </div>
     </footer>
-
-    <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-            <span class="tooltip">WhatsApp</span>
-        </a>
-        <a href="tel:0667772551" class="floating-btn phone" aria-label="Téléphone">
-            <i class="fas fa-phone-alt"></i>
-            <span class="tooltip">Appeler</span>
-        </a>
-        <a href="booking.html" class="floating-btn booking" aria-label="Réservation">
-            <i class="fas fa-calendar-check"></i>
-            <span class="tooltip">Réserver</span>
-        </a>
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
+        <a href="tel:0667772551" class="floating-btn phone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
+        <a href="booking.html" class="floating-btn booking"><i class="fas fa-calendar-check"></i><span class="tooltip">Réserver</span></a>
     </div>
-
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- JavaScript Files -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
     <script src="../js/main.js"></script>
     <script src="../js/script.js"></script>
-    
     <script>
-        // Back to Top Button functionality
         const backToTop = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-        });
-
-        backToTop.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+        window.addEventListener('scroll', () => { backToTop.classList.toggle('show', window.scrollY > 300); });
+        backToTop.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
     </script>
 </body>
 </html>
