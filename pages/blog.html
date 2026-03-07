@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Imsfrane Cathédrale | Randonnées, nature, culture amazighe</title>
-    <meta name="description" content="Blog d'Imsfrane Cathédrale. Articles sur la montagne, les randonnées, les cascades, les villages amazighs et la nature de l'Atlas marocain.">
+    <title>Blog Imsfrane | Randonnées, cascades cachées et culture amazighe dans l'Atlas</title>
+    <meta name="description" content="Blog d'Imsfrane Cathédrale. Articles sur Jebel Msfrane, les cascades Wakoudene, les gorges d'Ahansal et les villages amazighs de la région d'Azilal.">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Blog - Imsfrane Cathédrale">
@@ -338,7 +338,7 @@
         <div class="container header-content">
             <a href="../index.html" class="logo" aria-label="Accueil">
                 <div class="logo-img">
-                    <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60">
+                    <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
                 </div>
                 <div class="logo-text">
                     <h1>Imsfrane Cathédrale</h1>
@@ -353,8 +353,8 @@
                     <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
                 </div>
                 <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
-    <i class="fas fa-bars"></i>
-</button>
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -384,6 +384,7 @@
             <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
+    
 <main>
     <!-- Hero Image -->
     <div class="page-hero"></div>
@@ -416,7 +417,7 @@
             <!-- Article 1 - Jebel Msfrane -->
             <div class="blog-card">
                 <div class="blog-image">
-                    <img src="../images/blog-msfrane.jpg" alt="Jebel Msfrane" loading="lazy">
+                    <img src="../images/blog-msfrane.jpg" alt="Jebel Msfrane - La Cathédrale dans l'Atlas marocain" loading="lazy">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
@@ -442,7 +443,7 @@
             <!-- Article 2 - Wakoudene Waterfalls -->
             <div class="blog-card">
                 <div class="blog-image">
-                    <img src="../images/blog-cascades.jpg" alt="Cascades Wakoudene" loading="lazy">
+                    <img src="../images/blog-cascades.jpg" alt="Cascades Wakoudene dans la région d'Imsfrane" loading="lazy">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
@@ -468,7 +469,7 @@
             <!-- Article 3 - Ahansal Gorges -->
             <div class="blog-card">
                 <div class="blog-image">
-                    <img src="../images/blog-gorges.jpg" alt="Gorges d'Ahansal" loading="lazy">
+                    <img src="../images/blog-gorges.jpg" alt="Gorges de l'Oued Ahansal dans l'Atlas" loading="lazy">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
@@ -494,7 +495,7 @@
             <!-- Article 4 - Tilouguite Village -->
             <div class="blog-card">
                 <div class="blog-image">
-                    <img src="../images/blog-tilouguite.jpg" alt="Tilouguite" loading="lazy">
+                    <img src="../images/blog-tilouguite.jpg" alt="Village de Tilouguite dans les montagnes de l'Atlas" loading="lazy">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
@@ -520,7 +521,7 @@
             <!-- Article 5 - Oued Ahansal -->
             <div class="blog-card">
                 <div class="blog-image">
-                    <img src="../images/blog-oued-ahansal.jpg" alt="Oued Ahansal" loading="lazy">
+                    <img src="../images/blog-oued-ahansal.jpg" alt="Oued Ahansal - rivière de l'Atlas" loading="lazy">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
@@ -581,13 +582,14 @@
         </div>
     </div>
 </main>
+
     <!-- Footer -->
     <footer class="footer-pro">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Imsfrane Cathédrale" width="60" height="60" loading="lazy">
+                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
                     <p class="footer-description">
@@ -682,19 +684,12 @@
         const backToTop = document.getElementById('backToTop');
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
+            backToTop.classList.toggle('show', window.scrollY > 300);
         });
 
         backToTop.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         // Toggle full article
