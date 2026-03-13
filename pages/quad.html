@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quad dans l'Atlas à Imsfrane | Location quad solo 250 DH/h ou biplace 300 DH/h</title>
-    <meta name="description" content="Quad à Imsfrane. Conduite libre dans les sentiers de l'Atlas. Quad solo 250 DH/h, quad biplace 300 DH/h. Casque et carburant inclus. Permis recommandé.">
+    <title>Quad dans l'Atlas à Imsfrane | Aventure en quad dans les montagnes</title>
+    <meta name="description" content="Quad à Imsfrane. Conduite libre dans les sentiers de l'Atlas. Quad solo ou biplace. Casque et carburant inclus. Contactez-nous pour les prix.">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Quad à Imsfrane - Aventure en conduite libre">
-    <meta property="og:description" content="Quad solo 250 DH/h, quad biplace 300 DH/h. Conduite libre dans les sentiers de l'Atlas. Casque et carburant inclus.">
+    <meta property="og:description" content="Quad solo ou biplace. Conduite libre dans les sentiers de l'Atlas. Casque et carburant inclus. Contactez-nous pour les prix.">
     <meta property="og:image" content="https://imsfrane.com/images/quad.jpg">
     <meta property="og:url" content="https://imsfrane.com/pages/quad.html">
     <meta property="og:type" content="website">
+    
+    <!-- Google Fonts - نفس خطوط الموقع الأصلي -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -21,6 +26,15 @@
     
     <style>
         /* Page specific styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .section-title, .page-title h1, .route-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
         .page-hero {
             width: 100%;
             height: 500px;
@@ -84,6 +98,387 @@
             height: 3px;
             background: #e6b12e;
             margin: 0.5rem auto;
+        }
+        
+        .route-block {
+            margin-bottom: 5rem;
+        }
+        
+        .route-image {
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            border-radius: 20px;
+        }
+        
+        .route-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .route-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .route-location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #e6b12e;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .route-content h2 {
+            font-size: 2.5rem;
+            color: #1e3c2c;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        
+        .route-content h2 i {
+            color: #e6b12e;
+            margin-right: 0.5rem;
+        }
+        
+        .route-content p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .route-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1e3c2c;
+            font-weight: 600;
+        }
+        
+        .meta-item i {
+            color: #e6b12e;
+            font-size: 1.1rem;
+        }
+        
+        .meta-item small {
+            font-weight: 400;
+            color: #777;
+            margin-left: 0.2rem;
+        }
+        
+        /* Journey Timeline Styles */
+        .journey-section {
+            background: #f9f7f3;
+            border-radius: 30px;
+            padding: 2rem;
+            margin: 2rem 0 1rem;
+            border: 1px solid rgba(230,177,46,0.2);
+        }
+        
+        .journey-title {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+            color: #1e3c2c;
+            font-size: 1.3rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .journey-title i {
+            color: #e6b12e;
+            font-size: 1.5rem;
+        }
+        
+        .journey-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        
+        .journey-step {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        
+        .step-time {
+            min-width: 80px;
+            background: #1e3c2c;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .step-content {
+            flex: 1;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        
+        .step-icon {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e6b12e;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+        }
+        
+        .step-text h4 {
+            color: #1e3c2c;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .step-text p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .food-note {
+            background: #fff3e0;
+            border-left: 4px solid #e6b12e;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .food-note i {
+            color: #e6b12e;
+            margin-right: 0.5rem;
+        }
+        
+        .info-section {
+            background: linear-gradient(135deg, #f9f7f3, #f0e8d9);
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .info-card i {
+            font-size: 2.5rem;
+            color: #e6b12e;
+            margin-bottom: 1rem;
+        }
+        
+        .info-card h4 {
+            font-size: 1.5rem;
+            color: #1e3c2c;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .info-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .equipment-note {
+            background: #e8f5e8;
+            border: 2px dashed #4CAF50;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .testimonial-small {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-left: 5px solid #e6b12e;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: rgba(230,177,46,0.05);
+        }
+        
+        .faq-question h4 {
+            color: #1e3c2c;
+            font-size: 1.1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .faq-question i {
+            color: #e6b12e;
+            transition: transform 0.3s;
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .faq-answer.show {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+        
+        .cta-modern {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #e6b12e;
+            color: #1e3c2c;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background: #f4c542;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(230,177,46,0.3);
+        }
+        
+        .btn-wa {
+            background: #25D366;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-wa:hover {
+            background: #128C7E;
+        }
+        
+        .price-card {
+            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
+            color: white;
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+        
+        .price-card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .price-card h2 i {
+            color: #e6b12e;
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #e6b12e;
+            margin: 1rem 0;
+        }
+        
+        .price small {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.8);
         }
         
         .quad-card {
@@ -198,46 +593,52 @@
             color: #e6b12e;
         }
         
-        .btn {
-            display: inline-block;
-            background: #e6b12e;
-            color: #1e3c2c;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            margin-top: 1rem;
+        .trail-section {
+            background: #f9f7f3;
+            border-radius: 30px;
+            padding: 2.5rem;
+            margin: 4rem 0;
         }
         
-        .btn:hover {
-            background: #f4c542;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(230,177,46,0.3);
-        }
-        
-        .info-grid {
+        .trail-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            margin: 3rem 0;
+            margin-top: 2rem;
         }
         
-        .info-item {
+        .trail-point {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
             text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
-        .info-item i {
+        .trail-point i {
             font-size: 2rem;
             color: #e6b12e;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
         
-        .info-item h4 {
+        .trail-point h4 {
             color: #1e3c2c;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .trail-point p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+        
+        .safety-card {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
         }
         
         .contact-section {
@@ -265,6 +666,12 @@
             margin-bottom: 0.5rem;
         }
         
+        .contact-item h4 {
+            color: #1e3c2c;
+            margin-bottom: 0.3rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
         .contact-item a {
             color: #555;
             text-decoration: none;
@@ -275,21 +682,240 @@
             color: #e6b12e;
         }
         
+        .what-to-bring {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        
+        .bring-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            padding: 0.8rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+        }
+        
+        .bring-item i {
+            color: #e6b12e;
+            font-size: 1.2rem;
+        }
+        
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .package-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .package-item i {
+            color: #e6b12e;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .package-item h4 {
+            color: #1e3c2c;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .package-item p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+        
         #img-quad1 { object-position: 50% 50%; }
         #img-quad2 { object-position: 50% 50%; }
         
-        @media (max-width: 992px) {
-            .quad-card { grid-template-columns: 1fr; }
-            .info-grid { grid-template-columns: repeat(2, 1fr); }
+        /* ===== RESPONSIVE DESIGN - مثل الموقع الأصلي ===== */
+        
+        /* للشاشات المتوسطة (التابلت) */
+        @media screen and (max-width: 992px) {
+            .quad-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .quad-image {
+                min-height: 350px;
+            }
+            
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .trail-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .what-to-bring {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .packages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .journey-step {
+                gap: 0.8rem;
+            }
         }
         
-        @media (max-width: 768px) {
-            .page-hero { height: 350px; }
-            .quad-image { min-height: 300px; }
-            .info-grid { grid-template-columns: 1fr; }
-            .contact-grid { grid-template-columns: 1fr; }
-            .quad-content h2 { font-size: 1.8rem; }
-            .features-list { grid-template-columns: 1fr; }
+        /* للشاشات الصغيرة (الموبايل) */
+        @media screen and (max-width: 768px) {
+            .page-hero {
+                height: 350px;
+            }
+            
+            .page-title h1 {
+                font-size: 2rem;
+            }
+            
+            .quad-image {
+                min-height: 250px;
+            }
+            
+            .quad-content {
+                padding: 1.5rem;
+            }
+            
+            .quad-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trail-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .what-to-bring {
+                grid-template-columns: 1fr;
+            }
+            
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+            
+            .journey-step {
+                flex-direction: column;
+            }
+            
+            .step-time {
+                align-self: flex-start;
+                margin-bottom: 0.5rem;
+            }
+            
+            .info-section {
+                padding: 2rem 1.5rem;
+            }
+            
+            .contact-section {
+                padding: 2rem 1.5rem;
+            }
+            
+            .price {
+                font-size: 2.5rem;
+            }
+            
+            .price-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .price-card h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        /* للشاشات الصغيرة جداً */
+        @media screen and (max-width: 480px) {
+            .page-hero {
+                height: 300px;
+            }
+            
+            .page-title h1 {
+                font-size: 1.8rem;
+            }
+            
+            .quad-content {
+                padding: 1rem;
+            }
+            
+            .quad-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .quad-meta {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            
+            .journey-section {
+                padding: 1.5rem;
+            }
+            
+            .step-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .step-time {
+                min-width: 70px;
+                font-size: 0.7rem;
+            }
+            
+            .step-text h4 {
+                font-size: 0.95rem;
+            }
+            
+            .step-text p {
+                font-size: 0.85rem;
+            }
+            
+            .testimonial-small {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -370,8 +996,17 @@
             <div class="intro-icon">
                 <i class="fas fa-motorcycle"></i>
             </div>
-            <p class="lang-en">Rent a quad and explore the beautiful landscapes of Imsfrane at your own pace. Self-drive adventure for an unforgettable experience through mountains, valleys and Berber villages.</p>
-            <p class="lang-fr">Louez un quad et explorez les magnifiques paysages d'Imsfrane à votre rythme. Aventure en conduite libre pour une expérience inoubliable à travers montagnes, vallées et villages berbères.</p>
+            <p class="lang-en">Rent a quad and explore the beautiful landscapes of Imsfrane at your own pace. Self-drive adventure for an unforgettable experience through mountains, valleys and villages. Contact us for prices and availability.</p>
+            <p class="lang-fr">Louez un quad et explorez les magnifiques paysages d'Imsfrane à votre rythme. Aventure en conduite libre pour une expérience inoubliable à travers montagnes, vallées et villages. Contactez-nous pour les prix et la disponibilité.</p>
+        </div>
+    </div>
+
+    <!-- Equipment Note -->
+    <div class="container">
+        <div class="equipment-note">
+            <i class="fas fa-motorcycle" style="color: #e6b12e; font-size: 2rem; margin-bottom: 0.5rem;"></i>
+            <p class="lang-en" style="font-size: 1.1rem;">🚙 <strong>Equipment:</strong> We provide quads, helmets, and fuel. All our quads are well-maintained and ready for adventure. Safety briefing included.</p>
+            <p class="lang-fr" style="font-size: 1.1rem;">🚙 <strong>Équipement :</strong> Nous fournissons les quads, les casques et le carburant. Tous nos quads sont bien entretenus et prêts pour l'aventure. Instructions de sécurité incluses.</p>
         </div>
     </div>
 
@@ -388,24 +1023,107 @@
                     <span class="lang-en">Quad Solo</span>
                     <span class="lang-fr">Quad Seul</span>
                 </h2>
-                <p class="lang-en">For solo adventurers. Drive your own quad and explore the trails at your own pace. Perfect for those seeking independence and adrenaline.</p>
-                <p class="lang-fr">Pour les aventuriers solos. Conduisez votre propre quad et explorez les sentiers à votre rythme. Parfait pour ceux qui recherchent l'indépendance et l'adrénaline.</p>
+                <p class="lang-en">For solo adventurers. Drive your own quad and explore the trails at your own pace. Perfect for those seeking independence and adrenaline. You are in full control of your adventure.</p>
+                <p class="lang-fr">Pour les aventuriers solos. Conduisez votre propre quad et explorez les sentiers à votre rythme. Parfait pour ceux qui recherchent l'indépendance et l'adrénaline. Vous êtes en plein contrôle de votre aventure.</p>
                 
                 <div class="quad-meta">
-                    <div class="meta-item"><i class="fas fa-clock"></i> <span class="lang-en">1 hour</span><span class="lang-fr">1 heure</span></div>
-                    <div class="meta-item"><i class="fas fa-tag"></i> 250 DH <small>/h</small></div>
+                    <div class="meta-item"><i class="fas fa-clock"></i> <span class="lang-en">1 hour (or more)</span><span class="lang-fr">1 heure (ou plus)</span></div>
+                    <div class="meta-item"><i class="fas fa-tag"></i> <span data-price-key="quad-solo">250 DH</span> <small>/h</small></div>
                 </div>
 
                 <div class="features-list">
-                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Self-drive</span><span class="lang-fr">Conduite libre</span></div>
+                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Self-drive experience</span><span class="lang-fr">Conduite libre</span></div>
                     <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Helmet included</span><span class="lang-fr">Casque inclus</span></div>
                     <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Fuel included</span><span class="lang-fr">Carburant inclus</span></div>
                     <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Safety briefing</span><span class="lang-fr">Instructions de sécurité</span></div>
                 </div>
 
+                <!-- Journey Timeline for Quad Solo -->
+                <div class="journey-section">
+                    <div class="journey-title">
+                        <i class="fas fa-map-signal"></i>
+                        <span class="lang-en">Your Quad Journey Step by Step</span>
+                        <span class="lang-fr">Votre Parcours Quad Étape par Étape</span>
+                    </div>
+                    <div class="journey-steps">
+                        <div class="journey-step">
+                            <span class="step-time">09:00</span>
+                            <div class="step-content">
+                                <div class="step-icon"><i class="fas fa-map-pin"></i></div>
+                                <div class="step-text">
+                                    <h4 class="lang-en">Meeting at Imsfrane Center</h4>
+                                    <h4 class="lang-fr">Rendez-vous au Centre d'Imsfrane</h4>
+                                    <p class="lang-en">Meet your guide, equipment distribution</p>
+                                    <p class="lang-fr">Rencontre avec votre guide, distribution du matériel</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <span class="step-time">09:30</span>
+                            <div class="step-content">
+                                <div class="step-icon"><i class="fas fa-shield-alt"></i></div>
+                                <div class="step-text">
+                                    <h4 class="lang-en">Safety Briefing</h4>
+                                    <h4 class="lang-fr">Briefing Sécurité</h4>
+                                    <p class="lang-en">Learn how to handle the quad, safety rules</p>
+                                    <p class="lang-fr">Apprentissage de la conduite du quad, règles de sécurité</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <span class="step-time">10:00</span>
+                            <div class="step-content">
+                                <div class="step-icon"><i class="fas fa-flag"></i></div>
+                                <div class="step-text">
+                                    <h4 class="lang-en">Start the Adventure</h4>
+                                    <h4 class="lang-fr">Début de l'Aventure</h4>
+                                    <p class="lang-en">Begin riding through valleys and mountains</p>
+                                    <p class="lang-fr">Départ à travers vallées et montagnes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <span class="step-time">10:45</span>
+                            <div class="step-content">
+                                <div class="step-icon"><i class="fas fa-mountain"></i></div>
+                                <div class="step-text">
+                                    <h4 class="lang-en">Mountain Trail</h4>
+                                    <h4 class="lang-fr">Parcours Montagne</h4>
+                                    <p class="lang-en">Exciting ride on mountain paths with panoramic views</p>
+                                    <p class="lang-fr">Balade excitante sur sentiers de montagne avec vues panoramiques</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <span class="step-time">11:30</span>
+                            <div class="step-content">
+                                <div class="step-icon"><i class="fas fa-camera"></i></div>
+                                <div class="step-text">
+                                    <h4 class="lang-en">Photo Stop</h4>
+                                    <h4 class="lang-fr">Arrêt Photo</h4>
+                                    <p class="lang-en">Break at a viewpoint overlooking the valley</p>
+                                    <p class="lang-fr">Pause à un point de vue surplombant la vallée</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <span class="step-time">12:15</span>
+                            <div class="step-content">
+                                <div class="step-icon"><i class="fas fa-flag-checkered"></i></div>
+                                <div class="step-text">
+                                    <h4 class="lang-en">Return to Imsfrane</h4>
+                                    <h4 class="lang-fr">Retour à Imsfrane</h4>
+                                    <p class="lang-en">End of the ride</p>
+                                    <p class="lang-fr">Fin de la balade</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <a href="booking.html" class="btn" aria-label="Réserver le quad solo">
                     <i class="fas fa-calendar-check"></i> 
-                    <span class="lang-en">Book now</span><span class="lang-fr">Réserver</span>
+                    <span class="lang-en">Book Now</span><span class="lang-fr">Réserver</span>
                 </a>
             </div>
         </div>
@@ -424,30 +1142,162 @@
                     <span class="lang-en">Quad Biplace</span>
                     <span class="lang-fr">Quad Biplace</span>
                 </h2>
-                <p class="lang-en">For two people. Share the adventure with a friend or partner on one quad. Double the fun, double the memories.</p>
-                <p class="lang-fr">Pour deux personnes. Partagez l'aventure avec un ami ou un partenaire sur un seul quad. Deux fois plus de fun, deux fois plus de souvenirs.</p>
+                <p class="lang-en">For two people. Share the adventure with a friend or partner on one quad. Double the fun, double the memories. Perfect for couples or friends who want to experience the thrill together.</p>
+                <p class="lang-fr">Pour deux personnes. Partagez l'aventure avec un ami ou un partenaire sur un seul quad. Deux fois plus de fun, deux fois plus de souvenirs. Parfait pour les couples ou les amis qui veulent vivre le frisson ensemble.</p>
                 
                 <div class="quad-meta">
-                    <div class="meta-item"><i class="fas fa-clock"></i> <span class="lang-en">1 hour</span><span class="lang-fr">1 heure</span></div>
-                    <div class="meta-item"><i class="fas fa-tag"></i> 300 DH <small>/h</small></div>
+                    <div class="meta-item"><i class="fas fa-clock"></i> <span class="lang-en">1 hour (or more)</span><span class="lang-fr">1 heure (ou plus)</span></div>
+                    <div class="meta-item"><i class="fas fa-tag"></i> <span data-price-key="quad-biplace">300 DH</span> <small>/h</small></div>
                 </div>
 
                 <div class="features-list">
-                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Self-drive</span><span class="lang-fr">Conduite libre</span></div>
-                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Two helmets</span><span class="lang-fr">Deux casques</span></div>
+                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Self-drive experience</span><span class="lang-fr">Conduite libre</span></div>
+                    <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Two helmets included</span><span class="lang-fr">Deux casques inclus</span></div>
                     <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Fuel included</span><span class="lang-fr">Carburant inclus</span></div>
                     <div class="feature-item"><i class="fas fa-check"></i> <span class="lang-en">Safety briefing</span><span class="lang-fr">Instructions de sécurité</span></div>
                 </div>
 
+                <!-- Journey Timeline for Quad Biplace (same as solo) -->
+                <div class="journey-section">
+                    <div class="journey-title">
+                        <i class="fas fa-map-signal"></i>
+                        <span class="lang-en">Your Quad Journey Step by Step</span>
+                        <span class="lang-fr">Votre Parcours Quad Étape par Étape</span>
+                    </div>
+                    <div class="journey-steps">
+                        <div class="journey-step">
+                            <span class="step-time">09:00</span>
+                            <div class="step-content">
+                                <div class="step-icon"><i class="fas fa-map-pin"></i></div>
+                                <div class="step-text">
+                                    <h4 class="lang-en">Meeting at Imsfrane Center</h4>
+                                    <h4 class="lang-fr">Rendez-vous au Centre d'Imsfrane</h4>
+                                    <p class="lang-en">Meet your guide, equipment distribution</p>
+                                    <p class="lang-fr">Rencontre avec votre guide, distribution du matériel</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <span class="step-time">09:30</span>
+                            <div class="step-content">
+                                <div class="step-icon"><i class="fas fa-shield-alt"></i></div>
+                                <div class="step-text">
+                                    <h4 class="lang-en">Safety Briefing</h4>
+                                    <h4 class="lang-fr">Briefing Sécurité</h4>
+                                    <p class="lang-en">Learn how to handle the quad, safety rules</p>
+                                    <p class="lang-fr">Apprentissage de la conduite du quad, règles de sécurité</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <span class="step-time">10:00</span>
+                            <div class="step-content">
+                                <div class="step-icon"><i class="fas fa-flag"></i></div>
+                                <div class="step-text">
+                                    <h4 class="lang-en">Start the Adventure</h4>
+                                    <h4 class="lang-fr">Début de l'Aventure</h4>
+                                    <p class="lang-en">Begin riding through valleys and mountains</p>
+                                    <p class="lang-fr">Départ à travers vallées et montagnes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <span class="step-time">10:45</span>
+                            <div class="step-content">
+                                <div class="step-icon"><i class="fas fa-mountain"></i></div>
+                                <div class="step-text">
+                                    <h4 class="lang-en">Mountain Trail</h4>
+                                    <h4 class="lang-fr">Parcours Montagne</h4>
+                                    <p class="lang-en">Exciting ride on mountain paths with panoramic views</p>
+                                    <p class="lang-fr">Balade excitante sur sentiers de montagne avec vues panoramiques</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <span class="step-time">11:30</span>
+                            <div class="step-content">
+                                <div class="step-icon"><i class="fas fa-camera"></i></div>
+                                <div class="step-text">
+                                    <h4 class="lang-en">Photo Stop</h4>
+                                    <h4 class="lang-fr">Arrêt Photo</h4>
+                                    <p class="lang-en">Break at a viewpoint overlooking the valley</p>
+                                    <p class="lang-fr">Pause à un point de vue surplombant la vallée</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <span class="step-time">12:15</span>
+                            <div class="step-content">
+                                <div class="step-icon"><i class="fas fa-flag-checkered"></i></div>
+                                <div class="step-text">
+                                    <h4 class="lang-en">Return to Imsfrane</h4>
+                                    <h4 class="lang-fr">Retour à Imsfrane</h4>
+                                    <p class="lang-en">End of the ride</p>
+                                    <p class="lang-fr">Fin de la balade</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <a href="booking.html" class="btn" aria-label="Réserver le quad biplace">
                     <i class="fas fa-calendar-check"></i> 
-                    <span class="lang-en">Book now</span><span class="lang-fr">Réserver</span>
+                    <span class="lang-en">Book Now</span><span class="lang-fr">Réserver</span>
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- INFO PRATIQUES -->
+    <!-- Testimonial -->
+    <div class="container">
+        <div class="testimonial-small">
+            <i class="fas fa-quote-left" style="color: #e6b12e; font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
+            <p class="lang-en">"The quad adventure was amazing! We took the biplace quad and it was so much fun driving through the mountains. The views are spectacular and the guides made sure we were safe. Highly recommended!"</p>
+            <p class="lang-fr">"L'aventure en quad était incroyable ! Nous avons pris le quad biplace et c'était tellement amusant de conduire à travers les montagnes. Les vues sont spectaculaires et les guides ont assuré notre sécurité. Hautement recommandé !"</p>
+            <p style="margin-top: 1rem; font-weight: 600; color: #1e3c2c;">— Karim & Nadia, Casablanca</p>
+        </div>
+    </div>
+
+    <!-- Trail Information -->
+    <div class="container">
+        <div class="trail-section">
+            <h2 style="text-align: center; color: #1e3c2c; margin-bottom: 1rem;">
+                <i class="fas fa-route" style="color: #e6b12e;"></i> 
+                <span class="lang-en">The Quad Trails</span>
+                <span class="lang-fr">Les Parcours Quad</span>
+            </h2>
+            <p style="text-align: center; color: #555; margin-bottom: 2rem;">
+                <span class="lang-en">Choose from different trails based on your experience and preferences. Our guides will recommend the best route for you.</span>
+                <span class="lang-fr">Choisissez parmi différents parcours selon votre expérience et vos préférences. Nos guides vous recommanderont le meilleur itinéraire.</span>
+            </p>
+            
+            <div class="trail-grid">
+                <div class="trail-point">
+                    <i class="fas fa-mountain"></i>
+                    <h4 class="lang-en">Mountain Trail</h4>
+                    <h4 class="lang-fr">Parcours Montagne</h4>
+                    <p class="lang-en">Steep climbs, panoramic views, rocky terrain</p>
+                    <p class="lang-fr">Montées raides, vues panoramiques, terrain rocheux</p>
+                </div>
+                <div class="trail-point">
+                    <i class="fas fa-tree"></i>
+                    <h4 class="lang-en">Forest Trail</h4>
+                    <h4 class="lang-fr">Parcours Forêt</h4>
+                    <p class="lang-en">Shaded paths through juniper and oak forests</p>
+                    <p class="lang-fr">Chemins ombragés à travers forêts de genévriers et chênes</p>
+                </div>
+                <div class="trail-point">
+                    <i class="fas fa-water"></i>
+                    <h4 class="lang-en">Valley Trail</h4>
+                    <h4 class="lang-fr">Parcours Vallée</h4>
+                    <p class="lang-en">Follow the river through beautiful valleys</p>
+                    <p class="lang-fr">Suivez la rivière à travers de belles vallées</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical Info -->
     <div class="container">
         <h2 class="section-title">
             <span class="lang-en">Practical Information</span>
@@ -455,36 +1305,175 @@
         </h2>
         
         <div class="info-grid">
-            <div class="info-item">
+            <div class="info-card">
                 <i class="fas fa-id-card"></i>
                 <h4><span class="lang-en">License</span><span class="lang-fr">Permis</span></h4>
                 <p><span class="lang-en">License not mandatory but recommended</span><span class="lang-fr">Permis non obligatoire mais recommandé</span></p>
             </div>
-            <div class="info-item">
+            <div class="info-card">
                 <i class="fas fa-clock"></i>
                 <h4><span class="lang-en">Minimum age</span><span class="lang-fr">Âge minimum</span></h4>
-                <p>18 <span class="lang-en">years</span><span class="lang-fr">ans</span></p>
+                <p>18 <span class="lang-en">years</span><span class="lang-fr">ans</span> (driver)</p>
             </div>
-            <div class="info-item">
+            <div class="info-card">
                 <i class="fas fa-shield-alt"></i>
                 <h4><span class="lang-en">Safety</span><span class="lang-fr">Sécurité</span></h4>
                 <p><span class="lang-en">Helmet mandatory</span><span class="lang-fr">Casque obligatoire</span></p>
             </div>
-            <div class="info-item">
-                <i class="fas fa-clock"></i>
-                <h4><span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></h4>
-                <p><span class="lang-en">24h in advance</span><span class="lang-fr">24h à l'avance</span></p>
+        </div>
+    </div>
+
+    <!-- Safety Card -->
+    <div class="container">
+        <div class="safety-card">
+            <i class="fas fa-exclamation-triangle" style="color: #ff9800; font-size: 2rem; margin-bottom: 0.5rem;"></i>
+            <h4 style="color: #1e3c2c; margin-bottom: 0.5rem;">
+                <span class="lang-en">Safety First</span>
+                <span class="lang-fr">La Sécurité Avant Tout</span>
+            </h4>
+            <p class="lang-en">A safety briefing is provided before every ride. Follow the guide's instructions, wear your helmet at all times, and respect the terrain. Your safety is our priority.</p>
+            <p class="lang-fr">Des instructions de sécurité sont fournies avant chaque sortie. Suivez les instructions du guide, portez votre casque en tout temps, et respectez le terrain. Votre sécurité est notre priorité.</p>
+        </div>
+    </div>
+
+    <!-- Combined Packages -->
+    <div class="container">
+        <div class="info-section" style="background: linear-gradient(135deg, #f9f7f3, #f0e8d9); border-radius: 30px; padding: 2.5rem; margin: 3rem 0;">
+            <h3 style="text-align: center; color: #1e3c2c; margin-bottom: 2rem; font-size: 1.8rem;">
+                <i class="fas fa-box" style="color: #e6b12e;"></i> 
+                <span class="lang-en">Combined Packages</span>
+                <span class="lang-fr">Packages Combinés</span>
+            </h3>
+            <div class="packages-grid">
+                <div class="package-item">
+                    <i class="fas fa-campground"></i>
+                    <h4>Quad + Camping</h4>
+                    <p>Adventure by day, stars by night</p>
+                </div>
+                <div class="package-item">
+                    <i class="fas fa-water"></i>
+                    <h4>Quad + Rafting</h4>
+                    <p>Land and water adventure</p>
+                </div>
+                <div class="package-item">
+                    <i class="fas fa-hiking"></i>
+                    <h4>Quad + Hiking</h4>
+                    <p>Explore the mountains differently</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Contact -->
+    <!-- What to Bring -->
+    <div class="container">
+        <div class="info-section">
+            <h3 style="text-align: center; color: #1e3c2c; margin-bottom: 2rem; font-size: 1.8rem; font-family: 'Playfair Display', serif;">
+                <i class="fas fa-backpack" style="color: #e6b12e;"></i> 
+                <span class="lang-en">What to bring</span>
+                <span class="lang-fr">À prévoir</span>
+            </h3>
+            <div class="what-to-bring">
+                <div class="bring-item">
+                    <i class="fas fa-shoe-prints"></i> <span class="lang-en">Closed shoes</span><span class="lang-fr">Chaussures fermées</span>
+                </div>
+                <div class="bring-item">
+                    <i class="fas fa-tshirt"></i> <span class="lang-en">Comfortable clothes</span><span class="lang-fr">Vêtements confortables</span>
+                </div>
+                <div class="bring-item">
+                    <i class="fas fa-water"></i> <span class="lang-en">Water</span><span class="lang-fr">Eau</span>
+                </div>
+                <div class="bring-item">
+                    <i class="fas fa-camera"></i> <span class="lang-en">Camera</span><span class="lang-fr">Appareil photo</span>
+                </div>
+                <div class="bring-item">
+                    <i class="fas fa-sun"></i> <span class="lang-en">Sunscreen</span><span class="lang-fr">Crème solaire</span>
+                </div>
+                <div class="bring-item">
+                    <i class="fas fa-glasses"></i> <span class="lang-en">Sunglasses</span><span class="lang-fr">Lunettes de soleil</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="container">
+        <div class="info-section">
+            <h2 class="section-title"><span class="lang-en">Frequently Asked Questions</span><span class="lang-fr">Questions Fréquentes</span></h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h4 class="lang-en">Do I need a driving license?</h4>
+                    <h4 class="lang-fr">Faut-il un permis de conduire ?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p class="lang-en">A driving license is not mandatory but highly recommended for safety. Our guides will give you full instructions before the ride.</p>
+                    <p class="lang-fr">Un permis de conduire n'est pas obligatoire mais fortement recommandé pour la sécurité. Nos guides vous donneront des instructions complètes avant la balade.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h4 class="lang-en">Can I ride if it rains?</h4>
+                    <h4 class="lang-fr">Puis-je conduire s'il pleut ?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p class="lang-en">For safety reasons, we don't ride in heavy rain as trails become slippery. We'll contact you to reschedule. Light rain is okay with proper gear.</p>
+                    <p class="lang-fr">Pour des raisons de sécurité, nous ne faisons pas de quad en cas de forte pluie car les sentiers deviennent glissants. Nous vous contacterons pour reporter. Une pluie légère est possible avec un équipement approprié.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h4 class="lang-en">Is it safe for beginners?</h4>
+                    <h4 class="lang-fr">Est-ce sûr pour les débutants ?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p class="lang-en">Yes! We have easy trails for beginners. Our guides will teach you everything you need to know and accompany you throughout the ride.</p>
+                    <p class="lang-fr">Oui ! Nous avons des parcours faciles pour les débutants. Nos guides vous apprendront tout ce que vous devez savoir et vous accompagneront tout au long de la balade.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-modern">
+        <div class="cta-content">
+            <h2>
+                <span class="lang-en">Ready for an Adrenaline Rush?</span>
+                <span class="lang-fr">Prêt pour une Montée d'Adrénaline ?</span>
+            </h2>
+            <p class="lang-en">Book your quad adventure now and discover the wild beauty of Imsfrane</p>
+            <p class="lang-fr">Réservez votre aventure en quad maintenant et découvrez la beauté sauvage d'Imsfrane</p>
+            <div class="cta-buttons">
+                <a href="booking.html" class="btn">
+                    <i class="fas fa-calendar-check"></i>
+                    <span class="lang-en">Book Now</span>
+                    <span class="lang-fr">Réserver</span>
+                </a>
+                <a href="https://wa.me/212667772551" class="btn btn-wa" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="lang-en">Ask a Question</span>
+                    <span class="lang-fr">Poser une Question</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <div class="container">
         <div class="contact-section">
             <h2 class="section-title" style="margin-top: 0;">
-                <span class="lang-en">Book Your Quad</span>
-                <span class="lang-fr">Réserver Votre Quad</span>
+                <span class="lang-en">Book Your Quad Adventure</span>
+                <span class="lang-fr">Réserver Votre Aventure Quad</span>
             </h2>
+
+            <p style="text-align: center; margin-bottom: 2rem; color: #555;">
+                <span class="lang-en">Contact us for prices, availability, and to book your quad experience in Imsfrane.</span>
+                <span class="lang-fr">Contactez-nous pour les prix, la disponibilité et pour réserver votre expérience quad à Imsfrane.</span>
+            </p>
 
             <div class="contact-grid">
                 <div class="contact-item">
@@ -502,6 +1491,12 @@
                     <h4><span class="lang-en">Location</span><span class="lang-fr">Emplacement</span></h4>
                     <p>Imsfrane, Azilal, Morocco</p>
                 </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="booking.html" class="btn">
+                    <i class="fas fa-calendar-check"></i> <span class="lang-en">Book Now</span><span class="lang-fr">Réserver</span>
+                </a>
             </div>
         </div>
     </div>
@@ -521,10 +1516,10 @@
                         <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" rel="noopener" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://wa.me/212667772551" target="_blank" rel="noopener" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" rel="noopener" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" rel="noopener" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -604,7 +1599,7 @@
     <script src="../js/script.js"></script>
     
     <script>
-        // Back to Top Button functionality
+        // Back to Top Button
         const backToTop = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
             backToTop.classList.toggle('show', window.scrollY > 300);
@@ -613,6 +1608,14 @@
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+
+        // FAQ Toggle
+        window.toggleFaq = function(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            answer.classList.toggle('show');
+            icon.style.transform = answer.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)';
+        };
     </script>
 </body>
 </html>
