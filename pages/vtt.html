@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VTT dans l'Atlas à Imsfrane | Location VTT tout suspendu 150 DH/jour</title>
-    <meta name="description" content="VTT à Imsfrane dans l'Atlas. Parcours 18km à travers villages berbères et forêts. Location VTT tout suspendu 150 DH/jour. Casque et accompagnement inclus.">
+    <title>VTT dans l'Atlas à Imsfrane | Location VTT tout suspendu dans les montagnes</title>
+    <meta name="description" content="VTT à Imsfrane dans l'Atlas. Parcours à travers villages berbères et forêts. Location VTT tout suspendu. Contactez-nous pour les prix.">
     
     <meta property="og:title" content="VTT à Imsfrane - Location VTT tout suspendu">
-    <meta property="og:description" content="VTT dans l'Atlas. VTT tout suspendu 150 DH/jour. Parcours de 18km à travers villages et forêts. Casque et accompagnement inclus.">
+    <meta property="og:description" content="VTT dans l'Atlas. VTT tout suspendu. Parcours à travers villages et forêts. Casque et accompagnement inclus.">
     <meta property="og:image" content="https://imsfrane.com/images/IMG_4850.jpg">
     <meta property="og:url" content="https://imsfrane.com/pages/vtt.html">
     <meta property="og:type" content="website">
@@ -45,6 +45,8 @@
         .meta-item small { font-weight: 400; color: #777; margin-left: 0.2rem; }
         .btn { display: inline-block; background: #e6b12e; color: #1e3c2c; padding: 0.9rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s; border: none; cursor: pointer; margin-top: 1rem; }
         .btn:hover { background: #f4c542; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(230,177,46,0.3); }
+        .btn-wa { background: #25D366; color: white; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .btn-wa:hover { background: #128C7E; }
         .info-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 4rem 0; }
         .info-card { background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #f0f0f0; transition: all 0.3s; }
         .info-card:hover { border-color: #e6b12e; transform: translateY(-5px); }
@@ -56,8 +58,15 @@
         .price-card { background: linear-gradient(135deg, #1e3c2c, #2a5a3a); color: white; border-radius: 30px; padding: 3rem; margin: 4rem 0; text-align: center; }
         .price-card h2 { font-size: 2.5rem; margin-bottom: 1rem; }
         .price-card h2 i { color: #e6b12e; }
-        .price { font-size: 4rem; font-weight: 900; color: #e6b12e; margin: 1rem 0; }
+        .price { font-size: 3rem; font-weight: 900; color: #e6b12e; margin: 1rem 0; }
         .price small { font-size: 1.5rem; font-weight: 400; color: rgba(255,255,255,0.8); }
+        .trail-details { background: #f9f7f3; border-radius: 20px; padding: 2rem; margin: 3rem 0; border-left: 5px solid #e6b12e; }
+        .trail-details h3 { color: #1e3c2c; margin-bottom: 1rem; font-size: 1.5rem; }
+        .trail-details ul { list-style: none; }
+        .trail-details li { margin: 1rem 0; display: flex; align-items: flex-start; gap: 1rem; color: #555; }
+        .trail-details li i { color: #e6b12e; font-size: 1.2rem; margin-top: 0.2rem; }
+        .testimonial-small { background: white; border-radius: 15px; padding: 1.5rem; margin: 2rem 0; border-left: 5px solid #e6b12e; font-style: italic; color: #555; }
+        .equipment-note { background: #e8f5e8; border: 2px dashed #4CAF50; padding: 1.5rem; border-radius: 15px; margin: 2rem 0; text-align: center; }
         .contact-section { background: white; border-radius: 30px; padding: 3rem; margin: 4rem 0; box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
         .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 3rem 0; }
         .contact-item { text-align: center; }
@@ -68,7 +77,9 @@
         #img-vtt1 { object-position: 50% 40%; }
         #img-vtt2 { object-position: 50% 80%; }
         #img-vtt3 { object-position: 50% 80%; }
-        @media (max-width: 992px) { .info-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 992px) { 
+            .info-cards { grid-template-columns: repeat(2, 1fr); } 
+        }
         @media (max-width: 768px) {
             .page-hero { height: 350px; }
             .page-title h1 { font-size: 2rem; }
@@ -77,7 +88,7 @@
             .info-cards { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
             .route-content h2 { font-size: 2rem; }
-            .price { font-size: 3rem; }
+            .price { font-size: 2.5rem; }
         }
     </style>
 </head>
@@ -119,8 +130,12 @@
             <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
+    
 <main>
+    <!-- Hero Image -->
     <div class="page-hero"></div>
+
+    <!-- Page Title -->
     <div class="container">
         <div class="page-title">
             <h1 class="lang-en">Mountain Biking in Imsfrane</h1>
@@ -128,20 +143,33 @@
             <div class="location"><i class="fas fa-map-pin"></i> Imsfrane, Morocco</div>
         </div>
     </div>
+
+    <!-- Introduction -->
     <div class="container">
         <div class="intro-text">
             <div class="intro-icon"><i class="fas fa-bicycle"></i></div>
-            <p class="lang-en">🚵 Discover mountain biking in Imsfrane – between mountains and valleys. Located in the heart of the Atlas Mountains, Imsfrane is one of the most beautiful destinations for adventure and nature lovers. We offer you a VTT experience on natural trails through mountains, valleys and forests, with breathtaking panoramic views.</p>
-            <p class="lang-fr">🚵 Découvrez le VTT à Imsfrane – entre montagnes et vallées. Située au cœur des montagnes de l'Atlas, Imsfrane est l'une des plus belles destinations pour les amateurs d'aventure et de nature. Nous vous proposons une expérience VTT sur des sentiers naturels à travers montagnes, vallées et forêts, avec des vues panoramiques à couper le souffle.</p>
-            <div class="nature-badge"><i class="fas fa-bicycle"></i> 18km - 3h <i class="fas fa-mountain"></i></div>
+            <p class="lang-en">🚵 Discover mountain biking in Imsfrane – between mountains and valleys. Located in the heart of the Atlas Mountains, Imsfrane is one of the most beautiful destinations for adventure and nature lovers. We offer you a VTT experience on natural trails through mountains, valleys and forests, with breathtaking panoramic views. Contact us for prices and availability.</p>
+            <p class="lang-fr">🚵 Découvrez le VTT à Imsfrane – entre montagnes et vallées. Située au cœur des montagnes de l'Atlas, Imsfrane est l'une des plus belles destinations pour les amateurs d'aventure et de nature. Nous vous proposons une expérience VTT sur des sentiers naturels à travers montagnes, vallées et forêts, avec des vues panoramiques à couper le souffle. Contactez-nous pour les prix et la disponibilité.</p>
+            <div class="nature-badge"><i class="fas fa-bicycle"></i> 18km - 3-4h <i class="fas fa-mountain"></i></div>
         </div>
     </div>
+
+    <!-- Equipment Note -->
+    <div class="container">
+        <div class="equipment-note">
+            <i class="fas fa-bicycle" style="color: #e6b12e; font-size: 2rem; margin-bottom: 0.5rem;"></i>
+            <p class="lang-en" style="font-size: 1.1rem;">🚲 <strong>Equipment:</strong> We provide professional mountain bikes and helmets. You are also welcome to bring your own bike if you prefer!</p>
+            <p class="lang-fr" style="font-size: 1.1rem;">🚲 <strong>Équipement :</strong> Nous fournissons des VTT professionnels et des casques. Vous pouvez aussi apporter votre propre vélo si vous préférez !</p>
+        </div>
+    </div>
+
+    <!-- Section 1: The Trail -->
     <section class="container">
         <div class="route-block">
             <div class="route-image"><img src="../images/vtt.jpg" alt="Parcours VTT dans les montagnes de l'Atlas à Imsfrane" id="img-vtt1" width="800" height="450" loading="lazy"></div>
             <div class="route-content">
                 <div class="route-location"><i class="fas fa-map-pin"></i> <span class="lang-en">Starting point</span><span class="lang-fr">Point de départ</span></div>
-                <h2><i class="fas fa-route"></i> <span class="lang-en">The proposed trail (medium level)</span><span class="lang-fr">Le tracé proposé (niveau moyen)</span></h2>
+                <h2><i class="fas fa-route"></i> <span class="lang-en">The VTT Trail (Medium Level)</span><span class="lang-fr">Le Parcours VTT (Niveau Moyen)</span></h2>
                 <p class="lang-en">Distance: 18 km | Duration: 3 to 4 hours | Level: Medium | Start: Imsfrane center</p>
                 <p class="lang-fr">Distance: 18 km | Durée: 3 à 4 heures | Niveau: Moyen | Départ: Centre d'Imsfrane</p>
                 <div class="route-meta">
@@ -152,61 +180,233 @@
             </div>
         </div>
     </section>
+
+    <!-- Trail Details -->
+    <div class="container">
+        <div class="trail-details">
+            <h3><i class="fas fa-list"></i> <span class="lang-en">Trail Details</span><span class="lang-fr">Détails du Parcours</span></h3>
+            <ul>
+                <li><i class="fas fa-flag"></i> <span class="lang-en"><strong>Start:</strong> From the village center of Imsfrane</span><span class="lang-fr"><strong>Départ:</strong> Du centre du village d'Imsfrane</span></li>
+                <li><i class="fas fa-arrow-up"></i> <span class="lang-en"><strong>Climb:</strong> Gradual climb on a mountain road with panoramic views of the valley</span><span class="lang-fr"><strong>Montée:</strong> Montée progressive sur une route de montagne avec vue panoramique sur la vallée</span></li>
+                <li><i class="fas fa-tree"></i> <span class="lang-en"><strong>Forest section:</strong> Pass through natural trails in the middle of juniper and oak trees</span><span class="lang-fr"><strong>Section forestière:</strong> Passage par des sentiers naturels au milieu des genévriers et chênes</span></li>
+                <li><i class="fas fa-arrow-down"></i> <span class="lang-en"><strong>Descent:</strong> Fun and fast descent to the valley with amazing views</span><span class="lang-fr"><strong>Descente:</strong> Descente amusante et rapide vers la vallée avec des vues incroyables</span></li>
+                <li><i class="fas fa-camera"></i> <span class="lang-en"><strong>Photo stop:</strong> Break at a natural viewpoint for photos of the Cathedral rock</span><span class="lang-fr"><strong>Arrêt photo:</strong> Pause à un point de vue naturel pour des photos du rocher de la Cathédrale</span></li>
+                <li><i class="fas fa-flag-checkered"></i> <span class="lang-en"><strong>Return:</strong> Return to the starting point in Imsfrane center</span><span class="lang-fr"><strong>Retour:</strong> Retour au point de départ au centre d'Imsfrane</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 2: Through Berber Villages -->
     <section class="container">
         <div class="route-block">
             <div class="route-image"><img src="../images/IMG_4832.jpg" alt="VTT traversant les villages berbères de l'Atlas" id="img-vtt2" width="800" height="450" loading="lazy"></div>
             <div class="route-content">
-                <div class="route-location"><i class="fas fa-map-pin"></i> <span class="lang-en">Route details</span><span class="lang-fr">Détails du parcours</span></div>
-                <h2><i class="fas fa-list"></i> <span class="lang-en">Trail details</span><span class="lang-fr">Détails du parcours</span></h2>
-                <p class="lang-en">1. Start from the village center<br>2. Gradual climb on a mountain road with panoramic view<br>3. Pass through natural trails in the middle of trees<br>4. Fun and fast descent to the valley<br>5. Break at a natural viewpoint for photos<br>6. Return to the starting point</p>
-                <p class="lang-fr">1. Départ du centre du village<br>2. Montée progressive sur une route de montagne avec vue panoramique<br>3. Passage par des sentiers naturels au milieu des arbres<br>4. Descente amusante et rapide vers la vallée<br>5. Pause à un point de vue naturel pour des photos<br>6. Retour au point de départ</p>
+                <div class="route-location"><i class="fas fa-map-pin"></i> <span class="lang-en">Berber villages</span><span class="lang-fr">Villages berbères</span></div>
+                <h2><i class="fas fa-landmark"></i> <span class="lang-en">Cultural Discovery</span><span class="lang-fr">Découverte Culturelle</span></h2>
+                <p class="lang-en">The trail passes through traditional Berber villages where you can see authentic mountain architecture, terraced fields, and meet local people. A unique opportunity to discover the rich culture of the Atlas region while enjoying your ride.</p>
+                <p class="lang-fr">Le parcours traverse des villages berbères traditionnels où vous pourrez voir l'architecture authentique de la montagne, les champs en terrasses, et rencontrer les habitants. Une occasion unique de découvrir la riche culture de la région de l'Atlas tout en profitant de votre balade.</p>
             </div>
         </div>
     </section>
+
+    <!-- Section 3: What You'll Experience -->
     <section class="container">
         <div class="route-block">
             <div class="route-image"><img src="../images/1.jpg" alt="Vue panoramique depuis les sentiers VTT de l'Atlas" id="img-vtt3" width="800" height="450" loading="lazy"></div>
             <div class="route-content">
                 <div class="route-location"><i class="fas fa-map-pin"></i> <span class="lang-en">The experience</span><span class="lang-fr">L'expérience</span></div>
                 <h2><i class="fas fa-heart"></i> <span class="lang-en">What will you experience?</span><span class="lang-fr">Que vivrez-vous ?</span></h2>
-                <p class="lang-en">🔥 Fresh and pure air<br>🔥 Enchanting landscapes<br>🔥 Fun sporting adventure<br>🔥 Discovering the culture of the region and its inhabitants<br>🔥 Great photos of unique natural sites</p>
-                <p class="lang-fr">🔥 Air frais et pur<br>🔥 Paysages enchanteurs<br>🔥 Aventure sportive amusante<br>🔥 Découverte de la culture de la région et de ses habitants<br>🔥 Superbes photos de sites naturels uniques</p>
+                <p class="lang-en">🔥 Fresh and pure mountain air<br>🔥 Enchanting landscapes with panoramic views<br>🔥 Fun sporting adventure suitable for intermediate level<br>🔥 Discovering the culture of the region and its inhabitants<br>🔥 Great photos of unique natural sites<br>🔥 A memorable experience in the heart of the Atlas</p>
+                <p class="lang-fr">🔥 Air frais et pur de la montagne<br>🔥 Paysages enchanteurs avec vues panoramiques<br>🔥 Aventure sportive amusante adaptée au niveau intermédiaire<br>🔥 Découverte de la culture de la région et de ses habitants<br>🔥 Superbes photos de sites naturels uniques<br>🔥 Une expérience mémorable au cœur de l'Atlas</p>
             </div>
         </div>
     </section>
+
+    <!-- Testimonial -->
     <div class="container">
-        <div class="info-cards">
-            <div class="info-card"><i class="fas fa-bicycle"></i><h3><span class="lang-en">We provide</span><span class="lang-fr">Nous fournissons</span></h3><ul><li><i class="fas fa-check"></i> <span class="lang-en">Professional mountain bikes</span><span class="lang-fr">VTT professionnels</span></li><li><i class="fas fa-check"></i> <span class="lang-en">Helmets and safety equipment</span><span class="lang-fr">Casques et équipements de sécurité</span></li><li><i class="fas fa-check"></i> <span class="lang-en">Local guide who knows the area</span><span class="lang-fr">Guide local connaissant la région</span></li></ul></div>
-            <div class="info-card"><i class="fas fa-campground"></i><h3><span class="lang-en">Combined packages</span><span class="lang-fr">Packages combinés</span></h3><ul><li><i class="fas fa-check"></i> VTT + Camping</li><li><i class="fas fa-check"></i> VTT + Rafting</li><li><i class="fas fa-check"></i> VTT + Rafting + Camping</li></ul></div>
-            <div class="info-card"><i class="fas fa-clock"></i><h3><span class="lang-en">Practical info</span><span class="lang-fr">Infos pratiques</span></h3><ul><li><i class="fas fa-check"></i> <span class="lang-en">Duration: 3-4h</span><span class="lang-fr">Durée: 3-4h</span></li><li><i class="fas fa-check"></i> <span class="lang-en">Distance: 18km</span><span class="lang-fr">Distance: 18km</span></li><li><i class="fas fa-check"></i> <span class="lang-en">Level: Medium</span><span class="lang-fr">Niveau: Moyen</span></li></ul></div>
+        <div class="testimonial-small">
+            <i class="fas fa-quote-left" style="color: #e6b12e; font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
+            <p class="lang-en">"The VTT experience in Imsfrane was incredible! The trails are well-maintained and offer spectacular views of the mountains. Our guide was knowledgeable and took us to the best spots. The descent through the forest was so much fun!"</p>
+            <p class="lang-fr">"L'expérience VTT à Imsfrane était incroyable ! Les sentiers sont bien entretenus et offrent des vues spectaculaires sur les montagnes. Notre guide était compétent et nous a emmenés aux meilleurs endroits. La descente à travers la forêt était tellement amusante !"</p>
+            <p style="margin-top: 1rem; font-weight: 600; color: #1e3c2c;">— Marco, Italy</p>
         </div>
     </div>
+
+    <!-- Information Cards -->
+    <div class="container">
+        <div class="info-cards">
+            <div class="info-card">
+                <i class="fas fa-bicycle"></i>
+                <h3><span class="lang-en">We provide</span><span class="lang-fr">Nous fournissons</span></h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Professional mountain bikes (full suspension)</span><span class="lang-fr">VTT professionnels (tout suspendu)</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Helmets and safety equipment</span><span class="lang-fr">Casques et équipements de sécurité</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Local guide who knows the area perfectly</span><span class="lang-fr">Guide local connaissant parfaitement la région</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Mechanical assistance if needed</span><span class="lang-fr">Assistance mécanique si nécessaire</span></li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-campground"></i>
+                <h3><span class="lang-en">Combined packages</span><span class="lang-fr">Packages combinés</span></h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> VTT + Camping (night under the stars)</li>
+                    <li><i class="fas fa-check"></i> VTT + Rafting (adventure on water and land)</li>
+                    <li><i class="fas fa-check"></i> VTT + Rafting + Camping (complete experience)</li>
+                    <li><i class="fas fa-check"></i> VTT + Hiking (discover the region differently)</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-info-circle"></i>
+                <h3><span class="lang-en">Practical info</span><span class="lang-fr">Infos pratiques</span></h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Duration: 3-4 hours</span><span class="lang-fr">Durée: 3-4 heures</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Distance: 18 km</span><span class="lang-fr">Distance: 18 km</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Level: Medium (some experience recommended)</span><span class="lang-fr">Niveau: Moyen (expérience recommandée)</span></li>
+                    <li><i class="fas fa-check"></i> <span class="lang-en">Minimum age: 14 years</span><span class="lang-fr">Âge minimum: 14 ans</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bring Your Own Bike Note -->
+    <div class="container">
+        <div class="equipment-note" style="background: #fff3e0; border-color: #e6b12e;">
+            <i class="fas fa-bicycle" style="color: #e6b12e; font-size: 2rem; margin-bottom: 0.5rem;"></i>
+            <p class="lang-en" style="font-size: 1.1rem;"><strong>You can bring your own bike!</strong> If you prefer to ride your own VTT, you are welcome to bring it. Contact us for the price with your own equipment.</p>
+            <p class="lang-fr" style="font-size: 1.1rem;"><strong>Vous pouvez apporter votre propre vélo !</strong> Si vous préférez rouler avec votre propre VTT, vous êtes les bienvenus. Contactez-nous pour le prix avec votre propre équipement.</p>
+        </div>
+    </div>
+
+    <!-- Price Card -->
     <div class="container">
         <div class="price-card">
             <h2><i class="fas fa-bicycle"></i> <span class="lang-en">VTT Rental</span><span class="lang-fr">Location VTT</span></h2>
-            <div class="price">150 <small>DH/<span class="lang-en">person</span><span class="lang-fr">personne</span></small></div>
-            <p><span class="lang-en">Starting from 150 DH per person (depending on number of participants)</span><span class="lang-fr">À partir de 150 DH par personne (selon le nombre de participants)</span></p>
-            <a href="booking.html" class="btn"><i class="fas fa-calendar-check"></i> <span class="lang-en">Book now</span><span class="lang-fr">Réserver</span></a>
+            <div class="price">Contactez-nous</div>
+            <p><span class="lang-en">Contact us for prices (depending on number of participants and equipment)</span><span class="lang-fr">Contactez-nous pour les prix (selon le nombre de participants et l'équipement)</span></p>
+            <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20avoir%20les%20prix%20pour%20le%20VTT%20%C3%A0%20Imsfrane" class="btn btn-wa" target="_blank">
+                <i class="fab fa-whatsapp"></i> <span class="lang-en">Get price on WhatsApp</span><span class="lang-fr">Obtenir le prix sur WhatsApp</span>
+            </a>
         </div>
     </div>
+
+    <!-- What to Bring -->
+    <div class="container">
+        <div class="info-section" style="background: linear-gradient(135deg, #f9f7f3, #f0e8d9); border-radius: 30px; padding: 2rem; margin: 3rem 0;">
+            <h3 style="text-align: center; color: #1e3c2c; margin-bottom: 2rem; font-size: 1.8rem;">
+                <i class="fas fa-backpack" style="color: #e6b12e;"></i> 
+                <span class="lang-en">What to bring</span>
+                <span class="lang-fr">À prévoir</span>
+            </h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 600px; margin: 0 auto;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; background: white; padding: 0.8rem; border-radius: 10px;">
+                    <i class="fas fa-shoe-prints" style="color: #e6b12e;"></i> <span class="lang-en">Sport shoes</span><span class="lang-fr">Chaussures de sport</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; background: white; padding: 0.8rem; border-radius: 10px;">
+                    <i class="fas fa-tshirt" style="color: #e6b12e;"></i> <span class="lang-en">Comfortable clothes</span><span class="lang-fr">Vêtements confortables</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; background: white; padding: 0.8rem; border-radius: 10px;">
+                    <i class="fas fa-water" style="color: #e6b12e;"></i> <span class="lang-en">Water (1.5L minimum)</span><span class="lang-fr">Eau (1.5L minimum)</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; background: white; padding: 0.8rem; border-radius: 10px;">
+                    <i class="fas fa-camera" style="color: #e6b12e;"></i> <span class="lang-en">Camera</span><span class="lang-fr">Appareil photo</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; background: white; padding: 0.8rem; border-radius: 10px;">
+                    <i class="fas fa-sun" style="color: #e6b12e;"></i> <span class="lang-en">Sunscreen</span><span class="lang-fr">Crème solaire</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; background: white; padding: 0.8rem; border-radius: 10px;">
+                    <i class="fas fa-hat-cowboy" style="color: #e6b12e;"></i> <span class="lang-en">Cap/hat</span><span class="lang-fr">Casquette/chapeau</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
     <div class="container">
         <div class="contact-section">
             <h2 class="section-title"><span class="lang-en">Book Your VTT Adventure</span><span class="lang-fr">Réserver Votre Aventure VTT</span></h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #555;">
+                <span class="lang-en">Contact us for prices, availability, and to book your mountain biking experience in Imsfrane.</span>
+                <span class="lang-fr">Contactez-nous pour les prix, la disponibilité et pour réserver votre expérience VTT à Imsfrane.</span>
+            </p>
             <div class="contact-grid">
-                <div class="contact-item"><i class="fas fa-globe"></i><h4>Website</h4><a href="https://imsfrane.com" target="_blank">imsfrane.com</a></div>
-                <div class="contact-item"><i class="fab fa-whatsapp"></i><h4>WhatsApp</h4><a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a></div>
-                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><h4><span class="lang-en">Location</span><span class="lang-fr">Emplacement</span></h4><p>Imsfrane, Azilal, Morocco</p></div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <h4>Website</h4>
+                    <a href="https://imsfrane.com" target="_blank">imsfrane.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4><span class="lang-en">Location</span><span class="lang-fr">Emplacement</span></h4>
+                    <p>Imsfrane, Azilal, Morocco</p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20sortie%20VTT%20%C3%A0%20Imsfrane" class="btn btn-wa" target="_blank">
+                    <i class="fab fa-whatsapp"></i> <span class="lang-en">Book on WhatsApp</span><span class="lang-fr">Réserver sur WhatsApp</span>
+                </a>
+                <a href="booking.html" class="btn" style="margin-left: 1rem;">
+                    <i class="fas fa-calendar-check"></i> <span class="lang-en">Booking Form</span><span class="lang-fr">Formulaire</span>
+                </a>
             </div>
         </div>
     </div>
 </main>
+
     <footer class="footer-pro">
         <div class="container">
             <div class="footer-top">
-                <div class="footer-col footer-about"><div class="footer-logo"><img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60" loading="lazy"><h3>Imsfrane Cathédrale</h3></div><p class="footer-description"><span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span><span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span></p><div class="footer-social"><a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a><a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a><a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a></div></div>
-                <div class="footer-col footer-links"><h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4><ul><li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li><li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li><li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li><li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li><li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li><li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li></ul></div>
-                <div class="footer-col footer-info"><h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4><ul><li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li><li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li><li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li><li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li><li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li><li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li></ul></div>
-                <div class="footer-col footer-contact"><h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4><ul><li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li><li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li><li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li></ul></div>
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60" loading="lazy">
+                        <h3>Imsfrane Cathédrale</h3>
+                    </div>
+                    <p class="footer-description">
+                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
+                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col footer-links">
+                    <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
+                    <ul>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
+                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
+                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
+                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-info">
+                    <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
+                    <ul>
+                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer-middle">
                 <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
@@ -214,21 +414,45 @@
                 <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
                 <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
             </div>
-            <div class="footer-bottom"><div class="copyright"><p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p></div></div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
+                </div>
+            </div>
         </div>
     </footer>
+
     <div class="floating-buttons">
-        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
-        <a href="tel:0667772551" class="floating-btn phone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
-        <a href="booking.html" class="floating-btn booking"><i class="fas fa-calendar-check"></i><span class="tooltip">Réserver</span></a>
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">WhatsApp</span>
+        </a>
+        <a href="tel:0667772551" class="floating-btn phone">
+            <i class="fas fa-phone-alt"></i>
+            <span class="tooltip">Appeler</span>
+        </a>
+        <a href="booking.html" class="floating-btn booking">
+            <i class="fas fa-calendar-check"></i>
+            <span class="tooltip">Réserver</span>
+        </a>
     </div>
-    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <script src="../js/main.js"></script>
     <script src="../js/script.js"></script>
+    
     <script>
         const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => { backToTop.classList.toggle('show', window.scrollY > 300); });
-        backToTop.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        window.addEventListener('scroll', () => { 
+            backToTop.classList.toggle('show', window.scrollY > 300); 
+        });
+        backToTop.addEventListener('click', (e) => { 
+            e.preventDefault(); 
+            window.scrollTo({ top: 0, behavior: 'smooth' }); 
+        });
     </script>
 </body>
 </html>
