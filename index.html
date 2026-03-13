@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imsfrane Cathédrale | Rafting, Randonnée & Camping dans l'Atlas à 1868m</title>
-    <meta name="description" content="Découvrez Imsfrane Cathédrale à 1868m dans l'Atlas marocain. Rafting sur l'Oued Ahansal, randonnée au sommet, camping berbère, VTT et quad. Réservez votre aventure authentique.">
+    <meta name="description" content="Découvrez Imsfrane Cathédrale à 1868m dans l'Atlas marocain. Rafting sur l'Oued Ahansal, randonnée au sommet, camping traditionnel, VTT et quad. Réservez votre aventure authentique.">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Imsfrane Cathédrale - Aventures dans l'Atlas">
@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Imsfrane Cathédrale">
     
-    <!-- Google Fonts - Cinzel & Raleway -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -27,6 +27,701 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3106160668387388" crossorigin="anonymous"></script>
+    
+    <style>
+        /* Hero Slider */
+        .hero-slider {
+            position: relative;
+            height: 60vh;
+            min-height: 600px;
+            overflow: hidden;
+        }
+        
+        .slides-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease, visibility 1s ease;
+        }
+        
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(15,42,26,0.6) 0%, rgba(30,60,44,0.5) 100%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 10;
+            width: 90%;
+            max-width: 800px;
+            pointer-events: none;
+            padding: 2rem;
+        }
+        
+        .hero-content .badge {
+            display: inline-block;
+            background-color: #e6b12e;
+            color: #1e3c2c;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            pointer-events: auto;
+        }
+        
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 0.8rem;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.2;
+        }
+        
+        .hero-content p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .hero-content .btn {
+            pointer-events: auto;
+            font-size: 1rem;
+            padding: 0.8rem 2rem;
+        }
+        
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 20;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+        }
+        
+        .slider-btn:hover {
+            background: #e6b12e;
+            border-color: #e6b12e;
+            color: #1e3c2c;
+        }
+        
+        .slider-btn.prev {
+            left: 20px;
+        }
+        
+        .slider-btn.next {
+            right: 20px;
+        }
+        
+        .slider-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .dot.active {
+            background: #e6b12e;
+            transform: scale(1.2);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #e6b12e, #f4c542);
+            color: #1e3c2c;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(230,177,46,0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(230,177,46,0.4);
+        }
+        
+        .social-under-hero {
+            padding: 2rem 0 1rem;
+            background: linear-gradient(to bottom, transparent, rgba(230,177,46,0.05));
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.3rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-circle {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.7rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .social-circle:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+        }
+        
+        .social-circle.instagram { background: linear-gradient(45deg, #f09433, #d62976, #962fbf); }
+        .social-circle.facebook { background: #1877f2; }
+        .social-circle.tiktok { background: #000000; }
+        .social-circle.whatsapp { background: #25D366; }
+        .social-circle.email { background: #1e3c2c; }
+        
+        .activities-promax {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f9f7f3 100%);
+        }
+        
+        .section-header-promax {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-mini-title {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            color: #e6b12e;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title-promax {
+            font-size: 3.5rem;
+            color: #1e3c2c;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        
+        .gold-text {
+            color: #e6b12e;
+        }
+        
+        .activities-grid-promax {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .activity-card-promax {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            transition: all 0.5s;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .activity-card-promax:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(230,177,46,0.15);
+        }
+        
+        .card-media-promax {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .card-media-promax img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+        
+        .activity-card-promax:hover .card-media-promax img {
+            transform: scale(1.1);
+        }
+        
+        .card-badge-promax {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #e6b12e;
+            color: #1e3c2c;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            z-index: 2;
+        }
+        
+        .badge-new {
+            background: #1e3c2c;
+            color: white;
+        }
+        
+        .badge-hot {
+            background: #ff4757;
+            color: white;
+        }
+        
+        .card-content-promax {
+            padding: 1.8rem;
+        }
+        
+        .card-category-promax {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.85rem;
+            color: #000000;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        
+        .card-category-promax i {
+            color: #e6b12e;
+        }
+        
+        .card-title-promax {
+            font-size: 1.8rem;
+            color: #1e3c2c;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+        
+        .card-price-promax {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: baseline;
+            gap: 0.3rem;
+        }
+        
+        .card-price-promax .price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #e6b12e;
+        }
+        
+        .card-price-promax .price-unit {
+            font-size: 0.9rem;
+            color: #999;
+        }
+        
+        .card-desc-promax {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        
+        .card-features-promax {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 0.8rem 0;
+            border-top: 1px solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .card-features-promax span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.85rem;
+            color: #555;
+        }
+        
+        .card-features-promax i {
+            color: #e6b12e;
+        }
+        
+        .card-actions-promax {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+        }
+        
+        .btn-details-promax {
+            flex: 1;
+            background: transparent;
+            color: #1e3c2c;
+            border: 2px solid #1e3c2c;
+            padding: 0.8rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-details-promax:hover {
+            background: #1e3c2c;
+            color: white;
+        }
+        
+        .btn-wa-promax {
+            width: 48px;
+            height: 48px;
+            background: #25D366;
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-wa-promax:hover {
+            background: #128C7E;
+            transform: scale(1.1) rotate(360deg);
+        }
+        
+        .why-choose-us {
+            background-color: #1e3c2c;
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .why-choose-us .section-title {
+            color: white;
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+        }
+        
+        .why-choose-us .section-title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #e6b12e, transparent);
+            margin: 1rem auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .feature-item i {
+            font-size: 3rem;
+            color: #e6b12e;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-item h3 {
+            color: #e6b12e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonials-simple {
+            padding: 5rem 0;
+            background-color: #f9f7f3;
+        }
+        
+        .section-header-simple {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-subtitle {
+            display: inline-block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #000000;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title-simple {
+            font-size: 2.5rem;
+            color: #1e3c2c;
+            font-weight: 900;
+        }
+        
+        .testimonials-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .testimonial-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+        }
+        
+        .testimonial-rating {
+            color: #e6b12e;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: #1e3c2c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonial-meta {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+            font-size: 0.85rem;
+        }
+        
+        .testimonial-activity {
+            background: #000000;
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn-large {
+            font-size: 1.3rem;
+            padding: 1.2rem 3rem;
+        }
+        
+        .footer-pro {
+            background: linear-gradient(135deg, #0f2a1a, #1e3c2c);
+            color: white;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+            border-top: 3px solid #e6b12e;
+        }
+        
+        .floating-buttons {
+            position: fixed !important;
+            bottom: 100px !important;
+            right: 30px !important;
+            z-index: 9999 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 15px !important;
+        }
+        
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #1e3c2c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            position: relative;
+            text-decoration: none;
+        }
+        
+        .floating-btn:hover {
+            transform: scale(1.1) translateY(-5px);
+        }
+        
+        .floating-btn.whatsapp {
+            background-color: #25D366;
+        }
+        
+        .floating-btn.booking {
+            background-color: #e6b12e;
+            color: #1e3c2c;
+        }
+        
+        .floating-btn .tooltip {
+            position: absolute;
+            right: 70px;
+            background-color: #1e3c2c;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .floating-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #e6b12e, #f5c75a);
+            color: #1e3c2c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2), 0 0 0 3px rgba(255,255,255,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s;
+            z-index: 9999;
+            border: 2px solid white;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: linear-gradient(135deg, #1e3c2c, #2d5a3f);
+            color: #e6b12e;
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 20px 35px rgba(230,177,46,0.5), 0 0 0 4px #e6b12e;
+        }
+        
+        [data-lang="en"] .lang-fr {
+            display: none !important;
+        }
+        [data-lang="fr"] .lang-en {
+            display: none !important;
+        }
+        
+        @media screen and (max-width: 992px) {
+            .hero-content h1 { font-size: 3rem; }
+            .section-title-promax { font-size: 3rem; }
+            .activities-grid-promax { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-list { grid-template-columns: repeat(2, 1fr); }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .hero-content p { font-size: 0.9rem; }
+            .section-title-promax { font-size: 2.5rem; }
+            .activities-grid-promax { grid-template-columns: 1fr; }
+            .testimonials-list { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .floating-buttons { bottom: 20px; right: 20px; }
+            .floating-btn { width: 50px; height: 50px; font-size: 1.5rem; }
+            .back-to-top { width: 45px; height: 45px; font-size: 1.5rem; bottom: 20px; left: 20px; }
+        }
+    </style>
 </head>
 <body data-lang="en">
     <!-- Overlay -->
@@ -37,7 +732,7 @@
         <div class="container header-content">
             <a href="index.html" class="logo">
                 <div class="logo-img">
-                    <img src="images/logo.jpeg" alt="Logo Imsfrane Cathédrale - Aventures dans l'Atlas marocain" width="60" height="60">
+                    <img src="images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
                 </div>
                 <div class="logo-text">
                     <h1>Imsfrane Cathédrale</h1>
@@ -52,8 +747,8 @@
                     <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
                 </div>
                 <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
-    <i class="fas fa-bars"></i>
-</button>
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -83,24 +778,25 @@
             <li><a href="pages/contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
+    
 <main> 
     <!-- Hero Slider -->
     <section class="hero-slider">
         <div class="slides-container">
             <div class="slide active">
-                <img src="images/hero.jpeg" alt="Vue panoramique de la Cathédrale Imsfrane à 1868m dans l'Atlas marocain" fetchpriority="high">
+                <img src="images/hero.jpeg" alt="Vue panoramique de la Cathédrale Imsfrane" fetchpriority="high">
             </div>
             <div class="slide">
-                <img src="images/IMG_4665.jpg" alt="Formation rocheuse de la Cathédrale Imsfrane au coucher du soleil">
+                <img src="images/IMG_4665.jpg" alt="Formation rocheuse de la Cathédrale Imsfrane">
             </div>
             <div class="slide">
-                <img src="images/IMG_4826.jpg" alt="Vallée verdoyante de l'Oued Ahansal avec vue sur les montagnes de l'Atlas">
+                <img src="images/IMG_4826.jpg" alt="Vallée verdoyante de l'Oued Ahansal">
             </div>
             <div class="slide">
-                <img src="images/IMG_5131.jpg" alt="La Cathédrale Imsfrane, formation rocheuse emblématique de l'Atlas">
+                <img src="images/IMG_5131.jpg" alt="La Cathédrale Imsfrane">
             </div>
             <div class="slide">
-                <img src="images/camping-1.jpg" alt="Camping sauvage au pied de la Cathédrale Imsfrane avec tentes traditionnelles berbères">
+                <img src="images/camping-1.jpg" alt="Camping sauvage au pied de la Cathédrale">
             </div>
         </div>
 
@@ -131,248 +827,252 @@
     <div class="social-under-hero">
         <div class="container">
            <div class="social-links">
-    <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-circle instagram" aria-label="Visitez notre page Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-circle facebook" aria-label="Visitez notre page Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-circle tiktok" aria-label="Suivez-nous sur TikTok"><i class="fab fa-tiktok"></i></a>
-    <a href="https://wa.me/212667772551" target="_blank" class="social-circle whatsapp" aria-label="Contactez-nous sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    <a href="mailto:imsfraninfo@gmail.com" class="social-circle email" aria-label="Envoyez-nous un email"><i class="fas fa-envelope"></i></a>
-</div>
+               <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-circle instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+               <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-circle facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+               <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-circle tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+               <a href="https://wa.me/212667772551" target="_blank" class="social-circle whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+               <a href="mailto:imsfraninfo@gmail.com" class="social-circle email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+           </div>
         </div>
     </div>
 
     <!-- Activities Section -->
-<section class="activities-promax" id="activities">
-    <div class="container">
-        <div class="section-header-promax">
-            <span class="section-mini-title lang-en">✦ DISCOVER THE EXPERIENCE ✦</span>
-            <span class="section-mini-title lang-fr">✦ DÉCOUVREZ L'EXPÉRIENCE ✦</span>
-            <h2 class="section-title-promax">
-                <span class="lang-en">Our <span class="gold-text">Adventures</span></span>
-                <span class="lang-fr">Nos <span class="gold-text">Aventures</span></span>
-            </h2>
+    <section class="activities-promax" id="activities">
+        <div class="container">
+            <div class="section-header-promax">
+                <span class="section-mini-title lang-en">✦ DISCOVER THE EXPERIENCE ✦</span>
+                <span class="section-mini-title lang-fr">✦ DÉCOUVREZ L'EXPÉRIENCE ✦</span>
+                <h2 class="section-title-promax">
+                    <span class="lang-en">Our <span class="gold-text">Adventures</span></span>
+                    <span class="lang-fr">Nos <span class="gold-text">Aventures</span></span>
+                </h2>
+            </div>
+            
+            <div class="activities-grid-promax">
+                <!-- Rafting -->
+                <div class="activity-card-promax">
+                    <div class="card-media-promax">
+                        <img src="images/14.jpeg" alt="Rafting sur l'Oued Ahansal" loading="lazy">
+                        <div class="card-badge-promax lang-en">POPULAR</div>
+                        <div class="card-badge-promax lang-fr">POPULAIRE</div>
+                    </div>
+                    <div class="card-content-promax">
+                        <div class="card-category-promax">
+                            <i class="fas fa-water"></i>
+                            <span class="lang-en">Water Adventure</span>
+                            <span class="lang-fr">Aventure Aquatique</span>
+                        </div>
+                        <h3 class="card-title-promax">Rafting</h3>
+                        <div class="card-price-promax">
+                            <span class="price" data-price-key="rafting-12km">400 DH</span>
+                        </div>
+                        <p class="card-desc-promax lang-en">Descend the wild Ahansal river</p>
+                        <p class="card-desc-promax lang-fr">Descendez l'oued Ahansal sauvage</p>
+                        <div class="card-features-promax">
+                            <span><i class="fas fa-clock"></i> 2-3h</span>
+                            <span><i class="fas fa-route"></i> 12km</span>
+                            <span><i class="fas fa-signal"></i> Easy</span>
+                        </div>
+                        <div class="card-actions-promax">
+                            <a href="pages/rafting.html" class="btn-details-promax">
+                                <span class="lang-en">View Details</span>
+                                <span class="lang-fr">Voir Détails</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20Rafting" class="btn-wa-promax" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Camping -->
+                <div class="activity-card-promax">
+                    <div class="card-media-promax">
+                        <img src="images/camping-1.jpg" alt="Camping traditionnel à Imsfrane" loading="lazy">
+                    </div>
+                    <div class="card-content-promax">
+                        <div class="card-category-promax">
+                            <i class="fas fa-campground"></i>
+                            <span class="lang-en">Nature Stay</span>
+                            <span class="lang-fr">Séjour Nature</span>
+                        </div>
+                        <h3 class="card-title-promax">Camping</h3>
+                        <div class="card-price-promax">
+                            <span class="price" data-price-key="camping-1pers">60 DH</span>
+                            <span class="price-unit">/nuit</span>
+                        </div>
+                        <p class="card-desc-promax lang-en">Traditional tents under stars</p>
+                        <p class="card-desc-promax lang-fr">Tentes traditionnelles sous les étoiles</p>
+                        <div class="card-features-promax">
+                            <span><i class="fas fa-moon"></i> Night</span>
+                            <span><i class="fas fa-fire"></i> Campfire</span>
+                            <span><i class="fas fa-utensils"></i> Meals</span>
+                        </div>
+                        <div class="card-actions-promax">
+                            <a href="pages/camping.html" class="btn-details-promax">
+                                <span class="lang-en">View Details</span>
+                                <span class="lang-fr">Voir Détails</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20Camping" class="btn-wa-promax" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hiking -->
+                <div class="activity-card-promax">
+                    <div class="card-media-promax">
+                        <img src="images/randonnee.jpg" alt="Randonneurs au sommet du Jebel Imsfrane" loading="lazy">
+                        <div class="card-badge-promax badge-new lang-en">NEW</div>
+                        <div class="card-badge-promax badge-new lang-fr">NOUVEAU</div>
+                    </div>
+                    <div class="card-content-promax">
+                        <div class="card-category-promax">
+                            <i class="fas fa-mountain"></i>
+                            <span class="lang-en">Mountain</span>
+                            <span class="lang-fr">Montagne</span>
+                        </div>
+                        <h3 class="card-title-promax">
+                            <span class="lang-en">Hiking</span>
+                            <span class="lang-fr">Randonnée</span>
+                        </h3>
+                        <div class="card-price-promax">
+                            <span class="price" data-price-key="rando-summit">300 DH</span>
+                            <span class="price-unit">/groupe</span>
+                        </div>
+                        <p class="card-desc-promax lang-en">Summit 1,868m & hidden waterfalls</p>
+                        <p class="card-desc-promax lang-fr">Sommet 1,868m & cascades cachées</p>
+                        <div class="card-features-promax">
+                            <span><i class="fas fa-clock"></i> 3-10h</span>
+                            <span><i class="fas fa-arrow-up"></i> 668m</span>
+                            <span><i class="fas fa-flag"></i> Summit</span>
+                        </div>
+                        <div class="card-actions-promax">
+                            <a href="pages/randonnee.html" class="btn-details-promax">
+                                <span class="lang-en">View Details</span>
+                                <span class="lang-fr">Voir Détails</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20Randonn%C3%A9e" class="btn-wa-promax" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- VTT -->
+                <div class="activity-card-promax">
+                    <div class="card-media-promax">
+                        <img src="images/vtt.jpg" alt="Parcours VTT dans l'Atlas" loading="lazy">
+                    </div>
+                    <div class="card-content-promax">
+                        <div class="card-category-promax">
+                            <i class="fas fa-bicycle"></i>
+                            <span>VTT</span>
+                        </div>
+                        <h3 class="card-title-promax">VTT</h3>
+                        <div class="card-price-promax">
+                            <span class="price" data-price-key="vtt">150 DH</span>
+                            <span class="price-unit">/jour</span>
+                        </div>
+                        <p class="card-desc-promax lang-en">Full suspension bikes, helmet included</p>
+                        <p class="card-desc-promax lang-fr">VTT tout suspendu, casque inclus</p>
+                        <div class="card-features-promax">
+                            <span><i class="fas fa-clock"></i> 5-6h</span>
+                            <span><i class="fas fa-route"></i> 25km</span>
+                            <span><i class="fas fa-users"></i> Guide</span>
+                        </div>
+                        <div class="card-actions-promax">
+                            <a href="pages/vtt.html" class="btn-details-promax">
+                                <span class="lang-en">View Details</span>
+                                <span class="lang-fr">Voir Détails</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20VTT" class="btn-wa-promax" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quad -->
+                <div class="activity-card-promax">
+                    <div class="card-media-promax">
+                        <img src="images/quad.jpg" alt="Aventure en quad dans l'Atlas" loading="lazy">
+                        <div class="card-badge-promax badge-hot lang-en">HOT</div>
+                        <div class="card-badge-promax badge-hot lang-fr">CHAUD</div>
+                    </div>
+                    <div class="card-content-promax">
+                        <div class="card-category-promax">
+                            <i class="fas fa-motorcycle"></i>
+                            <span class="lang-en">Adventure</span>
+                            <span class="lang-fr">Aventure</span>
+                        </div>
+                        <h3 class="card-title-promax">Quad</h3>
+                        <div class="card-price-promax">
+                            <span class="price" data-price-key="quad-solo">250 DH</span>
+                            <span class="price-unit">/h</span>
+                        </div>
+                        <p class="card-desc-promax lang-en">Self-drive on rugged terrain</p>
+                        <p class="card-desc-promax lang-fr">Conduite libre sur pistes</p>
+                        <div class="card-features-promax">
+                            <span><i class="fas fa-user"></i> Solo</span>
+                            <span><i class="fas fa-user-friends"></i> Biplace</span>
+                            <span><i class="fas fa-helmet-safety"></i> Helmet</span>
+                        </div>
+                        <div class="card-actions-promax">
+                            <a href="pages/quad.html" class="btn-details-promax">
+                                <span class="lang-en">View Details</span>
+                                <span class="lang-fr">Voir Détails</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20Quad" class="btn-wa-promax" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hébergement -->
+                <div class="activity-card-promax">
+                    <div class="card-media-promax" style="background: linear-gradient(135deg, #1e3c2c, #2a5a3a); height: 220px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-clock" style="font-size: 4rem; color: #e6b12e;"></i>
+                    </div>
+                    <div class="card-content-promax">
+                        <div class="card-category-promax">
+                            <i class="fas fa-bed"></i>
+                            <span class="lang-en">Accommodation</span>
+                            <span class="lang-fr">Hébergement</span>
+                        </div>
+                        <h3 class="card-title-promax">
+                            <span class="lang-en">Coming Soon</span>
+                            <span class="lang-fr">À Venir</span>
+                        </h3>
+                        <div class="card-price-promax">
+                            <span class="price" data-price-key="hebergement">400 DH</span>
+                        </div>
+                        <p class="card-desc-promax lang-en">Furnished house near the river</p>
+                        <p class="card-desc-promax lang-fr">Maison meublée près de la rivière</p>
+                        <div class="card-features-promax">
+                            <span><i class="fas fa-shower"></i> Douche</span>
+                            <span><i class="fas fa-utensils"></i> Cuisine</span>
+                            <span><i class="fas fa-bed"></i> 400 DH</span>
+                        </div>
+                        <div class="card-actions-promax">
+                            <a href="pages/hebergement.html" class="btn-details-promax">
+                                <span class="lang-en">Learn more</span>
+                                <span class="lang-fr">En savoir plus</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div class="activities-grid-promax">
-            <!-- Rafting -->
-            <div class="activity-card-promax">
-                <div class="card-media-promax">
-                    <img src="images/14.jpeg" alt="Rafting sur l'Oued Ahansal avec guide local à Imsfrane" loading="lazy">
-                    <div class="card-badge-promax lang-en">POPULAR</div>
-                    <div class="card-badge-promax lang-fr">POPULAIRE</div>
-                </div>
-                <div class="card-content-promax">
-                    <div class="card-category-promax">
-                        <i class="fas fa-water"></i>
-                        <span class="lang-en">Water Adventure</span>
-                        <span class="lang-fr">Aventure Aquatique</span>
-                    </div>
-                    <h3 class="card-title-promax">Rafting</h3>
-                    <div class="card-price-promax">
-                        <span class="price" style="font-size: 1.5rem; color: #e6b12e; font-weight: 700;">Contactez-nous</span>
-                    </div>
-                    <p class="card-desc-promax lang-en">Descend the wild Ahansal river</p>
-                    <p class="card-desc-promax lang-fr">Descendez l'oued Ahansal sauvage</p>
-                    <div class="card-features-promax">
-                        <span><i class="fas fa-clock"></i> 2-3h</span>
-                        <span><i class="fas fa-route"></i> 12km</span>
-                        <span><i class="fas fa-signal"></i> Easy</span>
-                    </div>
-                    <div class="card-actions-promax">
-                        <a href="pages/rafting.html" class="btn-details-promax" aria-label="Voir les détails du Rafting">
-                            <span class="lang-en">View Details</span>
-                            <span class="lang-fr">Voir Détails</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20avoir%20les%20prix%20pour%20le%20Rafting%20%C3%A0%20Imsfrane." class="btn-wa-promax" target="_blank" rel="noopener" aria-label="Contacter pour les prix">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Camping -->
-            <div class="activity-card-promax">
-                <div class="card-media-promax">
-                    <img src="images/camping-1.jpg" alt="Camping traditionnel sous tente berbère au pied de la Cathédrale Imsfrane" loading="lazy">
-                </div>
-                <div class="card-content-promax">
-                    <div class="card-category-promax">
-                        <i class="fas fa-campground"></i>
-                        <span class="lang-en">Nature Stay</span>
-                        <span class="lang-fr">Séjour Nature</span>
-                    </div>
-                    <h3 class="card-title-promax">Camping</h3>
-                    <div class="card-price-promax">
-                        <span class="price" style="font-size: 1.5rem; color: #e6b12e; font-weight: 700;">Contactez-nous</span>
-                    </div>
-                    <p class="card-desc-promax lang-en">Traditional Amazigh tents under stars</p>
-                    <p class="card-desc-promax lang-fr">Tentes traditionnelles amazighes</p>
-                    <div class="card-features-promax">
-                        <span><i class="fas fa-moon"></i> Night</span>
-                        <span><i class="fas fa-fire"></i> Campfire</span>
-                        <span><i class="fas fa-utensils"></i> Meals</span>
-                    </div>
-                    <div class="card-actions-promax">
-                        <a href="pages/camping.html" class="btn-details-promax" aria-label="Voir les détails du Camping">
-                            <span class="lang-en">View Details</span>
-                            <span class="lang-fr">Voir Détails</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20avoir%20les%20prix%20pour%20le%20Camping%20%C3%A0%20Imsfrane." class="btn-wa-promax" target="_blank" rel="noopener" aria-label="Contacter pour les prix">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hiking -->
-            <div class="activity-card-promax">
-                <div class="card-media-promax">
-                    <img src="images/randonnee.jpg" alt="Randonneurs au sommet du Jebel Imsfrane à 1868m d'altitude" loading="lazy">
-                    <div class="card-badge-promax badge-new lang-en">NEW</div>
-                    <div class="card-badge-promax badge-new lang-fr">NOUVEAU</div>
-                </div>
-                <div class="card-content-promax">
-                    <div class="card-category-promax">
-                        <i class="fas fa-mountain"></i>
-                        <span class="lang-en">Mountain</span>
-                        <span class="lang-fr">Montagne</span>
-                    </div>
-                    <h3 class="card-title-promax">
-                        <span class="lang-en">Hiking</span>
-                        <span class="lang-fr">Randonnée</span>
-                    </h3>
-                    <div class="card-price-promax">
-                        <span class="price" style="font-size: 1.5rem; color: #e6b12e; font-weight: 700;">Contactez-nous</span>
-                    </div>
-                    <p class="card-desc-promax lang-en">Summit 1,868m & hidden waterfalls</p>
-                    <p class="card-desc-promax lang-fr">Sommet 1,868m & cascades cachées</p>
-                    <div class="card-features-promax">
-                        <span><i class="fas fa-clock"></i> 3-10h</span>
-                        <span><i class="fas fa-arrow-up"></i> 668m</span>
-                        <span><i class="fas fa-flag"></i> Summit</span>
-                    </div>
-                    <div class="card-actions-promax">
-                        <a href="pages/randonnee.html" class="btn-details-promax" aria-label="Voir les détails de la Randonnée">
-                            <span class="lang-en">View Details</span>
-                            <span class="lang-fr">Voir Détails</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20avoir%20les%20prix%20pour%20la%20Randonn%C3%A9e%20%C3%A0%20Imsfrane." class="btn-wa-promax" target="_blank" rel="noopener" aria-label="Contacter pour les prix">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- VTT -->
-            <div class="activity-card-promax">
-                <div class="card-media-promax">
-                    <img src="images/vtt.jpg" alt="Parcours VTT dans les montagnes de l'Atlas à Imsfrane" loading="lazy">
-                </div>
-                <div class="card-content-promax">
-                    <div class="card-category-promax">
-                        <i class="fas fa-bicycle"></i>
-                        <span>VTT</span>
-                    </div>
-                    <h3 class="card-title-promax">VTT</h3>
-                    <div class="card-price-promax">
-                        <span class="price" style="font-size: 1.5rem; color: #e6b12e; font-weight: 700;">Contactez-nous</span>
-                    </div>
-                    <p class="card-desc-promax lang-en">Full suspension bikes, helmet included</p>
-                    <p class="card-desc-promax lang-fr">VTT tout suspendu, casque inclus</p>
-                    <div class="card-features-promax">
-                        <span><i class="fas fa-clock"></i> 5-6h</span>
-                        <span><i class="fas fa-route"></i> 25km</span>
-                        <span><i class="fas fa-users"></i> Guide</span>
-                    </div>
-                    <div class="card-actions-promax">
-                        <a href="pages/vtt.html" class="btn-details-promax" aria-label="Voir les détails du VTT">
-                            <span class="lang-en">View Details</span>
-                            <span class="lang-fr">Voir Détails</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20avoir%20les%20prix%20pour%20le%20VTT%20%C3%A0%20Imsfrane." class="btn-wa-promax" target="_blank" rel="noopener" aria-label="Contacter pour les prix">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Quad -->
-            <div class="activity-card-promax">
-                <div class="card-media-promax">
-                    <img src="images/quad.jpg" alt="Aventure en quad dans les sentiers de l'Atlas à Imsfrane" loading="lazy">
-                    <div class="card-badge-promax badge-hot lang-en">HOT</div>
-                    <div class="card-badge-promax badge-hot lang-fr">CHAUD</div>
-                </div>
-                <div class="card-content-promax">
-                    <div class="card-category-promax">
-                        <i class="fas fa-motorcycle"></i>
-                        <span class="lang-en">Adventure</span>
-                        <span class="lang-fr">Aventure</span>
-                    </div>
-                    <h3 class="card-title-promax">Quad</h3>
-                    <div class="card-price-promax">
-                        <span class="price" style="font-size: 1.5rem; color: #e6b12e; font-weight: 700;">Contactez-nous</span>
-                    </div>
-                    <p class="card-desc-promax lang-en">Self-drive on rugged terrain</p>
-                    <p class="card-desc-promax lang-fr">Conduite libre sur pistes</p>
-                    <div class="card-features-promax">
-                        <span><i class="fas fa-user"></i> Solo</span>
-                        <span><i class="fas fa-user-friends"></i> Biplace</span>
-                        <span><i class="fas fa-helmet-safety"></i> Helmet</span>
-                    </div>
-                    <div class="card-actions-promax">
-                        <a href="pages/quad.html" class="btn-details-promax" aria-label="Voir les détails du Quad">
-                            <span class="lang-en">View Details</span>
-                            <span class="lang-fr">Voir Détails</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20avoir%20les%20prix%20pour%20le%20Quad%20%C3%A0%20Imsfrane." class="btn-wa-promax" target="_blank" rel="noopener" aria-label="Contacter pour les prix">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hébergement (Coming Soon) -->
-            <div class="activity-card-promax">
-                <div class="card-media-promax" style="background: linear-gradient(135deg, #1e3c2c, #2a5a3a); height: 220px; display: flex; align-items: center; justify-content: center;">
-                    <i class="fas fa-clock" style="font-size: 4rem; color: #e6b12e;"></i>
-                </div>
-                <div class="card-content-promax">
-                    <div class="card-category-promax">
-                        <i class="fas fa-bed"></i>
-                        <span class="lang-en">Accommodation</span>
-                        <span class="lang-fr">Hébergement</span>
-                    </div>
-                    <h3 class="card-title-promax">
-                        <span class="lang-en">Coming Soon</span>
-                        <span class="lang-fr">À Venir</span>
-                    </h3>
-                    <div class="card-price-promax">
-                        <span class="price" style="font-size: 1.2rem; color: #e6b12e; font-weight: 700;">Bientôt disponible</span>
-                    </div>
-                    <p class="card-desc-promax lang-en">Furnished house near the river</p>
-                    <p class="card-desc-promax lang-fr">Maison meublée près de la rivière</p>
-                    <div class="card-features-promax">
-                        <span><i class="fas fa-shower"></i> Douche</span>
-                        <span><i class="fas fa-utensils"></i> Cuisine</span>
-                        <span><i class="fas fa-bed"></i> Contactez-nous</span>
-                    </div>
-                    <div class="card-actions-promax">
-                        <a href="pages/hebergement.html" class="btn-details-promax" aria-label="En savoir plus sur l'hébergement à Imsfrane">
-                            <span class="lang-en">Learn more</span>
-                            <span class="lang-fr">En savoir plus</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Why Choose Us -->
     <section class="why-choose-us">
@@ -384,7 +1084,7 @@
                 <div class="feature-item">
                     <i class="fas fa-map-marked-alt"></i>
                     <h3><span class="lang-en">Local Guides</span><span class="lang-fr">Guides Locaux</span></h3>
-                    <p class="lang-en">guides who know every trail</p>
+                    <p class="lang-en">Guides who know every trail</p>
                     <p class="lang-fr">Guides qui connaissent chaque sentier</p>
                 </div>
                 
@@ -399,7 +1099,7 @@
                     <i class="fas fa-heart"></i>
                     <h3><span class="lang-en">Authentic Experiences</span><span class="lang-fr">Expériences Authentiques</span></h3>
                     <p class="lang-en">Discover real Amazigh culture</p>
-                    <p class="lang-fr">Découvrez la vraie culture Amazigh</p>
+                    <p class="lang-fr">Découvrez la vraie culture amazighe</p>
                 </div>
             </div>
         </div>
@@ -469,13 +1169,14 @@
         </div>
     </section>
 </main>
+
     <!-- Footer -->
     <footer class="footer-pro">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="images/logo.jpeg" alt="Logo Imsfrane Cathédrale - Aventures dans l'Atlas marocain" loading="lazy">
+                        <img src="images/logo.jpeg" alt="Logo Imsfrane Cathédrale" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
                     <p class="footer-description">
@@ -483,19 +1184,11 @@
                         <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
                     </p>
                     <div class="footer-social">
-    <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram" aria-label="Visitez notre page Instagram">
-        <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook" aria-label="Visitez notre page Facebook">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok" aria-label="Suivez-nous sur TikTok">
-        <i class="fab fa-tiktok"></i>
-    </a>
-    <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp" aria-label="Contactez-nous sur WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
 
                 <div class="footer-col footer-links">
@@ -528,16 +1221,16 @@
                         <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
                         <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> Tilouguite, Imsfrane, Azilal</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-middle">
-                <div class="stat-item"><span class="stat-number">1,868m</span> <span class="stat-label">Altitude</span></div>
-                <div class="stat-item"><span class="stat-number">50+ km</span> <span class="stat-label">Sentiers</span></div>
-                <div class="stat-item"><span class="stat-number">+500</span> <span class="stat-label">Aventuriers</span></div>
-                <div class="stat-item"><span class="stat-number">⭐ 4.9</span> <span class="stat-label">Avis</span></div>
+                <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
+                <div class="stat-item"><div class="stat-number">50+ km</div><div class="stat-label">Sentiers</div></div>
+                <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
+                <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
             </div>
 
             <div class="footer-bottom">
@@ -550,25 +1243,22 @@
 
     <!-- Floating Buttons -->
     <div class="floating-buttons">
-    <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" rel="noopener" aria-label="Contactez-nous sur WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-        <span class="tooltip">WhatsApp</span>
-        <span class="sr-only">WhatsApp</span>
-    </a>
-    <a href="tel:0667772551" class="floating-btn phone" aria-label="Appelez-nous">
-        <i class="fas fa-phone-alt"></i>
-        <span class="tooltip">Appeler</span>
-        <span class="sr-only">Téléphone</span>
-    </a>
-    <a href="pages/booking.html" class="floating-btn booking" aria-label="Aller à la page de réservation">
-        <i class="fas fa-calendar-check"></i>
-        <span class="tooltip">Réserver</span>
-        <span class="sr-only">Réservation</span>
-    </a>
-</div>
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">WhatsApp</span>
+        </a>
+        <a href="tel:0667772551" class="floating-btn phone">
+            <i class="fas fa-phone-alt"></i>
+            <span class="tooltip">Appeler</span>
+        </a>
+        <a href="pages/booking.html" class="floating-btn booking">
+            <i class="fas fa-calendar-check"></i>
+            <span class="tooltip">Réserver</span>
+        </a>
+    </div>
 
     <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <a href="#" class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </a>
 
@@ -579,21 +1269,12 @@
     <script>
         // Back to Top Button functionality
         const backToTop = document.getElementById('backToTop');
-
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
+            backToTop.classList.toggle('show', window.scrollY > 300);
         });
-
         backToTop.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
