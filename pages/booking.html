@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réserver vos activités à Imsfrane | Rafting, camping, randonnée, VTT, quad</title>
-    <meta name="description" content="Réservez vos activités à Imsfrane: rafting 400 DH, camping 60-100 DH, randonnée 200-400 DH, VTT 150 DH, quad 250-300 DH. Paiement sécurisé par PayPal ou virement.">
+    <meta name="description" content="Réservez vos activités à Imsfrane: rafting, camping, randonnée, VTT, quad. Contactez-nous pour les prix et disponibilités.">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Réservation - Imsfrane Cathédrale">
-    <meta property="og:description" content="Réservez vos activités à Imsfrane: rafting, camping, randonnée, VTT, quad. Paiement sécurisé par PayPal ou virement.">
+    <meta property="og:description" content="Réservez vos activités à Imsfrane: rafting, camping, randonnée, VTT, quad. Contactez-nous pour les prix et disponibilités.">
     <meta property="og:image" content="https://imsfrane.com/images/booking-hero.jpg">
     <meta property="og:url" content="https://imsfrane.com/pages/booking.html">
     <meta property="og:type" content="website">
@@ -233,7 +233,7 @@
         }
 
         .price-display .total-amount {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             font-weight: 900;
             color: #e6b12e;
         }
@@ -413,6 +413,18 @@
             box-shadow: 0 10px 20px rgba(230,177,46,0.3);
         }
 
+        .btn-wa {
+            background: #25D366;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-wa:hover {
+            background: #128C7E;
+        }
+
         @media (max-width: 992px) {
             .payment-options {
                 grid-template-columns: 1fr;
@@ -433,7 +445,7 @@
                 padding: 1.5rem;
             }
             .price-display .total-amount {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             .contact-grid {
                 grid-template-columns: 1fr;
@@ -521,8 +533,8 @@
             <div class="intro-icon">
                 <i class="fas fa-calendar-check"></i>
             </div>
-            <p class="lang-en">Choose your activities, select your dates, and book your adventure in Imsfrane. We'll confirm your reservation via WhatsApp within 24 hours.</p>
-            <p class="lang-fr">Choisissez vos activités, sélectionnez vos dates et réservez votre aventure à Imsfrane. Nous confirmerons votre réservation via WhatsApp dans les 24 heures.</p>
+            <p class="lang-en">Choose your activities, select your dates, and send us your reservation request. We'll confirm availability and prices via WhatsApp within 24 hours.</p>
+            <p class="lang-fr">Choisissez vos activités, sélectionnez vos dates et envoyez-nous votre demande de réservation. Nous confirmerons la disponibilité et les prix via WhatsApp dans les 24 heures.</p>
         </div>
     </div>
 
@@ -536,54 +548,73 @@
                 <div class="form-group">
                     <label><i class="fas fa-hiking"></i> <span class="lang-en">Activities *</span><span class="lang-fr">Activités *</span></label>
                     <div class="activities-list">
+                        <!-- Rafting -->
                         <div class="activity-item">
-                            <input type="checkbox" id="act-rafting" class="activity-checkbox" data-prix="400" data-nom="🌊 Rafting 12km - 400 DH /personne">
-                            <label for="act-rafting">🌊 Rafting 12km - <span class="activity-price">400 DH</span> /personne</label>
+                            <input type="checkbox" id="act-rafting" class="activity-checkbox" data-nom="🌊 Rafting 12km">
+                            <label for="act-rafting">🌊 Rafting 12km - <span style="color: #e6b12e; font-weight: 700;">Prix sur demande</span></label>
                         </div>
                         <div class="activity-item">
-                            <input type="checkbox" id="act-camping1" class="activity-checkbox" data-prix="60" data-nom="🏕️ Camping (Tente 1 pers.) - 60 DH /nuit">
-                            <label for="act-camping1">🏕️ Camping (Tente 1 pers.) - <span class="activity-price">60 DH</span> /nuit</label>
+                            <input type="checkbox" id="act-rafting30" class="activity-checkbox" data-nom="🌊 Rafting 30km">
+                            <label for="act-rafting30">🌊 Rafting 30km - <span style="color: #e6b12e; font-weight: 700;">Prix sur demande</span></label>
                         </div>
                         <div class="activity-item">
-                            <input type="checkbox" id="act-camping2" class="activity-checkbox" data-prix="100" data-nom="🏕️ Camping (Tente 2 pers.) - 100 DH /nuit">
-                            <label for="act-camping2">🏕️ Camping (Tente 2 pers.) - <span class="activity-price">100 DH</span> /nuit</label>
+                            <input type="checkbox" id="act-rafting50" class="activity-checkbox" data-nom="🌊 Rafting 50km (2 jours)">
+                            <label for="act-rafting50">🌊 Rafting 50km (2 jours) - <span style="color: #e6b12e; font-weight: 700;">Prix sur demande</span></label>
+                        </div>
+                        
+                        <!-- Camping -->
+                        <div class="activity-item">
+                            <input type="checkbox" id="act-camping1" class="activity-checkbox" data-nom="🏕️ Camping (Tente 1 pers.)">
+                            <label for="act-camping1">🏕️ Camping (Tente 1 pers.) - <span style="color: #e6b12e; font-weight: 700;">Prix sur demande</span></label>
                         </div>
                         <div class="activity-item">
-                            <input type="checkbox" id="act-rando1" class="activity-checkbox" data-prix="300" data-nom="🥾 Randonnée - Sommet 1868m - 300 DH (groupe)" data-est-rando="true">
-                            <label for="act-rando1">🥾 Randonnée - Sommet 1868m - <span class="activity-price">300 DH</span> (groupe)</label>
+                            <input type="checkbox" id="act-camping2" class="activity-checkbox" data-nom="🏕️ Camping (Tente 2 pers.)">
+                            <label for="act-camping2">🏕️ Camping (Tente 2 pers.) - <span style="color: #e6b12e; font-weight: 700;">Prix sur demande</span></label>
+                        </div>
+                        
+                        <!-- Hiking -->
+                        <div class="activity-item">
+                            <input type="checkbox" id="act-rando1" class="activity-checkbox" data-nom="🥾 Randonnée - Sommet 1868m">
+                            <label for="act-rando1">🥾 Randonnée - Sommet 1868m - <span style="color: #e6b12e; font-weight: 700;">Prix sur demande</span></label>
                         </div>
                         <div class="activity-item">
-                            <input type="checkbox" id="act-rando2" class="activity-checkbox" data-prix="200" data-nom="🥾 Randonnée - Gorges & Cascades - 200 DH (groupe)" data-est-rando="true">
-                            <label for="act-rando2">🥾 Randonnée - Gorges & Cascades - <span class="activity-price">200 DH</span> (groupe)</label>
+                            <input type="checkbox" id="act-rando2" class="activity-checkbox" data-nom="🥾 Randonnée - Gorges & Cascades">
+                            <label for="act-rando2">🥾 Randonnée - Gorges & Cascades - <span style="color: #e6b12e; font-weight: 700;">Prix sur demande</span></label>
                         </div>
                         <div class="activity-item">
-                            <input type="checkbox" id="act-rando3" class="activity-checkbox" data-prix="400" data-nom="🥾 Randonnée - Grand Tour - 400 DH (groupe)" data-est-rando="true">
-                            <label for="act-rando3">🥾 Randonnée - Grand Tour - <span class="activity-price">400 DH</span> (groupe)</label>
+                            <input type="checkbox" id="act-rando3" class="activity-checkbox" data-nom="🥾 Randonnée - Grand Tour">
+                            <label for="act-rando3">🥾 Randonnée - Grand Tour - <span style="color: #e6b12e; font-weight: 700;">Prix sur demande</span></label>
+                        </div>
+                        
+                        <!-- VTT -->
+                        <div class="activity-item">
+                            <input type="checkbox" id="act-vtt" class="activity-checkbox" data-nom="🚵 VTT">
+                            <label for="act-vtt">🚵 VTT - <span style="color: #e6b12e; font-weight: 700;">Prix sur demande</span></label>
+                        </div>
+                        
+                        <!-- Quad -->
+                        <div class="activity-item">
+                            <input type="checkbox" id="act-quad1" class="activity-checkbox" data-nom="🚙 Quad 1 personne">
+                            <label for="act-quad1">🚙 Quad 1 personne - <span style="color: #e6b12e; font-weight: 700;">Prix sur demande</span></label>
                         </div>
                         <div class="activity-item">
-                            <input type="checkbox" id="act-vtt" class="activity-checkbox" data-prix="150" data-nom="🚵 VTT - 150 DH /personne">
-                            <label for="act-vtt">🚵 VTT - <span class="activity-price">150 DH</span> /personne</label>
+                            <input type="checkbox" id="act-quad2" class="activity-checkbox" data-nom="🚙 Quad 2 personnes">
+                            <label for="act-quad2">🚙 Quad 2 personnes - <span style="color: #e6b12e; font-weight: 700;">Prix sur demande</span></label>
                         </div>
+                        
+                        <!-- Hébergement -->
                         <div class="activity-item">
-                            <input type="checkbox" id="act-quad1" class="activity-checkbox" data-prix="250" data-nom="🚙 Quad 1 personne - 250 DH /heure">
-                            <label for="act-quad1">🚙 Quad 1 personne - <span class="activity-price">250 DH</span> /heure</label>
-                        </div>
-                        <div class="activity-item">
-                            <input type="checkbox" id="act-quad2" class="activity-checkbox" data-prix="300" data-nom="🚙 Quad 2 personnes - 300 DH /heure">
-                            <label for="act-quad2">🚙 Quad 2 personnes - <span class="activity-price">300 DH</span> /heure</label>
-                        </div>
-                        <div class="activity-item">
-                            <input type="checkbox" id="act-hebergement" class="activity-checkbox" data-prix="400" data-nom="🏠 Hébergement - Maison meublée - 400 DH /nuit">
-                            <label for="act-hebergement">🏠 Hébergement - Maison meublée - <span class="activity-price">400 DH</span> /nuit</label>
+                            <input type="checkbox" id="act-hebergement" class="activity-checkbox" data-nom="🏠 Hébergement - Maison meublée">
+                            <label for="act-hebergement">🏠 Hébergement - Maison meublée - <span style="color: #e6b12e; font-weight: 700;">Prix sur demande</span></label>
                         </div>
                     </div>
                 </div>
 
                 <!-- Number of people -->
-                <div class="personnes-group" id="groupe-personnes" style="display: none;">
+                <div class="personnes-group" id="groupe-personnes">
                     <label><i class="fas fa-users"></i> <span class="lang-en">Number of people</span><span class="lang-fr">Nombre de personnes</span></label>
                     <input type="number" id="personnes" value="1" min="1" max="20">
-                    <small><i class="fas fa-info-circle"></i> <span class="lang-en">The price will be multiplied by the number of people</span><span class="lang-fr">Le prix sera multiplié par le nombre de personnes</span></small>
+                    <small><i class="fas fa-info-circle"></i> <span class="lang-en">Indicate the number of people for your group</span><span class="lang-fr">Indiquez le nombre de personnes pour votre groupe</span></small>
                 </div>
 
                 <!-- Date -->
@@ -599,11 +630,11 @@
                     <input type="tel" id="phone" placeholder="📞 Téléphone *" required>
                 </div>
 
-                <!-- Total Price -->
+                <!-- Price Display -->
                 <div class="price-display">
-                    <span class="total-label lang-en">Total to pay</span>
-                    <span class="total-label lang-fr">Total à payer</span>
-                    <span class="total-amount" id="totalAffiche">0 DH</span>
+                    <span class="total-label lang-en">Price available on request</span>
+                    <span class="total-label lang-fr">Prix disponible sur demande</span>
+                    <span class="total-amount" id="totalAffiche">Contactez-nous</span>
                 </div>
 
                 <!-- Payment Options -->
@@ -635,14 +666,14 @@
                     </h4>
                     <p><span class="lang-en">Account holder:</span><span class="lang-fr">Titulaire du compte :</span> <strong>FARID LAYDI</strong></p>
                     <div class="bank-details">022780000760004191778274</div>
-                    <p style="font-size: 13px;"><i class="fas fa-clock"></i> <span class="lang-en">Your booking will be confirmed after receipt of the transfer.</span><span class="lang-fr">Votre réservation sera confirmée après réception du virement.</span></p>
+                    <p style="font-size: 13px;"><i class="fas fa-clock"></i> <span class="lang-en">We will confirm the total amount when you contact us.</span><span class="lang-fr">Nous confirmerons le montant total lorsque vous nous contactez.</span></p>
                 </div>
 
                 <!-- Confirm Button -->
                 <button type="button" class="btn-submit" id="btn-confirmer">
                     <i class="fab fa-whatsapp"></i> 
-                    <span class="lang-en">Confirm Booking</span>
-                    <span class="lang-fr">Confirmer la réservation</span>
+                    <span class="lang-en">Send Reservation Request</span>
+                    <span class="lang-fr">Envoyer la demande</span>
                 </button>
             </form>
         </div>
@@ -675,7 +706,7 @@
             </div>
 
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://wa.me/212667772551" target="_blank" class="btn" aria-label="WhatsApp">
+                <a href="https://wa.me/212667772551" target="_blank" class="btn btn-wa" aria-label="WhatsApp">
                     <i class="fab fa-whatsapp"></i> 
                     <span class="lang-en">Contact us on WhatsApp</span>
                     <span class="lang-fr">Contactez-nous sur WhatsApp</span>
@@ -797,35 +828,6 @@
         // Booking Form Functionality
         let modePaiement = 'paypal';
 
-        // Calculate total
-        function calculerTotal() {
-            let checkboxes = document.querySelectorAll('.activity-checkbox:checked');
-            let total = 0;
-            let aDesActivitesAvecPersonnes = false;
-            
-            checkboxes.forEach(cb => {
-                let prix = parseFloat(cb.getAttribute('data-prix'));
-                let estRandonnee = cb.hasAttribute('data-est-rando');
-                
-                if (estRandonnee) {
-                    total += prix;
-                } else {
-                    aDesActivitesAvecPersonnes = true;
-                    let personnes = parseInt(document.getElementById('personnes').value) || 1;
-                    total += prix * personnes;
-                }
-            });
-            
-            document.getElementById('groupe-personnes').style.display = aDesActivitesAvecPersonnes ? 'block' : 'none';
-            document.getElementById('totalAffiche').textContent = total + ' DH';
-            return total;
-        }
-
-        document.querySelectorAll('.activity-checkbox').forEach(cb => {
-            cb.addEventListener('change', calculerTotal);
-        });
-        document.getElementById('personnes').addEventListener('input', calculerTotal);
-
         // Payment selection
         window.selectPayment = function(mode) {
             modePaiement = mode;
@@ -874,39 +876,23 @@
             }
             
             let personnes = document.getElementById('personnes').value;
-            let total = document.getElementById('totalAffiche').textContent;
             let mode = modePaiement;
             
             let message = `*NOUVELLE DEMANDE DE RÉSERVATION*\n\n`;
             message += `👤 *Nom:* ${fullName}\n`;
             message += `📧 *Email:* ${email}\n`;
             message += `📞 *Téléphone:* ${phone}\n`;
-            message += `📅 *Date:* ${date}\n\n`;
+            message += `📅 *Date souhaitée:* ${date}\n\n`;
             message += `📋 *ACTIVITÉS CHOISIES:*\n`;
             
-            let aDesActivitesAvecPersonnes = false;
             checkboxes.forEach(cb => {
                 let nom = cb.getAttribute('data-nom');
-                let estRandonnee = cb.hasAttribute('data-est-rando');
-                if (!estRandonnee) aDesActivitesAvecPersonnes = true;
                 message += `- ${nom}\n`;
             });
             
-            if (aDesActivitesAvecPersonnes) {
-                message += `👥 *Nombre de personnes:* ${personnes}\n`;
-            }
-            
-            message += `\n💰 *TOTAL:* ${total}\n`;
-            message += `💳 *Paiement:* ${mode === 'paypal' ? 'PayPal' : 'Virement bancaire'}\n\n`;
-
-            if (mode === 'paypal') {
-                message += `🔗 *Lien PayPal:* https://paypal.me/FaridLaydi?locale.x=fr_XC&country.x=MA\n`;
-                message += `Veuillez effectuer le paiement de ${total} via ce lien.`;
-            } else {
-                message += `*RIB:* 022780000760004191778274\n`;
-                message += `Titulaire: FARID LAYDI\n`;
-                message += `Veuillez effectuer le virement de ${total} à ce RIB.`;
-            }
+            message += `\n👥 *Nombre de personnes:* ${personnes}\n\n`;
+            message += `💳 *Mode de paiement souhaité:* ${mode === 'paypal' ? 'PayPal' : 'Virement bancaire'}\n\n`;
+            message += `📌 *Merci de nous contacter pour confirmer les prix et la disponibilité.*`;
 
             window.open(`https://wa.me/212667772551?text=${encodeURIComponent(message)}`, '_blank');
         });
