@@ -110,6 +110,18 @@ header {
     min-width: 45px;
     text-align: center;
     transition: all 0.3s;
+    position: relative;
+}
+
+.lang-btn::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: transparent;
+    border-radius: inherit;
 }
 
 .lang-btn.active, .lang-btn:hover {
@@ -130,6 +142,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.menu-toggle::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: transparent;
+    border-radius: inherit;
 }
 
 .menu-toggle:hover {
@@ -254,26 +278,6 @@ nav ul li a:hover {
     display: block;
 }
 
-.hero-slider .slide:nth-child(1) img {
-    object-position: 50% 50%;
-}
-
-.hero-slider .slide:nth-child(2) img {
-    object-position: 50% 50%;
-}
-
-.hero-slider .slide:nth-child(3) img {
-    object-position: 50% 50%;
-}
-
-.hero-slider .slide:nth-child(4) img {
-    object-position: 50% 50%;
-}
-
-.hero-slider .slide:nth-child(5) img {
-    object-position: 50% 50%;
-}
-
 .slide::before {
     content: '';
     position: absolute;
@@ -354,6 +358,18 @@ nav ul li a:hover {
     z-index: 20;
     transition: all 0.3s;
     backdrop-filter: blur(5px);
+    position: relative;
+}
+
+.slider-btn::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: transparent;
+    border-radius: inherit;
 }
 
 .slider-btn:hover {
@@ -376,17 +392,30 @@ nav ul li a:hover {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    padding: 10px;
     z-index: 20;
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: rgba(255,255,255,0.5);
     cursor: pointer;
     transition: all 0.3s;
+    position: relative;
+}
+
+.dot::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: transparent;
 }
 
 .dot.active {
@@ -407,6 +436,18 @@ nav ul li a:hover {
     box-shadow: 0 4px 15px rgba(230,177,46,0.3);
     border: none;
     cursor: pointer;
+    position: relative;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: transparent;
+    border-radius: inherit;
 }
 
 .btn:hover {
@@ -439,6 +480,18 @@ nav ul li a:hover {
     text-decoration: none;
     transition: all 0.3s;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.social-circle::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    background: transparent;
 }
 
 .social-circle:hover {
@@ -452,27 +505,6 @@ nav ul li a:hover {
 .social-circle.whatsapp { background: #25D366; }
 .social-circle.email { background: #1e3c2c; }
 
-@media screen and (max-width: 768px) {
-    .social-links {
-        gap: 1.1rem;
-    }
-    .social-circle {
-        width: 48px;
-        height: 48px;
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .social-links {
-        gap: 0.9rem;
-    }
-    .social-circle {
-        width: 42px;
-        height: 42px;
-        font-size: 1.3rem;
-    }
-}
 .activities-promax {
     padding: 4rem 0;
     background: linear-gradient(135deg, #ffffff 0%, #f9f7f3 100%);
@@ -540,30 +572,6 @@ nav ul li a:hover {
     transition: transform 0.8s;
 }
 
-.activities-grid-promax .activity-card-promax:nth-child(1) .card-media-promax img {
-    object-position: 50% 50%;
-}
-
-.activities-grid-promax .activity-card-promax:nth-child(2) .card-media-promax img {
-    object-position: 50% 70%;
-}
-
-.activities-grid-promax .activity-card-promax:nth-child(3) .card-media-promax img {
-    object-position: 50% 50%;
-}
-
-.activities-grid-promax .activity-card-promax:nth-child(4) .card-media-promax img {
-    object-position: 50% 50%;
-}
-
-.activities-grid-promax .activity-card-promax:nth-child(5) .card-media-promax img {
-    object-position: 50% 90%;
-}
-
-.activities-grid-promax .activity-card-promax:nth-child(6) .card-media-promax i {
-    color: #e6b12e;
-}
-
 .activity-card-promax:hover .card-media-promax img {
     transform: scale(1.1);
 }
@@ -601,9 +609,13 @@ nav ul li a:hover {
     gap: 0.5rem;
     margin-bottom: 0.8rem;
     font-size: 0.85rem;
-    color: #e6b12e;
-    font-weight: 600;
+    color: #000000;
+    font-weight: 800;
     text-transform: uppercase;
+}
+
+.card-category-promax i {
+    color: #e6b12e;
 }
 
 .card-title-promax {
@@ -679,6 +691,18 @@ nav ul li a:hover {
     justify-content: center;
     gap: 0.5rem;
     transition: all 0.3s;
+    position: relative;
+}
+
+.btn-details-promax::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: transparent;
+    border-radius: inherit;
 }
 
 .btn-details-promax:hover {
@@ -698,6 +722,18 @@ nav ul li a:hover {
     text-decoration: none;
     font-size: 1.4rem;
     transition: all 0.3s;
+    position: relative;
+}
+
+.btn-wa-promax::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: transparent;
+    border-radius: inherit;
 }
 
 .btn-wa-promax:hover {
@@ -760,8 +796,8 @@ nav ul li a:hover {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #e6b12e;
-    font-weight: 600;
+    color: #000000;
+    font-weight: 800;
     margin-bottom: 0.5rem;
 }
 
@@ -814,8 +850,8 @@ nav ul li a:hover {
 }
 
 .testimonial-activity {
-    background: rgba(230,177,46,0.1);
-    color: #e6b12e;
+    background: #000000;
+    color: white;
     padding: 0.2rem 0.8rem;
     border-radius: 20px;
     font-weight: 600;
@@ -912,6 +948,18 @@ nav ul li a:hover {
     transition: all 0.3s;
     font-size: 1.2rem;
     text-decoration: none;
+    position: relative;
+}
+
+.social-icon::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    background: transparent;
 }
 
 .social-icon.instagram { background: linear-gradient(45deg, #f09433, #d62976, #962fbf); }
@@ -1050,6 +1098,17 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
+.floating-btn::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    background: transparent;
+}
+
 .floating-btn:hover {
     transform: scale(1.1) translateY(-5px);
 }
@@ -1090,71 +1149,10 @@ nav ul li a:hover {
     display: none !important;
 }
 
-@media screen and (max-width: 992px) {
-    .hero-content h1 { font-size: 3rem; }
-    .section-title-promax { font-size: 3rem; }
-    .activities-grid-promax { grid-template-columns: repeat(2, 1fr); }
-    .testimonials-list { grid-template-columns: repeat(2, 1fr); }
-    .footer-top { grid-template-columns: 1fr 1fr; }
-    .features-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media screen and (max-width: 768px) {
-    .hero-content h1 { font-size: 2.2rem; }
-    .hero-content p { font-size: 0.9rem; }
-    .section-title-promax { font-size: 2.5rem; }
-    .activities-grid-promax { grid-template-columns: 1fr; }
-    .testimonials-list { grid-template-columns: 1fr; }
-    .footer-top { grid-template-columns: 1fr; }
-    .footer-middle { grid-template-columns: repeat(2, 1fr); }
-    .features-grid { grid-template-columns: 1fr; }
-    .floating-buttons { bottom: 20px; right: 20px; }
-    .floating-btn { width: 50px; height: 50px; font-size: 1.5rem; }
-    .floating-btn .tooltip { display: none; }
-}
-/* ===== AMÉLIORATION DU CONTRASTE ===== */
-.card-category-promax {
-    color: #b38f2a !important;
-    font-weight: 700 !important;
-}
-
-.section-subtitle {
-    color: #b38f2a !important;
-}
-
-.testimonial-activity {
-    background: #b38f2a !important;
-    color: white !important;
-}
-
-.price, .price-unit, .card-price-promax .price, .card-price-promax .price-unit {
-    color: #b38f2a !important;
-    font-weight: 700 !important;
-}
-
-.gold-text {
-    color: #b38f2a !important;
-}
-
-.btn-details-promax {
-    border-color: #b38f2a !important;
-    color: #b38f2a !important;
-}
-
-.btn-details-promax:hover {
-    background: #b38f2a !important;
-    color: white !important;
-}
-
-.badge-new, .badge-hot {
-    background: #b38f2a !important;
-    color: white !important;
-}
-/* ===== BACK TO TOP BUTTON - الجهة اليسرى ===== */
 .back-to-top {
     position: fixed;
     bottom: 30px;
-    left: 30px;  /* بدلنا right إلى left */
+    left: 30px;
     width: 55px;
     height: 55px;
     background: linear-gradient(135deg, #e6b12e, #f5c75a);
@@ -1193,17 +1191,64 @@ nav ul li a:hover {
     transform: translateY(-5px);
 }
 
-/* للشاشات الصغيرة */
-@media screen and (max-width: 768px) {
-    .back-to-top {
-        width: 45px;
-        height: 45px;
-        font-size: 1.5rem;
-        bottom: 20px;
-        left: 20px;  /* بدلنا right إلى left هنا أيضاً */
-    }
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
-/* ===== FIX CONTRAST & COLORS ===== */
+
+@media screen and (max-width: 1200px) {
+    .hero-content h1 { font-size: 3.5rem; }
+    .activities-grid-promax { gap: 1.5rem; }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-content h1 { font-size: 3rem; }
+    .section-title-promax { font-size: 3rem; }
+    .activities-grid-promax { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-list { grid-template-columns: repeat(2, 1fr); }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .slider-dots { gap: 12px; }
+    .dot { width: 18px; height: 18px; }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-content p { font-size: 0.9rem; }
+    .section-title-promax { font-size: 2.5rem; }
+    .activities-grid-promax { grid-template-columns: 1fr; }
+    .testimonials-list { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+    .footer-middle { grid-template-columns: repeat(2, 1fr); }
+    .features-grid { grid-template-columns: 1fr; }
+    .floating-buttons { bottom: 20px; right: 20px; }
+    .floating-btn { width: 50px; height: 50px; font-size: 1.5rem; }
+    .floating-btn .tooltip { display: none; }
+    .back-to-top { width: 45px; height: 45px; font-size: 1.5rem; bottom: 20px; left: 20px; }
+    .slider-dots { gap: 20px; bottom: 20px; }
+    .dot { width: 24px; height: 24px; }
+    .slider-btn { width: 40px; height: 40px; font-size: 1.2rem; }
+    .social-circle { width: 48px; height: 48px; font-size: 1.5rem; }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 { font-size: 1.8rem; }
+    .logo-text h1 { font-size: 1rem; }
+    .logo-img { width: 50px; height: 50px; min-width: 50px; }
+    .lang-btn { min-width: 40px; padding: 0.2rem 0.5rem; font-size: 0.7rem; }
+    .social-links { gap: 0.9rem; }
+    .social-circle { width: 42px; height: 42px; font-size: 1.3rem; }
+    .dot { width: 28px; height: 28px; }
+    .slider-dots { gap: 15px; }
+}
+
 .card-category-promax {
     color: #000000 !important;
     background: transparent !important;
@@ -1283,15 +1328,36 @@ nav ul li a:hover {
     color: #000000 !important;
     font-weight: 800 !important;
 }
-/* ===== SCREEN READER ONLY ===== */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+
+button, 
+.btn, 
+.btn-details-promax, 
+.btn-wa-promax,
+.floating-btn,
+.social-circle,
+.menu-toggle,
+.lang-btn,
+.dot,
+.slider-dot,
+.slider-btn {
+    position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+    .lang-btn::after,
+    .menu-toggle::after,
+    .btn::after,
+    .btn-details-promax::after,
+    .btn-wa-promax::after,
+    .floating-btn::after,
+    .social-circle::after,
+    .social-icon::after,
+    .dot::after,
+    .slider-dot::after,
+    .slider-btn::after {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+    }
 }
