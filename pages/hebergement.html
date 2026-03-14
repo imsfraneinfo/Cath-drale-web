@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hébergement à Imsfrane | Ouverture prochaine</title>
-    <meta name="description" content="Hébergement à Imsfrane: maisons meublées à louer près de la rivière. Ouverture prochaine - Contactez-nous pour plus d'informations.">
+    <title>Hébergement à Imsfrane | Maisons meublées - Ouverture prochaine</title>
+    <meta name="description" content="Hébergement à Imsfrane: maisons meublées à louer près de la rivière. Douche, eau chaude, cuisine équipée. Ouverture prochaine - Contactez-nous pour plus d'informations.">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Hébergement à Imsfrane - Ouverture prochaine">
-    <meta property="og:description" content="Maisons meublées à louer près de la rivière. Ouverture prochaine - Contactez-nous pour plus d'informations.">
+    <meta property="og:description" content="Maisons meublées à louer près de la rivière. Douche, eau chaude, cuisine équipée. Ouverture prochaine - Contactez-nous pour plus d'informations.">
     <meta property="og:image" content="https://imsfrane.com/images/hebergement.jpg">
     <meta property="og:url" content="https://imsfrane.com/pages/hebergement.html">
     <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -21,6 +26,15 @@
     
     <style>
         /* Page specific styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
         .page-hero {
             width: 100%;
             height: 400px;
@@ -50,6 +64,7 @@
             gap: 0.5rem;
         }
         
+        /* Coming Soon Section */
         .coming-soon {
             min-height: 60vh;
             display: flex;
@@ -128,37 +143,35 @@
             line-height: 1.8;
         }
         
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
         .btn {
             display: inline-block;
-            background: #e6b12e;
-            color: #1e3c2c;
-            padding: 1rem 2.5rem;
+            padding: 1.2rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
+            font-size: 1rem;
             border: none;
             cursor: pointer;
-            margin: 0.5rem;
-            font-size: 1.1rem;
         }
         
-        .btn:hover {
+        .btn-primary {
+            background: #e6b12e;
+            color: #1e3c2c;
+        }
+        
+        .btn-primary:hover {
             background: #f4c542;
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(230,177,46,0.3);
-        }
-        
-        .btn-wa {
-            background: #25D366;
-            color: white;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .btn-wa:hover {
-            background: #128C7E;
         }
         
         .btn-outline {
@@ -170,17 +183,136 @@
         .btn-outline:hover {
             background: #1e3c2c;
             color: white;
+            transform: translateY(-3px);
+        }
+        
+        .btn-wa {
+            background: #25D366;
+            color: white;
+        }
+        
+        .btn-wa:hover {
+            background: #128C7E;
+        }
+        
+        .btn i {
+            margin-right: 0.5rem;
+        }
+        
+        /* Features Preview */
+        .features-preview {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .feature-preview-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .feature-preview-item i {
+            font-size: 2.5rem;
+            color: #e6b12e;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-preview-item h3 {
+            color: #1e3c2c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-preview-item p {
+            color: #e6b12e;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .contact-section {
+            background: white;
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 4rem 0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .contact-item {
+            text-align: center;
+        }
+        
+        .contact-item i {
+            font-size: 2rem;
+            color: #e6b12e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item h4 {
+            color: #1e3c2c;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-item a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: #e6b12e;
+        }
+        
+        @media (max-width: 992px) {
+            .features-preview {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         @media (max-width: 768px) {
-            .page-hero { height: 300px; }
-            .coming-soon-content { padding: 2rem 1.5rem; }
-            .coming-soon-content h2 { font-size: 2.5rem; }
-            .coming-soon-content .subtitle { font-size: 1.5rem; }
-            .coming-soon-content p { font-size: 1.1rem; }
-            .icon-wrapper { width: 80px; height: 80px; }
-            .icon-wrapper i { font-size: 2.5rem; }
-            .btn { display: block; width: 100%; margin: 0.5rem 0; }
+            .page-hero {
+                height: 300px;
+            }
+            .coming-soon-content {
+                padding: 2rem 1.5rem;
+            }
+            .coming-soon-content h2 {
+                font-size: 2.5rem;
+            }
+            .coming-soon-content .subtitle {
+                font-size: 1.5rem;
+            }
+            .coming-soon-content p {
+                font-size: 1.1rem;
+            }
+            .icon-wrapper {
+                width: 80px;
+                height: 80px;
+            }
+            .icon-wrapper i {
+                font-size: 2.5rem;
+            }
+            .features-preview {
+                grid-template-columns: 1fr;
+            }
+            .btn-container {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -191,9 +323,9 @@
     <!-- Header -->
     <header>
         <div class="container header-content">
-            <a href="../index.html" class="logo" aria-label="Accueil">
+            <a href="../index.html" class="logo" aria-label="Retour à la page d'accueil d'Imsfrane Cathédrale">
                 <div class="logo-img">
-                    <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
+                    <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale - Aventures dans l'Atlas marocain" width="60" height="60">
                 </div>
                 <div class="logo-text">
                     <h1>Imsfrane Cathédrale</h1>
@@ -204,10 +336,10 @@
             
             <div class="right-controls">
                 <div class="lang-buttons">
-                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
+                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="Switch to English">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Passer en français">FR</button>
                 </div>
-                <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+                <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu principal de navigation">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -215,7 +347,7 @@
     </header>
 
     <!-- Menu -->
-    <nav id="mainNav" aria-label="Menu principal">
+    <nav id="mainNav" aria-label="Menu principal de navigation">
         <ul>
             <li><a href="../index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
             <li class="has-submenu">
@@ -255,7 +387,39 @@
         </div>
     </div>
 
-    <!-- COMING SOON SECTION - PAGE UNIQUE -->
+    <!-- Introduction -->
+    <div class="container">
+        <div class="intro-text" style="max-width: 800px; margin: 2rem auto 3rem; text-align: center;">
+            <div class="intro-icon" style="font-size: 2rem; color: #e6b12e; margin-bottom: 1rem;">
+                <i class="fas fa-home"></i>
+            </div>
+            <p class="lang-en" style="font-size: 1.1rem; line-height: 1.6; color: #555;">After a day full of adventures in the mountains, nothing beats a comfortable place to rest. We are preparing comfortable houses for you near the river and all activities. Stay tuned for our opening!</p>
+            <p class="lang-fr" style="font-size: 1.1rem; line-height: 1.6; color: #555;">Après une journée pleine d'aventures en montagne, rien ne vaut un endroit confortable pour se reposer. Nous préparons des maisons confortables pour vous près de la rivière et de toutes les activités. Restez à l'écoute pour notre ouverture !</p>
+        </div>
+    </div>
+
+    <!-- Features Preview -->
+    <div class="container">
+        <div class="features-preview">
+            <div class="feature-preview-item">
+                <i class="fas fa-shower"></i>
+                <h3><span class="lang-en">Hot shower</span><span class="lang-fr">Douche chaude</span></h3>
+                <p><span class="lang-en">Included</span><span class="lang-fr">Incluse</span></p>
+            </div>
+            <div class="feature-preview-item">
+                <i class="fas fa-utensils"></i>
+                <h3><span class="lang-en">Equipped kitchen</span><span class="lang-fr">Cuisine équipée</span></h3>
+                <p><span class="lang-en">Available</span><span class="lang-fr">Disponible</span></p>
+            </div>
+            <div class="feature-preview-item">
+                <i class="fas fa-bed"></i>
+                <h3><span class="lang-en">Price per night</span><span class="lang-fr">Prix par nuit</span></h3>
+                <p><span class="lang-en">Contact us</span><span class="lang-fr">Nous contacter</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- COMING SOON SECTION -->
     <section class="coming-soon">
         <div class="container">
             <div class="coming-soon-content">
@@ -280,17 +444,50 @@
                     Restez à l'écoute pour notre ouverture !
                 </p>
 
-                <div style="margin: 3rem 0;">
+                <div class="btn-container">
                     <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20les%20maisons%20%C3%A0%20venir%20%C3%A0%20Imsfrane" class="btn btn-wa" target="_blank">
-                        <i class="fab fa-whatsapp"></i> <span class="lang-en">Contact us on WhatsApp</span><span class="lang-fr">Contactez-nous sur WhatsApp</span>
+                        <i class="fab fa-whatsapp"></i> 
+                        <span class="lang-en">Contact us on WhatsApp for accommodation information</span>
+                        <span class="lang-fr">Contactez-nous sur WhatsApp pour les informations d'hébergement</span>
                     </a>
+                    
                     <a href="../index.html" class="btn btn-outline">
-                        <i class="fas fa-home"></i> <span class="lang-en">Back to Home</span><span class="lang-fr">Retour à l'Accueil</span>
+                        <i class="fas fa-home"></i> 
+                        <span class="lang-en">Return to Imsfrane Cathédrale homepage</span>
+                        <span class="lang-fr">Retour à l'accueil d'Imsfrane Cathédrale</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Contact Section -->
+    <div class="container">
+        <div class="contact-section">
+            <h2 style="text-align: center; color: #1e3c2c; margin-bottom: 2rem;">
+                <span class="lang-en">Get notified when we open</span>
+                <span class="lang-fr">Restez informé de notre ouverture</span>
+            </h2>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <h4>Website</h4>
+                    <a href="https://imsfrane.com" target="_blank" rel="noopener">Visit our official website imsfrane.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/212667772551" target="_blank" rel="noopener">Contact our team on WhatsApp +212 667-772551</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4><span class="lang-en">Location</span><span class="lang-fr">Emplacement</span></h4>
+                    <p>Imsfrane, Azilal, Morocco - Atlas Mountains</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
     <!-- Footer -->
@@ -299,7 +496,7 @@
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60" loading="lazy">
+                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale - Aventures dans l'Atlas marocain" width="60" height="60" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
                     <p class="footer-description">
@@ -307,44 +504,44 @@
                         <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" rel="noopener" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://wa.me/212667772551" target="_blank" rel="noopener" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon instagram" aria-label="Follow us on Instagram @imsfrane_cathedrale"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" rel="noopener" class="social-icon facebook" aria-label="Like our Facebook page Imsfrane Cathédrale"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon tiktok" aria-label="Follow our TikTok account @imsfrane_cathedrale"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" rel="noopener" class="social-icon whatsapp" aria-label="Contact us on WhatsApp for reservations"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-col footer-links">
                     <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
                     <ul>
-                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
-                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
-                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
-                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
-                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
-                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Homepage</span><span class="lang-fr">Accueil</span></a></li>
+                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting adventures</a></li>
+                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping under the stars</a></li>
+                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking trails</span><span class="lang-fr">Randonnées</span></a></li>
+                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> Mountain biking</a></li>
+                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad adventures</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col footer-info">
                     <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
                     <ul>
-                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
-                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
-                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
-                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
-                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Travel guide</span><span class="lang-fr">Guide pratique</span></a></li>
+                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Photo gallery</span><span class="lang-fr">Galerie photos</span></a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog articles</a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Reservation</span><span class="lang-fr">Réservation</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact us</span><span class="lang-fr">Contactez-nous</span></a></li>
+                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation (coming soon)</span><span class="lang-fr">Hébergement (prochainement)</span></a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col footer-contact">
                     <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
                     <ul>
-                        <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank" rel="noopener">WhatsApp</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">Call us: +212 667-772551</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank" rel="noopener">WhatsApp: +212 667-772551</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">Email: imsfraninfo@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane, Province d'Azilal, Maroc</span></li>
                     </ul>
                 </div>
             </div>
@@ -366,22 +563,22 @@
 
     <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" rel="noopener" aria-label="Contact our team on WhatsApp for accommodation inquiries">
             <i class="fab fa-whatsapp"></i>
             <span class="tooltip">WhatsApp</span>
         </a>
-        <a href="tel:0667772551" class="floating-btn phone" aria-label="Téléphone">
+        <a href="tel:0667772551" class="floating-btn phone" aria-label="Call us for accommodation information">
             <i class="fas fa-phone-alt"></i>
             <span class="tooltip">Appeler</span>
         </a>
-        <a href="booking.html" class="floating-btn booking" aria-label="Réservation">
+        <a href="booking.html" class="floating-btn booking" aria-label="Go to reservation page for other activities">
             <i class="fas fa-calendar-check"></i>
             <span class="tooltip">Réserver</span>
         </a>
     </div>
 
     <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Return to top of page">
         <i class="fas fa-arrow-up"></i>
     </a>
 
@@ -392,9 +589,11 @@
     <script>
         // Back to Top Button functionality
         const backToTop = document.getElementById('backToTop');
+
         window.addEventListener('scroll', () => {
             backToTop.classList.toggle('show', window.scrollY > 300);
         });
+
         backToTop.addEventListener('click', (e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
