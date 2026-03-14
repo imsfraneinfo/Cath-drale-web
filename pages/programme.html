@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme 3 Jours | Randonnée Cathédrale & Cascades d'Ouakhdoune</title>
+    <meta name="description" content="Programme de 3 jours à Imsfrane : randonnée au sommet 1868m, cascades d'Ouakhdoune, soirée folklorique. Options : Rafting, VTT, Quad.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- CSS Files - استخدام style.css الموحد -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        /* فقط الأنماط الخاصة بهذه الصفحة */
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+        
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease, visibility 1s ease;
+        }
+        
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+        }
+        
+        .slider-overlay {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            width: 100%;
+            padding: 40px;
+            z-index: 10;
+            color: white;
+        }
+        
+        .slider-badge {
+            background: #e6b12e;
+            color: #1e3c2c;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 10px;
+            border: 2px solid white;
+            letter-spacing: 0.5px;
+        }
+        
+        .slider-title {
+            color: white;
+            font-size: 2.2rem;
+            max-width: 700px;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.2;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .slider-location {
+            color: #e6b12e;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .dot.active {
+            background: #e6b12e;
+            transform: scale(1.2);
+            border-color: white;
+        }
+        
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 20;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+        }
+        
+        .slider-btn:hover {
+            background: #e6b12e;
+            border-color: #e6b12e;
+            color: #1e3c2c;
+        }
+        
+        .slider-btn.prev {
+            left: 20px;
+        }
+        
+        .slider-btn.next {
+            right: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .breadcrumb {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a {
+            color: #1e3c2c;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #e6b12e;
+        }
+        
+        .breadcrumb i {
+            color: #e6b12e;
+            font-size: 0.8rem;
+        }
+        
+        .intro {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .intro p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .meta-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+        }
+        
+        .meta-card i {
+            font-size: 2rem;
+            color: #e6b12e;
+            margin-bottom: 8px;
+        }
+        
+        .meta-card .label {
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+        }
+        
+        .meta-card .value {
+            font-weight: 700;
+            color: #1e3c2c;
+            font-size: 1.1rem;
+        }
+        
+        .price-card-main {
+            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
+            color: white;
+            border-radius: 30px;
+            padding: 30px;
+            margin: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .price-info h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .price-info p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+        }
+        
+        .price-tag {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #e6b12e;
+        }
+        
+        .price-tag small {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            font-weight: 400;
+        }
+        
+        .timeline {
+            margin: 50px 0;
+        }
+        
+        .timeline h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            position: relative;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .timeline h2:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #e6b12e;
+            margin: 10px auto;
+        }
+        
+        .day {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .day-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .day-icon {
+            width: 50px;
+            height: 50px;
+            background: #1e3c2c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e6b12e;
+            font-size: 1.5rem;
+        }
+        
+        .day-title {
+            font-size: 1.5rem;
+            color: #1e3c2c;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .day-date {
+            color: #e6b12e;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .day-content {
+            padding-left: 65px;
+        }
+        
+        .day-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 10px 0;
+            color: #555;
+        }
+        
+        .day-item i {
+            color: #e6b12e;
+            width: 20px;
+            margin-top: 3px;
+        }
+        
+        .options-section {
+            margin: 50px 0;
+        }
+        
+        .options-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .option-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .option-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .option-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .option-header i {
+            font-size: 2rem;
+            color: #e6b12e;
+        }
+        
+        .option-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .option-desc {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .option-price {
+            background: #f9f7f3;
+            padding: 10px 15px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .option-price span {
+            color: #1e3c2c;
+            font-weight: 600;
+        }
+        
+        .option-price .price-add {
+            color: #e6b12e;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .total-calculator {
+            background: white;
+            border-radius: 30px;
+            padding: 30px;
+            margin: 50px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 2px solid #e6b12e;
+        }
+        
+        .total-calculator h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .calc-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .calc-item:last-child {
+            border-bottom: none;
+        }
+        
+        .calc-label {
+            font-weight: 600;
+            color: #1e3c2c;
+        }
+        
+        .calc-value {
+            color: #e6b12e;
+            font-weight: 700;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .checkbox-group input {
+            width: 20px;
+            height: 20px;
+            accent-color: #e6b12e;
+        }
+        
+        .calc-total {
+            background: #1e3c2c;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .calc-total .total-price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #e6b12e;
+        }
+        
+        .included-box {
+            background: #f0f8f0;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .included-box h4 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .included-box h4 i {
+            color: #4CAF50;
+        }
+        
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        
+        .included-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+        }
+        
+        .included-item i {
+            color: #4CAF50;
+        }
+        
+        .not-included {
+            background: #fff3e0;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0 40px;
+        }
+        
+        .not-included h4 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .not-included h4 i {
+            color: #f44336;
+        }
+        
+        .home-button {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .btn-home {
+            background: transparent;
+            border: 2px solid #e6b12e;
+            color: #e6b12e;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-home:hover {
+            background: #e6b12e;
+            color: #1e3c2c;
+        }
+        
+        .dates {
+            text-align: center;
+            margin: 40px 0;
+            padding: 25px;
+            background: white;
+            border-radius: 50px;
+        }
+        
+        .dates i {
+            color: #e6b12e;
+            margin: 0 10px;
+        }
+        
+        .date-tag {
+            display: inline-block;
+            background: #f9f7f3;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin: 5px;
+            font-weight: 500;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 40px 0 60px;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-slider {
+                height: 400px;
+            }
+            
+            .slider-overlay {
+                padding: 20px;
+                bottom: 30px;
+            }
+            
+            .slider-badge {
+                padding: 4px 12px;
+                font-size: 0.7rem;
+                margin-bottom: 8px;
+            }
+            
+            .slider-title {
+                font-size: 1.5rem;
+                max-width: 100%;
+            }
+            
+            .slider-location {
+                font-size: 0.9rem;
+                gap: 5px;
+                margin-bottom: 10px;
+            }
+            
+            .slider-dots {
+                right: 20px;
+            }
+            
+            .slider-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .meta-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .price-card-main {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .day-content {
+                padding-left: 0;
+            }
+            
+            .included-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+            
+            .btn, .btn-home {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body data-lang="fr">
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Header - يستخدم style.css الموحد -->
+    <header>
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <div class="logo-img">
+                    <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale">
+                </div>
+                <div class="logo-text">
+                    <h1>Imsfrane Cathédrale</h1>
+                    <span class="lang-en">Nature Adventures</span>
+                    <span class="lang-fr">Aventures Nature</span>
+                </div>
+            </a>
+            
+            <div class="right-controls">
+                <div class="lang-buttons">
+                    <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+                    <button class="lang-btn active" onclick="setLanguage('fr')">FR</button>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu - يستخدم style.css الموحد -->
+    <nav id="mainNav">
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">
+                    <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="rafting.html"><i class="fas fa-water"></i> Rafting</a></li>
+                    <li><a href="camping.html"><i class="fas fa-campground"></i> Camping</a></li>
+                    <li><a href="randonnee.html"><i class="fas fa-hiking"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                    <li><a href="vtt.html"><i class="fas fa-bicycle"></i> VTT</a></li>
+                    <li><a href="quad.html"><i class="fas fa-motorcycle"></i> Quad</a></li>
+                    <li><a href="hebergement.html"><i class="fas fa-bed"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                </ul>
+            </li>
+            <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+            <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Slider -->
+    <div class="hero-slider">
+        <div class="slider-container">
+            <!-- Slide 1 - Randonnée -->
+            <div class="slide active">
+                <img src="../images/IMG_7431.jpg" alt="Randonnée au sommet de la Cathédrale Imsfrane">
+            </div>
+            <!-- Slide 2 - Cascades -->
+            <div class="slide">
+                <img src="../images/IMG_7430.jpg" alt="Cascades d'Ouakhdoune">
+            </div>
+            <!-- Slide 3 - Rafting -->
+            <div class="slide">
+                <img src="../images/14.jpeg" alt="Rafting sur l'Oued Ahansal">
+            </div>
+            <!-- Slide 4 - Camping/Soirée -->
+            <div class="slide">
+                <img src="../images/IMG_7733.jpg" alt="Feu de camp et soirée sous les étoiles">
+            </div>
+            <!-- Slide 5 - Vue Cathédrale -->
+            <div class="slide">
+                <img src="../images/IMG_7422.jpg" alt="Vue panoramique de la Cathédrale Imsfrane">
+            </div>
+        </div>
+        
+        <div class="slider-overlay">
+            <span class="slider-badge"><i class="fas fa-star"></i> PROGRAMME SPÉCIAL 3 JOURS</span>
+            <h1 class="slider-title">Randonnée Cathédrale & Cascades d'Ouakhdoune</h1>
+            <div class="slider-location">
+                <i class="fas fa-map-pin"></i> Imsfrane, Haut Atlas • Départ Rabat/Casa
+            </div>
+        </div>
+        
+        <button class="slider-btn prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <div class="slider-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+            <span class="dot" onclick="goToSlide(4)"></span>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="../index.html"><i class="fas fa-home"></i> Accueil</a>
+            <i class="fas fa-chevron-right"></i>
+            <span style="color: #e6b12e;">Programme 3 Jours</span>
+        </div>
+        
+        <!-- Introduction -->
+        <div class="intro">
+            <p><i class="fas fa-quote-left" style="color: #e6b12e; opacity: 0.5; font-size: 2rem; margin-right: 10px;"></i> Ascension du sommet de la Cathédrale d'Imsfrane (1868m) et découverte des cascades cachées d'Ouakhdoune. Une expérience complète avec nuit en tente ou auberge, soirée folklorique et feu de camp.</p>
+        </div>
+        
+        <!-- Meta Cards -->
+        <div class="meta-grid">
+            <div class="meta-card">
+                <i class="fas fa-clock"></i>
+                <div class="label">Durée</div>
+                <div class="value">3 jours / 2 nuits</div>
+            </div>
+            <div class="meta-card">
+                <i class="fas fa-mountain"></i>
+                <div class="label">Altitude</div>
+                <div class="value">1868m</div>
+            </div>
+            <div class="meta-card">
+                <i class="fas fa-signal"></i>
+                <div class="label">Niveau</div>
+                <div class="value">3/5</div>
+            </div>
+            <div class="meta-card">
+                <i class="fas fa-users"></i>
+                <div class="label">Groupe</div>
+                <div class="value">8-15 pers</div>
+            </div>
+        </div>
+        
+        <!-- Prix de Base -->
+        <div class="price-card-main">
+            <div class="price-info">
+                <h3><i class="fas fa-campground"></i> Formule de base (Tente)</h3>
+                <p>Transport • Hébergement • Repas • Guide • Soirée</p>
+            </div>
+            <div class="price-tag">
+                850 <small>DH</small>
+            </div>
+        </div>
+        
+        <!-- Programme -->
+        <div class="timeline">
+            <h2>Programme détaillé</h2>
+            
+            <div class="day">
+                <div class="day-header">
+                    <div class="day-icon"><i class="fas fa-sun"></i></div>
+                    <div>
+                        <div class="day-title">Vendredi - Départ</div>
+                        <div class="day-date">Jour 1</div>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="day-item"><i class="fas fa-bus"></i> 18h00 : Départ de Rabat (Gare Rabat Ville)</div>
+                    <div class="day-item"><i class="fas fa-bus"></i> 19h30 : Départ de Casa (Gare Casa Voyageurs)</div>
+                    <div class="day-item"><i class="fas fa-utensils"></i> Dîner libre en route</div>
+                    <div class="day-item"><i class="fas fa-bed"></i> Arrivée au gîte, installation</div>
+                </div>
+            </div>
+            
+            <div class="day">
+                <div class="day-header">
+                    <div class="day-icon"><i class="fas fa-hiking"></i></div>
+                    <div>
+                        <div class="day-title">Samedi - Ascension</div>
+                        <div class="day-date">Jour 2</div>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="day-item"><i class="fas fa-coffee"></i> Petit déjeuner</div>
+                    <div class="day-item"><i class="fas fa-arrow-up"></i> Ascension vers le sommet (1868m)</div>
+                    <div class="day-item"><i class="fas fa-flag"></i> Arrivée au sommet - vue panoramique</div>
+                    <div class="day-item"><i class="fas fa-camera"></i> Photos</div>
+                    <div class="day-item"><i class="fas fa-arrow-down"></i> Descente</div>
+                    <div class="day-item"><i class="fas fa-utensils"></i> Déjeuner</div>
+                    <div class="day-item"><i class="fas fa-fire"></i> Soirée folklorique Ahidouss</div>
+                </div>
+            </div>
+            
+            <div class="day">
+                <div class="day-header">
+                    <div class="day-icon"><i class="fas fa-water"></i></div>
+                    <div>
+                        <div class="day-title">Dimanche - Activités & Retour</div>
+                        <div class="day-date">Jour 3</div>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="day-item"><i class="fas fa-coffee"></i> Petit déjeuner</div>
+                    <div class="day-item"><i class="fas fa-water"></i> Rafting (optionnel)</div>
+                    <div class="day-item"><i class="fas fa-bicycle"></i> VTT (optionnel)</div>
+                    <div class="day-item"><i class="fas fa-motorcycle"></i> Quad (optionnel)</div>
+                    <div class="day-item"><i class="fas fa-utensils"></i> Déjeuner</div>
+                    <div class="day-item"><i class="fas fa-bus"></i> 15h30 : Retour</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Options -->
+        <div class="options-section">
+            <h2>Options disponibles</h2>
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-header">
+                        <i class="fas fa-hotel"></i>
+                        <h3>Auberge</h3>
+                    </div>
+                    <div class="option-desc">Nuit en auberge (chambre)</div>
+                    <div class="option-price">
+                        <span>Supplément</span>
+                        <span class="price-add">+200 DH</span>
+                    </div>
+                </div>
+                
+                <div class="option-card">
+                    <div class="option-header">
+                        <i class="fas fa-water"></i>
+                        <h3>Rafting 12km</h3>
+                    </div>
+                    <div class="option-desc">Descente de l'Oued Ahansal</div>
+                    <div class="option-price">
+                        <span>Supplément</span>
+                        <span class="price-add">+400 DH</span>
+                    </div>
+                </div>
+                
+                <div class="option-card">
+                    <div class="option-header">
+                        <i class="fas fa-bicycle"></i>
+                        <h3>VTT</h3>
+                    </div>
+                    <div class="option-desc">VTT tout suspendu</div>
+                    <div class="option-price">
+                        <span>Supplément</span>
+                        <span class="price-add">+150 DH</span>
+                    </div>
+                </div>
+                
+                <div class="option-card">
+                    <div class="option-header">
+                        <i class="fas fa-motorcycle"></i>
+                        <h3>Quad</h3>
+                    </div>
+                    <div class="option-desc">Quad solo ou biplace</div>
+                    <div class="option-price">
+                        <span>Supplément</span>
+                        <span class="price-add">+250 DH</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Calculateur -->
+        <div class="total-calculator">
+            <h3><i class="fas fa-calculator" style="color: #e6b12e;"></i> Calculez votre total</h3>
+            
+            <div class="calc-item">
+                <span class="calc-label">Base (tente)</span>
+                <span class="calc-value">850 DH</span>
+            </div>
+            
+            <div class="calc-item checkbox-group">
+                <span class="calc-label">Auberge (+200 DH)</span>
+                <input type="checkbox" id="auberge" onchange="calculerTotal()">
+            </div>
+            
+            <div class="calc-item checkbox-group">
+                <span class="calc-label">Rafting (+400 DH)</span>
+                <input type="checkbox" id="rafting" onchange="calculerTotal()">
+            </div>
+            
+            <div class="calc-item checkbox-group">
+                <span class="calc-label">VTT (+150 DH)</span>
+                <input type="checkbox" id="vtt" onchange="calculerTotal()">
+            </div>
+            
+            <div class="calc-item checkbox-group">
+                <span class="calc-label">Quad (+250 DH)</span>
+                <input type="checkbox" id="quad" onchange="calculerTotal()">
+            </div>
+            
+            <div class="calc-total">
+                <span>TOTAL</span>
+                <span class="total-price" id="total">850 DH</span>
+            </div>
+        </div>
+        
+        <!-- Inclus / Non inclus -->
+        <div class="included-box">
+            <h4><i class="fas fa-check-circle"></i> Inclus</h4>
+            <div class="included-grid">
+                <div class="included-item"><i class="fas fa-check"></i> Transport</div>
+                <div class="included-item"><i class="fas fa-check"></i> 2 nuits en tente</div>
+                <div class="included-item"><i class="fas fa-check"></i> Petits déjeuners</div>
+                <div class="included-item"><i class="fas fa-check"></i> Déjeuners</div>
+                <div class="included-item"><i class="fas fa-check"></i> Dîner (samedi)</div>
+                <div class="included-item"><i class="fas fa-check"></i> Guide</div>
+                <div class="included-item"><i class="fas fa-check"></i> Soirée folklorique</div>
+                <div class="included-item"><i class="fas fa-check"></i> Feu de camp</div>
+            </div>
+        </div>
+        
+        <div class="not-included">
+            <h4><i class="fas fa-times-circle"></i> Non inclus</h4>
+            <div class="included-grid">
+                <div class="included-item"><i class="fas fa-times"></i> Dîner vendredi</div>
+                <div class="included-item"><i class="fas fa-times"></i> Auberge</div>
+                <div class="included-item"><i class="fas fa-times"></i> Rafting</div>
+                <div class="included-item"><i class="fas fa-times"></i> VTT</div>
+                <div class="included-item"><i class="fas fa-times"></i> Quad</div>
+                <div class="included-item"><i class="fas fa-times"></i> Boissons</div>
+            </div>
+        </div>
+        
+        <!-- Dates -->
+        <div class="dates">
+            <i class="fas fa-calendar-alt"></i> <strong>Prochains départs :</strong>
+            <span class="date-tag">10-12 Avril</span>
+            <span class="date-tag">17-19 Avril</span>
+            <span class="date-tag">24-26 Avril</span>
+        </div>
+        
+        <!-- Boutons -->
+        <div class="buttons">
+            <a href="booking.html" class="btn" id="bookBtn"><i class="fas fa-calendar-check"></i> Réserver</a>
+            <a href="https://wa.me/212667772551" class="btn" id="waBtn" style="background:#25D366; color:white;" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+        
+        <!-- Retour accueil -->
+        <div class="home-button">
+            <a href="../index.html" class="btn-home"><i class="fas fa-home"></i> Retour à l'accueil</a>
+        </div>
+    </div>
+    
+    <!-- Footer - يستخدم style.css الموحد -->
+    <footer class="footer-pro">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale">
+                        <h3>Imsfrane Cathédrale</h3>
+                    </div>
+                    <p class="footer-description">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques.</p>
+                </div>
+                <div class="footer-col footer-links">
+                    <h4>Liens</h4>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="rafting.html">Rafting</a></li>
+                        <li><a href="camping.html">Camping</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> +212 667-772551</li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Imsfrane Cathédrale</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
+        <a href="tel:0667772551" class="floating-btn phone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
+        <a href="booking.html" class="floating-btn booking"><i class="fas fa-calendar-check"></i><span class="tooltip">Réserver</span></a>
+    </div>
+    
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+    
+    <script>
+        // Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const overlay = document.getElementById('overlay');
+        
+        function toggleMenu() {
+            mainNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        }
+        
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+        
+        // Submenu Toggle
+        window.toggleSubmenu = function(event) {
+            event.preventDefault();
+            const parent = event.currentTarget.closest('.has-submenu');
+            const submenu = parent.querySelector('.submenu');
+            const arrow = parent.querySelector('.arrow');
+            submenu.classList.toggle('active');
+            arrow.classList.toggle('rotated');
+        };
+        
+        // Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+        
+        function showSlide(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        window.changeSlide = function(direction) {
+            showSlide(currentSlide + direction);
+        };
+        
+        window.goToSlide = function(index) {
+            showSlide(index);
+        };
+        
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+        
+        // Price calculator
+        function calculerTotal() {
+            let total = 850;
+            if (document.getElementById('auberge').checked) total += 200;
+            if (document.getElementById('rafting').checked) total += 400;
+            if (document.getElementById('vtt').checked) total += 150;
+            if (document.getElementById('quad').checked) total += 250;
+            document.getElementById('total').textContent = total + ' DH';
+        }
+        
+        // Back to Top
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('show', window.scrollY > 300);
+        });
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Language Switcher
+        window.setLanguage = function(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang.toLowerCase());
+            });
+            localStorage.setItem('preferred-language', lang);
+        };
+        
+        const savedLang = localStorage.getItem('preferred-language');
+        if (savedLang) {
+            setLanguage(savedLang);
+        }
+    </script>
+</body>
+</html>
