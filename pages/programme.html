@@ -22,7 +22,7 @@
         .hero-slider {
             position: relative;
             width: 100%;
-            height: 500px;
+            height: 400px;
             overflow: hidden;
         }
         
@@ -54,16 +54,22 @@
             object-fit: cover;
         }
         
-     .slide::after {
-    display: none;
-}
+        .slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+        }
         
         .slider-overlay {
             position: absolute;
-            bottom: 40px;
+            bottom: 30px;
             left: 0;
             width: 100%;
-            padding: 40px;
+            padding: 30px;
             z-index: 10;
             color: white;
         }
@@ -71,10 +77,10 @@
         .slider-badge {
             background: #e6b12e;
             color: #1e3c2c;
-            padding: 6px 16px;
+            padding: 5px 14px;
             border-radius: 50px;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             display: inline-block;
             margin-bottom: 10px;
             border: 2px solid white;
@@ -83,8 +89,8 @@
         
         .slider-title {
             color: white;
-            font-size: 2.2rem;
-            max-width: 700px;
+            font-size: 2rem;
+            max-width: 600px;
             margin-bottom: 8px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             line-height: 1.2;
@@ -93,7 +99,7 @@
         
         .slider-location {
             color: #e6b12e;
-            font-size: 1rem;
+            font-size: 0.95rem;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -103,8 +109,8 @@
         
         .slider-dots {
             position: absolute;
-            bottom: 20px;
-            right: 40px;
+            bottom: 15px;
+            right: 30px;
             display: flex;
             gap: 10px;
             z-index: 20;
@@ -130,8 +136,8 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background: rgba(255,255,255,0.2);
             border: 2px solid white;
             border-radius: 50%;
@@ -139,7 +145,7 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             cursor: pointer;
             z-index: 20;
             transition: all 0.3s;
@@ -554,6 +560,24 @@
             color: #f44336;
         }
         
+        .price-summary {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f7f3;
+            border-radius: 50px;
+            font-size: 1.1rem;
+        }
+        
+        .price-summary strong {
+            color: #1e3c2c;
+        }
+        
+        .price-summary span {
+            color: #e6b12e;
+            font-weight: 700;
+        }
+        
         .home-button {
             text-align: center;
             margin: 30px 0;
@@ -608,12 +632,12 @@
         
         @media (max-width: 768px) {
             .hero-slider {
-                height: 400px;
+                height: 350px;
             }
             
             .slider-overlay {
                 padding: 20px;
-                bottom: 30px;
+                bottom: 25px;
             }
             
             .slider-badge {
@@ -623,8 +647,7 @@
             }
             
             .slider-title {
-                font-size: 1.5rem;
-                max-width: 100%;
+                font-size: 1.6rem;
             }
             
             .slider-location {
@@ -638,8 +661,8 @@
             }
             
             .slider-btn {
-                width: 40px;
-                height: 40px;
+                width: 35px;
+                height: 35px;
                 font-size: 1.2rem;
             }
             
@@ -813,15 +836,21 @@
             </div>
         </div>
         
-        <!-- Prix de Base -->
+        <!-- Prix de Base - Tente 1000 DH -->
         <div class="price-card-main">
             <div class="price-info">
-                <h3><i class="fas fa-campground"></i> Formule de base (Tente)</h3>
-                <p>Transport • Hébergement • Repas • Guide • Soirée</p>
+                <h3><i class="fas fa-campground"></i> Formule Tente</h3>
+                <p>Transport • Hébergement en tente • Repas • Guide • Soirée</p>
             </div>
             <div class="price-tag">
-                850 <small>DH</small>
+                1000 <small>DH</small>
             </div>
+        </div>
+        
+        <!-- Résumé des prix -->
+        <div class="price-summary">
+            <strong>Formule Tente:</strong> <span>1000 DH</span> | 
+            <strong>Formule Auberge:</strong> <span>1150 DH</span>
         </div>
         
         <!-- Programme -->
@@ -882,30 +911,48 @@
             </div>
         </div>
         
-        <!-- Options -->
+        <!-- Options d'hébergement -->
         <div class="options-section">
-            <h2>Options disponibles</h2>
+            <h2>Options d'hébergement</h2>
             <div class="options-grid">
                 <div class="option-card">
                     <div class="option-header">
-                        <i class="fas fa-hotel"></i>
-                        <h3>Auberge</h3>
+                        <i class="fas fa-campground"></i>
+                        <h3>Tente traditionnelle</h3>
                     </div>
-                    <div class="option-desc">Nuit en auberge (chambre)</div>
+                    <div class="option-desc">Hébergement en tente traditionnelle (mfercha) - inclus dans le prix de base</div>
                     <div class="option-price">
-                        <span>Supplément</span>
-                        <span class="price-add">+200 DH</span>
+                        <span>Formule de base</span>
+                        <span class="price-add">0 DH</span>
                     </div>
                 </div>
                 
                 <div class="option-card">
                     <div class="option-header">
+                        <i class="fas fa-hotel"></i>
+                        <h3>Auberge</h3>
+                    </div>
+                    <div class="option-desc">Nuit en auberge avec chambre (option de confort)</div>
+                    <div class="option-price">
+                        <span>Supplément auberge</span>
+                        <span class="price-add">+150 DH</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Options d'activités -->
+        <div class="options-section">
+            <h2>Activités optionnelles</h2>
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-header">
                         <i class="fas fa-water"></i>
                         <h3>Rafting 12km</h3>
                     </div>
-                    <div class="option-desc">Descente de l'Oued Ahansal</div>
+                    <div class="option-desc">Descente de l'Oued Ahansal - 12km de rafting avec guide professionnel</div>
                     <div class="option-price">
-                        <span>Supplément</span>
+                        <span>Supplément rafting</span>
                         <span class="price-add">+400 DH</span>
                     </div>
                 </div>
@@ -915,9 +962,9 @@
                         <i class="fas fa-bicycle"></i>
                         <h3>VTT</h3>
                     </div>
-                    <div class="option-desc">VTT tout suspendu</div>
+                    <div class="option-desc">Location de VTT tout suspendu - parcours de 18km dans les montagnes</div>
                     <div class="option-price">
-                        <span>Supplément</span>
+                        <span>Supplément VTT</span>
                         <span class="price-add">+150 DH</span>
                     </div>
                 </div>
@@ -927,47 +974,47 @@
                         <i class="fas fa-motorcycle"></i>
                         <h3>Quad</h3>
                     </div>
-                    <div class="option-desc">Quad solo ou biplace</div>
+                    <div class="option-desc">Quad solo ou biplace - 1 heure de conduite dans les sentiers</div>
                     <div class="option-price">
-                        <span>Supplément</span>
+                        <span>Supplément quad</span>
                         <span class="price-add">+250 DH</span>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- Calculateur -->
+        <!-- Calculateur de prix -->
         <div class="total-calculator">
             <h3><i class="fas fa-calculator" style="color: #e6b12e;"></i> Calculez votre total</h3>
             
             <div class="calc-item">
-                <span class="calc-label">Base (tente)</span>
-                <span class="calc-value">850 DH</span>
+                <span class="calc-label"><i class="fas fa-campground"></i> Base (tente)</span>
+                <span class="calc-value">1000 DH</span>
             </div>
             
             <div class="calc-item checkbox-group">
-                <span class="calc-label">Auberge (+200 DH)</span>
+                <span class="calc-label"><i class="fas fa-hotel"></i> Auberge (+150 DH)</span>
                 <input type="checkbox" id="auberge" onchange="calculerTotal()">
             </div>
             
             <div class="calc-item checkbox-group">
-                <span class="calc-label">Rafting (+400 DH)</span>
+                <span class="calc-label"><i class="fas fa-water"></i> Rafting (+400 DH)</span>
                 <input type="checkbox" id="rafting" onchange="calculerTotal()">
             </div>
             
             <div class="calc-item checkbox-group">
-                <span class="calc-label">VTT (+150 DH)</span>
+                <span class="calc-label"><i class="fas fa-bicycle"></i> VTT (+150 DH)</span>
                 <input type="checkbox" id="vtt" onchange="calculerTotal()">
             </div>
             
             <div class="calc-item checkbox-group">
-                <span class="calc-label">Quad (+250 DH)</span>
+                <span class="calc-label"><i class="fas fa-motorcycle"></i> Quad (+250 DH)</span>
                 <input type="checkbox" id="quad" onchange="calculerTotal()">
             </div>
             
             <div class="calc-total">
                 <span>TOTAL</span>
-                <span class="total-price" id="total">850 DH</span>
+                <span class="total-price" id="total">1000 DH</span>
             </div>
         </div>
         
@@ -1120,10 +1167,10 @@
             changeSlide(1);
         }, 5000);
         
-        // Price calculator
+        // Price calculator - avec prix de base 1000 DH
         function calculerTotal() {
-            let total = 850;
-            if (document.getElementById('auberge').checked) total += 200;
+            let total = 1000; // Base tente 1000 DH
+            if (document.getElementById('auberge').checked) total += 150;
             if (document.getElementById('rafting').checked) total += 400;
             if (document.getElementById('vtt').checked) total += 150;
             if (document.getElementById('quad').checked) total += 250;
