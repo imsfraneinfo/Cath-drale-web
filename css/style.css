@@ -1721,7 +1721,7 @@ nav ul li a:hover {
 
 /* Rafting - صورة 14.jpeg */
 .activities-grid-promax .activity-card-promax:nth-child(1) .card-media-promax img {
-    object-position: 50% 55%;
+    object-position: 50% 60%;
 }
 
 /* Camping - صورة camping-1.jpg */
@@ -2030,4 +2030,34 @@ nav ul li a:hover {
     .pro-btn-primary {
         flex: 1;
     }
+}
+/* ===== RAFTING IMAGES CONTROL - UNIFIED FOR ALL SCREENS ===== */
+
+/* Hero image - fixed position */
+.page-hero {
+    background-position: 50% 60% !important;
+    background-size: cover !important;
+}
+
+/* All card images - base settings */
+.route-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 12km image - raft2.jpeg */
+.route-block:nth-of-type(1) .route-image img {
+    object-position: 50% 60%;
+}
+
+/* 30km image - 15.jpeg */
+.route-block:nth-of-type(2) .route-image img {
+    object-position: 50% 60%;
+}
+
+/* 50km image - raft1.jpeg */
+.route-block:nth-of-type(3) .route-image img {
+    object-position: 50% 30%;
 }
