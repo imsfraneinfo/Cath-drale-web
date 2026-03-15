@@ -1706,3 +1706,45 @@ nav ul li a:hover {
         font-size: 1.25rem;
     }
 }
+/* ===== التحكم في ظهور الصور في بطاقات الأنشطة ===== */
+.activities-grid-promax .activity-card-promax .card-media-promax {
+    height: 200px;
+    overflow: hidden;
+}
+
+.activities-grid-promax .activity-card-promax .card-media-promax img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+/* Rafting - صورة 14.jpeg */
+.activities-grid-promax .activity-card-promax:nth-child(1) .card-media-promax img {
+    object-position: 50% 55%;
+}
+
+/* Camping - صورة camping-1.jpg */
+.activities-grid-promax .activity-card-promax:nth-child(2) .card-media-promax img {
+    object-position: 50% 70%;
+}
+
+/* Hiking - صورة randonnee.jpg */
+.activities-grid-promax .activity-card-promax:nth-child(3) .card-media-promax img {
+    object-position: 50% 30%;
+}
+
+/* VTT - صورة vtt.jpg */
+.activities-grid-promax .activity-card-promax:nth-child(4) .card-media-promax img {
+    object-position: 50% 50%;
+}
+
+/* Quad - صورة quad.jpg */
+.activities-grid-promax .activity-card-promax:nth-child(5) .card-media-promax img {
+    object-position: 50% 85%;
+}
+
+/* Programme spécial - إذا كانت موجودة كبطاقة سادسة */
+.activities-grid-promax .activity-card-promax:nth-child(6) .card-media-promax img {
+    object-position: 50% 70%;
+}
