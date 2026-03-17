@@ -2061,3 +2061,35 @@ nav ul li a:hover {
 .route-block:nth-of-type(3) .route-image img {
     object-position: 50% 30%;
 }
+/* ===== AMÉLIORATION DU CONTRASTE ===== */
+
+/* Programme Exclusif - texte doré */
+.pro-category span {
+    color: #b38f2a !important;  /* لون ذهبي أغمق للتباين */
+    font-weight: 700;
+}
+
+/* Label "À PARTIR DE" */
+.pro-price-label {
+    color: #4a4a4a !important;  /* رمادي غامق */
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+/* Titre de la carte */
+.pro-title {
+    color: #1e3c2c !important;  /* أخضر غامق (مثل الموقع) */
+    font-weight: 800;
+}
+
+/* Description */
+.pro-desc {
+    color: #3a3a3a !important;  /* رمادي غامق */
+}
+
+/* Options */
+.pro-option {
+    color: #1e3c2c !important;
+    background: #e8e8e8 !important;  /* خلفية أغمق قليلاً */
+    border: 1px solid #b38f2a;
+}
