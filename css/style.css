@@ -2213,3 +2213,26 @@ nav ul li a:hover {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 12px;
 }
+/* ===== FIX CONTRASTE AVEC COULEURS ORIGINALES ===== */
+
+/* Badge NOUVEAU - ذهبي مع نص داكن */
+.pro-badge {
+    background: #b38f2a !important;  /* ذهبي غامق */
+    color: #0a1a0f !important;       /* أخضر غامق جداً */
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Programme Exclusif - ذهبي غامق */
+.pro-category span {
+    color: #8b6f20 !important;  /* ذهبي غامق جداً */
+    font-weight: 800;
+}
+
+.pro-category i {
+    color: #8b6f20 !important;
+}
