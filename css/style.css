@@ -2061,35 +2061,155 @@ nav ul li a:hover {
 .route-block:nth-of-type(3) .route-image img {
     object-position: 50% 30%;
 }
-/* ===== AMÉLIORATION DU CONTRASTE ===== */
+/* ===== FIX CONTRASTE ===== */
 
-/* Programme Exclusif - texte doré */
+/* Programme Exclusif - texte doré plus foncé */
 .pro-category span {
-    color: #b38f2a !important;  /* لون ذهبي أغمق للتباين */
+    color: #b38f2a !important;
     font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
-/* Label "À PARTIR DE" */
+/* Label "À PARTIR DE" - plus lisible */
 .pro-price-label {
-    color: #4a4a4a !important;  /* رمادي غامق */
+    color: #4a4a4a !important;
     font-size: 0.7rem;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
-/* Titre de la carte */
+/* Titre de la carte - contraste renforcé */
 .pro-title {
-    color: #1e3c2c !important;  /* أخضر غامق (مثل الموقع) */
+    color: #1e3c2c !important;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+/* Description - plus lisible */
+.pro-desc {
+    color: #3a3a3a !important;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* Options - meilleur contraste */
+.pro-option {
+    color: #1e3c2c !important;
+    background: #e8e8e8 !important;
+    border: 1px solid #b38f2a;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+}
+
+/* Prix - plus visible */
+.pro-price-value {
+    color: #1e3c2c !important;
+    font-size: 1.3rem;
     font-weight: 800;
 }
 
-/* Description */
-.pro-desc {
-    color: #3a3a3a !important;  /* رمادي غامق */
+/* Badge NOUVEAU - meilleur contraste */
+.pro-badge {
+    background: #b38f2a !important;
+    color: #1e3c2c !important;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
 }
 
-/* Options */
-.pro-option {
+/* Durée - amélioration */
+.pro-duration {
+    background: rgba(30, 60, 44, 0.9) !important;
+    color: white !important;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pro-duration i {
+    color: #e6b12e !important;
+}
+
+/* Icônes de la grille d'infos */
+.pro-info-item i {
+    color: #b38f2a !important;
+}
+
+.pro-info-item span {
     color: #1e3c2c !important;
-    background: #e8e8e8 !important;  /* خلفية أغمق قليلاً */
-    border: 1px solid #b38f2a;
+    font-weight: 600;
+}
+
+/* Bouton Voir */
+.pro-btn-primary {
+    background: #1e3c2c !important;
+    color: white !important;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s;
+}
+
+.pro-btn-primary:hover {
+    background: #b38f2a !important;
+    color: #1e3c2c !important;
+}
+
+.pro-btn-primary i {
+    color: white;
+    transition: transform 0.3s;
+}
+
+.pro-btn-primary:hover i {
+    color: #1e3c2c;
+    transform: translateX(3px);
+}
+
+/* ===== SCREEN READER ONLY ===== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ===== AMÉLIORATION GÉNÉRALE DU CONTRASTE ===== */
+
+/* Texte général dans la carte */
+.pro-content {
+    color: #2c3e50;
+}
+
+.pro-category i {
+    color: #b38f2a !important;
+}
+
+.pro-divider {
+    background: linear-gradient(90deg, transparent, #b38f2a, transparent);
+    height: 1px;
+    opacity: 0.3;
+    margin: 12px 0;
+}
+
+/* Footer */
+.pro-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 12px;
 }
