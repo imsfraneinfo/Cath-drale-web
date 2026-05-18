@@ -5,42 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Randonnée à Imsfrane | Sommet 1868m, Gorges d'Ahansal et Cascades dans l'Atlas</title>
     
-    <!-- تحسين الأداء - اتصال مسبق -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <meta name="description" content="3 parcours de randonnée à Imsfrane : ascension du sommet 1868m, exploration des gorges d'Ahansal et cascades cachées. Accompagné par un guide local.">
+    <meta name="description" content="3 parcours de randonnée à Imsfrane : ascension du sommet 1868m (300 DH/groupe), exploration des gorges d'Ahansal et cascades (200 DH/groupe), Grand Tour (400 DH/groupe). Accompagné par un guide local.">
     
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Randonnée à Imsfrane - Sommet 1868m et cascades">
-    <meta property="og:description" content="Randonnée à Imsfrane: Sommet 1868m, Gorges d'Ahansal, cascades cachées. 3 parcours avec guides locaux.">
+    <meta property="og:description" content="Randonnée à Imsfrane: Sommet 1868m (300 DH/groupe), Gorges d'Ahansal (200 DH/groupe), Grand Tour (400 DH/groupe).">
     <meta property="og:image" content="https://imsfrane.com/images/randonnee-hero.jpg">
     <meta property="og:url" content="https://imsfrane.com/pages/randonnee.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Imsfrane Cathédrale">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome - محسن -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
     
-    <!-- CSS Files - مع ../ -->
     <link rel="stylesheet" href="../css/style.css">
     
     <style>
-        /* Page specific styles */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        h1, h2, h3, h4, h5, h6, .section-title, .program-title, .card-title-promax {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-        }
-        
         .page-hero {
             width: 100%;
             height: 500px;
@@ -167,6 +151,9 @@
             gap: 2rem;
             flex-wrap: wrap;
             margin: 1.5rem 0;
+            padding: 1rem 0;
+            border-top: 1px solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
         }
         
         .meta-item {
@@ -188,7 +175,22 @@
             margin-left: 0.2rem;
         }
         
-        /* Journey Timeline Styles */
+        .price-badge {
+            background: linear-gradient(135deg, #e6b12e, #f4c542);
+            color: #1e3c2c;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.4rem;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+        
+        .price-badge small {
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+        
         .journey-section {
             background: #f9f7f3;
             border-radius: 30px;
@@ -286,20 +288,6 @@
             margin: 2rem auto 4rem;
         }
         
-        .program-title {
-            font-size: 1.8rem;
-            color: #1e3c2c;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .program-title i {
-            color: #e6b12e;
-        }
-        
         .program-meta {
             display: flex;
             gap: 2rem;
@@ -308,34 +296,6 @@
             padding: 1rem 1.5rem;
             border-radius: 10px;
             margin: 1.5rem 0;
-        }
-        
-        .program-text {
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-        
-        .program-text strong {
-            color: #1e3c2c;
-        }
-        
-        .program-list {
-            list-style: none;
-            margin: 1rem 0 1.5rem;
-        }
-        
-        .program-list li {
-            margin: 0.5rem 0;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.8rem;
-            color: #555;
-        }
-        
-        .program-list li i {
-            color: #e6b12e;
-            margin-top: 0.2rem;
         }
         
         .guide-role {
@@ -372,6 +332,24 @@
         .guide-role li i {
             color: #e6b12e;
             font-size: 0.9rem;
+        }
+        
+        .program-list {
+            list-style: none;
+            margin: 1rem 0 1.5rem;
+        }
+        
+        .program-list li {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            color: #555;
+        }
+        
+        .program-list li i {
+            color: #e6b12e;
+            margin-top: 0.2rem;
         }
         
         .info-section {
@@ -570,54 +548,12 @@
             transition: color 0.3s;
         }
         
-        .contact-item a:hover {
-            color: #e6b12e;
-        }
-        
-        /* Slider specific */
-        #slider1 .slider-slide:nth-child(1) img {
-            object-position: 50% 86%;
-        }
-        
-        #slider1 .slider-slide:nth-child(2) img {
-            object-position: 50% 90%;
-        }
-        
-        #slider1 .slider-slide:nth-child(3) img {
-            object-position: 50% 90%;
-        }
-        
-        #slider2 .slider-slide:nth-child(1) img {
-            object-position: 50% 30%;
-        }
-        
-        #slider2 .slider-slide:nth-child(2) img {
-            object-position: 50% 50%;
-        }
-        
-        #slider2 .slider-slide:nth-child(3) img {
-            object-position: 50% 60%;
-        }
-        
-        #slider2 .slider-slide:nth-child(4) img {
-            object-position: 50% 80%;
-        }
-        
-        #slider3 .slider-slide:nth-child(1) img {
-            object-position: 50% 80%;
-        }
-        
-        #slider3 .slider-slide:nth-child(2) img {
-            object-position: 50% 90%;
-        }
-        
         .slider-container {
             position: relative;
             width: 100%;
             height: 450px;
             overflow: hidden;
             border-radius: 20px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
         }
         
@@ -692,79 +628,45 @@
         }
         
         @media (max-width: 992px) {
-            .contact-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .info-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .contact-grid { grid-template-columns: repeat(2, 1fr); }
+            .info-grid { grid-template-columns: repeat(2, 1fr); }
         }
         
         @media (max-width: 768px) {
-            .page-hero {
-                height: 350px;
-            }
-            .slider-container {
-                height: 350px;
-            }
-            .program-meta {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-            .cta-buttons {
-                flex-direction: column;
-            }
-            .journey-step {
-                flex-direction: column;
-            }
-            .step-time {
-                align-self: flex-start;
-            }
+            .page-hero { height: 350px; }
+            .slider-container { height: 350px; }
+            .program-meta { flex-direction: column; gap: 1rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .info-grid { grid-template-columns: 1fr; }
+            .cta-buttons { flex-direction: column; }
+            .journey-step { flex-direction: column; }
+            .step-time { align-self: flex-start; }
+            .route-content h2 { font-size: 2rem; }
+            .price-badge { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body data-lang="en">
-    <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
 
-    <!-- Header -->
     <header>
         <div class="container header-content">
-            <a href="../index.html" class="logo" aria-label="Accueil">
-                <div class="logo-img">
-                    <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
-                </div>
-                <div class="logo-text">
-                    <h1>Imsfrane Cathédrale</h1>
-                    <span class="lang-en">Nature Adventures</span>
-                    <span class="lang-fr">Aventures Nature</span>
-                </div>
+            <a href="../index.html" class="logo">
+                <div class="logo-img"><img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60"></div>
+                <div class="logo-text"><h1>Imsfrane Cathédrale</h1><span class="lang-en">Nature Adventures</span><span class="lang-fr">Aventures Nature</span></div>
             </a>
-            
             <div class="right-controls">
-                <div class="lang-buttons">
-                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
-                </div>
-                <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <div class="lang-buttons"><button class="lang-btn active" onclick="setLanguage('en')">EN</button><button class="lang-btn" onclick="setLanguage('fr')">FR</button></div>
+                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
             </div>
         </div>
     </header>
 
-    <!-- Menu -->
-    <nav id="mainNav" aria-label="Menu principal">
+    <nav id="mainNav">
         <ul>
             <li><a href="../index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
             <li class="has-submenu">
-                <a href="#" onclick="toggleSubmenu(event)" aria-expanded="false">
+                <a href="#" onclick="toggleSubmenu(event)">
                     <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
                     <i class="fas fa-chevron-right arrow"></i>
                 </a>
@@ -786,32 +688,25 @@
     </nav>
     
 <main>
-    <!-- Hero Image -->
     <div class="page-hero"></div>
 
-    <!-- Page Title -->
     <div class="container">
         <div class="page-title">
             <h1 class="lang-en">Hiking in Imsfrane</h1>
             <h1 class="lang-fr">Randonnée à Imsfrane</h1>
-            <div class="location">
-                <i class="fas fa-map-pin"></i> Imsfrane, Morocco
-            </div>
+            <div class="location"><i class="fas fa-map-pin"></i> Imsfrane, Morocco</div>
         </div>
     </div>
 
-    <!-- Introduction -->
     <div class="container">
         <div class="intro-text">
-            <div class="intro-icon">
-                <i class="fas fa-mountain"></i>
-            </div>
-            <p class="lang-en">Discover the most beautiful hiking trails in Imsfrane, in the heart of the Atlas Mountains. Whether you're looking for a sporting challenge or a peaceful walk in nature, we have the right program for you. Accompanied by a local guide, you will explore breathtaking landscapes: majestic summits, deep gorges, hidden waterfalls and historical sites. Contact us for prices and availability.</p>
-            <p class="lang-fr">Découvrez les plus beaux sentiers de randonnée d'Imsfrane, au cœur des montagnes de l'Atlas. Que vous soyez à la recherche d'un défi sportif ou d'une balade tranquille dans la nature, nous avons le programme qu'il vous faut. Accompagné par un guide local, vous explorerez des paysages à couper le souffle : sommets majestueux, gorges profondes, cascades cachées et sites historiques. Contactez-nous pour les prix et la disponibilité.</p>
+            <div class="intro-icon"><i class="fas fa-mountain"></i></div>
+            <p class="lang-en">Discover the most beautiful hiking trails in Imsfrane, in the heart of the Atlas Mountains. Whether you're looking for a sporting challenge or a peaceful walk in nature, we have the right program for you.</p>
+            <p class="lang-fr">Découvrez les plus beaux sentiers de randonnée d'Imsfrane, au cœur des montagnes de l'Atlas. Que vous soyez à la recherche d'un défi sportif ou d'une balade tranquille dans la nature, nous avons le programme qu'il vous faut.</p>
         </div>
     </div>
 
-    <!-- PROGRAMME 1 - SOMMET -->
+    <!-- PROGRAMME 1 - SOMMET 300 DH -->
     <div class="container">
         <h2 class="section-title">
             <span class="lang-en">Program 1: Summit Ascent (1868m)</span>
@@ -820,12 +715,12 @@
 
         <div class="slider-container" id="slider1">
             <div class="slider-wrapper">
-                <div class="slider-slide"><img src="../images/17.jpeg" alt="Vue panoramique depuis le sommet du Jebel Imsfrane" width="800" height="450" loading="lazy"></div>
-                <div class="slider-slide"><img src="../images/19.jpeg" alt="Randonneurs sur le sentier menant au sommet" width="800" height="450" loading="lazy"></div>
-                <div class="slider-slide"><img src="../images/20.jpeg" alt="Paysage montagneux de l'Atlas depuis le sommet" width="800" height="450" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/17.jpeg" alt="Vue panoramique depuis le sommet" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/19.jpeg" alt="Randonneurs sur le sentier" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/20.jpeg" alt="Paysage montagneux" loading="lazy"></div>
             </div>
-            <button class="slider-btn prev" onclick="moveSlide(-1, 'slider1')" aria-label="Image précédente">❮</button>
-            <button class="slider-btn next" onclick="moveSlide(1, 'slider1')" aria-label="Image suivante">❯</button>
+            <button class="slider-btn prev" onclick="moveSlide(-1, 'slider1')">❮</button>
+            <button class="slider-btn next" onclick="moveSlide(1, 'slider1')">❯</button>
             <div class="slider-dots" id="dots1">
                 <span class="slider-dot active" onclick="goToSlide(0, 'slider1')"></span>
                 <span class="slider-dot" onclick="goToSlide(1, 'slider1')"></span>
@@ -837,15 +732,18 @@
             <div class="program-meta">
                 <div class="meta-item"><i class="fas fa-clock"></i> 4-5h</div>
                 <div class="meta-item"><i class="fas fa-signal"></i> <span class="lang-en">Medium</span><span class="lang-fr">Moyenne</span></div>
-                <div class="meta-item"><i class="fas fa-tag"></i> <span data-price-key="rando-summit">300 DH</span> <small>/groupe</small></div>
+                <div class="meta-item"><i class="fas fa-tag"></i> <span style="color:#e6b12e; font-size:1.3rem; font-weight:900;">300 DH</span> <small>/groupe</small></div>
             </div>
 
-            <!-- Journey Timeline for Summit -->
+            <div class="price-badge">
+                <i class="fas fa-tag"></i> 300 DH <small>par groupe (jusqu'à 6 personnes)</small>
+            </div>
+
             <div class="journey-section">
                 <div class="journey-title">
                     <i class="fas fa-map-signal"></i>
-                    <span class="lang-en">Your Summit Journey Step by Step</span>
-                    <span class="lang-fr">Votre Ascension Étape par Étape</span>
+                    <span class="lang-en">Your Summit Journey</span>
+                    <span class="lang-fr">Votre Ascension</span>
                 </div>
                 <div class="journey-steps">
                     <div class="journey-step">
@@ -853,10 +751,8 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-map-pin"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Meeting at Imsfrane Center</h4>
-                                <h4 class="lang-fr">Rendez-vous au Centre d'Imsfrane</h4>
-                                <p class="lang-en">Meet your guide, quick briefing about the hike</p>
-                                <p class="lang-fr">Rencontre avec votre guide, briefing rapide sur la randonnée</p>
+                                <h4>Meeting at Imsfrane Center</h4>
+                                <p>Meet your guide, quick briefing</p>
                             </div>
                         </div>
                     </div>
@@ -865,22 +761,8 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-hiking"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Start the Ascent</h4>
-                                <h4 class="lang-fr">Début de l'Ascension</h4>
-                                <p class="lang-en">Begin the hike through forests and mountain paths</p>
-                                <p class="lang-fr">Départ de la randonnée à travers forêts et sentiers de montagne</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="journey-step">
-                        <span class="step-time">10:00</span>
-                        <div class="step-content">
-                            <div class="step-icon"><i class="fas fa-camera"></i></div>
-                            <div class="step-text">
-                                <h4 class="lang-en">First Panoramic View</h4>
-                                <h4 class="lang-fr">Première Vue Panoramique</h4>
-                                <p class="lang-en">Stop at a viewpoint overlooking the valley, photo opportunity</p>
-                                <p class="lang-fr">Arrêt à un point de vue surplombant la vallée, photos</p>
+                                <h4>Start the Ascent</h4>
+                                <p>Begin the hike through forests and mountain paths</p>
                             </div>
                         </div>
                     </div>
@@ -889,10 +771,8 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-flag"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Summit (1868m)</h4>
-                                <h4 class="lang-fr">Sommet (1868m)</h4>
-                                <p class="lang-en">Reach the summit! Enjoy the 360° view of the Atlas mountains</p>
-                                <p class="lang-fr">Arrivée au sommet ! Profitez de la vue à 360° sur les montagnes de l'Atlas</p>
+                                <h4>Summit (1868m)</h4>
+                                <p>Reach the summit! 360° view of the Atlas mountains</p>
                             </div>
                         </div>
                     </div>
@@ -901,22 +781,8 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-utensils"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Picnic at the Summit</h4>
-                                <h4 class="lang-fr">Pique-nique au Sommet</h4>
-                                <p class="lang-en">Lunch with a view (bring your own food)</p>
-                                <p class="lang-fr">Déjeuner avec vue (apportez votre propre nourriture)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="journey-step">
-                        <span class="step-time">13:00</span>
-                        <div class="step-content">
-                            <div class="step-icon"><i class="fas fa-arrow-down"></i></div>
-                            <div class="step-text">
-                                <h4 class="lang-en">Descent</h4>
-                                <h4 class="lang-fr">Descente</h4>
-                                <p class="lang-en">Start the way back, different path for new perspectives</p>
-                                <p class="lang-fr">Retour par un chemin différent pour de nouvelles perspectives</p>
+                                <h4>Picnic at the Summit</h4>
+                                <p>Lunch with a view (bring your own food)</p>
                             </div>
                         </div>
                     </div>
@@ -925,46 +791,38 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-flag-checkered"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Return to Imsfrane</h4>
-                                <h4 class="lang-fr">Retour à Imsfrane</h4>
-                                <p class="lang-en">End of the hike, rest at your accommodation</p>
-                                <p class="lang-fr">Fin de la randonnée, repos à votre hébergement</p>
+                                <h4>Return to Imsfrane</h4>
+                                <p>End of the hike</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Food note -->
             <div class="food-note">
                 <i class="fas fa-utensils"></i>
-                <span class="lang-en"><strong>Food:</strong> Please bring your own picnic lunch. We recommend sandwiches, fruit, nuts, and plenty of water (at least 2L per person).</span>
-                <span class="lang-fr"><strong>Repas :</strong> Merci d'apporter votre propre pique-nique. Nous recommandons des sandwiches, des fruits, des fruits secs, et beaucoup d'eau (au moins 2L par personne).</span>
+                <span class="lang-en"><strong>Food:</strong> Please bring your own picnic lunch (sandwiches, fruit, 2L water per person).</span>
+                <span class="lang-fr"><strong>Repas :</strong> Merci d'apporter votre propre pique-nique (sandwiches, fruits, 2L d'eau par personne).</span>
             </div>
 
-            <p class="program-text"><strong>🎯 <span class="lang-en">This program is ideal for those looking for a sporting challenge and an incredible panoramic view of the Atlas Mountains.</span><span class="lang-fr">Ce programme est idéal pour ceux qui cherchent un défi sportif et une vue panoramique incroyable sur les montagnes de l'Atlas.</span></strong></p>
-
             <div class="guide-role">
-                <h4><i class="fas fa-user-tie"></i> <span class="lang-en">My role as a guide</span><span class="lang-fr">Mon rôle comme guide</span></h4>
+                <h4><i class="fas fa-user-tie"></i> <span class="lang-en">What's included</span><span class="lang-fr">Ce qui est inclus</span></h4>
                 <ul>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">I welcome the group at the starting point</span><span class="lang-fr">J'accueille le groupe au point de départ</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">I accompany them step by step to the summit</span><span class="lang-fr">Je les accompagne pas à pas jusqu'au sommet</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">I explain the region and nature</span><span class="lang-fr">Je leur explique la région et la nature</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">I help on the climbs</span><span class="lang-fr">J'aide dans les passages en montée</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">I take breaks at panoramic viewpoints for photos</span><span class="lang-fr">Je fais des pauses aux points panoramiques pour les photos</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">I bring you back safely to the starting point</span><span class="lang-fr">Je vous ramène en toute sécurité au point de départ</span></li>
+                    <li><i class="fas fa-check"></i> Local guide</li>
+                    <li><i class="fas fa-check"></i> Safety briefing</li>
+                    <li><i class="fas fa-check"></i> Photo stops at panoramic viewpoints</li>
                 </ul>
             </div>
 
             <a href="booking.html" class="btn">
                 <i class="fas fa-calendar-check"></i> 
-                <span class="lang-en">Book Now</span>
-                <span class="lang-fr">Réserver</span>
+                <span class="lang-en">Book Now - 300 DH/group</span>
+                <span class="lang-fr">Réserver - 300 DH/groupe</span>
             </a>
         </div>
     </div>
 
-    <!-- PROGRAMME 2 - GORGES & CASCADES -->
+    <!-- PROGRAMME 2 - GORGES 200 DH -->
     <div class="container">
         <h2 class="section-title">
             <span class="lang-en">Program 2: Gorges & Waterfalls</span>
@@ -973,18 +831,16 @@
 
         <div class="slider-container" id="slider2">
             <div class="slider-wrapper">
-                <div class="slider-slide"><img src="../images/12.jpeg" alt="Gorges de l'Oued Ahansal" width="800" height="450" loading="lazy"></div>
-                <div class="slider-slide"><img src="../images/blog-article2.jpg" alt="Vue des gorges" width="800" height="450" loading="lazy"></div>
-                <div class="slider-slide"><img src="../images/blog-cascades.jpg" alt="Cascades Wakoudene" width="800" height="450" loading="lazy"></div>
-                <div class="slider-slide"><img src="../images/IMG_7430.jpg" alt="Randonneur découvrant les cascades" width="800" height="450" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/12.jpeg" alt="Gorges de l'Oued Ahansal" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/blog-article2.jpg" alt="Vue des gorges" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/IMG_7430.jpg" alt="Cascades" loading="lazy"></div>
             </div>
-            <button class="slider-btn prev" onclick="moveSlide(-1, 'slider2')" aria-label="Image précédente">❮</button>
-            <button class="slider-btn next" onclick="moveSlide(1, 'slider2')" aria-label="Image suivante">❯</button>
+            <button class="slider-btn prev" onclick="moveSlide(-1, 'slider2')">❮</button>
+            <button class="slider-btn next" onclick="moveSlide(1, 'slider2')">❯</button>
             <div class="slider-dots" id="dots2">
                 <span class="slider-dot active" onclick="goToSlide(0, 'slider2')"></span>
                 <span class="slider-dot" onclick="goToSlide(1, 'slider2')"></span>
                 <span class="slider-dot" onclick="goToSlide(2, 'slider2')"></span>
-                <span class="slider-dot" onclick="goToSlide(3, 'slider2')"></span>
             </div>
         </div>
 
@@ -993,15 +849,18 @@
                 <div class="meta-item"><i class="fas fa-clock"></i> 3-4h</div>
                 <div class="meta-item"><i class="fas fa-route"></i> 8km</div>
                 <div class="meta-item"><i class="fas fa-signal"></i> <span class="lang-en">Easy</span><span class="lang-fr">Facile</span></div>
-                <div class="meta-item"><i class="fas fa-tag"></i> <span data-price-key="rando-gorges">200 DH</span> <small>/groupe</small></div>
+                <div class="meta-item"><i class="fas fa-tag"></i> <span style="color:#e6b12e; font-size:1.3rem; font-weight:900;">200 DH</span> <small>/groupe</small></div>
             </div>
 
-            <!-- Journey Timeline for Gorges -->
+            <div class="price-badge">
+                <i class="fas fa-tag"></i> 200 DH <small>par groupe (jusqu'à 6 personnes)</small>
+            </div>
+
             <div class="journey-section">
                 <div class="journey-title">
                     <i class="fas fa-map-signal"></i>
-                    <span class="lang-en">Your Gorges Journey Step by Step</span>
-                    <span class="lang-fr">Votre Parcours des Gorges Étape par Étape</span>
+                    <span class="lang-en">Your Gorges Journey</span>
+                    <span class="lang-fr">Votre Parcours des Gorges</span>
                 </div>
                 <div class="journey-steps">
                     <div class="journey-step">
@@ -1009,10 +868,8 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-map-pin"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Meeting at Imsfrane Center</h4>
-                                <h4 class="lang-fr">Rendez-vous au Centre d'Imsfrane</h4>
-                                <p class="lang-en">Meet your guide, get ready for the walk</p>
-                                <p class="lang-fr">Rencontre avec votre guide, préparation pour la balade</p>
+                                <h4>Meeting at Imsfrane Center</h4>
+                                <p>Meet your guide</p>
                             </div>
                         </div>
                     </div>
@@ -1021,46 +878,18 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-water"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Start along the River</h4>
-                                <h4 class="lang-fr">Départ le long de la Rivière</h4>
-                                <p class="lang-en">Follow the Ahansal river through beautiful landscapes</p>
-                                <p class="lang-fr">Suivez la rivière Ahansal à travers de beaux paysages</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="journey-step">
-                        <span class="step-time">10:30</span>
-                        <div class="step-content">
-                            <div class="step-icon"><i class="fas fa-mountain"></i></div>
-                            <div class="step-text">
-                                <h4 class="lang-en">Enter the Gorges</h4>
-                                <h4 class="lang-fr">Entrée dans les Gorges</h4>
-                                <p class="lang-en">Walk through impressive narrow canyons</p>
-                                <p class="lang-fr">Marche à travers des canyons étroits impressionnants</p>
+                                <h4>Start along the River</h4>
+                                <p>Follow the Ahansal river</p>
                             </div>
                         </div>
                     </div>
                     <div class="journey-step">
                         <span class="step-time">11:30</span>
                         <div class="step-content">
-                            <div class="step-icon"><i class="fas fa-camera"></i></div>
-                            <div class="step-text">
-                                <h4 class="lang-en">Photo Stop</h4>
-                                <h4 class="lang-fr">Arrêt Photo</h4>
-                                <p class="lang-en">Take photos of the stunning rock formations</p>
-                                <p class="lang-fr">Prenez des photos des formations rocheuses spectaculaires</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="journey-step">
-                        <span class="step-time">12:30</span>
-                        <div class="step-content">
                             <div class="step-icon"><i class="fas fa-water"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Waterfalls</h4>
-                                <h4 class="lang-fr">Cascades</h4>
-                                <p class="lang-en">Arrive at the hidden waterfalls, swimming possible</p>
-                                <p class="lang-fr">Arrivée aux cascades cachées, baignade possible</p>
+                                <h4>Waterfalls</h4>
+                                <p>Arrive at the hidden waterfalls, swimming possible</p>
                             </div>
                         </div>
                     </div>
@@ -1069,22 +898,8 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-utensils"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Picnic by the Waterfall</h4>
-                                <h4 class="lang-fr">Pique-nique près de la Cascade</h4>
-                                <p class="lang-en">Lunch in nature (bring your own food)</p>
-                                <p class="lang-fr">Déjeuner en pleine nature (apportez votre propre nourriture)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="journey-step">
-                        <span class="step-time">14:00</span>
-                        <div class="step-content">
-                            <div class="step-icon"><i class="fas fa-arrow-left"></i></div>
-                            <div class="step-text">
-                                <h4 class="lang-en">Return Walk</h4>
-                                <h4 class="lang-fr">Retour</h4>
-                                <p class="lang-en">Walk back through the beautiful valley</p>
-                                <p class="lang-fr">Retour à travers la belle vallée</p>
+                                <h4>Picnic by the Waterfall</h4>
+                                <p>Lunch in nature (bring your own food)</p>
                             </div>
                         </div>
                     </div>
@@ -1093,65 +908,42 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-flag-checkered"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Return to Imsfrane</h4>
-                                <h4 class="lang-fr">Retour à Imsfrane</h4>
-                                <p class="lang-en">End of the hike</p>
-                                <p class="lang-fr">Fin de la randonnée</p>
+                                <h4>Return to Imsfrane</h4>
+                                <p>End of the hike</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Food note -->
             <div class="food-note">
                 <i class="fas fa-utensils"></i>
-                <span class="lang-en"><strong>Food:</strong> Please bring your own picnic lunch. We recommend sandwiches, fruit, and plenty of water (at least 1.5L per person).</span>
-                <span class="lang-fr"><strong>Repas :</strong> Merci d'apporter votre propre pique-nique. Nous recommandons des sandwiches, des fruits, et beaucoup d'eau (au moins 1.5L par personne).</span>
-            </div>
-
-            <p class="program-text"><strong>🎯 <span class="lang-en">Suitable for families, beginners and those who want a nature walk without great effort.</span><span class="lang-fr">Adapté aux familles, aux débutants et à ceux qui veulent une balade nature sans grand effort.</span></strong></p>
-
-            <p class="program-text"><span class="lang-en"><strong>What it includes:</strong></span><span class="lang-fr"><strong>Ce qu'il comprend :</strong></span></p>
-            <ul class="program-list">
-                <li><i class="fas fa-check"></i> <span class="lang-en">Visit of the Ahansal River gorges</span><span class="lang-fr">Visite des gorges d'Oued Ahansal</span></li>
-                <li><i class="fas fa-check"></i> <span class="lang-en">Discovery of waterfalls and natural pools</span><span class="lang-fr">Découverte de cascades et de bassins naturels</span></li>
-                <li><i class="fas fa-check"></i> <span class="lang-en">Stop at the famous historic truck</span><span class="lang-fr">Arrêt au camion historique célèbre</span></li>
-                <li><i class="fas fa-check"></i> <span class="lang-en">Mythical photo spot with view of Imsfrane</span><span class="lang-fr">Spot photo mythique avec vue sur Imsfrane</span></li>
-            </ul>
-
-            <div class="guide-role">
-                <h4><i class="fas fa-user-tie"></i> <span class="lang-en">My role as a guide</span><span class="lang-fr">Mon rôle comme guide</span></h4>
-                <ul>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Present the route in a simple and safe way</span><span class="lang-fr">Présenter le parcours de manière simple et sécurisée</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Explain the history of the region</span><span class="lang-fr">Expliquer l'histoire de la région</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Show the best photo spots</span><span class="lang-fr">Montrer les meilleurs spots photo</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Make the experience pleasant and light</span><span class="lang-fr">Rendre l'expérience agréable et légère</span></li>
-                </ul>
+                <span class="lang-en"><strong>Food:</strong> Please bring your own picnic lunch (1.5L water per person).</span>
+                <span class="lang-fr"><strong>Repas :</strong> Merci d'apporter votre propre pique-nique (1.5L d'eau par personne).</span>
             </div>
 
             <a href="booking.html" class="btn">
                 <i class="fas fa-calendar-check"></i> 
-                <span class="lang-en">Book Now</span>
-                <span class="lang-fr">Réserver</span>
+                <span class="lang-en">Book Now - 200 DH/group</span>
+                <span class="lang-fr">Réserver - 200 DH/groupe</span>
             </a>
         </div>
     </div>
 
-    <!-- PROGRAMME 3 - GRAND TOUR -->
+    <!-- PROGRAMME 3 - GRAND TOUR 400 DH -->
     <div class="container">
         <h2 class="section-title">
-            <span class="lang-en">Program 3: The Grand Tour (Complete Experience)</span>
-            <span class="lang-fr">Programme 3 : Le Grand Tour (Expérience complète)</span>
+            <span class="lang-en">Program 3: The Grand Tour</span>
+            <span class="lang-fr">Programme 3 : Le Grand Tour</span>
         </h2>
 
         <div class="slider-container" id="slider3">
             <div class="slider-wrapper">
-                <div class="slider-slide"><img src="../images/guide.jpg" alt="Guide local accompagnant des randonneurs" width="800" height="450" loading="lazy"></div>
-                <div class="slider-slide"><img src="../images/IMG_7422.jpg" alt="Vue panoramique sur la Cathédrale Imsfrane" width="800" height="450" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/guide.jpg" alt="Guide local" loading="lazy"></div>
+                <div class="slider-slide"><img src="../images/IMG_7422.jpg" alt="Vue panoramique" loading="lazy"></div>
             </div>
-            <button class="slider-btn prev" onclick="moveSlide(-1, 'slider3')" aria-label="Image précédente">❮</button>
-            <button class="slider-btn next" onclick="moveSlide(1, 'slider3')" aria-label="Image suivante">❯</button>
+            <button class="slider-btn prev" onclick="moveSlide(-1, 'slider3')">❮</button>
+            <button class="slider-btn next" onclick="moveSlide(1, 'slider3')">❯</button>
             <div class="slider-dots" id="dots3">
                 <span class="slider-dot active" onclick="goToSlide(0, 'slider3')"></span>
                 <span class="slider-dot" onclick="goToSlide(1, 'slider3')"></span>
@@ -1163,15 +955,18 @@
                 <div class="meta-item"><i class="fas fa-clock"></i> 8-10h</div>
                 <div class="meta-item"><i class="fas fa-route"></i> 26km+</div>
                 <div class="meta-item"><i class="fas fa-signal"></i> <span class="lang-en">Challenging</span><span class="lang-fr">Soutenu</span></div>
-                <div class="meta-item"><i class="fas fa-tag"></i> <span data-price-key="rando-grand">400 DH</span> <small>/groupe</small></div>
+                <div class="meta-item"><i class="fas fa-tag"></i> <span style="color:#e6b12e; font-size:1.3rem; font-weight:900;">400 DH</span> <small>/groupe</small></div>
             </div>
 
-            <!-- Journey Timeline for Grand Tour -->
+            <div class="price-badge">
+                <i class="fas fa-tag"></i> 400 DH <small>par groupe (jusqu'à 6 personnes)</small>
+            </div>
+
             <div class="journey-section">
                 <div class="journey-title">
                     <i class="fas fa-map-signal"></i>
-                    <span class="lang-en">Your Grand Tour Journey Step by Step</span>
-                    <span class="lang-fr">Votre Grand Tour Étape par Étape</span>
+                    <span class="lang-en">Your Grand Tour Journey</span>
+                    <span class="lang-fr">Votre Grand Tour</span>
                 </div>
                 <div class="journey-steps">
                     <div class="journey-step">
@@ -1179,10 +974,8 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-map-pin"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Meeting at Imsfrane Center</h4>
-                                <h4 class="lang-fr">Rendez-vous au Centre d'Imsfrane</h4>
-                                <p class="lang-en">Meet your guide, full day briefing</p>
-                                <p class="lang-fr">Rencontre avec votre guide, briefing pour la journée complète</p>
+                                <h4>Meeting at Imsfrane Center</h4>
+                                <p>Full day briefing</p>
                             </div>
                         </div>
                     </div>
@@ -1191,10 +984,8 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-hiking"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Start towards the Summit</h4>
-                                <h4 class="lang-fr">Départ vers le Sommet</h4>
-                                <p class="lang-en">Begin the ascent to Jebel Imsfrane</p>
-                                <p class="lang-fr">Début de l'ascension vers Jebel Imsfrane</p>
+                                <h4>Start towards the Summit</h4>
+                                <p>Ascend to Jebel Imsfrane</p>
                             </div>
                         </div>
                     </div>
@@ -1203,22 +994,8 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-flag"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Summit (1868m)</h4>
-                                <h4 class="lang-fr">Sommet (1868m)</h4>
-                                <p class="lang-en">Reach the summit, enjoy the panoramic view</p>
-                                <p class="lang-fr">Arrivée au sommet, profitez de la vue panoramique</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="journey-step">
-                        <span class="step-time">12:00</span>
-                        <div class="step-content">
-                            <div class="step-icon"><i class="fas fa-utensils"></i></div>
-                            <div class="step-text">
-                                <h4 class="lang-en">Picnic at the Summit</h4>
-                                <h4 class="lang-fr">Pique-nique au Sommet</h4>
-                                <p class="lang-en">Lunch with incredible views (bring your own food)</p>
-                                <p class="lang-fr">Déjeuner avec vue incroyable (apportez votre propre nourriture)</p>
+                                <h4>Summit (1868m)</h4>
+                                <p>Panoramic view</p>
                             </div>
                         </div>
                     </div>
@@ -1227,10 +1004,8 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-arrow-down"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Descent towards Gorges</h4>
-                                <h4 class="lang-fr">Descente vers les Gorges</h4>
-                                <p class="lang-en">Start descending towards the Ahansal gorges</p>
-                                <p class="lang-fr">Descente vers les gorges d'Ahansal</p>
+                                <h4>Descent towards Gorges</h4>
+                                <p>Descend towards Ahansal gorges</p>
                             </div>
                         </div>
                     </div>
@@ -1239,22 +1014,8 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-water"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Gorges & Waterfalls</h4>
-                                <h4 class="lang-fr">Gorges & Cascades</h4>
-                                <p class="lang-en">Explore the gorges and waterfalls, swimming break</p>
-                                <p class="lang-fr">Exploration des gorges et cascades, pause baignade</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="journey-step">
-                        <span class="step-time">16:30</span>
-                        <div class="step-content">
-                            <div class="step-icon"><i class="fas fa-camera"></i></div>
-                            <div class="step-text">
-                                <h4 class="lang-en">Photo Spots</h4>
-                                <h4 class="lang-fr">Spots Photo</h4>
-                                <p class="lang-en">Take photos at the best viewpoints</p>
-                                <p class="lang-fr">Photos aux meilleurs points de vue</p>
+                                <h4>Gorges & Waterfalls</h4>
+                                <p>Explore the gorges and waterfalls</p>
                             </div>
                         </div>
                     </div>
@@ -1263,48 +1024,24 @@
                         <div class="step-content">
                             <div class="step-icon"><i class="fas fa-flag-checkered"></i></div>
                             <div class="step-text">
-                                <h4 class="lang-en">Return to Imsfrane</h4>
-                                <h4 class="lang-fr">Retour à Imsfrane</h4>
-                                <p class="lang-en">End of the full day adventure</p>
-                                <p class="lang-fr">Fin de l'aventure d'une journée complète</p>
+                                <h4>Return to Imsfrane</h4>
+                                <p>End of the full day adventure</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Food note -->
             <div class="food-note">
                 <i class="fas fa-utensils"></i>
-                <span class="lang-en"><strong>Food:</strong> Please bring your own picnic lunch and plenty of snacks. This is a long day, we recommend bringing extra food and at least 3L of water per person.</span>
-                <span class="lang-fr"><strong>Repas :</strong> Merci d'apporter votre propre pique-nique et beaucoup de snacks. C'est une longue journée, nous recommandons d'apporter de la nourriture supplémentaire et au moins 3L d'eau par personne.</span>
-            </div>
-
-            <p class="program-text"><strong>🎯 <span class="lang-en">This program is for those who want to experience Imsfrane fully in one day.</span><span class="lang-fr">Ce programme est destiné à ceux qui veulent vivre Imsfrane entièrement en une seule journée.</span></strong></p>
-
-            <p class="program-text"><span class="lang-en"><strong>What it includes:</strong></span><span class="lang-fr"><strong>Ce qu'il comprend :</strong></span></p>
-            <ul class="program-list">
-                <li><i class="fas fa-check"></i> <span class="lang-en">Summit ascent</span><span class="lang-fr">Ascension du sommet</span></li>
-                <li><i class="fas fa-check"></i> <span class="lang-en">Visit of the gorges and waterfalls</span><span class="lang-fr">Visite des gorges et cascades</span></li>
-                <li><i class="fas fa-check"></i> <span class="lang-en">Photos at all remarkable points</span><span class="lang-fr">Photos dans tous les points remarquables</span></li>
-                <li><i class="fas fa-check"></i> <span class="lang-en">Full day of adventure in the wilderness</span><span class="lang-fr">Journée complète d'aventure en pleine nature</span></li>
-            </ul>
-
-            <div class="guide-role">
-                <h4><i class="fas fa-user-tie"></i> <span class="lang-en">My role as a guide</span><span class="lang-fr">Mon rôle comme guide</span></h4>
-                <ul>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Complete organization of the day</span><span class="lang-fr">Organisation complète de la journée</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Energy management and breaks</span><span class="lang-fr">Gestion de l'énergie et des pauses</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Securing the itinerary</span><span class="lang-fr">Sécurisation de l'itinéraire</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Complete explanations about the region</span><span class="lang-fr">Explications complètes sur la région</span></li>
-                    <li><i class="fas fa-check"></i> <span class="lang-en">Accompaniment until the end</span><span class="lang-fr">Accompagnement jusqu'à la fin</span></li>
-                </ul>
+                <span class="lang-en"><strong>Food:</strong> Please bring your own picnic lunch and snacks (3L water per person minimum).</span>
+                <span class="lang-fr"><strong>Repas :</strong> Merci d'apporter votre propre pique-nique et snacks (3L d'eau par personne minimum).</span>
             </div>
 
             <a href="booking.html" class="btn">
                 <i class="fas fa-calendar-check"></i> 
-                <span class="lang-en">Book Now</span>
-                <span class="lang-fr">Réserver</span>
+                <span class="lang-en">Book Now - 400 DH/group</span>
+                <span class="lang-fr">Réserver - 400 DH/groupe</span>
             </a>
         </div>
     </div>
@@ -1313,8 +1050,8 @@
     <div class="container">
         <div class="testimonial-small">
             <i class="fas fa-quote-left" style="color: #e6b12e; font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
-            <p class="lang-en">"The Grand Tour was absolutely incredible! We started at sunrise and finished at sunset. Our guide knew every path and shared so much about the local culture. The views from the summit and the waterfalls in the gorges were breathtaking. Best hiking experience in Morocco!"</p>
-            <p class="lang-fr">"Le Grand Tour était absolument incroyable ! Nous avons commencé au lever du soleil et terminé au coucher. Notre guide connaissait chaque chemin et a partagé tant de choses sur la culture locale. Les vues du sommet et les cascades dans les gorges étaient à couper le souffle. La meilleure expérience de randonnée au Maroc !"</p>
+            <p class="lang-en">"The Grand Tour was absolutely incredible! We started at sunrise and finished at sunset. Our guide knew every path and shared so much about the local culture. Best hiking experience in Morocco!"</p>
+            <p class="lang-fr">"Le Grand Tour était absolument incroyable ! Nous avons commencé au lever du soleil et terminé au coucher. Notre guide connaissait chaque chemin. La meilleure expérience de randonnée au Maroc !"</p>
             <p style="margin-top: 1rem; font-weight: 600; color: #1e3c2c;">— Marco, Italy</p>
         </div>
     </div>
@@ -1323,99 +1060,25 @@
     <div class="container">
         <div class="info-section">
             <h2 class="section-title"><span class="lang-en">Practical Information</span><span class="lang-fr">Informations Pratiques</span></h2>
-            
             <div class="info-grid">
                 <div class="info-card">
                     <i class="fas fa-shoe-prints"></i>
-                    <h4 class="lang-en">What to Wear</h4>
-                    <h4 class="lang-fr">Tenue Recommandée</h4>
-                    <p class="lang-en">Hiking shoes, comfortable clothes, warm layers (summit can be cold), rain jacket</p>
-                    <p class="lang-fr">Chaussures de randonnée, vêtements confortables, couches chaudes (le sommet peut être froid), veste imperméable</p>
+                    <h4>What to Wear</h4>
+                    <p>Hiking shoes, comfortable clothes, warm layers</p>
                 </div>
                 <div class="info-card">
                     <i class="fas fa-backpack"></i>
-                    <h4 class="lang-en">What to Bring</h4>
-                    <h4 class="lang-fr">À Apporter</h4>
-                    <p class="lang-en">Water (2-3L), picnic lunch, snacks, sunscreen, hat, camera</p>
-                    <p class="lang-fr">Eau (2-3L), pique-nique, snacks, crème solaire, chapeau, appareil photo</p>
+                    <h4>What to Bring</h4>
+                    <p>Water (2-3L), picnic lunch, snacks, sunscreen, hat</p>
                 </div>
                 <div class="info-card">
                     <i class="fas fa-clock"></i>
-                    <h4 class="lang-en">Best Time</h4>
-                    <h4 class="lang-fr">Meilleure Période</h4>
-                    <p class="lang-en">Spring (March-May) and Autumn (September-November)</p>
-                    <p class="lang-fr">Printemps (Mars-Mai) et Automne (Septembre-Novembre)</p>
+                    <h4>Best Time</h4>
+                    <p>Spring (March-May) and Autumn (September-November)</p>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- FAQ Section -->
-    <div class="container">
-        <div class="info-section">
-            <h2 class="section-title"><span class="lang-en">Frequently Asked Questions</span><span class="lang-fr">Questions Fréquentes</span></h2>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <h4 class="lang-en">Do I need hiking experience?</h4>
-                    <h4 class="lang-fr">Faut-il de l'expérience en randonnée ?</h4>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p class="lang-en">Program 2 (Gorges & Waterfalls) is perfect for beginners. Program 1 requires a good fitness level. Program 3 (Grand Tour) is for experienced hikers. Our guides will adapt the pace to the group.</p>
-                    <p class="lang-fr">Le programme 2 (Gorges & Cascades) est parfait pour les débutants. Le programme 1 nécessite une bonne condition physique. Le programme 3 (Grand Tour) est pour les randonneurs expérimentés. Nos guides adapteront le rythme au groupe.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <h4 class="lang-en">Can we do the hike if it rains?</h4>
-                    <h4 class="lang-fr">Peut-on faire la randonnée s'il pleut ?</h4>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p class="lang-en">For safety reasons, we don't hike in heavy rain or thunderstorms. We'll contact you to reschedule. Light rain is okay with proper gear.</p>
-                    <p class="lang-fr">Pour des raisons de sécurité, nous ne faisons pas de randonnée en cas de forte pluie ou d'orage. Nous vous contacterons pour reporter. Une pluie légère est possible avec un équipement approprié.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <h4 class="lang-en">Are dogs allowed on hikes?</h4>
-                    <h4 class="lang-fr">Les chiens sont-ils autorisés ?</h4>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p class="lang-en">Yes, well-behaved dogs are welcome on leashes. Please inform us when booking.</p>
-                    <p class="lang-fr">Oui, les chiens bien élevés sont les bienvenus en laisse. Veuillez nous informer lors de la réservation.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CTA Section -->
-    <section class="cta-modern">
-        <div class="cta-content">
-            <h2>
-                <span class="lang-en">Ready to Explore the Atlas?</span>
-                <span class="lang-fr">Prêt à Explorer l'Atlas ?</span>
-            </h2>
-            <p class="lang-en">Book your hiking adventure now and discover the most beautiful trails of Imsfrane</p>
-            <p class="lang-fr">Réservez votre randonnée maintenant et découvrez les plus beaux sentiers d'Imsfrane</p>
-            <div class="cta-buttons">
-                <a href="booking.html" class="btn">
-                    <i class="fas fa-calendar-check"></i>
-                    <span class="lang-en">Book Now</span>
-                    <span class="lang-fr">Réserver</span>
-                </a>
-                <a href="https://wa.me/212667772551" class="btn btn-wa" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <span class="lang-en">Ask a Question</span>
-                    <span class="lang-fr">Poser une Question</span>
-                </a>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <div class="container">
@@ -1424,30 +1087,23 @@
                 <span class="lang-en">Book Your Hike</span>
                 <span class="lang-fr">Réserver Votre Randonnée</span>
             </h2>
-
-            <p style="text-align: center; margin-bottom: 2rem; color: #555;">
-                <span class="lang-en">Contact us for prices, availability, and to book your hiking adventure in Imsfrane.</span>
-                <span class="lang-fr">Contactez-nous pour les prix, la disponibilité et pour réserver votre randonnée à Imsfrane.</span>
-            </p>
-
             <div class="contact-grid">
                 <div class="contact-item">
                     <i class="fas fa-globe"></i>
                     <h4>Website</h4>
-                    <a href="https://imsfrane.com" target="_blank" rel="noopener">imsfrane.com</a>
+                    <a href="https://imsfrane.com" target="_blank">imsfrane.com</a>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-whatsapp"></i>
                     <h4>WhatsApp</h4>
-                    <a href="https://wa.me/212667772551" target="_blank" rel="noopener">+212 667-772551</a>
+                    <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <h4><span class="lang-en">Location</span><span class="lang-fr">Emplacement</span></h4>
+                    <h4>Location</h4>
                     <p>Imsfrane, Azilal, Morocco</p>
                 </div>
             </div>
-
             <div style="text-align: center;">
                 <a href="booking.html" class="btn">
                     <i class="fas fa-calendar-check"></i> <span class="lang-en">Book Now</span><span class="lang-fr">Réserver</span>
@@ -1457,185 +1113,99 @@
     </div>
 </main>
 
-    <!-- Footer -->
     <footer class="footer-pro">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60" loading="lazy">
+                        <img src="../images/logo.jpeg" alt="Logo" width="60" height="60" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
-                    <p class="footer-description">
-                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
-                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
-                    </p>
+                    <p class="footer-description">Discover the magic of the Atlas Mountains at 1,868m altitude.</p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" rel="noopener" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" rel="noopener" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://wa.me/212667772551" target="_blank" rel="noopener" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-
                 <div class="footer-col footer-links">
-                    <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
-                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
-                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
-                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
-                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
-                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="rafting.html">Rafting</a></li>
+                        <li><a href="camping.html">Camping</a></li>
+                        <li><a href="randonnee.html">Hiking</a></li>
+                        <li><a href="vtt.html">VTT</a></li>
+                        <li><a href="quad.html">Quad</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-col footer-info">
-                    <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
-                    <ul>
-                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
-                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
-                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
-                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
-                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
-                    </ul>
-                </div>
-
                 <div class="footer-col footer-contact">
-                    <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
+                    <h4>Contact Us</h4>
                     <ul>
                         <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
                     </ul>
                 </div>
             </div>
-
-            <div class="footer-middle">
-                <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
-                <div class="stat-item"><div class="stat-number">50+ km</div><div class="stat-label">Sentiers</div></div>
-                <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
-                <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
-            </div>
-
             <div class="footer-bottom">
                 <div class="copyright">
-                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
+                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i>
-            <span class="tooltip">WhatsApp</span>
-        </a>
-        <a href="tel:0667772551" class="floating-btn phone">
-            <i class="fas fa-phone-alt"></i>
-            <span class="tooltip">Appeler</span>
-        </a>
-        <a href="booking.html" class="floating-btn booking">
-            <i class="fas fa-calendar-check"></i>
-            <span class="tooltip">Réserver</span>
-        </a>
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
+        <a href="tel:0667772551" class="floating-btn phone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
+        <a href="booking.html" class="floating-btn booking"><i class="fas fa-calendar-check"></i><span class="tooltip">Réserver</span></a>
     </div>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
-    <!-- JavaScript Files -->
     <script src="../js/main.js"></script>
     <script src="../js/script.js"></script>
     
     <script>
-        // Back to Top Button functionality
         const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            backToTop.classList.toggle('show', window.scrollY > 300);
-        });
-        backToTop.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        window.addEventListener('scroll', () => { backToTop.classList.toggle('show', window.scrollY > 300); });
+        backToTop.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-        // FAQ Toggle
-        window.toggleFaq = function(element) {
-            const answer = element.nextElementSibling;
-            const icon = element.querySelector('i');
-            answer.classList.toggle('show');
-            icon.style.transform = answer.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)';
-        };
-
-        // Infinite sliders
         const sliders = {};
-
         function initSlider(sliderId, totalSlides) {
-            sliders[sliderId] = {
-                current: 0,
-                total: totalSlides,
-                wrapper: document.querySelector(`#${sliderId} .slider-wrapper`),
-                dots: document.querySelectorAll(`#${sliderId} .slider-dot`)
-            };
-
+            sliders[sliderId] = { current: 0, total: totalSlides, wrapper: document.querySelector(`#${sliderId} .slider-wrapper`), dots: document.querySelectorAll(`#${sliderId} .slider-dot`) };
             const wrapper = sliders[sliderId].wrapper;
             const slides = wrapper.children;
-            
-            for (let i = 0; i < totalSlides; i++) {
-                const clone = slides[i].cloneNode(true);
-                wrapper.appendChild(clone);
-            }
+            for (let i = 0; i < totalSlides; i++) { wrapper.appendChild(slides[i].cloneNode(true)); }
         }
-
         function updateSlider(sliderId, newIndex) {
             const slider = sliders[sliderId];
             if (!slider) return;
-
             slider.current = newIndex;
             slider.wrapper.style.transform = `translateX(-${slider.current * 100}%)`;
-
             let dotIndex = slider.current % slider.total;
-            slider.dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === dotIndex);
-            });
-
+            slider.dots.forEach((dot, i) => { dot.classList.toggle('active', i === dotIndex); });
             if (slider.current >= slider.total) {
                 setTimeout(() => {
                     slider.wrapper.style.transition = 'none';
                     slider.current = 0;
                     slider.wrapper.style.transform = `translateX(0)`;
-                    setTimeout(() => {
-                        slider.wrapper.style.transition = 'transform 0.5s ease';
-                    }, 50);
+                    setTimeout(() => { slider.wrapper.style.transition = 'transform 0.5s ease'; }, 50);
                 }, 500);
             }
         }
-
-        window.moveSlide = function(direction, sliderId) {
-            const slider = sliders[sliderId];
-            if (slider) {
-                updateSlider(sliderId, slider.current + direction);
-            }
-        };
-
-        window.goToSlide = function(index, sliderId) {
-            updateSlider(sliderId, index);
-        };
-
+        window.moveSlide = function(direction, sliderId) { if (sliders[sliderId]) updateSlider(sliderId, sliders[sliderId].current + direction); };
+        window.goToSlide = function(index, sliderId) { updateSlider(sliderId, index); };
         initSlider('slider1', 3);
-        initSlider('slider2', 4);
+        initSlider('slider2', 3);
         initSlider('slider3', 2);
-
         setInterval(() => {
             if (sliders['slider1']) updateSlider('slider1', sliders['slider1'].current + 1);
             if (sliders['slider2']) updateSlider('slider2', sliders['slider2'].current + 1);
             if (sliders['slider3']) updateSlider('slider3', sliders['slider3'].current + 1);
-        }, 4000);
+        }, 5000);
     </script>
 </body>
 </html>
