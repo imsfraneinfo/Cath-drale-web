@@ -640,5 +640,44 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
+    <script>
+    // تحسين تحميل الصور - lazy loading متقدم
+    document.addEventListener("DOMContentLoaded", function() {
+        // جيب جميع الصور ما عدا الأولى
+        let images = document.querySelectorAll('img:not([fetchpriority="high"])');
+        
+        images.forEach(img => {
+            // أضف lazy loading لكل الصور ما عدا الأولى
+            img.setAttribute('loading', 'lazy');
+        });
+        
+        // تحسين صور السلايدر
+        let slides = document.querySelectorAll('.slide img');
+        slides.forEach((img, index) => {
+            if (index === 0) {
+                img.setAttribute('fetchpriority', 'high');
+            } else {
+                img.setAttribute('loading', 'lazy');
+            }
+        });
+        
+        // تحسين الصور اللي كتكون خارج الشاشة
+        if ('IntersectionObserver' in window) {
+            let lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            let imageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        let img = entry.target;
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            lazyImages.forEach(function(img) {
+                imageObserver.observe(img);
+            });
+        }
+    });
+</script>
 </body>
 </html>
