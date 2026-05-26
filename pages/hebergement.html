@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hébergement à Imsfrane | Maisons meublées à louer - Tilouguite</title>
+    <title>Hébergement à Tilouguite | Maisons meublées à louer - Imsfrane</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <meta name="description" content="Location de maisons meublées à Tilouguite (à 10km d'Imsfrane). Maison vue sur rivière Ahansal, douche, cuisine, salon. Idéal pour familles et groupes. Piscine naturelle à proximité.">
+    <meta name="description" content="Location de maisons meublées à Tilouguite (à 10km d'Imsfrane). Maison vue sur rivière Ahansal, douche, cuisine. De 250 à 400 DH/nuit. Piscine naturelle à 2 minutes.">
     
-    <meta property="og:title" content="Hébergement à Imsfrane - Maisons meublées à Tilouguite">
-    <meta property="og:description" content="Maisons meublées à louer avec vue sur la rivière Ahansal. Piscine naturelle à 2 minutes. Proche du village (5 min à pied).">
-    <meta property="og:image" content="https://imsfrane.com/images/hebergement.jpg">
-    <meta property="og:url" content="https://imsfrane.com/pages/hebergement.html">
+    <meta property="og:title" content="Hébergement à Tilouguite - Maisons meublées Imsfrane">
+    <meta property="og:description" content="Maisons meublées à louer avec vue sur la rivière Ahansal. De 250 à 400 DH/nuit.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imsfrane.com/pages/hebergement.html">
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
@@ -26,27 +25,20 @@
     <noscript><link rel="stylesheet" href="../css/style.css"></noscript>
     
     <style>
-        .page-hero {
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../images/hebergement-hero.jpg') center/cover no-repeat;
-            background-position: 50% 40%;
-            position: relative;
-        }
-        
-        .page-title {
+        .page-header {
             text-align: center;
             margin: 3rem 0 1rem;
         }
         
-        .page-title h1 {
+        .page-header h1 {
             font-size: 2.5rem;
             color: #1e3c2c;
             font-weight: 700;
             margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
         }
         
-        .page-title .location {
+        .page-header .location {
             color: #e6b12e;
             font-size: 1rem;
             display: flex;
@@ -73,12 +65,11 @@
         
         .alert-location strong {
             color: #ff4444;
-            font-size: 1.1rem;
         }
         
         .intro-text {
             max-width: 800px;
-            margin: 2rem auto 3rem;
+            margin: 2rem auto;
             text-align: center;
         }
         
@@ -86,13 +77,6 @@
             font-size: 1.1rem;
             line-height: 1.6;
             color: #555;
-            margin-bottom: 1rem;
-        }
-        
-        .intro-icon {
-            font-size: 2rem;
-            color: #e6b12e;
-            margin-bottom: 1rem;
         }
         
         .houses-grid {
@@ -113,113 +97,6 @@
         .house-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 30px 50px rgba(0,0,0,0.15);
-        }
-        
-        /* Video styles - format vertical (Reels) */
-        .video-container {
-            position: relative;
-            width: 100%;
-            background: #000;
-            overflow: hidden;
-            aspect-ratio: 9 / 16;
-            max-height: 550px;
-        }
-        
-        .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .play-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            z-index: 2;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        .video-container:hover .play-overlay {
-            opacity: 1;
-        }
-        
-        .play-btn {
-            width: 70px;
-            height: 70px;
-            background: rgba(230,177,46,0.95);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #1e3c2c;
-            font-size: 2rem;
-            transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        
-        .play-overlay:hover .play-btn {
-            transform: scale(1.1);
-            background: #e6b12e;
-        }
-        
-        .video-info {
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            right: 15px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 25px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-align: center;
-            backdrop-filter: blur(5px);
-            z-index: 2;
-            pointer-events: none;
-        }
-        
-        .video-info i {
-            margin-right: 5px;
-            color: #e6b12e;
-        }
-        
-        .video-controls {
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            display: flex;
-            gap: 8px;
-            z-index: 2;
-        }
-        
-        .video-controls button {
-            background: rgba(0,0,0,0.6);
-            border: none;
-            color: white;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 0.8rem;
-        }
-        
-        .video-controls button:hover {
-            background: #e6b12e;
-            color: #1e3c2c;
         }
         
         .house-content {
@@ -324,9 +201,70 @@
             margin: 1.5rem 0;
         }
         
-        .river-note i {
-            color: #4CAF50;
-            margin-right: 0.5rem;
+        .btn-instagram {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-instagram:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .btn-instagram i {
+            font-size: 1.3rem;
+        }
+        
+        .map-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: #f9f7f3;
+            border-radius: 30px;
+            text-align: center;
+        }
+        
+        .map-container {
+            margin-top: 1.5rem;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .map-iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        
+        .btn-map {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: #4285F4;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+        
+        .btn-map:hover {
+            background: #3367D6;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         
         .location-info {
@@ -359,11 +297,6 @@
             margin-bottom: 0.3rem;
         }
         
-        .location-point p {
-            color: #555;
-            font-size: 0.9rem;
-        }
-        
         .swim-note {
             background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
             color: white;
@@ -379,15 +312,6 @@
             margin-bottom: 1rem;
         }
         
-        .swim-note h3 {
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-        
-        .swim-note p {
-            opacity: 0.9;
-        }
-        
         .btn {
             display: inline-block;
             background: #e6b12e;
@@ -398,14 +322,11 @@
             font-weight: 600;
             transition: all 0.3s;
             margin-top: 1rem;
-            border: none;
-            cursor: pointer;
         }
         
         .btn:hover {
             background: #f4c542;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(230,177,46,0.3);
         }
         
         .btn-wa {
@@ -432,7 +353,6 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            margin: 2rem 0;
             text-align: center;
         }
         
@@ -440,11 +360,6 @@
             font-size: 2rem;
             color: #e6b12e;
             margin-bottom: 0.5rem;
-        }
-        
-        .contact-item a {
-            color: #555;
-            text-decoration: none;
         }
         
         .section-title {
@@ -463,6 +378,14 @@
             margin: 0.5rem auto;
         }
         
+        .mitoyen-info {
+            text-align: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f0f8f0;
+            border-radius: 15px;
+        }
+        
         @media (max-width: 992px) {
             .houses-grid {
                 grid-template-columns: 1fr;
@@ -476,10 +399,7 @@
         }
         
         @media (max-width: 768px) {
-            .page-hero {
-                height: 350px;
-            }
-            .page-title h1 {
+            .page-header h1 {
                 font-size: 2rem;
             }
             .location-grid {
@@ -494,13 +414,8 @@
             .house-price {
                 font-size: 1.5rem;
             }
-            .play-btn {
-                width: 55px;
-                height: 55px;
-                font-size: 1.5rem;
-            }
-            .video-info {
-                font-size: 0.65rem;
+            .map-iframe {
+                height: 300px;
             }
         }
     </style>
@@ -556,19 +471,17 @@
     </nav>
     
 <main>
-    <div class="page-hero"></div>
-
     <div class="container">
-        <div class="page-title">
-            <h1 class="lang-en">Accommodation - Furnished Houses</h1>
-            <h1 class="lang-fr">Hébergement - Maisons Meublées</h1>
+        <div class="page-header">
+            <h1 class="lang-en">Furnished Houses in Tilouguite</h1>
+            <h1 class="lang-fr">Maisons Meublées à Tilouguite</h1>
             <div class="location">
                 <i class="fas fa-map-pin"></i> Tilouguite, Imsfrane, Morocco
             </div>
         </div>
     </div>
 
-    <!-- ⚠️ ALERTE IMPORTANTE - TEXTE EN ROUGE -->
+    <!-- ⚠️ ALERTE IMPORTANTE -->
     <div class="container">
         <div class="alert-location">
             <i class="fas fa-exclamation-triangle"></i>
@@ -581,13 +494,23 @@
         </div>
     </div>
 
+    <!-- CARTE GOOGLE MAPS -->
     <div class="container">
-        <div class="intro-text">
-            <div class="intro-icon">
-                <i class="fas fa-home"></i>
+        <div class="map-section">
+            <h2 class="section-title" style="margin-top: 0;">
+                <i class="fas fa-map-marker-alt"></i> Emplacement exact
+            </h2>
+            <p>Cliquez sur la carte pour voir l'emplacement exact des maisons et obtenir l'itinéraire.</p>
+            <div class="map-container">
+                <iframe class="map-iframe" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d542.4888888888889!2d-6.416666!3d32.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda371b4ccbef319%3A0x6512f14756e1d716!2sTilouguite%2C%20Imsfrane%2C%20Morocco!5e0!3m2!1sfr!2sma!4v1700000000000" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
             </div>
-            <p class="lang-en">Two adjoining houses for rent in Tilouguite, with direct view of the Ahansal river. Perfect for families or groups who want comfort while being close to nature. Natural swimming pool at 2 minutes walk.</p>
-            <p class="lang-fr">Deux maisons mitoyennes à louer à Tilouguite, avec vue directe sur l'oued Ahansal. Parfaites pour les familles ou groupes qui veulent allier confort et nature. Piscine naturelle à 2 minutes à pied.</p>
+            <a href="https://maps.google.com/?ftid=0xda371b4ccbef319:0x6512f14756e1d716&entry=gps" target="_blank" class="btn-map">
+                <i class="fab fa-google"></i> Ouvrir dans Google Maps
+            </a>
         </div>
     </div>
 
@@ -595,27 +518,8 @@
     <div class="container">
         <div class="houses-grid">
             
-            <!-- HOUSE 1 - GRANDE MAISON (400 DH/nuit) - VIDEO VERTICAL -->
+            <!-- HOUSE 1 - GRANDE MAISON (400 DH/nuit) -->
             <div class="house-card">
-                <div class="video-container">
-                    <video id="video1" preload="metadata" playsinline loop>
-                        <source src="../videos/maison1.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la vidéo.
-                    </video>
-                    <div class="play-overlay" onclick="toggleVideo('video1')">
-                        <div class="play-btn">
-                            <i class="fas fa-play"></i>
-                        </div>
-                    </div>
-                    <div class="video-info">
-                        <i class="fas fa-mobile-alt"></i> 📱 Visite en format Reels (vertical) | Cliquez pour lire
-                    </div>
-                    <div class="video-controls">
-                        <button onclick="toggleMute('video1')" title="Son">
-                            <i class="fas fa-volume-up"></i>
-                        </button>
-                    </div>
-                </div>
                 <div class="house-content">
                     <span class="house-badge">🏠 MAISON PRINCIPALE</span>
                     <h2 class="house-title">
@@ -628,37 +532,21 @@
                         <li><i class="fas fa-utensils"></i> Cuisine équipée avec banquette donnant sur la rivière</li>
                         <li><i class="fas fa-shower"></i> Douche et toilettes</li>
                         <li><i class="fas fa-bed"></i> Chambre pour 2 personnes</li>
-                        <li><i class="fas fa-couch"></i> Salon avec grand canapé (peut accueillir 4-6 personnes)</li>
+                        <li><i class="fas fa-couch"></i> Salon avec grand canapé (accueille 4-6 personnes)</li>
                         <li><i class="fas fa-water"></i> Vue directe sur l'oued Ahansal</li>
                         <li><i class="fas fa-door-open"></i> Accès depuis l'entrée (côté portes)</li>
                     </ul>
                     <div class="river-note">
                         <i class="fas fa-water"></i> <strong>Vue imprenable sur la rivière</strong> - Le salon et la cuisine donnent directement sur l'oued
                     </div>
+                    <a href="https://www.instagram.com/reel/DXZrMlRMXNM/?igsh=Y2Y0Ynl0YXpqODI2" target="_blank" rel="noopener" class="btn-instagram">
+                        <i class="fab fa-instagram"></i> Voir la vidéo sur Instagram
+                    </a>
                 </div>
             </div>
             
-            <!-- HOUSE 2 - PETITE MAISON (250 DH/nuit) - VIDEO VERTICAL -->
+            <!-- HOUSE 2 - PETITE MAISON (250 DH/nuit) -->
             <div class="house-card">
-                <div class="video-container">
-                    <video id="video2" preload="metadata" playsinline loop>
-                        <source src="../videos/maison2.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la vidéo.
-                    </video>
-                    <div class="play-overlay" onclick="toggleVideo('video2')">
-                        <div class="play-btn">
-                            <i class="fas fa-play"></i>
-                        </div>
-                    </div>
-                    <div class="video-info">
-                        <i class="fas fa-mobile-alt"></i> 📱 Visite en format Reels (vertical) | Cliquez pour lire
-                    </div>
-                    <div class="video-controls">
-                        <button onclick="toggleMute('video2')" title="Son">
-                            <i class="fas fa-volume-up"></i>
-                        </button>
-                    </div>
-                </div>
                 <div class="house-content">
                     <span class="house-badge house2">🏠 MAISON MITOYENNE</span>
                     <h2 class="house-title">
@@ -671,9 +559,9 @@
                     <div class="rooms-list">
                         <h4><i class="fas fa-bed"></i> Composition des chambres :</h4>
                         <ul>
-                            <li><i class="fas fa-bed"></i> <strong>Chambre 1</strong> - 2 lits jumeaux (pour 2 personnes)</li>
-                            <li><i class="fas fa-bed"></i> <strong>Chambre 2</strong> - 2 lits jumeaux (pour 2 personnes)</li>
-                            <li><i class="fas fa-heart"></i> <strong>Chambre Couple</strong> - 1 grand lit (pour 2 personnes)</li>
+                            <li><i class="fas fa-bed"></i> <strong>Chambre 1</strong> - 2 lits jumeaux</li>
+                            <li><i class="fas fa-bed"></i> <strong>Chambre 2</strong> - 2 lits jumeaux</li>
+                            <li><i class="fas fa-heart"></i> <strong>Chambre Couple</strong> - 1 grand lit</li>
                         </ul>
                     </div>
                     
@@ -688,11 +576,14 @@
                     <div class="river-note">
                         <i class="fas fa-water"></i> <strong>À côté de la meilleure spot d'Ahansal</strong> - Piscine naturelle très fréquentée en été
                     </div>
+                    <a href="https://www.instagram.com/reel/DXZrMlRMXNM/?igsh=Y2Y0Ynl0YXpqODI2" target="_blank" rel="noopener" class="btn-instagram">
+                        <i class="fab fa-instagram"></i> Voir la vidéo sur Instagram
+                    </a>
                 </div>
             </div>
         </div>
         
-        <div style="text-align: center; margin: 1rem 0; padding: 1rem; background: #f0f8f0; border-radius: 15px;">
+        <div class="mitoyen-info">
             <i class="fas fa-door-open" style="color: #e6b12e;"></i>
             <strong>Les deux maisons sont mitoyennes</strong> (portes adjacentes) - Idéal pour les grands groupes ou familles !
         </div>
@@ -702,7 +593,7 @@
     <div class="container">
         <div class="location-info">
             <h2 class="section-title" style="margin-top: 0;">
-                <i class="fas fa-map-marker-alt"></i> Emplacement privilégié
+                <i class="fas fa-info-circle"></i> À proximité
             </h2>
             <div class="location-grid">
                 <div class="location-point">
@@ -775,13 +666,10 @@
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60" loading="lazy">
+                        <img src="../images/logo.jpeg" alt="Logo" width="60" height="60" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
-                    <p class="footer-description">
-                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
-                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
-                    </p>
+                    <p class="footer-description">Discover the magic of the Atlas Mountains at 1,868m altitude.</p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
@@ -789,52 +677,29 @@
                         <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-
                 <div class="footer-col footer-links">
-                    <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
-                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
-                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
-                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
-                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
-                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="rafting.html">Rafting</a></li>
+                        <li><a href="camping.html">Camping</a></li>
+                        <li><a href="randonnee.html">Hiking</a></li>
+                        <li><a href="vtt.html">VTT</a></li>
+                        <li><a href="quad.html">Quad</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-col footer-info">
-                    <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
-                    <ul>
-                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
-                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
-                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
-                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
-                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
-                    </ul>
-                </div>
-
                 <div class="footer-col footer-contact">
-                    <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
+                    <h4>Contact</h4>
                     <ul>
                         <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
                         <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
                     </ul>
                 </div>
             </div>
-
-            <div class="footer-middle">
-                <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
-                <div class="stat-item"><div class="stat-number">50+ km</div><div class="stat-label">Sentiers</div></div>
-                <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
-                <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
-            </div>
-
             <div class="footer-bottom">
                 <div class="copyright">
-                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
+                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
@@ -870,44 +735,6 @@
         backToTop.addEventListener('click', (e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Video functions
-        window.toggleVideo = function(videoId) {
-            const video = document.getElementById(videoId);
-            const overlay = video.nextElementSibling;
-            
-            if (video.paused) {
-                document.querySelectorAll('video').forEach(vid => {
-                    if (vid !== video && !vid.paused) {
-                        vid.pause();
-                        const otherOverlay = vid.nextElementSibling;
-                        if (otherOverlay) otherOverlay.style.display = 'flex';
-                    }
-                });
-                video.play();
-                if (overlay) overlay.style.display = 'none';
-            } else {
-                video.pause();
-                if (overlay) overlay.style.display = 'flex';
-            }
-        };
-        
-        window.toggleMute = function(videoId) {
-            const video = document.getElementById(videoId);
-            const muteBtn = document.querySelector(`#${videoId}`).parentElement.querySelector('.video-controls button:first-child i');
-            
-            video.muted = !video.muted;
-            if (muteBtn) {
-                muteBtn.className = video.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
-            }
-        };
-        
-        document.querySelectorAll('video').forEach(video => {
-            video.addEventListener('ended', function() {
-                const overlay = this.nextElementSibling;
-                if (overlay) overlay.style.display = 'flex';
-            });
         });
     </script>
 </body>
