@@ -3,38 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafting sur l'Oued Ahansal | Descente 12km, 30km et 50km dans l'Atlas</title>
+    <title>Rafting sur l'Oued Ahansal | Reprise Février 2027</title>
     
-    <!-- تحسين الأداء - اتصال مسبق -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <meta name="description" content="Rafting sur l'Oued Ahansal et Oued Melloul. Parcours 12km (400 DH), 30km (800 DH) et 50km (3000 DH) avec nuit en bivouac. Guides professionnels et équipement inclus.">
+    <meta name="description" content="Rafting à Imsfrane actuellement hors saison. Reprise des activités en Février 2027. Contactez-nous pour plus d'informations.">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Rafting à Imsfrane - Descente de l'Oued Ahansal">
-    <meta property="og:description" content="Rafting sur l'Oued Ahansal. Parcours 12km (400 DH), 30km (800 DH) et 50km (3000 DH) avec guides professionnels.">
+    <meta property="og:title" content="Rafting à Imsfrane - Reprise Février 2027">
+    <meta property="og:description" content="Rafting temporairement indisponible. Reprise des activités en Février 2027.">
     <meta property="og:image" content="https://imsfrane.com/images/raft2.jpeg">
     <meta property="og:url" content="https://imsfrane.com/pages/rafting.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Imsfrane Cathédrale">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
     
-    <!-- CSS Files -->
     <link rel="stylesheet" href="../css/style.css">
     
     <style>
         .page-hero {
             width: 100%;
             height: 500px;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('../images/raft3.jpeg') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../images/raft3.jpeg') center/cover no-repeat;
             position: relative;
         }
         
@@ -57,6 +51,40 @@
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
+        }
+        
+        /* Unavailable Alert */
+        .alert-unavailable {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            border-radius: 15px;
+            max-width: 900px;
+            text-align: center;
+        }
+        
+        .alert-unavailable i {
+            color: #ff9800;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .alert-unavailable strong {
+            color: #ff9800;
+            font-size: 1.2rem;
+        }
+        
+        .return-date {
+            display: inline-block;
+            background: #1e3c2c;
+            color: #e6b12e;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 1rem;
+            font-size: 1rem;
         }
         
         .intro-text {
@@ -157,26 +185,50 @@
             font-size: 1.1rem;
         }
         
-        .meta-item small {
-            font-weight: 400;
-            color: #777;
-            margin-left: 0.2rem;
-        }
-        
         .price-badge {
-            background: linear-gradient(135deg, #e6b12e, #f4c542);
-            color: #1e3c2c;
+            background: #e0e0e0;
+            color: #999;
             padding: 0.5rem 1.5rem;
             border-radius: 50px;
             font-weight: 800;
             font-size: 1.4rem;
             display: inline-block;
             margin: 1rem 0;
+            text-decoration: line-through;
         }
         
-        .price-badge small {
-            font-size: 0.9rem;
-            font-weight: 400;
+        .btn-unavailable {
+            display: inline-block;
+            background: #cccccc;
+            color: #666;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            cursor: not-allowed;
+            border: none;
+        }
+        
+        .btn-unavailable i {
+            margin-right: 0.5rem;
+        }
+        
+        .prebook-section {
+            background: #e8f5e8;
+            border-left: 5px solid #4CAF50;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            border-radius: 15px;
+            max-width: 900px;
+            text-align: center;
+        }
+        
+        .prebook-section i {
+            color: #4CAF50;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
         }
         
         .journey-section {
@@ -266,94 +318,6 @@
             font-size: 0.9rem;
         }
         
-        .food-note i {
-            color: #e6b12e;
-            margin-right: 0.5rem;
-        }
-        
-        .expedition-title {
-            font-size: 2.5rem;
-            color: #1e3c2c;
-            margin: 5rem 0 3rem;
-            font-weight: 800;
-            text-align: center;
-        }
-        
-        .expedition-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .expedition-item {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            border: 1px solid #f0f0f0;
-            transition: all 0.3s;
-        }
-        
-        .expedition-item:hover {
-            border-color: #e6b12e;
-            transform: translateY(-5px);
-        }
-        
-        .expedition-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(230,177,46,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: #e6b12e;
-            margin-bottom: 1.5rem;
-        }
-        
-        .expedition-item h3 {
-            font-size: 1.3rem;
-            color: #1e3c2c;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        
-        .expedition-item ul {
-            list-style: none;
-        }
-        
-        .expedition-item li {
-            margin: 0.6rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            color: #555;
-            font-size: 0.95rem;
-        }
-        
-        .expedition-item li i {
-            color: #e6b12e;
-            font-size: 0.9rem;
-        }
-        
-        .note-box {
-            background: #f9f7f3;
-            border: 2px dashed #e6b12e;
-            border-radius: 50px;
-            padding: 1.2rem 2rem;
-            text-align: center;
-            margin: 2rem 0 4rem;
-            font-weight: 500;
-            color: #1e3c2c;
-        }
-        
-        .note-box i {
-            color: #e6b12e;
-            margin-right: 0.5rem;
-        }
-        
         .contact-section {
             background: white;
             border-radius: 30px;
@@ -414,76 +378,50 @@
             box-shadow: 0 10px 20px rgba(230,177,46,0.3);
         }
         
-        @media (max-width: 992px) {
-            .expedition-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .btn-wa {
+            background: #25D366;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-wa:hover {
+            background: #128C7E;
         }
         
         @media (max-width: 768px) {
-            .page-hero {
-                height: 350px;
-            }
-            .route-image {
-                height: 300px;
-            }
-            .expedition-grid {
-                grid-template-columns: 1fr;
-            }
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .route-content h2 {
-                font-size: 2rem;
-            }
-            .journey-step {
-                flex-direction: column;
-            }
-            .step-time {
-                align-self: flex-start;
-            }
-            .price-badge {
-                font-size: 1.2rem;
-            }
+            .page-hero { height: 350px; }
+            .route-image { height: 300px; }
+            .route-content h2 { font-size: 2rem; }
+            .journey-step { flex-direction: column; }
+            .step-time { align-self: flex-start; }
+            .price-badge { font-size: 1.2rem; }
+            .contact-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body data-lang="en">
-    <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
 
-    <!-- Header -->
     <header>
         <div class="container header-content">
-            <a href="../index.html" class="logo" aria-label="Accueil">
-                <div class="logo-img">
-                    <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
-                </div>
-                <div class="logo-text">
-                    <h1>Imsfrane Cathédrale</h1>
-                    <span class="lang-en">Nature Adventures</span>
-                    <span class="lang-fr">Aventures Nature</span>
-                </div>
+            <a href="../index.html" class="logo">
+                <div class="logo-img"><img src="../images/logo.jpeg" alt="Logo" width="60" height="60"></div>
+                <div class="logo-text"><h1>Imsfrane Cathédrale</h1><span class="lang-en">Nature Adventures</span><span class="lang-fr">Aventures Nature</span></div>
             </a>
-            
             <div class="right-controls">
-                <div class="lang-buttons">
-                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
-                </div>
-                <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <div class="lang-buttons"><button class="lang-btn active" onclick="setLanguage('en')">EN</button><button class="lang-btn" onclick="setLanguage('fr')">FR</button></div>
+                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
             </div>
         </div>
     </header>
 
-    <!-- Menu -->
-    <nav id="mainNav" aria-label="Menu principal">
+    <nav id="mainNav">
         <ul>
             <li><a href="../index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
             <li class="has-submenu">
-                <a href="#" onclick="toggleSubmenu(event)" aria-expanded="false">
+                <a href="#" onclick="toggleSubmenu(event)">
                     <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
                     <i class="fas fa-chevron-right arrow"></i>
                 </a>
@@ -498,35 +436,56 @@
             </li>
             <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
             <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
-            <li><a href="blog.html"><i class="fas fa-blog"></i> <span class="lang-en">Blog</span><span class="lang-fr">Blog</span></a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
             <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
             <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
     
 <main>
-    <!-- Hero Image -->
     <div class="page-hero"></div>
 
-    <!-- Page Title -->
     <div class="container">
         <div class="page-title">
             <h1 class="lang-en">Rafting on Ahansal River</h1>
             <h1 class="lang-fr">Rafting sur l'Oued Ahansal</h1>
-            <div class="location">
-                <i class="fas fa-map-pin"></i> Imsfrane, Morocco
+            <div class="location"><i class="fas fa-map-pin"></i> Imsfrane, Morocco</div>
+        </div>
+    </div>
+
+    <!-- ⚠️ ALERTE UNAVAILABLE - BILINGUE -->
+    <div class="container">
+        <div class="alert-unavailable">
+            <i class="fas fa-calendar-times"></i>
+            <strong class="lang-en">🚣‍♂️ Rafting temporarily unavailable</strong>
+            <strong class="lang-fr">🚣‍♂️ Rafting temporairement indisponible</strong>
+            <p class="lang-en">The rafting season has ended. Activities will resume in <strong>February 2027</strong>.</p>
+            <p class="lang-fr">La saison de rafting est terminée. Les activités reprendront en <strong>Février 2027</strong>.</p>
+            <div class="return-date">
+                <i class="fas fa-calendar-alt"></i> <span class="lang-en">Return: February 2027</span><span class="lang-fr">Reprise : Février 2027</span>
             </div>
         </div>
     </div>
 
-    <!-- Introduction -->
+    <!-- PRE-BOOK SECTION - BILINGUE -->
+    <div class="container">
+        <div class="prebook-section">
+            <i class="fas fa-calendar-check"></i>
+            <strong class="lang-en">📅 Reserve your spot for next season!</strong>
+            <strong class="lang-fr">📅 Réservez votre place pour la prochaine saison !</strong>
+            <p class="lang-en">You can already contact us to be notified when rafting resumes in February 2027. No payment required now.</p>
+            <p class="lang-fr">Vous pouvez dès maintenant nous contacter pour être notifié à la reprise du rafting en Février 2027. Aucun paiement requis maintenant.</p>
+            <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20%C3%AAtre%20inform%C3%A9%20de%20la%20reprise%20du%20rafting%20en%20F%C3%A9vrier%202027" target="_blank" class="btn btn-wa" style="background: #25D366; color: white; margin-top: 0.5rem;">
+                <i class="fab fa-whatsapp"></i> <span class="lang-en">Notify me</span><span class="lang-fr">Me notifier</span>
+            </a>
+        </div>
+    </div>
+
     <div class="container">
         <div class="intro-text">
-            <div class="intro-icon">
-                <i class="fas fa-water"></i>
-            </div>
+            <div class="intro-icon"><i class="fas fa-water"></i></div>
             <p class="lang-en">Experience the thrill of white water rafting on the Ahansal River, in the heart of the High Atlas Mountains. Our experienced guides will take you through spectacular gorges and rapids, offering an unforgettable adventure.</p>
-            <p class="lang-fr">Vivez le frisson du rafting en eaux vives sur l'Oued Ahansal, au cœur des montagnes du Haut Atlas. Nos guides expérimentés vous emmèneront à travers des gorges et rapides spectaculaires, pour une aventure inoubliable.</p>
+            <p class="lang-fr">Vivez le frisson du rafting en eaux vives sur l'Oued Ahansal, au cœur des montagnes du Haut Atlas. Nos guides expérimentés vous emmèneront à travers des gorges et rapides spectaculaires.</p>
         </div>
     </div>
 
@@ -534,149 +493,37 @@
     <section class="container">
         <div class="route-block">
             <div class="route-image">
-                <img src="../images/raft2.jpeg" alt="Rafting sur l'Oued Ahansal - parcours 12km" width="800" height="400" loading="lazy">
+                <img src="../images/raft2.jpeg" alt="Rafting 12km" width="800" height="400" loading="lazy">
             </div>
             <div class="route-content">
-                <div class="route-location">
-                    <i class="fas fa-map-pin"></i> 
-                    <span class="lang-en">Ahansal River</span>
-                    <span class="lang-fr">Oued Ahansal</span>
-                </div>
-                <h2>
-                    <span class="lang-en">Discovery Route - 12km</span>
-                    <span class="lang-fr">Parcours Découverte - 12km</span>
-                </h2>
-                <p class="lang-en">Meeting point at your accommodation. Equipment distribution, then transfer by 4x4 to the confluence of Ahansal and Melloul rivers. Safety briefing, navigation through stunning landscapes, swimming, photos. Arrival at Tilouguite Bridge. Return by 4x4. Shower and rest.</p>
-                <p class="lang-fr">Point de rendez-vous à votre hébergement. Distribution du matériel, puis transfert en 4x4 jusqu'au confluent de l'Ahansal et Melloul. Briefing sécurité, navigation dans des paysages époustouflants, baignade, photos. Arrivée au Pont de Tilouguite. Retour en 4x4. Douche et repos.</p>
+                <div class="route-location"><i class="fas fa-map-pin"></i> Oued Ahansal</div>
+                <h2>Parcours Découverte - 12km</h2>
+                <p>Point de rendez-vous à votre hébergement. Distribution du matériel, puis transfert en 4x4 jusqu'au confluent. Briefing sécurité, navigation, baignade, photos. Arrivée au Pont de Tilouguite. Retour en 4x4.</p>
                 
                 <div class="route-meta">
-                    <div class="meta-item"><i class="fas fa-clock"></i> <span>2-3h</span></div>
-                    <div class="meta-item"><i class="fas fa-route"></i> <span>12km</span></div>
-                    <div class="meta-item"><i class="fas fa-tag"></i> <span style="color:#e6b12e; font-size:1.3rem; font-weight:900;">400 DH</span> <small>/pers</small></div>
+                    <div class="meta-item"><i class="fas fa-clock"></i> 2-3h</div>
+                    <div class="meta-item"><i class="fas fa-route"></i> 12km</div>
+                    <div class="meta-item"><i class="fas fa-tag"></i> <span style="color:#999;">400 DH</span></div>
                 </div>
 
                 <div class="price-badge">
                     <i class="fas fa-tag"></i> 400 DH <small>par personne</small>
                 </div>
 
-                <!-- Journey Timeline -->
                 <div class="journey-section">
-                    <div class="journey-title">
-                        <i class="fas fa-map-signal"></i>
-                        <span class="lang-en">Your Journey Step by Step</span>
-                        <span class="lang-fr">Votre Parcours Étape par Étape</span>
-                    </div>
+                    <div class="journey-title"><i class="fas fa-map-signal"></i> Déroulé de la descente</div>
                     <div class="journey-steps">
-                        <div class="journey-step">
-                            <span class="step-time">09:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-map-pin"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Meeting at Your Accommodation</h4>
-                                    <h4 class="lang-fr">Rendez-vous à Votre Hébergement</h4>
-                                    <p class="lang-en">We pick you up from your auberge, camping, or anywhere you're staying</p>
-                                    <p class="lang-fr">Nous venons vous chercher à votre auberge, camping, ou tout lieu où vous séjournez</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">09:30</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-tshirt"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Equipment Distribution</h4>
-                                    <h4 class="lang-fr">Distribution du Matériel</h4>
-                                    <p class="lang-en">Wetsuits, life jackets, helmets, paddles provided</p>
-                                    <p class="lang-fr">Combinaisons, gilets, casques, pagaies fournis</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">10:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-car"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">4x4 Transfer to Starting Point</h4>
-                                    <h4 class="lang-fr">Transfert en 4x4 au Point de Départ</h4>
-                                    <p class="lang-en">Drive to the confluence of Ahansal and Melloul rivers</p>
-                                    <p class="lang-fr">Trajet jusqu'au confluent des rivières Ahansal et Melloul</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">10:30</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-shield-alt"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Safety Briefing</h4>
-                                    <h4 class="lang-fr">Briefing Sécurité</h4>
-                                    <p class="lang-en">Paddling techniques, safety rules, river briefing</p>
-                                    <p class="lang-fr">Techniques de pagaie, règles de sécurité, explications du parcours</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">11:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-water"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Start the Descent</h4>
-                                    <h4 class="lang-fr">Début de la Descente</h4>
-                                    <p class="lang-en">Launch the raft and begin the adventure</p>
-                                    <p class="lang-fr">Mise à l'eau et début de l'aventure</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">12:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-camera"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Swimming & Photos</h4>
-                                    <h4 class="lang-fr">Baignade & Photos</h4>
-                                    <p class="lang-en">Stop for swimming and photos with the Cathedral rock</p>
-                                    <p class="lang-fr">Arrêt pour se baigner et prendre des photos avec le rocher Cathédrale</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">13:30</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-flag-checkered"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Arrival at Tilouguite Bridge</h4>
-                                    <h4 class="lang-fr">Arrivée au Pont de Tilouguite</h4>
-                                    <p class="lang-en">End of the rafting, collect the rafts</p>
-                                    <p class="lang-fr">Fin du rafting, sortie des rafts</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">14:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-car"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Return to Accommodation</h4>
-                                    <h4 class="lang-fr">Retour à l'Hébergement</h4>
-                                    <p class="lang-en">4x4 transfer back, hot shower, rest</p>
-                                    <p class="lang-fr">Transfert en 4x4 retour, douche chaude, repos</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="journey-step"><span class="step-time">09:00</span><div class="step-content"><div class="step-icon"><i class="fas fa-map-pin"></i></div><div class="step-text"><h4>Rendez-vous à l'hébergement</h4><p>Nous venons vous chercher</p></div></div></div>
+                        <div class="journey-step"><span class="step-time">09:30</span><div class="step-content"><div class="step-icon"><i class="fas fa-tshirt"></i></div><div class="step-text"><h4>Distribution du matériel</h4><p>Combinaisons, gilets, casques</p></div></div></div>
+                        <div class="journey-step"><span class="step-time">10:30</span><div class="step-content"><div class="step-icon"><i class="fas fa-shield-alt"></i></div><div class="step-text"><h4>Briefing sécurité</h4><p>Instructions de navigation</p></div></div></div>
+                        <div class="journey-step"><span class="step-time">11:00</span><div class="step-content"><div class="step-icon"><i class="fas fa-water"></i></div><div class="step-text"><h4>Début de la descente</h4><p>Mise à l'eau</p></div></div></div>
+                        <div class="journey-step"><span class="step-time">13:30</span><div class="step-content"><div class="step-icon"><i class="fas fa-flag-checkered"></i></div><div class="step-text"><h4>Arrivée</h4><p>Pont de Tilouguite</p></div></div></div>
                     </div>
                 </div>
 
-                <div class="food-note">
-                    <i class="fas fa-utensils"></i>
-                    <span class="lang-en"><strong>Food:</strong> Please bring your own picnic lunch. We recommend sandwiches, fruit, and plenty of water.</span>
-                    <span class="lang-fr"><strong>Repas :</strong> Merci d'apporter votre propre pique-nique. Nous recommandons des sandwiches, des fruits et beaucoup d'eau.</span>
+                <div class="btn-unavailable">
+                    <i class="fas fa-ban"></i> <span class="lang-en">Unavailable until Feb 2027</span><span class="lang-fr">Indisponible jusqu'à Fév 2027</span>
                 </div>
-
-                <a href="booking.html" class="btn">
-                    <i class="fas fa-calendar-check"></i> 
-                    <span class="lang-en">Book Now - 400 DH/person</span>
-                    <span class="lang-fr">Réserver - 400 DH/personne</span>
-                </a>
             </div>
         </div>
     </section>
@@ -685,160 +532,26 @@
     <section class="container">
         <div class="route-block">
             <div class="route-image">
-                <img src="../images/15.jpeg" alt="Rafting aventure 30km sur l'Oued Ahansal" width="800" height="400" loading="lazy">
+                <img src="../images/15.jpeg" alt="Rafting 30km" loading="lazy">
             </div>
             <div class="route-content">
-                <div class="route-location">
-                    <i class="fas fa-map-pin"></i> 
-                    <span class="lang-en">Ahansal River</span>
-                    <span class="lang-fr">Oued Ahansal</span>
-                </div>
-                <h2>
-                    <span class="lang-en">Adventure Route - 30km</span>
-                    <span class="lang-fr">Parcours Aventure - 30km</span>
-                </h2>
-                <p class="lang-en">Meeting point at your accommodation. Equipment distribution, then transfer by 4x4 to Pont d'Isgli (starting point). Rafting adventure through the natural gorges surrounded by breathtaking mountain landscapes. Arrival at Pont de Tilouguite. Return by 4x4 vehicle. Shower and rest.</p>
-                <p class="lang-fr">Point de rendez-vous à votre hébergement. Distribution du matériel, puis transfert en 4x4 jusqu'au Pont d'Isgli (point de départ). Aventure rafting à travers les gorges naturelles au cœur de paysages montagneux spectaculaires. Arrivée au Pont de Tilouguite. Retour en véhicule 4x4. Douche et repos.</p>
+                <div class="route-location"><i class="fas fa-map-pin"></i> Oued Ahansal</div>
+                <h2>Parcours Aventure - 30km</h2>
+                <p>Transfert en 4x4 jusqu'au Pont d'Isgli. Rafting à travers les gorges naturelles. Arrivée au Pont de Tilouguite.</p>
                 
                 <div class="route-meta">
-                    <div class="meta-item"><i class="fas fa-clock"></i> <span>4-5h</span></div>
-                    <div class="meta-item"><i class="fas fa-route"></i> <span>30km</span></div>
-                    <div class="meta-item"><i class="fas fa-tag"></i> <span style="color:#e6b12e; font-size:1.3rem; font-weight:900;">800 DH</span> <small>/pers</small></div>
+                    <div class="meta-item"><i class="fas fa-clock"></i> 4-5h</div>
+                    <div class="meta-item"><i class="fas fa-route"></i> 30km</div>
+                    <div class="meta-item"><i class="fas fa-tag"></i> <span style="color:#999;">800 DH</span></div>
                 </div>
 
                 <div class="price-badge">
                     <i class="fas fa-tag"></i> 800 DH <small>par personne</small>
                 </div>
 
-                <div class="journey-section">
-                    <div class="journey-title">
-                        <i class="fas fa-map-signal"></i>
-                        <span class="lang-en">Your Journey Step by Step</span>
-                        <span class="lang-fr">Votre Parcours Étape par Étape</span>
-                    </div>
-                    <div class="journey-steps">
-                        <div class="journey-step">
-                            <span class="step-time">08:30</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-map-pin"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Meeting at Your Accommodation</h4>
-                                    <h4 class="lang-fr">Rendez-vous à Votre Hébergement</h4>
-                                    <p class="lang-en">We pick you up from where you're staying</p>
-                                    <p class="lang-fr">Nous venons vous chercher là où vous séjournez</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">09:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-tshirt"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Equipment Distribution</h4>
-                                    <h4 class="lang-fr">Distribution du Matériel</h4>
-                                    <p class="lang-en">Get equipped with all necessary gear</p>
-                                    <p class="lang-fr">Équipement avec tout le matériel nécessaire</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">09:30</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-car"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Transfer to Pont d'Isgli</h4>
-                                    <h4 class="lang-fr">Transfert vers Pont d'Isgli</h4>
-                                    <p class="lang-en">30-40 minute 4x4 transfer</p>
-                                    <p class="lang-fr">30-40 minutes de transfert en 4x4</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">10:15</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-shield-alt"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Safety Briefing</h4>
-                                    <h4 class="lang-fr">Briefing Sécurité</h4>
-                                    <p class="lang-en">Detailed instructions for the longer adventure</p>
-                                    <p class="lang-fr">Instructions détaillées pour l'aventure plus longue</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">10:45</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-water"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Start the Descent</h4>
-                                    <h4 class="lang-fr">Début de la Descente</h4>
-                                    <p class="lang-en">Launch into the Ahansal River</p>
-                                    <p class="lang-fr">Mise à l'eau dans l'Oued Ahansal</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">11:45</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-mountain"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Entering the Gorges</h4>
-                                    <h4 class="lang-fr">Entrée dans les Gorges</h4>
-                                    <p class="lang-en">Spectacular narrow canyons</p>
-                                    <p class="lang-fr">Gorges étroites spectaculaires</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">13:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Exciting Rapids</h4>
-                                    <h4 class="lang-fr">Rapides Palpitants</h4>
-                                    <p class="lang-en">Class II-III rapids</p>
-                                    <p class="lang-fr">Rapides de classe II-III</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">15:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-flag-checkered"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Arrival at Tilouguite Bridge</h4>
-                                    <h4 class="lang-fr">Arrivée au Pont de Tilouguite</h4>
-                                    <p class="lang-en">End of the 30km adventure</p>
-                                    <p class="lang-fr">Fin de l'aventure 30km</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">15:30</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-car"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Return to Accommodation</h4>
-                                    <h4 class="lang-fr">Retour à l'Hébergement</h4>
-                                    <p class="lang-en">4x4 transfer back, hot shower, rest</p>
-                                    <p class="lang-fr">Transfert en 4x4 retour, douche chaude, repos</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="btn-unavailable">
+                    <i class="fas fa-ban"></i> <span class="lang-en">Unavailable until Feb 2027</span><span class="lang-fr">Indisponible jusqu'à Fév 2027</span>
                 </div>
-
-                <div class="food-note">
-                    <i class="fas fa-utensils"></i>
-                    <span class="lang-en"><strong>Food:</strong> Please bring your own picnic lunch (sandwiches, fruit, nuts, 2L water per person).</span>
-                    <span class="lang-fr"><strong>Repas :</strong> Merci d'apporter votre propre pique-nique (sandwiches, fruits, fruits secs, 2L d'eau par personne).</span>
-                </div>
-
-                <a href="booking.html" class="btn">
-                    <i class="fas fa-calendar-check"></i> 
-                    <span class="lang-en">Book Now - 800 DH/person</span>
-                    <span class="lang-fr">Réserver - 800 DH/personne</span>
-                </a>
             </div>
         </div>
     </section>
@@ -847,306 +560,61 @@
     <section class="container">
         <div class="route-block">
             <div class="route-image">
-                <img src="../images/raft1.jpeg" alt="Expédition rafting 50km sur 2 jours avec bivouac" width="800" height="400" loading="lazy">
+                <img src="../images/raft1.jpeg" alt="Expédition 50km" loading="lazy">
             </div>
             <div class="route-content">
-                <div class="route-location">
-                    <i class="fas fa-map-pin"></i>
-                    <span class="lang-en">Ahansal River</span>
-                    <span class="lang-fr">Oued Ahansal</span>
-                </div>
-                <h2>
-                    <span class="lang-en">Expedition - 50km (2 days)</span>
-                    <span class="lang-fr">Expédition - 50km (2 jours)</span>
-                </h2>
-                <p class="lang-en">Meeting point at your accommodation. Equipment distribution, then start the adventure. Overnight in a bivouac by the river (traditional tents provided). All meals included: 2 lunches, 1 dinner, 1 breakfast (traditional Moroccan meals). Visit of Aït Hssain village: ancient Amazigh architecture and traditional olive press. Continue to Bin El Ouidane Dam. Return by 4x4.</p>
-                <p class="lang-fr">Point de rendez-vous à votre hébergement. Distribution du matériel, puis début de l'aventure. Nuit en bivouac au bord de l'oued (tentes traditionnelles fournies). Tous les repas inclus : 2 déjeuners, 1 dîner, 1 petit-déjeuner (repas marocains traditionnels). Visite du village d'Aït Hssain : architecture amazighe ancienne et pressoir à olives traditionnel. Continuation jusqu'au Barrage Bin El Ouidane. Retour en 4x4.</p>
+                <div class="route-location"><i class="fas fa-map-pin"></i> Oued Ahansal</div>
+                <h2>Expédition - 50km (2 jours)</h2>
+                <p>Nuit en bivouac au bord de l'oued. Repas inclus. Visite du village d'Aït Hssain et du Barrage Bin El Ouidane.</p>
                 
                 <div class="route-meta">
-                    <div class="meta-item"><i class="fas fa-clock"></i> <span>2 <span class="lang-en">days</span><span class="lang-fr">jours</span></span></div>
-                    <div class="meta-item"><i class="fas fa-route"></i> <span>50km</span></div>
-                    <div class="meta-item"><i class="fas fa-tag"></i> <span style="color:#e6b12e; font-size:1.3rem; font-weight:900;">3000 DH</span> <small>/pers</small></div>
+                    <div class="meta-item"><i class="fas fa-clock"></i> 2 jours</div>
+                    <div class="meta-item"><i class="fas fa-route"></i> 50km</div>
+                    <div class="meta-item"><i class="fas fa-tag"></i> <span style="color:#999;">3000 DH</span></div>
                 </div>
 
                 <div class="price-badge">
                     <i class="fas fa-tag"></i> 3000 DH <small>par personne (tout inclus)</small>
                 </div>
 
-                <div class="journey-section">
-                    <div class="journey-title">
-                        <i class="fas fa-sun"></i>
-                        <span class="lang-en">Day 1 - River & Bivouac</span>
-                        <span class="lang-fr">Jour 1 - Rivière & Bivouac</span>
-                    </div>
-                    <div class="journey-steps">
-                        <div class="journey-step">
-                            <span class="step-time">09:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-map-pin"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Meeting at Your Accommodation</h4>
-                                    <h4 class="lang-fr">Rendez-vous à Votre Hébergement</h4>
-                                    <p class="lang-en">We pick you up from where you're staying</p>
-                                    <p class="lang-fr">Nous venons vous chercher là où vous séjournez</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">09:30</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-tshirt"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Equipment Distribution</h4>
-                                    <h4 class="lang-fr">Distribution du Matériel</h4>
-                                    <p class="lang-en">Get equipped for the 2-day expedition</p>
-                                    <p class="lang-fr">Équipement pour l'expédition de 2 jours</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">10:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-shield-alt"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Expedition Briefing</h4>
-                                    <h4 class="lang-fr">Briefing Expédition</h4>
-                                    <p class="lang-en">Detailed explanation of the 2-day journey</p>
-                                    <p class="lang-fr">Explication détaillée du voyage de 2 jours</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">10:30</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-water"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Start the Descent</h4>
-                                    <h4 class="lang-fr">Début de la Descente</h4>
-                                    <p class="lang-en">Begin the 50km journey</p>
-                                    <p class="lang-fr">Début du voyage de 50km</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">13:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-utensils"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Lunch by the River</h4>
-                                    <h4 class="lang-fr">Déjeuner au Bord de l'Eau</h4>
-                                    <p class="lang-en">Traditional Moroccan meal (included)</p>
-                                    <p class="lang-fr">Repas marocain traditionnel (inclus)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">17:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-campground"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Arrival at Bivouac</h4>
-                                    <h4 class="lang-fr">Arrivée au Bivouac</h4>
-                                    <p class="lang-en">Set up camp by the river, traditional tents</p>
-                                    <p class="lang-fr">Installation du camp, tentes traditionnelles</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">19:30</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-fire"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Dinner Around the Fire</h4>
-                                    <h4 class="lang-fr">Dîner Autour du Feu</h4>
-                                    <p class="lang-en">Traditional dinner, stories, stargazing (included)</p>
-                                    <p class="lang-fr">Dîner traditionnel, histoires, étoiles (inclus)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="btn-unavailable">
+                    <i class="fas fa-ban"></i> <span class="lang-en">Unavailable until Feb 2027</span><span class="lang-fr">Indisponible jusqu'à Fév 2027</span>
                 </div>
-
-                <div class="journey-section">
-                    <div class="journey-title">
-                        <i class="fas fa-moon"></i>
-                        <span class="lang-en">Day 2 - Village & Dam</span>
-                        <span class="lang-fr">Jour 2 - Village & Barrage</span>
-                    </div>
-                    <div class="journey-steps">
-                        <div class="journey-step">
-                            <span class="step-time">08:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-sun"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Sunrise & Breakfast</h4>
-                                    <h4 class="lang-fr">Lever du Soleil & Petit-déjeuner</h4>
-                                    <p class="lang-en">Wake up to stunning views, breakfast (included)</p>
-                                    <p class="lang-fr">Réveil avec vue, petit-déjeuner (inclus)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">09:30</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-landmark"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Aït Hssain Village Visit</h4>
-                                    <h4 class="lang-fr">Visite du Village d'Aït Hssain</h4>
-                                    <p class="lang-en">Ancient Amazigh architecture, traditional olive press</p>
-                                    <p class="lang-fr">Architecture amazighe, pressoir à olives traditionnel</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">13:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-utensils"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Lunch on the River</h4>
-                                    <h4 class="lang-fr">Déjeuner sur la Rivière</h4>
-                                    <p class="lang-en">Final traditional meal (included)</p>
-                                    <p class="lang-fr">Dernier repas traditionnel (inclus)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">15:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-dam"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Bin El Ouidane Dam</h4>
-                                    <h4 class="lang-fr">Barrage Bin El Ouidane</h4>
-                                    <p class="lang-en">Arrival at the spectacular dam, end of rafting</p>
-                                    <p class="lang-fr">Arrivée au barrage spectaculaire, fin du rafting</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">16:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-car"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Return Transfer</h4>
-                                    <h4 class="lang-fr">Transfert Retour</h4>
-                                    <p class="lang-en">4x4 ride back to your accommodation</p>
-                                    <p class="lang-fr">Retour en 4x4 à votre hébergement</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="food-note" style="background: #e8f5e8; border-left-color: #4CAF50;">
-                    <i class="fas fa-utensils" style="color: #4CAF50;"></i>
-                    <span class="lang-en"><strong>Food:</strong> All meals included! 2 lunches, 1 dinner, 1 breakfast. Traditional Moroccan cuisine.</span>
-                    <span class="lang-fr"><strong>Repas :</strong> Tous les repas inclus ! 2 déjeuners, 1 dîner, 1 petit-déjeuner. Cuisine marocaine traditionnelle.</span>
-                </div>
-
-                <a href="booking.html" class="btn">
-                    <i class="fas fa-calendar-check"></i>
-                    <span class="lang-en">Book Now - 3000 DH/person (all inclusive)</span>
-                    <span class="lang-fr">Réserver - 3000 DH/personne (tout inclus)</span>
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- EXPEDITION DETAILS -->
-    <div class="container">
-        <h2 class="expedition-title">
-            <span class="lang-en">The 50km Expedition Experience</span>
-            <span class="lang-fr">L'Expérience 50km</span>
-        </h2>
-
-        <div class="expedition-grid">
-            <div class="expedition-item">
-                <div class="expedition-icon"><i class="fas fa-campground"></i></div>
-                <h3><span class="lang-en">Bivouac</span><span class="lang-fr">Bivouac</span></h3>
-                <ul>
-                    <li><i class="fas fa-check"></i> Traditional tents provided</li>
-                    <li><i class="fas fa-check"></i> By the river</li>
-                    <li><i class="fas fa-check"></i> Campfire area</li>
-                </ul>
-            </div>
-
-            <div class="expedition-item">
-                <div class="expedition-icon"><i class="fas fa-landmark"></i></div>
-                <h3>Aït Hssain Village</h3>
-                <ul>
-                    <li><i class="fas fa-check"></i> Ancient Amazigh architecture</li>
-                    <li><i class="fas fa-check"></i> Traditional olive press</li>
-                    <li><i class="fas fa-check"></i> Cultural discovery</li>
-                </ul>
-            </div>
-
-            <div class="expedition-item">
-                <div class="expedition-icon"><i class="fas fa-water"></i></div>
-                <h3>Bin El Ouidane</h3>
-                <ul>
-                    <li><i class="fas fa-check"></i> Spectacular dam</li>
-                    <li><i class="fas fa-check"></i> Panoramic view</li>
-                    <li><i class="fas fa-check"></i> End of expedition</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="note-box">
-            <i class="fas fa-star"></i>
-            <span class="lang-en">✨ Meals included for the 50km expedition (2 lunches, 1 dinner, 1 breakfast).</span>
-            <span class="lang-fr">✨ Repas inclus pour l'expédition 50km (2 déjeuners, 1 dîner, 1 petit-déjeuner).</span>
-        </div>
-    </div>
-
     <!-- CONTACT SECTION -->
     <div class="container">
         <div class="contact-section">
-            <h2 class="expedition-title" style="margin-top: 0;">
-                <span class="lang-en">Book Your Adventure</span>
-                <span class="lang-fr">Réservez Votre Aventure</span>
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:1rem;">
+                <span class="lang-en">Information & Pre-booking</span>
+                <span class="lang-fr">Information & Pré-réservation</span>
             </h2>
-
+            <p style="text-align:center; margin-bottom:2rem; color:#555;">
+                <span class="lang-en">Contact us to be notified when rafting resumes in February 2027.</span>
+                <span class="lang-fr">Contactez-nous pour être notifié à la reprise du rafting en Février 2027.</span>
+            </p>
             <div class="contact-grid">
-                <div class="contact-item">
-                    <i class="fas fa-globe"></i>
-                    <h4>Website</h4>
-                    <a href="https://imsfrane.com" target="_blank">imsfrane.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <h4>WhatsApp</h4>
-                    <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h4>Location</h4>
-                    <p>Imsfrane, Azilal, Morocco</p>
-                </div>
+                <div class="contact-item"><i class="fas fa-globe"></i><h4>Website</h4><a href="https://imsfrane.com">imsfrane.com</a></div>
+                <div class="contact-item"><i class="fab fa-whatsapp"></i><h4>WhatsApp</h4><a href="https://wa.me/212667772551">+212 667-772551</a></div>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><h4>Location</h4><p>Imsfrane, Morocco</p></div>
             </div>
-
-            <div style="text-align: center;">
-                <a href="booking.html" class="btn">
-                    <i class="fas fa-calendar-check"></i> 
-                    <span class="lang-en">Book Now</span>
-                    <span class="lang-fr">Réserver</span>
+            <div style="text-align:center;">
+                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20%C3%AAtre%20inform%C3%A9%20de%20la%20reprise%20du%20rafting%20en%20F%C3%A9vrier%202027" class="btn btn-wa" target="_blank">
+                    <i class="fab fa-whatsapp"></i> <span class="lang-en">Notify me about rafting 2027</span><span class="lang-fr">Me notifier pour le rafting 2027</span>
                 </a>
             </div>
         </div>
     </div>
 </main>
 
-    <!-- Footer -->
     <footer class="footer-pro">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
-                    <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60" loading="lazy">
-                        <h3>Imsfrane Cathédrale</h3>
-                    </div>
-                    <p class="footer-description">
-                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
-                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
-                    </p>
+                    <div class="footer-logo"><img src="../images/logo.jpeg" alt="Logo" width="60" height="60" loading="lazy"><h3>Imsfrane Cathédrale</h3></div>
+                    <p class="footer-description">Discover the magic of the Atlas Mountains at 1,868m altitude.</p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
@@ -1154,94 +622,45 @@
                         <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-
                 <div class="footer-col footer-links">
-                    <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
-                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
-                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
-                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
-                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
-                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="rafting.html">Rafting</a></li>
+                        <li><a href="camping.html">Camping</a></li>
+                        <li><a href="randonnee.html">Hiking</a></li>
+                        <li><a href="vtt.html">VTT</a></li>
+                        <li><a href="quad.html">Quad</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-col footer-info">
-                    <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
-                    <ul>
-                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
-                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
-                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
-                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
-                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
-                    </ul>
-                </div>
-
                 <div class="footer-col footer-contact">
-                    <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
+                    <h4>Contact</h4>
                     <ul>
                         <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
                         <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
                     </ul>
                 </div>
             </div>
-
-            <div class="footer-middle">
-                <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
-                <div class="stat-item"><div class="stat-number">50+ km</div><div class="stat-label">Sentiers</div></div>
-                <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
-                <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
-            </div>
-
-            <div class="footer-bottom">
-                <div class="copyright">
-                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
-                </div>
-            </div>
+            <div class="footer-bottom"><div class="copyright"><p>© 2026 <strong>Imsfrane Cathédrale</strong>. All Rights Reserved.</p></div></div>
         </div>
     </footer>
 
-    <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-            <span class="tooltip">WhatsApp</span>
-        </a>
-        <a href="tel:0667772551" class="floating-btn phone">
-            <i class="fas fa-phone-alt"></i>
-            <span class="tooltip">Appeler</span>
-        </a>
-        <a href="booking.html" class="floating-btn booking">
-            <i class="fas fa-calendar-check"></i>
-            <span class="tooltip">Réserver</span>
-        </a>
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
+        <a href="tel:0667772551" class="floating-btn phone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
+        <a href="booking.html" class="floating-btn booking"><i class="fas fa-calendar-check"></i><span class="tooltip">Réserver</span></a>
     </div>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
-    <!-- JavaScript Files -->
     <script src="../js/main.js"></script>
     <script src="../js/script.js"></script>
     
     <script>
-        // Back to Top Button
         const backToTop = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            backToTop.classList.toggle('show', window.scrollY > 300);
-        });
-
-        backToTop.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        window.addEventListener('scroll', () => { backToTop.classList.toggle('show', window.scrollY > 300); });
+        backToTop.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
     </script>
 </body>
 </html>
