@@ -9,12 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <meta name="description" content="Location de maisons meublées à Tilouguite (à 10km d'Imsfrane). Maison vue sur rivière Ahansal, douche, cuisine. De 250 à 400 DH/nuit. Piscine naturelle à 2 minutes.">
+    <meta name="description" content="Location de maisons meublées à Tilouguite (à 10km d'Imsfrane). Maison vue sur rivière Ahansal, douche, cuisine. De 250 à 300 DH/nuit. Piscine naturelle à 2 minutes.">
     
     <meta property="og:title" content="Hébergement à Tilouguite - Maisons meublées Imsfrane">
-    <meta property="og:description" content="Maisons meublées à louer avec vue sur la rivière Ahansal. De 250 à 400 DH/nuit.">
-    <meta property="og:type" content="website">
+    <meta property="og:description" content="Maisons meublées à louer avec vue sur la rivière Ahansal. De 250 à 300 DH/nuit.">
+    <meta property="og:image" content="https://imsfrane.com/images/babmsfrane.jpeg">
     <meta property="og:url" content="https://imsfrane.com/pages/hebergement.html">
+    <meta property="og:type" content="website">
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
@@ -25,32 +26,58 @@
     <noscript><link rel="stylesheet" href="../css/style.css"></noscript>
     
     <style>
-        .page-header {
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f9f7f3;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* HERO SECTION */
+.page-hero {
+    width: 100%;
+    height: 450px;
+    background: url('../images/babmsfrane.jpeg') center/cover no-repeat;
+    background-position: 50% 100%;
+    position: relative;
+}        .page-title {
             text-align: center;
             margin: 3rem 0 1rem;
         }
         
-        .page-header h1 {
-            font-size: 2.5rem;
+        .page-title h1 {
+            font-size: 2.8rem;
             color: #1e3c2c;
             font-weight: 700;
-            margin-bottom: 0.5rem;
             font-family: 'Playfair Display', serif;
         }
         
-        .page-header .location {
+        .page-title .location {
             color: #e6b12e;
             font-size: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
+            margin-top: 0.5rem;
         }
         
+        /* ALERT */
         .alert-location {
             background: #fff3e0;
             border-left: 5px solid #ff4444;
-            padding: 1.2rem;
+            padding: 1.5rem;
             margin: 2rem auto;
             border-radius: 15px;
             max-width: 900px;
@@ -59,26 +86,42 @@
         
         .alert-location i {
             color: #ff4444;
-            font-size: 1.5rem;
-            margin-right: 0.5rem;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            display: block;
         }
         
         .alert-location strong {
             color: #ff4444;
+            font-size: 1.1rem;
         }
         
+        .alert-location p {
+            color: #333;
+            margin-top: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        /* INTRO */
         .intro-text {
             max-width: 800px;
-            margin: 2rem auto;
+            margin: 2rem auto 3rem;
             text-align: center;
         }
         
         .intro-text p {
             font-size: 1.1rem;
-            line-height: 1.6;
+            line-height: 1.8;
             color: #555;
         }
         
+        .intro-icon {
+            font-size: 2.5rem;
+            color: #e6b12e;
+            margin-bottom: 1rem;
+        }
+        
+        /* HOUSES GRID */
         .houses-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -90,15 +133,44 @@
             background: white;
             border-radius: 30px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             transition: all 0.3s;
         }
         
         .house-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 30px 50px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 30px 50px rgba(0,0,0,0.12);
         }
         
+        /* IMAGE CONTAINER avec object-fit + object-position */
+        .house-img-wrapper {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            background: #e8e8e8;
+        }
+        
+        .house-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        /* object-position pour chaque image */
+        .house-img-wrapper.img-1 img {
+            object-position: 50% 70%;
+        }
+        
+        .house-img-wrapper.img-2 img {
+            object-position: 50% 70%;
+        }
+        
+        .house-card:hover .house-img-wrapper img {
+            transform: scale(1.03);
+        }
+        
+        /* CONTENT */
         .house-content {
             padding: 2rem;
         }
@@ -107,9 +179,9 @@
             display: inline-block;
             background: #e6b12e;
             color: #1e3c2c;
-            padding: 0.3rem 1rem;
+            padding: 0.3rem 1.2rem;
             border-radius: 30px;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: 700;
             margin-bottom: 1rem;
         }
@@ -120,23 +192,22 @@
         }
         
         .house-title {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: #1e3c2c;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
         }
         
         .house-title i {
             color: #e6b12e;
+            margin-right: 0.5rem;
         }
         
         .house-price {
             font-size: 2rem;
             font-weight: 800;
             color: #e6b12e;
-            margin: 1rem 0;
+            margin: 0.8rem 0;
         }
         
         .house-price small {
@@ -151,22 +222,23 @@
         }
         
         .features-list li {
-            margin: 0.8rem 0;
+            margin: 0.7rem 0;
             display: flex;
             align-items: center;
             gap: 0.8rem;
             color: #555;
+            font-size: 0.95rem;
         }
         
         .features-list li i {
             color: #e6b12e;
-            width: 25px;
+            width: 22px;
         }
         
         .rooms-list {
             background: #f9f7f3;
             border-radius: 15px;
-            padding: 1rem;
+            padding: 1rem 1.2rem;
             margin: 1rem 0;
         }
         
@@ -178,15 +250,15 @@
         
         .rooms-list ul {
             list-style: none;
-            padding-left: 0;
         }
         
         .rooms-list li {
-            margin: 0.5rem 0;
+            margin: 0.4rem 0;
             display: flex;
             align-items: center;
             gap: 0.5rem;
             font-size: 0.9rem;
+            color: #555;
         }
         
         .rooms-list li i {
@@ -197,35 +269,57 @@
             background: #e8f5e8;
             border-left: 5px solid #4CAF50;
             padding: 1rem;
-            border-radius: 15px;
+            border-radius: 12px;
             margin: 1.5rem 0;
+            font-size: 0.95rem;
+            color: #333;
         }
         
+        .river-note i {
+            color: #4CAF50;
+            margin-right: 0.5rem;
+        }
+        
+        /* INSTAGRAM BUTTON */
         .btn-instagram {
             display: inline-flex;
             align-items: center;
             gap: 0.8rem;
             background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
             color: white;
-            padding: 0.8rem 1.5rem;
+            padding: 0.8rem 1.8rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.95rem;
             transition: all 0.3s;
             margin-top: 1rem;
-            border: none;
-            cursor: pointer;
         }
         
         .btn-instagram:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
         
         .btn-instagram i {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
         
+        /* MITOYEN INFO */
+        .mitoyen-info {
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 1.2rem;
+            background: #f0f8f0;
+            border-radius: 15px;
+        }
+        
+        .mitoyen-info i {
+            color: #e6b12e;
+            margin-right: 0.5rem;
+        }
+        
+        /* MAP SECTION */
         .map-section {
             margin: 3rem 0;
             padding: 2rem;
@@ -238,7 +332,7 @@
             margin-top: 1.5rem;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
         
         .map-iframe {
@@ -253,7 +347,7 @@
             gap: 0.8rem;
             background: #4285F4;
             color: white;
-            padding: 1rem 2rem;
+            padding: 0.8rem 2rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -264,13 +358,14 @@
         .btn-map:hover {
             background: #3367D6;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
         
+        /* LOCATION GRID */
         .location-info {
             background: #f9f7f3;
             border-radius: 30px;
-            padding: 2rem;
+            padding: 2.5rem;
             margin: 3rem 0;
             text-align: center;
         }
@@ -287,36 +382,53 @@
         }
         
         .location-point i {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #e6b12e;
             margin-bottom: 0.5rem;
         }
         
         .location-point h4 {
             color: #1e3c2c;
-            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
         }
         
+        .location-point p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+        
+        /* SWIM NOTE */
         .swim-note {
             background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
             color: white;
             border-radius: 30px;
-            padding: 2rem;
+            padding: 2.5rem;
             margin: 2rem 0;
             text-align: center;
         }
         
         .swim-note i {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: #e6b12e;
             margin-bottom: 1rem;
         }
         
+        .swim-note h3 {
+            font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .swim-note p {
+            opacity: 0.9;
+            font-size: 1.05rem;
+        }
+        
+        /* BUTTONS */
         .btn {
             display: inline-block;
             background: #e6b12e;
             color: #1e3c2c;
-            padding: 0.8rem 2rem;
+            padding: 0.8rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -327,6 +439,7 @@
         .btn:hover {
             background: #f4c542;
             transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(230,177,46,0.3);
         }
         
         .btn-wa {
@@ -341,32 +454,55 @@
             background: #128C7E;
         }
         
+        /* CONTACT SECTION */
         .contact-section {
             background: white;
             border-radius: 30px;
             padding: 3rem;
             margin: 4rem 0;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+            text-align: center;
         }
         
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .contact-item {
             text-align: center;
         }
         
         .contact-item i {
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: #e6b12e;
             margin-bottom: 0.5rem;
         }
         
+        .contact-item h4 {
+            color: #1e3c2c;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-item a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: #e6b12e;
+        }
+        
+        /* SECTION TITLE */
         .section-title {
             text-align: center;
             margin: 2rem 0;
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: #1e3c2c;
+            font-family: 'Playfair Display', serif;
         }
         
         .section-title::after {
@@ -378,14 +514,7 @@
             margin: 0.5rem auto;
         }
         
-        .mitoyen-info {
-            text-align: center;
-            margin: 1rem 0;
-            padding: 1rem;
-            background: #f0f8f0;
-            border-radius: 15px;
-        }
-        
+        /* RESPONSIVE */
         @media (max-width: 992px) {
             .houses-grid {
                 grid-template-columns: 1fr;
@@ -399,8 +528,14 @@
         }
         
         @media (max-width: 768px) {
-            .page-header h1 {
+            .page-hero {
+                height: 300px;
+            }
+            .page-title h1 {
                 font-size: 2rem;
+            }
+            .house-img-wrapper {
+                height: 220px;
             }
             .location-grid {
                 grid-template-columns: 1fr;
@@ -409,13 +544,44 @@
                 grid-template-columns: 1fr;
             }
             .house-title {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
             .house-price {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
             }
             .map-iframe {
-                height: 300px;
+                height: 250px;
+            }
+            .btn-instagram {
+                font-size: 0.85rem;
+                padding: 0.6rem 1.2rem;
+            }
+            .alert-location {
+                padding: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-title h1 {
+                font-size: 1.6rem;
+            }
+            .house-img-wrapper {
+                height: 180px;
+            }
+            .house-content {
+                padding: 1.2rem;
+            }
+            .house-price {
+                font-size: 1.3rem;
+            }
+            .features-list li {
+                font-size: 0.85rem;
+            }
+            .swim-note {
+                padding: 1.5rem;
+            }
+            .swim-note h3 {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -465,28 +631,33 @@
             <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
             <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
             <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="store.html"><i class="fas fa-store"></i> <span class="lang-en">Store</span><span class="lang-fr">Boutique</span></a></li>
             <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
             <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
     
 <main>
+    <!-- HERO -->
+    <div class="page-hero"></div>
+
+    <!-- TITLE -->
     <div class="container">
-        <div class="page-header">
-            <h1 class="lang-en">Furnished Houses in Tilouguite</h1>
-            <h1 class="lang-fr">Maisons Meublées à Tilouguite</h1>
+        <div class="page-title">
+            <h1 class="lang-en">Accommodation - Furnished Houses</h1>
+            <h1 class="lang-fr">Hébergement - Maisons Meublées</h1>
             <div class="location">
                 <i class="fas fa-map-pin"></i> Tilouguite, Imsfrane, Morocco
             </div>
         </div>
     </div>
 
-    <!-- ⚠️ ALERTE IMPORTANTE -->
+    <!-- ALERT -->
     <div class="container">
         <div class="alert-location">
             <i class="fas fa-exclamation-triangle"></i>
             <strong>📍 IMPORTANT - À LIRE ABSOLUMENT</strong>
-            <p style="margin-top: 0.5rem; color: #333;">
+            <p>
                 ⚠️ Ces maisons sont situées à <strong>Tilouguite</strong>, à <strong style="color: #ff4444;">10 kilomètres avant Imsfrane</strong>.<br>
                 Elles sont à <strong>5 minutes à pied du village</strong> où vous trouverez tout ce dont vous avez besoin (épicerie, café, etc.).<br>
                 La vue donne sur la <strong>meilleure spot de la rivière Ahansal</strong> avec une <strong>piscine naturelle</strong> très fréquentée en été.
@@ -494,7 +665,98 @@
         </div>
     </div>
 
-    <!-- CARTE GOOGLE MAPS -->
+    <!-- INTRO -->
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-icon">
+                <i class="fas fa-home"></i>
+            </div>
+            <p class="lang-en">Two adjoining houses for rent in Tilouguite, with direct view of the Ahansal river. Perfect for families or groups who want comfort while being close to nature. Natural swimming pool at 2 minutes walk.</p>
+            <p class="lang-fr">Deux maisons mitoyennes à louer à Tilouguite, avec vue directe sur l'oued Ahansal. Parfaites pour les familles ou groupes qui veulent allier confort et nature. Piscine naturelle à 2 minutes à pied.</p>
+        </div>
+    </div>
+
+    <!-- HOUSES GRID -->
+    <div class="container">
+        <div class="houses-grid">
+            
+            <!-- HOUSE 1 -->
+            <div class="house-card">
+                <div class="house-img-wrapper img-1">
+                    <img src="../images/bab2.jpeg" alt="Appartement 01 - Vue extérieure" loading="lazy">
+                </div>
+                <div class="house-content">
+                    <span class="house-badge">🏠 APPARTEMENT 01</span>
+                    <h2 class="house-title">
+                        <i class="fas fa-building"></i> Maison Familiale
+                    </h2>
+                    <div class="house-price">
+                        300 DH <small>/nuit (jusqu'à 6 personnes)</small>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-utensils"></i> Cuisine équipée avec vue sur la rivière</li>
+                        <li><i class="fas fa-shower"></i> Douche et toilettes</li>
+                        <li><i class="fas fa-bed"></i> Chambre pour 2 personnes</li>
+                        <li><i class="fas fa-couch"></i> Salon avec grand canapé (4-6 personnes)</li>
+                        <li><i class="fas fa-water"></i> Vue directe sur l'oued Ahansal</li>
+                    </ul>
+                    <div class="river-note">
+                        <i class="fas fa-water"></i> <strong>Vue imprenable sur la rivière</strong> - Salon et cuisine donnent directement sur l'oued
+                    </div>
+                    <a href="https://www.instagram.com/reel/DZszuG4MzP3/?igsh=MXBrejlsaGY4amdudg==" target="_blank" rel="noopener" class="btn-instagram">
+                        <i class="fab fa-instagram"></i> Voir la vidéo sur Instagram
+                    </a>
+                </div>
+            </div>
+            
+            <!-- HOUSE 2 -->
+            <div class="house-card">
+                <div class="house-img-wrapper img-2">
+                    <img src="../images/bab3.jpeg" alt="Appartement 02 - Vue extérieure" loading="lazy">
+                </div>
+                <div class="house-content">
+                    <span class="house-badge house2">🏠 APPARTEMENT 02</span>
+                    <h2 class="house-title">
+                        <i class="fas fa-home"></i> Maison 3 Chambres
+                    </h2>
+                    <div class="house-price">
+                        250 DH <small>/nuit (jusqu'à 6 personnes)</small>
+                    </div>
+                    
+                    <div class="rooms-list">
+                        <h4><i class="fas fa-bed"></i> Composition des chambres :</h4>
+                        <ul>
+                            <li><i class="fas fa-bed"></i> <strong>Chambre 1</strong> - 2 lits jumeaux</li>
+                            <li><i class="fas fa-bed"></i> <strong>Chambre 2</strong> - 2 lits jumeaux</li>
+                            <li><i class="fas fa-heart"></i> <strong>Chambre Couple</strong> - 1 grand lit</li>
+                        </ul>
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-bed"></i> Capacité : jusqu'à 6 personnes</li>
+                        <li><i class="fas fa-shower"></i> Douche et toilettes</li>
+                        <li><i class="fas fa-water"></i> À côté de la meilleure spot de la rivière</li>
+                        <li><i class="fas fa-walking"></i> 5 min à pied du village</li>
+                        <li><i class="fas fa-swimming-pool"></i> Piscine naturelle à 2 min</li>
+                    </ul>
+                    
+                    <div class="river-note">
+                        <i class="fas fa-water"></i> <strong>À côté de la meilleure spot d'Ahansal</strong> - Piscine naturelle très fréquentée en été
+                    </div>
+                    <a href="https://www.instagram.com/reel/DZs03NwsJKi/?igsh=Z3BpenRhc3I4YThn" target="_blank" rel="noopener" class="btn-instagram">
+                        <i class="fab fa-instagram"></i> Voir la vidéo sur Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mitoyen-info">
+            <i class="fas fa-door-open" style="color: #e6b12e;"></i>
+            <strong>Les deux maisons sont mitoyennes</strong> (portes adjacentes) - Idéal pour les grands groupes ou familles !
+        </div>
+    </div>
+
+    <!-- MAP -->
     <div class="container">
         <div class="map-section">
             <h2 class="section-title" style="margin-top: 0;">
@@ -514,82 +776,7 @@
         </div>
     </div>
 
-    <!-- Houses Grid -->
-    <div class="container">
-        <div class="houses-grid">
-            
-            <!-- HOUSE 1 - GRANDE MAISON (400 DH/nuit) -->
-            <div class="house-card">
-                <div class="house-content">
-                    <span class="house-badge">🏠 MAISON PRINCIPALE</span>
-                    <h2 class="house-title">
-                        <i class="fas fa-building"></i> Maison Familiale
-                    </h2>
-                    <div class="house-price">
-                        400 DH <small>/nuit (jusqu'à 6 personnes)</small>
-                    </div>
-                    <ul class="features-list">
-                        <li><i class="fas fa-utensils"></i> Cuisine équipée avec banquette donnant sur la rivière</li>
-                        <li><i class="fas fa-shower"></i> Douche et toilettes</li>
-                        <li><i class="fas fa-bed"></i> Chambre pour 2 personnes</li>
-                        <li><i class="fas fa-couch"></i> Salon avec grand canapé (accueille 4-6 personnes)</li>
-                        <li><i class="fas fa-water"></i> Vue directe sur l'oued Ahansal</li>
-                        <li><i class="fas fa-door-open"></i> Accès depuis l'entrée (côté portes)</li>
-                    </ul>
-                    <div class="river-note">
-                        <i class="fas fa-water"></i> <strong>Vue imprenable sur la rivière</strong> - Le salon et la cuisine donnent directement sur l'oued
-                    </div>
-                    <a href="https://www.instagram.com/reel/DXZrMlRMXNM/?igsh=Y2Y0Ynl0YXpqODI2" target="_blank" rel="noopener" class="btn-instagram">
-                        <i class="fab fa-instagram"></i> Voir la vidéo sur Instagram
-                    </a>
-                </div>
-            </div>
-            
-            <!-- HOUSE 2 - PETITE MAISON (250 DH/nuit) -->
-            <div class="house-card">
-                <div class="house-content">
-                    <span class="house-badge house2">🏠 MAISON MITOYENNE</span>
-                    <h2 class="house-title">
-                        <i class="fas fa-home"></i> Maison 3 Chambres
-                    </h2>
-                    <div class="house-price">
-                        250 DH <small>/nuit (jusqu'à 6 personnes)</small>
-                    </div>
-                    
-                    <div class="rooms-list">
-                        <h4><i class="fas fa-bed"></i> Composition des chambres :</h4>
-                        <ul>
-                            <li><i class="fas fa-bed"></i> <strong>Chambre 1</strong> - 2 lits jumeaux</li>
-                            <li><i class="fas fa-bed"></i> <strong>Chambre 2</strong> - 2 lits jumeaux</li>
-                            <li><i class="fas fa-heart"></i> <strong>Chambre Couple</strong> - 1 grand lit</li>
-                        </ul>
-                    </div>
-                    
-                    <ul class="features-list">
-                        <li><i class="fas fa-bed"></i> Capacité totale : jusqu'à 6 personnes</li>
-                        <li><i class="fas fa-shower"></i> Douche et toilettes</li>
-                        <li><i class="fas fa-water"></i> À côté de la meilleure spot de la rivière</li>
-                        <li><i class="fas fa-walking"></i> 5 minutes à pied du village</li>
-                        <li><i class="fas fa-swimming-pool"></i> Piscine naturelle à 2 minutes</li>
-                    </ul>
-                    
-                    <div class="river-note">
-                        <i class="fas fa-water"></i> <strong>À côté de la meilleure spot d'Ahansal</strong> - Piscine naturelle très fréquentée en été
-                    </div>
-                    <a href="https://www.instagram.com/reel/DXZrMlRMXNM/?igsh=Y2Y0Ynl0YXpqODI2" target="_blank" rel="noopener" class="btn-instagram">
-                        <i class="fab fa-instagram"></i> Voir la vidéo sur Instagram
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="mitoyen-info">
-            <i class="fas fa-door-open" style="color: #e6b12e;"></i>
-            <strong>Les deux maisons sont mitoyennes</strong> (portes adjacentes) - Idéal pour les grands groupes ou familles !
-        </div>
-    </div>
-
-    <!-- Location & Swimming -->
+    <!-- LOCATION & SWIMMING -->
     <div class="container">
         <div class="location-info">
             <h2 class="section-title" style="margin-top: 0;">
@@ -622,14 +809,14 @@
         </div>
     </div>
 
-    <!-- Contact Section -->
+    <!-- CONTACT -->
     <div class="container">
         <div class="contact-section">
             <h2 class="section-title" style="margin-top: 0;">
                 <span class="lang-en">Book Your Stay</span>
                 <span class="lang-fr">Réserver Votre Séjour</span>
             </h2>
-            <p style="text-align: center; margin-bottom: 2rem; color: #555;">
+            <p style="margin-bottom: 2rem; color: #555;">
                 <span class="lang-en">Contact us for availability and to book your accommodation in Tilouguite.</span>
                 <span class="lang-fr">Contactez-nous pour la disponibilité et pour réserver votre hébergement à Tilouguite.</span>
             </p>
@@ -650,7 +837,7 @@
                     <p>Tilouguite, Imsfrane, Azilal</p>
                 </div>
             </div>
-            <div style="text-align: center;">
+            <div>
                 <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20louer%20une%20maison%20%C3%A0%20Tilouguite" class="btn btn-wa" target="_blank">
                     <i class="fab fa-whatsapp"></i> 
                     <span class="lang-en">Book on WhatsApp</span>
@@ -677,6 +864,7 @@
                         <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
+
                 <div class="footer-col footer-links">
                     <h4>Quick Links</h4>
                     <ul>
@@ -688,6 +876,7 @@
                         <li><a href="quad.html">Quad</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-col footer-contact">
                     <h4>Contact</h4>
                     <ul>
@@ -705,6 +894,7 @@
         </div>
     </footer>
 
+    <!-- FLOATING BUTTONS -->
     <div class="floating-buttons">
         <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
             <i class="fab fa-whatsapp"></i>
