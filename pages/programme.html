@@ -4,48 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programme 3 Jours | Randonnée Cathédrale & Cascades d'Ouakhdoune</title>
-    <!-- Open Graph Tags pour le partage -->
-    <meta property="og:title" content="Programme 3 Jours - Randonnée Cathédrale Imsfrane" />
-    <meta property="og:description" content="3-day trekking program in Imsfrane: ascent to the Cathedral summit (1868m) and Ouakhdoune waterfalls. Hébergement en chambres, soirée folklorique, options rafting, VTT et quad." />
-    <meta property="og:image" content="https://www.imsfranecathedrale.com/images/A.jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://www.imsfranecathedrale.com/pages/programme-3jours.html" />
-    <meta property="og:type" content="website" />
-
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Programme 3 Jours - Randonnée Cathédrale Imsfrane" />
-    <meta name="twitter:description" content="3-day trekking program in Imsfrane: ascent to the Cathedral summit and Ouakhdoune waterfalls. Hébergement en chambres, soirée folklorique." />
-    <meta name="twitter:image" content="https://www.imsfranecathedrale.com/images/A.jpeg" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <meta name="description" content="Programme de 3 jours à Imsfrane : randonnée au sommet 1868m, cascades d'Ouakhdoune, hébergement en chambres, soirée folklorique. Options : Rafting, VTT, Quad.">
+    <meta name="description" content="Programme 3 jours à Imsfrane : randonnée au sommet 1868m, cascades d'Ouakhdoune, hébergement en chambres, soirée folklorique. Options Rafting, VTT, Quad.">
+    <meta name="keywords" content="programme Imsfrane, randonnée 3 jours, Cathédrale Imsfrane, cascades Ouakhdoune, trekking Atlas, séjour montagne Maroc">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Programme 3 Jours - Randonnée Cathédrale Imsfrane" />
+    <meta property="og:description" content="3-day trekking program in Imsfrane: ascent to the Cathedral summit (1868m) and Ouakhdoune waterfalls. Hébergement en chambres, soirée folklorique." />
+    <meta property="og:image" content="https://www.imsfranecathedrale.com/images/A.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://www.imsfranecathedrale.com/pages/programme-3jours.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Imsfrane Cathédrale">
+    <meta property="og:locale" content="fr_FR">
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
     
+    <!-- ===== STYLE UNIFIED ===== -->
     <link rel="stylesheet" href="../css/style.css">
     
     <style>
-        .hero-slider {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
+        /* ===== PROGRAMME PAGE SPECIFIC ===== */
+        .page-hero.programme-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../images/A.jpeg') center/cover no-repeat;
+            background-position: 50% 50%;
         }
         
-        .slider-container {
+        .page-title {
+            text-align: center;
+            margin: 3rem 0 1rem;
+        }
+        
+        .page-title h1 {
+            font-size: 2.5rem;
+            color: #1e3c2c;
+            font-weight: 700;
+        }
+        
+        .page-title .location {
+            color: #e6b12e;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .intro-text {
+            max-width: 800px;
+            margin: 2rem auto 3rem;
+            text-align: center;
+        }
+        
+        .intro-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .intro-icon {
+            font-size: 2rem;
+            color: #e6b12e;
+            margin-bottom: 1rem;
+        }
+        
+        .programme-slider {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+        
+        .programme-slider .slider-container {
             position: relative;
             width: 100%;
             height: 100%;
         }
         
-        .slide {
+        .programme-slider .slide {
             position: absolute;
             top: 0;
             left: 0;
@@ -53,21 +99,21 @@
             height: 100%;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 1s ease, visibility 1s ease;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
         }
         
-        .slide.active {
+        .programme-slider .slide.active {
             opacity: 1;
             visibility: visible;
         }
         
-        .slide img {
+        .programme-slider .slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
         
-        .slider-dots {
+        .programme-slider .slider-dots {
             position: absolute;
             bottom: 20px;
             left: 50%;
@@ -77,7 +123,7 @@
             z-index: 20;
         }
         
-        .dot {
+        .programme-slider .dot {
             width: 12px;
             height: 12px;
             border-radius: 50%;
@@ -86,12 +132,12 @@
             transition: all 0.3s;
         }
         
-        .dot.active {
+        .programme-slider .dot.active {
             background: #e6b12e;
             transform: scale(1.2);
         }
         
-        .slider-btn {
+        .programme-slider .slider-btn {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -110,64 +156,17 @@
             transition: all 0.3s;
         }
         
-        .slider-btn:hover {
+        .programme-slider .slider-btn:hover {
             background: #e6b12e;
             color: #1e3c2c;
         }
         
-        .slider-btn.prev {
+        .programme-slider .slider-btn.prev {
             left: 20px;
         }
         
-        .slider-btn.next {
+        .programme-slider .slider-btn.next {
             right: 20px;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .breadcrumb {
-            margin: 20px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        .breadcrumb a {
-            color: #1e3c2c;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .breadcrumb a:hover {
-            color: #e6b12e;
-        }
-        
-        .breadcrumb i {
-            color: #e6b12e;
-            font-size: 0.8rem;
-        }
-        
-        .intro {
-            text-align: center;
-            margin: 40px 0;
-            padding: 30px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-        
-        .intro p {
-            font-size: 1.1rem;
-            color: #555;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.8;
         }
         
         .meta-grid {
@@ -249,11 +248,11 @@
             text-align: center;
             margin-bottom: 30px;
             font-size: 2rem;
-            position: relative;
             font-family: 'Playfair Display', serif;
+            color: #1e3c2c;
         }
         
-        .timeline h2:after {
+        .timeline h2::after {
             content: '';
             display: block;
             width: 60px;
@@ -375,11 +374,21 @@
             margin-bottom: 30px;
             font-size: 2rem;
             font-family: 'Playfair Display', serif;
+            color: #1e3c2c;
+        }
+        
+        .options-section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #e6b12e;
+            margin: 10px auto;
         }
         
         .options-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
         
@@ -411,6 +420,7 @@
             font-size: 1.3rem;
             margin-bottom: 0;
             font-family: 'Playfair Display', serif;
+            color: #1e3c2c;
         }
         
         .option-desc {
@@ -453,6 +463,7 @@
             margin-bottom: 20px;
             font-size: 1.5rem;
             font-family: 'Playfair Display', serif;
+            color: #1e3c2c;
         }
         
         .calc-item {
@@ -521,6 +532,7 @@
             margin-bottom: 20px;
             font-size: 1.3rem;
             font-family: 'Playfair Display', serif;
+            color: #1e3c2c;
         }
         
         .included-box h4 i {
@@ -558,33 +570,44 @@
             margin-bottom: 20px;
             font-size: 1.3rem;
             font-family: 'Playfair Display', serif;
+            color: #1e3c2c;
         }
         
         .not-included h4 i {
             color: #f44336;
         }
         
-        .price-summary {
+        .dates {
             text-align: center;
-            margin: 20px 0;
-            padding: 15px;
-            background: #f9f7f3;
+            margin: 40px 0;
+            padding: 25px;
+            background: white;
             border-radius: 50px;
-            font-size: 1.1rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
         
-        .price-summary strong {
+        .dates i {
+            color: #e6b12e;
+            margin: 0 10px;
+        }
+        
+        .date-tag {
+            display: inline-block;
+            background: #f9f7f3;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin: 5px;
+            font-weight: 500;
+            border: 1px solid #f0f0f0;
             color: #1e3c2c;
         }
         
-        .price-summary span {
-            color: #e6b12e;
-            font-weight: 700;
-        }
-        
-        .home-button {
-            text-align: center;
-            margin: 30px 0;
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 40px 0 60px;
+            flex-wrap: wrap;
         }
         
         .btn-home {
@@ -604,93 +627,53 @@
             color: #1e3c2c;
         }
         
-        .dates {
-            text-align: center;
-            margin: 40px 0;
-            padding: 25px;
-            background: white;
-            border-radius: 50px;
-        }
-        
-        .dates i {
-            color: #e6b12e;
-            margin: 0 10px;
-        }
-        
-        .date-tag {
-            display: inline-block;
-            background: #f9f7f3;
-            padding: 8px 20px;
-            border-radius: 30px;
-            margin: 5px;
-            font-weight: 500;
-        }
-        
-        .buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin: 40px 0 60px;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            background: #e6b12e;
-            color: #1e3c2c;
-            padding: 14px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s;
-            display: inline-block;
-            font-size: 1rem;
-        }
-        
-        .btn:hover {
-            background: #1e3c2c;
-            color: #e6b12e;
-            transform: translateY(-2px);
+        @media (max-width: 992px) {
+            .meta-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+            .included-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 768px) {
-            .hero-slider {
+            .page-hero.programme-hero {
                 height: 300px;
             }
-            
-            .slider-btn {
+            .programme-slider {
+                height: 300px;
+            }
+            .programme-slider .slider-btn {
                 width: 35px;
                 height: 35px;
                 font-size: 1rem;
             }
-            
-            .meta-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .options-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .price-card-main {
                 flex-direction: column;
                 text-align: center;
             }
-            
             .day-content {
                 padding-left: 0;
             }
-            
-            .included-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .buttons {
                 flex-direction: column;
             }
-            
-            .btn, .btn-home {
+            .btn, .btn-home, .btn-wa {
                 width: 100%;
                 text-align: center;
+                justify-content: center;
+            }
+            .price-tag {
+                font-size: 2.5rem;
+            }
+            .meta-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .page-title h1 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -698,11 +681,12 @@
 <body data-lang="fr">
     <div class="overlay" id="overlay"></div>
 
+    <!-- ===== HEADER ===== -->
     <header>
         <div class="container header-content">
-            <a href="../index.html" class="logo">
+            <a href="../index.html" class="logo" aria-label="Imsfrane Cathédrale - Retour à la page d'accueil">
                 <div class="logo-img">
-                    <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale">
+                    <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
                 </div>
                 <div class="logo-text">
                     <h1>Imsfrane Cathédrale</h1>
@@ -713,21 +697,22 @@
             
             <div class="right-controls">
                 <div class="lang-buttons">
-                    <button class="lang-btn" onclick="setLanguage('en')">EN</button>
-                    <button class="lang-btn active" onclick="setLanguage('fr')">FR</button>
+                    <button class="lang-btn" onclick="setLanguage('en')" aria-label="Switch to English">EN</button>
+                    <button class="lang-btn active" onclick="setLanguage('fr')" aria-label="Passer en français">FR</button>
                 </div>
-                <button class="menu-toggle" id="menuToggle">
+                <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu de navigation">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <nav id="mainNav">
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="mainNav" aria-label="Menu principal">
         <ul>
             <li><a href="../index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
             <li class="has-submenu">
-                <a href="#" onclick="toggleSubmenu(event)">
+                <a href="#" onclick="toggleSubmenu(event)" aria-expanded="false">
                     <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
                     <i class="fas fa-chevron-right arrow"></i>
                 </a>
@@ -742,355 +727,536 @@
             </li>
             <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
             <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
-            <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="store.html"><i class="fas fa-store"></i> <span class="lang-en">Store</span><span class="lang-fr">Boutique</span></a></li>
             <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
             <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
 
-    <!-- Hero Slider -->
-    <div class="hero-slider">
-        <div class="slider-container">
-            <div class="slide active">
-                <img src="../images/A.jpeg" alt="Image A - Cathédrale Imsfrane">
-            </div>
-            <div class="slide">
-                <img src="../images/B.jpeg" alt="Image B - Cascades d'Ouakhdoune">
-            </div>
-            <div class="slide">
-                <img src="../images/C.jpeg" alt="Image C - Rafting">
-            </div>
-            <div class="slide">
-                <img src="../images/D.jpeg" alt="Image D - Feu de camp">
-            </div>
-            <div class="slide">
-                <img src="../images/E.jpeg" alt="Image E - Vue panoramique">
-            </div>
-            <div class="slide">
-                <img src="../images/F.jpeg" alt="Image F - Randonnée">
-            </div>
-            <div class="slide">
-                <img src="../images/G.jpeg" alt="Image G - Paysage montagne">
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <div class="page-hero programme-hero"></div>
+
+        <div class="container">
+            <div class="page-title">
+                <h1>🗓️ Programme 3 Jours</h1>
+                <h1 class="lang-en">3-Day Program</h1>
+                <div class="location">
+                    <i class="fas fa-map-pin"></i> Imsfrane, Morocco
+                </div>
             </div>
         </div>
-        
-        <button class="slider-btn prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
-        <button class="slider-btn next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <div class="slider-dots">
-            <span class="dot active" onclick="goToSlide(0)"></span>
-            <span class="dot" onclick="goToSlide(1)"></span>
-            <span class="dot" onclick="goToSlide(2)"></span>
-            <span class="dot" onclick="goToSlide(3)"></span>
-            <span class="dot" onclick="goToSlide(4)"></span>
-            <span class="dot" onclick="goToSlide(5)"></span>
-            <span class="dot" onclick="goToSlide(6)"></span>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="breadcrumb">
-            <a href="../index.html"><i class="fas fa-home"></i> Accueil</a>
-            <i class="fas fa-chevron-right"></i>
-            <span style="color: #e6b12e;">Programme 3 Jours</span>
-        </div>
-        
-        <div class="intro">
-            <p><i class="fas fa-quote-left" style="color: #e6b12e; opacity: 0.5; font-size: 2rem; margin-right: 10px;"></i> Ascension du sommet de la Cathédrale d'Imsfrane (1868m) et découverte des cascades cachées d'Ouakhdoune. Une expérience complète avec transport en 4x4, hébergement en chambres confortables, soirée folklorique avec guitare et Ahidouss, et feu de camp.</p>
-        </div>
-        
-        <div class="meta-grid">
-            <div class="meta-card">
-                <i class="fas fa-clock"></i>
-                <div class="label">Durée</div>
-                <div class="value">3 jours / 2 nuits</div>
-            </div>
-            <div class="meta-card">
-                <i class="fas fa-mountain"></i>
-                <div class="label">Altitude</div>
-                <div class="value">1868m</div>
-            </div>
-            <div class="meta-card">
-                <i class="fas fa-car"></i>
-                <div class="label">Transport</div>
-                <div class="value">4x4 + Rando</div>
-            </div>
-            <div class="meta-card">
-                <i class="fas fa-users"></i>
-                <div class="label">Groupe</div>
-                <div class="value">8-15 pers</div>
-            </div>
-        </div>
-        
-        <!-- Prix - 1150 DH avec hébergement en chambres -->
-        <div class="price-card-main">
-            <div class="price-info">
-                <h3><i class="fas fa-bed"></i> Formule Chambres + 4x4</h3>
-                <p>Transport 4x4 • Hébergement en chambres (gîte) • 2 petits déjeuners • 2 déjeuners • 1 dîner • Guide • Soirée folklorique</p>
-            </div>
-            <div class="price-tag">
-                1150 <small>DH</small>
-            </div>
-        </div>
-        
-        <div class="timeline">
-            <h2>Programme détaillé</h2>
-            
-            <div class="day">
-                <div class="day-header">
-                    <div class="day-icon"><i class="fas fa-sun"></i></div>
-                    <div>
-                        <div class="day-title">Vendredi - Départ</div>
-                        <div class="day-date">Jour 1</div>
+
+        <!-- ===== PROGRAMME SLIDER ===== -->
+        <div class="container">
+            <div class="programme-slider" id="programmeSlider">
+                <div class="slider-container">
+                    <div class="slide active">
+                        <img src="../images/A.jpeg" alt="Cathédrale Imsfrane">
                     </div>
-                </div>
-                <div class="day-content">
-                    <div class="day-item"><i class="fas fa-bus"></i> 18h00 : Départ de Rabat (Gare Rabat Ville)</div>
-                    <div class="day-item"><i class="fas fa-bus"></i> 19h30 : Départ de Casa (Gare Casa Voyageurs)</div>
-                    <div class="day-item"><i class="fas fa-utensils"></i> Dîner libre en route</div>
-                    <div class="day-item"><i class="fas fa-bed"></i> Arrivée au gîte, installation en chambres et nuitée</div>
-                </div>
-            </div>
-            
-            <div class="day">
-                <div class="day-header">
-                    <div class="day-icon"><i class="fas fa-car"></i></div>
-                    <div>
-                        <div class="day-title">Samedi - Ascension 4x4 + Sommet + Cascades</div>
-                        <div class="day-date">Jour 2 - Aventure complète</div>
+                    <div class="slide">
+                        <img src="../images/B.jpeg" alt="Cascades d'Ouakhdoune">
                     </div>
-                </div>
-                <div class="day-content">
-                    <div class="meal-highlight"><i class="fas fa-coffee"></i> <strong>Petit déjeuner</strong> - Repas traditionnel</div>
-                    
-                    <div class="transport-badge"><i class="fas fa-truck-monster"></i> <strong>Matin : Transport en 4x4 jusqu'au pied du sommet</strong> - Trajet en véhicule tout-terrain à travers les pistes de montagne</div>
-                    <div class="walk-info"><i class="fas fa-hiking"></i> <strong>40 minutes de marche pour atteindre le sommet (1868m)</strong> - Montée progressive avec guide, panorama exceptionnel</div>
-                    <div class="day-item"><i class="fas fa-flag-checkered"></i> Arrivée au sommet - Vue panoramique à 360° sur l'Atlas</div>
-                    <div class="day-item"><i class="fas fa-camera"></i> Pause photo et contemplation</div>
-                    <div class="day-item"><i class="fas fa-arrow-down"></i> Descente (40 minutes) jusqu'au point de rendez-vous 4x4</div>
-                    
-                    <div class="transport-badge"><i class="fas fa-truck-monster"></i> <strong>Après-midi : Transfert en 4x4 vers les gorges d'Ouakhdoune</strong> - Descente en véhicule vers les cascades</div>
-                    <div class="walk-info"><i class="fas fa-hiking"></i> <strong>40 minutes de marche dans les gorges jusqu'aux cascades</strong> - Découverte des bassins naturels et des chutes d'eau</div>
-                    <div class="day-item"><i class="fas fa-water"></i> Baignade dans les cascades (selon saison)</div>
-                    
-                    <div class="meal-highlight"><i class="fas fa-utensils"></i> <strong>Déjeuner</strong> - Repas berbère sous les arbres</div>
-                    <div class="meal-highlight"><i class="fas fa-utensil-spoon"></i> <strong>Dîner</strong> - Repas traditionnel préparé sur place</div>
-                    
-                    <div class="evening-highlight">
-                        <i class="fas fa-guitar"></i> <strong>Soirée folklorique</strong> <i class="fas fa-drum"></i><br>
-                        Veillée au coin du feu avec guitare et musique Ahidouss traditionnelle<br>
-                        <i class="fas fa-moon"></i> Ambiance authentique sous les étoiles
+                    <div class="slide">
+                        <img src="../images/C.jpeg" alt="Rafting">
                     </div>
-                    <div class="day-item"><i class="fas fa-bed"></i> Nuit en chambres (gîte confortable)</div>
-                </div>
-            </div>
-            
-            <div class="day">
-                <div class="day-header">
-                    <div class="day-icon"><i class="fas fa-water"></i></div>
-                    <div>
-                        <div class="day-title">Dimanche - Activités & Retour</div>
-                        <div class="day-date">Jour 3</div>
+                    <div class="slide">
+                        <img src="../images/D.jpeg" alt="Feu de camp">
                     </div>
-                </div>
-                <div class="day-content">
-                    <div class="meal-highlight"><i class="fas fa-coffee"></i> <strong>Petit déjeuner</strong></div>
-                    <div class="day-item"><i class="fas fa-water"></i> Rafting (optionnel) - Descente de l'Oued Ahansal</div>
-                    <div class="day-item"><i class="fas fa-bicycle"></i> VTT (optionnel) - Parcours dans les montagnes</div>
-                    <div class="day-item"><i class="fas fa-motorcycle"></i> Quad (optionnel) - Circuit dans les sentiers</div>
-                    <div class="meal-highlight"><i class="fas fa-utensils"></i> <strong>Déjeuner</strong></div>
-                    <div class="day-item"><i class="fas fa-bus"></i> 15h30 : Départ retour vers Rabat & Casa</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="options-section">
-            <h2>Activités optionnelles (Dimanche)</h2>
-            <div class="options-grid">
-                <div class="option-card">
-                    <div class="option-header">
-                        <i class="fas fa-water"></i>
-                        <h3>Rafting 12km</h3>
+                    <div class="slide">
+                        <img src="../images/E.jpeg" alt="Vue panoramique">
                     </div>
-                    <div class="option-desc">Descente de l'Oued Ahansal - 12km de rafting avec guide professionnel</div>
-                    <div class="option-price">
-                        <span>Supplément rafting</span>
-                        <span class="price-add">+400 DH</span>
+                    <div class="slide">
+                        <img src="../images/F.jpeg" alt="Randonnée">
+                    </div>
+                    <div class="slide">
+                        <img src="../images/G.jpeg" alt="Paysage montagne">
                     </div>
                 </div>
                 
-                <div class="option-card">
-                    <div class="option-header">
-                        <i class="fas fa-bicycle"></i>
-                        <h3>VTT</h3>
+                <button class="slider-btn prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+                
+                <div class="slider-dots">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                    <span class="dot" onclick="goToSlide(3)"></span>
+                    <span class="dot" onclick="goToSlide(4)"></span>
+                    <span class="dot" onclick="goToSlide(5)"></span>
+                    <span class="dot" onclick="goToSlide(6)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== INTRO ===== -->
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-icon">
+                    <i class="fas fa-mountain"></i>
+                </div>
+                <p class="lang-fr"><i class="fas fa-quote-left" style="color: #e6b12e; opacity: 0.5; font-size: 2rem; margin-right: 10px;"></i> Ascension du sommet de la Cathédrale d'Imsfrane (1868m) et découverte des cascades cachées d'Ouakhdoune. Une expérience complète avec transport en 4x4, hébergement en chambres confortables, soirée folklorique avec guitare et Ahidouss, et feu de camp.</p>
+                <p class="lang-en"><i class="fas fa-quote-left" style="color: #e6b12e; opacity: 0.5; font-size: 2rem; margin-right: 10px;"></i> Ascent of the Imsfrane Cathedral summit (1868m) and discovery of the hidden Ouakhdoune waterfalls. A complete experience with 4x4 transport, comfortable room accommodation, folk evening with guitar and Ahidouss music, and campfire.</p>
+            </div>
+        </div>
+
+        <!-- ===== META ===== -->
+        <div class="container">
+            <div class="meta-grid">
+                <div class="meta-card">
+                    <i class="fas fa-clock"></i>
+                    <div class="label">Durée</div>
+                    <div class="value">3 jours / 2 nuits</div>
+                </div>
+                <div class="meta-card">
+                    <i class="fas fa-mountain"></i>
+                    <div class="label">Altitude</div>
+                    <div class="value">1868m</div>
+                </div>
+                <div class="meta-card">
+                    <i class="fas fa-car"></i>
+                    <div class="label">Transport</div>
+                    <div class="value">4x4 + Rando</div>
+                </div>
+                <div class="meta-card">
+                    <i class="fas fa-users"></i>
+                    <div class="label">Groupe</div>
+                    <div class="value">8-15 pers</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== PRICE ===== -->
+        <div class="container">
+            <div class="price-card-main">
+                <div class="price-info">
+                    <h3><i class="fas fa-bed"></i> Formule Chambres + 4x4</h3>
+                    <p>Transport 4x4 • Hébergement en chambres (gîte) • 2 petits déjeuners • 2 déjeuners • 1 dîner • Guide • Soirée folklorique</p>
+                </div>
+                <div class="price-tag">
+                    860 <small>DH</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TIMELINE ===== -->
+        <div class="container">
+            <div class="timeline">
+                <h2>Programme détaillé</h2>
+                
+                <!-- DAY 1 -->
+                <div class="day">
+                    <div class="day-header">
+                        <div class="day-icon"><i class="fas fa-sun"></i></div>
+                        <div>
+                            <div class="day-title">Vendredi - Départ</div>
+                            <div class="day-date">Jour 1</div>
+                        </div>
                     </div>
-                    <div class="option-desc">Location de VTT tout suspendu - parcours de 18km dans les montagnes</div>
-                    <div class="option-price">
-                        <span>Supplément VTT</span>
-                        <span class="price-add">+150 DH</span>
+                    <div class="day-content">
+                        <div class="day-item">
+                            <i class="fas fa-bus"></i>
+                            <span class="lang-fr">18h00 : Départ de Rabat (Gare Rabat Ville)</span>
+                            <span class="lang-en">18h00 : Departure from Rabat (Rabat Ville Station)</span>
+                        </div>
+                        <div class="day-item">
+                            <i class="fas fa-bus"></i>
+                            <span class="lang-fr">19h30 : Départ de Casa (Gare Casa Voyageurs)</span>
+                            <span class="lang-en">19h30 : Departure from Casablanca (Casa Voyageurs Station)</span>
+                        </div>
+                        <div class="day-item">
+                            <i class="fas fa-utensils"></i>
+                            <span class="lang-fr">Dîner libre en route</span>
+                            <span class="lang-en">Dinner on the way (not included)</span>
+                        </div>
+                        <div class="day-item">
+                            <i class="fas fa-bed"></i>
+                            <span class="lang-fr">Arrivée au gîte, installation en chambres et nuitée</span>
+                            <span class="lang-en">Arrival at the lodge, check-in, and overnight stay</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="option-card">
-                    <div class="option-header">
-                        <i class="fas fa-motorcycle"></i>
-                        <h3>Quad</h3>
+                <!-- DAY 2 -->
+                <div class="day">
+                    <div class="day-header">
+                        <div class="day-icon"><i class="fas fa-car"></i></div>
+                        <div>
+                            <div class="day-title">Samedi - Ascension 4x4 + Sommet + Cascades</div>
+                            <div class="day-date">Jour 2 - Aventure complète</div>
+                        </div>
                     </div>
-                    <div class="option-desc">Quad solo ou biplace - 1 heure de conduite dans les sentiers</div>
-                    <div class="option-price">
-                        <span>Supplément quad</span>
-                        <span class="price-add">+250 DH</span>
+                    <div class="day-content">
+                        <div class="meal-highlight">
+                            <i class="fas fa-coffee"></i>
+                            <span class="lang-fr"><strong>Petit déjeuner</strong> - Repas traditionnel</span>
+                            <span class="lang-en"><strong>Breakfast</strong> - Traditional meal</span>
+                        </div>
+                        
+                        <div class="transport-badge">
+                            <i class="fas fa-truck-monster"></i>
+                            <span class="lang-fr"><strong>Matin : Transport en 4x4 jusqu'au pied du sommet</strong> - Trajet en véhicule tout-terrain à travers les pistes de montagne</span>
+                            <span class="lang-en"><strong>Morning : 4x4 transfer to the summit base</strong> - Off-road journey through mountain tracks</span>
+                        </div>
+                        <div class="walk-info">
+                            <i class="fas fa-hiking"></i>
+                            <span class="lang-fr"><strong>40 minutes de marche pour atteindre le sommet (1868m)</strong> - Montée progressive avec guide, panorama exceptionnel</span>
+                            <span class="lang-en"><strong>40-minute walk to reach the summit (1868m)</strong> - Gradual ascent with guide, exceptional panorama</span>
+                        </div>
+                        <div class="day-item">
+                            <i class="fas fa-flag-checkered"></i>
+                            <span class="lang-fr">Arrivée au sommet - Vue panoramique à 360° sur l'Atlas</span>
+                            <span class="lang-en">Summit arrival - 360° panoramic view of the Atlas Mountains</span>
+                        </div>
+                        <div class="day-item">
+                            <i class="fas fa-camera"></i>
+                            <span class="lang-fr">Pause photo et contemplation</span>
+                            <span class="lang-en">Photo break and contemplation</span>
+                        </div>
+                        <div class="day-item">
+                            <i class="fas fa-arrow-down"></i>
+                            <span class="lang-fr">Descente (40 minutes) jusqu'au point de rendez-vous 4x4</span>
+                            <span class="lang-en">Descent (40 minutes) to the 4x4 meeting point</span>
+                        </div>
+                        
+                        <div class="transport-badge">
+                            <i class="fas fa-truck-monster"></i>
+                            <span class="lang-fr"><strong>Après-midi : Transfert en 4x4 vers les gorges d'Ouakhdoune</strong> - Descente en véhicule vers les cascades</span>
+                            <span class="lang-en"><strong>Afternoon : 4x4 transfer to Ouakhdoune gorges</strong> - Vehicle descent to the waterfalls</span>
+                        </div>
+                        <div class="walk-info">
+                            <i class="fas fa-hiking"></i>
+                            <span class="lang-fr"><strong>40 minutes de marche dans les gorges jusqu'aux cascades</strong> - Découverte des bassins naturels et des chutes d'eau</span>
+                            <span class="lang-en"><strong>40-minute walk through the gorges to the waterfalls</strong> - Discovery of natural pools and waterfalls</span>
+                        </div>
+                        <div class="day-item">
+                            <i class="fas fa-water"></i>
+                            <span class="lang-fr">Baignade dans les cascades (selon saison)</span>
+                            <span class="lang-en">Swimming in the waterfalls (seasonal)</span>
+                        </div>
+                        
+                        <div class="meal-highlight">
+                            <i class="fas fa-utensils"></i>
+                            <span class="lang-fr"><strong>Déjeuner</strong> - Repas berbère sous les arbres</span>
+                            <span class="lang-en"><strong>Lunch</strong> - Berber meal under the trees</span>
+                        </div>
+                        <div class="meal-highlight">
+                            <i class="fas fa-utensil-spoon"></i>
+                            <span class="lang-fr"><strong>Dîner</strong> - Repas traditionnel préparé sur place</span>
+                            <span class="lang-en"><strong>Dinner</strong> - Traditional meal prepared on site</span>
+                        </div>
+                        
+                        <div class="evening-highlight">
+                            <i class="fas fa-guitar"></i>
+                            <span class="lang-fr"><strong>Soirée folklorique</strong> <i class="fas fa-drum"></i><br>Veillée au coin du feu avec guitare et musique Ahidouss traditionnelle<br><i class="fas fa-moon"></i> Ambiance authentique sous les étoiles</span>
+                            <span class="lang-en"><strong>Folk evening</strong> <i class="fas fa-drum"></i><br>Campfire evening with guitar and traditional Ahidouss music<br><i class="fas fa-moon"></i> Authentic atmosphere under the stars</span>
+                        </div>
+                        <div class="day-item">
+                            <i class="fas fa-bed"></i>
+                            <span class="lang-fr">Nuit en chambres (gîte confortable)</span>
+                            <span class="lang-en">Night in rooms (comfortable lodge)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- DAY 3 -->
+                <div class="day">
+                    <div class="day-header">
+                        <div class="day-icon"><i class="fas fa-water"></i></div>
+                        <div>
+                            <div class="day-title">Dimanche - Activités & Retour</div>
+                            <div class="day-date">Jour 3</div>
+                        </div>
+                    </div>
+                    <div class="day-content">
+                        <div class="meal-highlight">
+                            <i class="fas fa-coffee"></i>
+                            <span class="lang-fr"><strong>Petit déjeuner</strong></span>
+                            <span class="lang-en"><strong>Breakfast</strong></span>
+                        </div>
+                        <div class="day-item">
+                            <i class="fas fa-water"></i>
+                            <span class="lang-fr">Rafting (optionnel) - Descente de l'Oued Ahansal</span>
+                            <span class="lang-en">Rafting (optional) - Ahansal River descent</span>
+                        </div>
+                        <div class="day-item">
+                            <i class="fas fa-bicycle"></i>
+                            <span class="lang-fr">VTT (optionnel) - Parcours dans les montagnes</span>
+                            <span class="lang-en">Mountain biking (optional) - Mountain trails</span>
+                        </div>
+                        <div class="day-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span class="lang-fr">Quad (optionnel) - Circuit dans les sentiers</span>
+                            <span class="lang-en">Quad (optional) - Off-road circuits</span>
+                        </div>
+                        <div class="meal-highlight">
+                            <i class="fas fa-utensils"></i>
+                            <span class="lang-fr"><strong>Déjeuner</strong></span>
+                            <span class="lang-en"><strong>Lunch</strong></span>
+                        </div>
+                        <div class="day-item">
+                            <i class="fas fa-bus"></i>
+                            <span class="lang-fr">15h30 : Départ retour vers Rabat & Casa</span>
+                            <span class="lang-en">15h30 : Return departure to Rabat & Casablanca</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="total-calculator">
-            <h3><i class="fas fa-calculator" style="color: #e6b12e;"></i> Calculez votre total</h3>
+
+        <!-- ===== OPTIONS ===== -->
+        <div class="container">
+            <div class="options-section">
+                <h2>Activités optionnelles (Dimanche)</h2>
+                <div class="options-grid">
+                    <div class="option-card">
+                        <div class="option-header">
+                            <i class="fas fa-water"></i>
+                            <h3>Rafting 12km</h3>
+                        </div>
+                        <div class="option-desc">Descente de l'Oued Ahansal - 12km de rafting avec guide professionnel</div>
+                        <div class="option-price">
+                            <span>Supplément rafting</span>
+                            <span class="price-add">+400 DH</span>
+                        </div>
+                    </div>
+                    
+                    <div class="option-card">
+                        <div class="option-header">
+                            <i class="fas fa-bicycle"></i>
+                            <h3>VTT</h3>
+                        </div>
+                        <div class="option-desc">Location de VTT tout suspendu - parcours de 18km dans les montagnes</div>
+                        <div class="option-price">
+                            <span>Supplément VTT</span>
+                            <span class="price-add">+150 DH</span>
+                        </div>
+                    </div>
+                    
+                    <div class="option-card">
+                        <div class="option-header">
+                            <i class="fas fa-motorcycle"></i>
+                            <h3>Quad</h3>
+                        </div>
+                        <div class="option-desc">Quad solo ou biplace - 1 heure de conduite dans les sentiers</div>
+                        <div class="option-price">
+                            <span>Supplément quad</span>
+                            <span class="price-add">+250 DH</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CALCULATOR ===== -->
+        <div class="container">
+            <div class="total-calculator">
+                <h3><i class="fas fa-calculator" style="color: #e6b12e;"></i> Calculez votre total</h3>
+                
+                <div class="calc-item">
+                    <span class="calc-label"><i class="fas fa-bed"></i> Base (chambres + 4x4 + repas)</span>
+                    <span class="calc-value">860 DH</span>
+                </div>
+                
+                <div class="calc-item checkbox-group">
+                    <span class="calc-label"><i class="fas fa-water"></i> Rafting (+400 DH)</span>
+                    <input type="checkbox" id="rafting" onchange="calculerTotal()">
+                </div>
+                
+                <div class="calc-item checkbox-group">
+                    <span class="calc-label"><i class="fas fa-bicycle"></i> VTT (+150 DH)</span>
+                    <input type="checkbox" id="vtt" onchange="calculerTotal()">
+                </div>
+                
+                <div class="calc-item checkbox-group">
+                    <span class="calc-label"><i class="fas fa-motorcycle"></i> Quad (+250 DH)</span>
+                    <input type="checkbox" id="quad" onchange="calculerTotal()">
+                </div>
+                
+                <div class="calc-total">
+                    <span>TOTAL</span>
+                    <span class="total-price" id="total">860 DH</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== INCLUDED ===== -->
+        <div class="container">
+            <div class="included-box">
+                <h4><i class="fas fa-check-circle"></i> Inclus</h4>
+                <div class="included-grid">
+                    <div class="included-item"><i class="fas fa-check"></i> Transport aller/retour</div>
+                    <div class="included-item"><i class="fas fa-check"></i> 2 nuits en chambres (gîte confortable)</div>
+                    <div class="included-item"><i class="fas fa-check"></i> Transport en 4x4 (sommet + gorges)</div>
+                    <div class="included-item"><i class="fas fa-check"></i> Petit déjeuner (samedi + dimanche)</div>
+                    <div class="included-item"><i class="fas fa-check"></i> Déjeuner (samedi + dimanche)</div>
+                    <div class="included-item"><i class="fas fa-check"></i> Dîner (samedi)</div>
+                    <div class="included-item"><i class="fas fa-check"></i> Guide de montagne</div>
+                    <div class="included-item"><i class="fas fa-check"></i> Soirée folklorique (guitare + Ahidouss)</div>
+                    <div class="included-item"><i class="fas fa-check"></i> Feu de camp</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== NOT INCLUDED ===== -->
+        <div class="container">
+            <div class="not-included">
+                <h4><i class="fas fa-times-circle"></i> Non inclus</h4>
+                <div class="included-grid">
+                    <div class="included-item"><i class="fas fa-times"></i> Dîner du vendredi</div>
+                    <div class="included-item"><i class="fas fa-times"></i> Rafting (optionnel)</div>
+                    <div class="included-item"><i class="fas fa-times"></i> VTT (optionnel)</div>
+                    <div class="included-item"><i class="fas fa-times"></i> Quad (optionnel)</div>
+                    <div class="included-item"><i class="fas fa-times"></i> Boissons personnelles</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== DATES ===== -->
+        <div class="container">
+            <div class="dates">
+                <i class="fas fa-calendar-alt"></i> <strong>Prochains départs :</strong>
+                <span class="date-tag">03-04 Avril</span>
+                <span class="date-tag">10-12 Avril</span>
+                <span class="date-tag">17-19 Avril</span>
+                <span class="date-tag">24-26 Avril</span>
+                <span class="date-tag">8-10 Mai</span>
+            </div>
+        </div>
+
+        <!-- ===== BUTTONS ===== -->
+        <div class="container">
+            <div class="buttons">
+                <a href="booking.html" class="btn"><i class="fas fa-calendar-check"></i> Réserver</a>
+                <a href="https://wa.me/212667772551" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
             
-            <div class="calc-item">
-                <span class="calc-label"><i class="fas fa-bed"></i> Base (chambres + 4x4 + repas)</span>
-                <span class="calc-value">1150 DH</span>
-            </div>
-            
-            <div class="calc-item checkbox-group">
-                <span class="calc-label"><i class="fas fa-water"></i> Rafting (+400 DH)</span>
-                <input type="checkbox" id="rafting" onchange="calculerTotal()">
-            </div>
-            
-            <div class="calc-item checkbox-group">
-                <span class="calc-label"><i class="fas fa-bicycle"></i> VTT (+150 DH)</span>
-                <input type="checkbox" id="vtt" onchange="calculerTotal()">
-            </div>
-            
-            <div class="calc-item checkbox-group">
-                <span class="calc-label"><i class="fas fa-motorcycle"></i> Quad (+250 DH)</span>
-                <input type="checkbox" id="quad" onchange="calculerTotal()">
-            </div>
-            
-            <div class="calc-total">
-                <span>TOTAL</span>
-                <span class="total-price" id="total">1150 DH</span>
+            <div style="text-align: center; margin-bottom: 60px;">
+                <a href="../index.html" class="btn-home"><i class="fas fa-home"></i> Retour à l'accueil</a>
             </div>
         </div>
-        
-        <div class="included-box">
-            <h4><i class="fas fa-check-circle"></i> Inclus</h4>
-            <div class="included-grid">
-                <div class="included-item"><i class="fas fa-check"></i> Transport aller/retour</div>
-                <div class="included-item"><i class="fas fa-check"></i> 2 nuits en chambres (gîte confortable)</div>
-                <div class="included-item"><i class="fas fa-check"></i> Transport en 4x4 (sommet + gorges)</div>
-                <div class="included-item"><i class="fas fa-check"></i> Petit déjeuner (samedi + dimanche)</div>
-                <div class="included-item"><i class="fas fa-check"></i> Déjeuner (samedi + dimanche)</div>
-                <div class="included-item"><i class="fas fa-check"></i> Dîner (samedi)</div>
-                <div class="included-item"><i class="fas fa-check"></i> Guide de montagne</div>
-                <div class="included-item"><i class="fas fa-check"></i> Soirée folklorique (guitare + Ahidouss)</div>
-                <div class="included-item"><i class="fas fa-check"></i> Feu de camp</div>
-            </div>
-        </div>
-        
-        <div class="not-included">
-            <h4><i class="fas fa-times-circle"></i> Non inclus</h4>
-            <div class="included-grid">
-                <div class="included-item"><i class="fas fa-times"></i> Dîner du vendredi</div>
-                <div class="included-item"><i class="fas fa-times"></i> Rafting (optionnel)</div>
-                <div class="included-item"><i class="fas fa-times"></i> VTT (optionnel)</div>
-                <div class="included-item"><i class="fas fa-times"></i> Quad (optionnel)</div>
-                <div class="included-item"><i class="fas fa-times"></i> Boissons personnelles</div>
-            </div>
-        </div>
-        
-        <div class="dates">
-            <i class="fas fa-calendar-alt"></i> <strong>Prochains départs :</strong>
-            <span class="date-tag">03-04 Avril</span>
-            <span class="date-tag">10-12 Avril</span>
-            <span class="date-tag">17-19 Avril</span>
-            <span class="date-tag">24-26 Avril</span>
-            <span class="date-tag">8-10 Mai</span>
-        </div>
-        
-        <div class="buttons">
-            <a href="booking.html" class="btn" id="bookBtn"><i class="fas fa-calendar-check"></i> Réserver</a>
-            <a href="https://wa.me/212667772551" class="btn" id="waBtn" style="background:#25D366; color:white;" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        </div>
-        
-        <div class="home-button">
-            <a href="../index.html" class="btn-home"><i class="fas fa-home"></i> Retour à l'accueil</a>
-        </div>
-    </div>
-    
-    <footer class="footer-pro">
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-pro" aria-label="Pied de page">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale">
+                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
-                    <p class="footer-description">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques.</p>
+                    <p class="footer-description">
+                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
+                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
+
                 <div class="footer-col footer-links">
-                    <h4>Liens</h4>
+                    <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
                     <ul>
-                        <li><a href="../index.html">Accueil</a></li>
-                        <li><a href="rafting.html">Rafting</a></li>
-                        <li><a href="camping.html">Camping</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
+                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
+                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
+                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
                     </ul>
                 </div>
-                <div class="footer-col footer-contact">
-                    <h4>Contact</h4>
+
+                <div class="footer-col footer-info">
+                    <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
                     <ul>
-                        <li><i class="fas fa-phone-alt"></i> +212 667-772551</li>
-                        <li><i class="fab fa-whatsapp"></i> WhatsApp</li>
+                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+                        <li><a href="store.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Store</span><span class="lang-fr">Boutique</span></a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-contact">
+                    <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
                     </ul>
                 </div>
             </div>
+
+            <div class="footer-middle">
+                <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
+                <div class="stat-item"><div class="stat-number">50+ km</div><div class="stat-label">Sentiers</div></div>
+                <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
+                <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
+            </div>
+
             <div class="footer-bottom">
-                <p>© 2026 Imsfrane Cathédrale</p>
+                <div class="copyright">
+                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
+                </div>
             </div>
         </div>
     </footer>
-    
+
+    <!-- ===== FLOATING BUTTONS ===== -->
     <div class="floating-buttons">
-        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
-        <a href="tel:0667772551" class="floating-btn phone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
-        <a href="booking.html" class="floating-btn booking"><i class="fas fa-calendar-check"></i><span class="tooltip">Réserver</span></a>
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
+        <a href="tel:0667772551" class="floating-btn phone" aria-label="Téléphone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
+        <a href="store.html" class="floating-btn booking" style="background: #e6b12e;" aria-label="Boutique"><i class="fas fa-store"></i><span class="tooltip">Boutique</span></a>
     </div>
-    
-    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../js/script.js"></script>
     
     <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const mainNav = document.getElementById('mainNav');
-        const overlay = document.getElementById('overlay');
-        
-        function toggleMenu() {
-            mainNav.classList.toggle('active');
-            overlay.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
-            if (icon) {
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-times');
-            }
-        }
-        
-        menuToggle.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
-        
-        window.toggleSubmenu = function(event) {
-            event.preventDefault();
-            const parent = event.currentTarget.closest('.has-submenu');
-            const submenu = parent.querySelector('.submenu');
-            const arrow = parent.querySelector('.arrow');
-            submenu.classList.toggle('active');
-            arrow.classList.toggle('rotated');
+        // ===== LANGUAGE SWITCHER =====
+        window.setLanguage = function(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang.toLowerCase());
+            });
+            localStorage.setItem('preferred-language', lang);
         };
-        
+
+        // Load saved language
+        const savedLang = localStorage.getItem('preferred-language');
+        if (savedLang) {
+            setLanguage(savedLang);
+        } else {
+            setLanguage('fr');
+        }
+
+        // ===== BACK TO TOP =====
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                backToTop.classList.toggle('show', window.scrollY > 300);
+            });
+            backToTop.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // ===== PROGRAMME SLIDER =====
         let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.dot');
+        const slides = document.querySelectorAll('#programmeSlider .slide');
+        const dots = document.querySelectorAll('#programmeSlider .dot');
         const totalSlides = slides.length;
-        
+
         function showSlide(index) {
             if (index < 0) index = totalSlides - 1;
             if (index >= totalSlides) index = 0;
@@ -1102,47 +1268,27 @@
             dots[index].classList.add('active');
             currentSlide = index;
         }
-        
+
         window.changeSlide = function(direction) {
             showSlide(currentSlide + direction);
         };
-        
+
         window.goToSlide = function(index) {
             showSlide(index);
         };
-        
+
+        // Auto advance slides
         setInterval(() => {
             changeSlide(1);
         }, 5000);
-        
+
+        // ===== CALCULATOR =====
         function calculerTotal() {
-            let total = 1150;
+            let total = 860;
             if (document.getElementById('rafting').checked) total += 400;
             if (document.getElementById('vtt').checked) total += 150;
             if (document.getElementById('quad').checked) total += 250;
             document.getElementById('total').textContent = total + ' DH';
-        }
-        
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            backToTop.classList.toggle('show', window.scrollY > 300);
-        });
-        backToTop.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        
-        window.setLanguage = function(lang) {
-            document.body.setAttribute('data-lang', lang);
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang.toLowerCase());
-            });
-            localStorage.setItem('preferred-language', lang);
-        };
-        
-        const savedLang = localStorage.getItem('preferred-language');
-        if (savedLang) {
-            setLanguage(savedLang);
         }
     </script>
 </body>
