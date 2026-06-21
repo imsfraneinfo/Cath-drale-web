@@ -2,421 +2,547 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafting sur l'Oued Ahansal | Reprise Février 2027</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rafting Adventure | Imsfrane Cathédrale - Oued Ahansal</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <meta name="description" content="Rafting à Imsfrane actuellement hors saison. Reprise des activités en Février 2027. Contactez-nous pour plus d'informations.">
+    <meta name="description" content="Experience the ultimate rafting adventure on Oued Ahansal. 12km, 30km & 50km descents in the High Atlas Mountains. Professional guides, premium equipment.">
+    <meta name="keywords" content="rafting Morocco, Oued Ahansal rafting, Atlas Mountains adventure, white water rafting, Imsfrane rafting">
+    <meta name="robots" content="index, follow">
     
-    <meta property="og:title" content="Rafting à Imsfrane - Reprise Février 2027">
-    <meta property="og:description" content="Rafting temporairement indisponible. Reprise des activités en Février 2027.">
-    <meta property="og:image" content="https://imsfrane.com/images/raft2.jpeg">
+    <meta property="og:title" content="Rafting Adventure - Oued Ahansal | Imsfrane Cathédrale">
+    <meta property="og:description" content="Experience the ultimate rafting adventure on Oued Ahansal. Professional guides, premium equipment, unforgettable memories.">
+    <meta property="og:image" content="https://imsfrane.com/images/rafting-og.jpg">
     <meta property="og:url" content="https://imsfrane.com/pages/rafting.html">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Imsfrane Cathédrale">
+    <meta property="og:locale" content="fr_FR">
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
+    <!-- ===== STYLE UNIFIED ===== -->
     <link rel="stylesheet" href="../css/style.css">
     
     <style>
-        .page-hero {
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../images/raft3.jpeg') center/cover no-repeat;
+        /* ===== RAFTING PAGE STYLES ===== */
+        .rafting-hero-section {
             position: relative;
-        }
-        
-        .page-title {
-            text-align: center;
-            margin: 3rem 0 2rem;
-        }
-        
-        .page-title h1 {
-            font-size: 2.5rem;
-            color: #1e3c2c;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .page-title .location {
-            color: #e6b12e;
-            font-size: 1rem;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
-        }
-        
-        /* Unavailable Alert */
-        .alert-unavailable {
-            background: #fff3e0;
-            border-left: 5px solid #ff9800;
-            padding: 1.5rem;
-            margin: 2rem auto;
-            border-radius: 15px;
-            max-width: 900px;
+            background: linear-gradient(135deg, rgba(15,42,26,0.8) 0%, rgba(30,60,44,0.6) 100%), url('../images/raft3.jpeg') center/cover no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            padding: 2rem;
             text-align: center;
+            width: 100%;
         }
-        
-        .alert-unavailable i {
-            color: #ff9800;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            display: block;
+
+        .rafting-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            width: 100%;
         }
-        
-        .alert-unavailable strong {
-            color: #ff9800;
-            font-size: 1.2rem;
-        }
-        
-        .return-date {
+
+        .rafting-hero-badge {
             display: inline-block;
-            background: #1e3c2c;
+            background: rgba(230,177,46,0.15);
             color: #e6b12e;
             padding: 0.5rem 1.5rem;
             border-radius: 50px;
-            font-weight: 700;
-            margin-top: 1rem;
-            font-size: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(230,177,46,0.3);
         }
-        
-        .intro-text {
-            max-width: 800px;
-            margin: 2rem auto 3rem;
+
+        .rafting-hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .rafting-hero-title .gold-text {
+            color: #e6b12e;
+        }
+
+        .rafting-hero-desc {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.85);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .rafting-hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
             text-align: center;
         }
-        
-        .intro-text p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 1rem;
-        }
-        
-        .intro-icon {
-            font-size: 2rem;
-            color: #e6b12e;
-            margin-bottom: 1rem;
-        }
-        
-        .route-block {
-            margin-bottom: 5rem;
-        }
-        
-        .route-image {
-            width: 100%;
-            height: 450px;
-            overflow: hidden;
-            margin-bottom: 1.5rem;
-            border-radius: 20px;
-        }
-        
-        .route-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+
+        .hero-stat-number {
             display: block;
-        }
-        
-        .route-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .route-location {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-size: 2.5rem;
+            font-weight: 900;
             color: #e6b12e;
-            font-size: 0.9rem;
-            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-stat-label {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 0.5rem;
         }
-        
-        .route-content h2 {
-            font-size: 2.5rem;
+
+        .rafting-intro-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 4rem 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .rafting-intro-title {
+            font-size: 2.8rem;
             color: #1e3c2c;
-            margin-bottom: 1rem;
-            font-weight: 800;
+            font-weight: 900;
+            margin: 1rem 0 1.5rem;
+            font-family: 'Playfair Display', serif;
             line-height: 1.2;
         }
-        
-        .route-content h2 i {
+
+        .rafting-intro-title .gold-text {
             color: #e6b12e;
-            margin-right: 0.5rem;
         }
-        
-        .route-content p {
+
+        .rafting-intro-desc {
             color: #555;
             line-height: 1.8;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
         }
-        
-        .route-meta {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin: 1.5rem 0;
-            padding: 1rem 0;
-            border-top: 1px solid #f0f0f0;
-            border-bottom: 1px solid #f0f0f0;
+
+        .rafting-intro-features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
         }
-        
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #1e3c2c;
-            font-weight: 600;
-        }
-        
-        .meta-item i {
-            color: #e6b12e;
-            font-size: 1.1rem;
-        }
-        
-        .price-badge {
-            background: #e0e0e0;
-            color: #999;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 1.4rem;
-            display: inline-block;
-            margin: 1rem 0;
-            text-decoration: line-through;
-        }
-        
-        .btn-unavailable {
-            display: inline-block;
-            background: #cccccc;
-            color: #666;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-            cursor: not-allowed;
-            border: none;
-        }
-        
-        .btn-unavailable i {
-            margin-right: 0.5rem;
-        }
-        
-        .prebook-section {
-            background: #e8f5e8;
-            border-left: 5px solid #4CAF50;
-            padding: 1.5rem;
-            margin: 2rem auto;
-            border-radius: 15px;
-            max-width: 900px;
-            text-align: center;
-        }
-        
-        .prebook-section i {
-            color: #4CAF50;
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        .journey-section {
-            background: #f9f7f3;
-            border-radius: 30px;
-            padding: 2rem;
-            margin: 2rem 0 1rem;
-            border: 1px solid rgba(230,177,46,0.2);
-        }
-        
-        .journey-title {
+
+        .intro-feature {
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            margin-bottom: 1.5rem;
-            color: #1e3c2c;
-            font-size: 1.3rem;
-        }
-        
-        .journey-title i {
-            color: #e6b12e;
-            font-size: 1.5rem;
-        }
-        
-        .journey-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-        
-        .journey-step {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-        
-        .step-time {
-            min-width: 80px;
-            background: #1e3c2c;
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 30px;
-            font-size: 0.8rem;
+            background: #f9f7f3;
+            padding: 0.8rem 1.2rem;
+            border-radius: 12px;
             font-weight: 600;
-            text-align: center;
+            color: #1e3c2c;
+            font-size: 0.9rem;
         }
-        
-        .step-content {
-            flex: 1;
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-        
-        .step-icon {
-            width: 40px;
-            height: 40px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+        .intro-feature i {
             color: #e6b12e;
             font-size: 1.2rem;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
         }
-        
-        .step-text h4 {
+
+        /* ===== RAFTING CARDS ===== */
+        .rafting-card {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 0;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            margin-bottom: 2.5rem;
+        }
+
+        .rafting-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(230,177,46,0.12);
+        }
+
+        .rafting-card-image {
+            position: relative;
+            overflow: hidden;
+            min-height: 350px;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+        }
+
+        .rafting-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            display: block;
+        }
+
+        .rafting-card:hover .rafting-card-image img {
+            transform: scale(1.05);
+        }
+
+        .rafting-card-badge {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            background: rgba(30,60,44,0.9);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255,255,255,0.1);
+            z-index: 2;
+        }
+
+        .rafting-card-content {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .rafting-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .rafting-card-title {
+            font-size: 1.8rem;
+            font-weight: 800;
             color: #1e3c2c;
-            margin-bottom: 0.3rem;
-            font-size: 1rem;
+            font-family: 'Playfair Display', serif;
         }
-        
-        .step-text p {
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.5;
+
+        .rafting-card-distance {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #e6b12e;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .rafting-card-intro {
+            background: #f9f7f3;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            margin: 0.5rem 0 1.5rem;
+            border-left: 3px solid #e6b12e;
+        }
+
+        .rafting-card-intro p {
+            color: #1e3c2c;
+            font-weight: 500;
+            font-size: 0.95rem;
             margin: 0;
         }
-        
-        .food-note {
-            background: #fff3e0;
-            border-left: 4px solid #e6b12e;
-            padding: 1rem;
-            border-radius: 10px;
-            margin: 1rem 0;
-            font-size: 0.9rem;
+
+        .rafting-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            padding: 1rem 0;
+            border-top: 1px solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 1.5rem;
         }
-        
-        .contact-section {
-            background: white;
-            border-radius: 30px;
-            padding: 3rem;
-            margin: 4rem 0;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .contact-item {
-            text-align: center;
-        }
-        
-        .contact-item i {
-            font-size: 2.5rem;
-            color: #e6b12e;
-            margin-bottom: 0.8rem;
-        }
-        
-        .contact-item h4 {
-            color: #1e3c2c;
-            margin-bottom: 0.3rem;
-        }
-        
-        .contact-item a {
-            color: #555;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .contact-item a:hover {
-            color: #e6b12e;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: #e6b12e;
-            color: #1e3c2c;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            margin-top: 1rem;
-        }
-        
-        .btn:hover {
-            background: #f4c542;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(230,177,46,0.3);
-        }
-        
-        .btn-wa {
-            background: #25D366;
-            color: white;
-            display: inline-flex;
+
+        .rafting-card-meta span {
+            display: flex;
             align-items: center;
             gap: 0.5rem;
+            color: #555;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
-        
-        .btn-wa:hover {
-            background: #128C7E;
+
+        .rafting-card-meta i {
+            color: #e6b12e;
         }
-        
+
+        .rafting-card-price {
+            font-size: 1.6rem !important;
+            font-weight: 900 !important;
+            color: #e6b12e !important;
+            margin-left: auto !important;
+        }
+
+        .rafting-card-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .rafting-programme-detail {
+            display: none;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px dashed #e6b12e;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .rafting-programme-detail.show {
+            display: block;
+        }
+
+        .rafting-programme-inner {
+            background: #f9f7f3;
+            border-radius: 16px;
+            padding: 1.8rem;
+        }
+
+        .rafting-programme-inner h4 {
+            font-size: 1.3rem;
+            color: #1e3c2c;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1.5rem;
+        }
+
+        .rafting-programme-inner h4 i {
+            color: #e6b12e;
+            margin-right: 0.5rem;
+        }
+
+        .rafting-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            padding: 0.8rem 1rem;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .timeline-time {
+            min-width: 70px;
+            background: #1e3c2c;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 0.2rem;
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .timeline-content strong {
+            display: block;
+            color: #1e3c2c;
+            font-size: 0.95rem;
+        }
+
+        .timeline-content p {
+            color: #666;
+            font-size: 0.85rem;
+            margin: 0.2rem 0 0;
+        }
+
+        .rafting-included {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .rafting-included h5 {
+            font-size: 1rem;
+            color: #1e3c2c;
+            margin-bottom: 0.8rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .rafting-included ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            padding: 0;
+        }
+
+        .rafting-included ul li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .rafting-included ul li i {
+            color: #4CAF50;
+            font-size: 0.85rem;
+        }
+
+        .note-important {
+            background: #fff3cd;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border-left: 4px solid #ffc107;
+            font-size: 0.9rem;
+            color: #856404;
+        }
+
+        .note-important i {
+            margin-right: 0.5rem;
+        }
+
+        .note-meals {
+            background: #d4edda;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border-left: 4px solid #28a745;
+            font-size: 0.9rem;
+            color: #155724;
+        }
+
+        .note-meals i {
+            margin-right: 0.5rem;
+        }
+
+        .note-option {
+            background: #cce5ff;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            margin-top: 0.5rem;
+            border-left: 4px solid #007bff;
+            font-size: 0.9rem;
+            color: #004085;
+        }
+
+        .note-option i {
+            margin-right: 0.5rem;
+        }
+
+        /* ===== IMAGE POSITIONS ===== */
+        .rafting-card:nth-of-type(1) .rafting-card-image {
+            background-image: url('../images/raft2.jpeg') !important;
+            background-position: 50% 65% !important;
+        }
+
+        .rafting-card:nth-of-type(2) .rafting-card-image {
+            background-image: url('../images/15.jpeg') !important;
+            background-position: 50% 60% !important;
+        }
+
+        .rafting-card:nth-of-type(3) .rafting-card-image {
+            background-image: url('../images/raft1.jpeg') !important;
+            background-position: 50% 30% !important;
+        }
+
+      
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .rafting-hero-title { font-size: 3rem !important; }
+            .rafting-hero-stats { gap: 1.5rem !important; }
+            .hero-stat-number { font-size: 2rem !important; }
+            .rafting-intro-title { font-size: 2.2rem !important; }
+            .rafting-intro-features { grid-template-columns: repeat(2, 1fr) !important; }
+            .rafting-card { grid-template-columns: 1fr !important; }
+            .rafting-card-image { min-height: 250px !important; }
+        }
+
         @media (max-width: 768px) {
-            .page-hero { height: 350px; }
-            .route-image { height: 300px; }
-            .route-content h2 { font-size: 2rem; }
-            .journey-step { flex-direction: column; }
-            .step-time { align-self: flex-start; }
-            .price-badge { font-size: 1.2rem; }
-            .contact-grid { grid-template-columns: 1fr; }
+            .rafting-hero-section { min-height: 60vh !important; padding: 1.5rem !important; }
+            .rafting-hero-title { font-size: 2rem !important; }
+            .rafting-hero-desc { font-size: 0.95rem !important; }
+            .rafting-hero-stats { gap: 1rem !important; }
+            .hero-stat-number { font-size: 1.5rem !important; }
+            .rafting-intro-title { font-size: 1.8rem !important; }
+            .rafting-intro-features { grid-template-columns: 1fr 1fr !important; }
+            .intro-feature { font-size: 0.8rem !important; padding: 0.5rem 0.8rem !important; }
+            .rafting-card-content { padding: 1.2rem !important; }
+            .rafting-card-title { font-size: 1.3rem !important; }
+            .rafting-card-distance { font-size: 1.3rem !important; }
+            .rafting-card-meta { gap: 0.6rem !important; }
+            .rafting-card-price { font-size: 1.2rem !important; margin-left: 0 !important; }
+            .rafting-card-actions { flex-direction: column !important; width: 100% !important; }
+            .rafting-card-actions .btn,
+            .rafting-card-actions .btn-readmore { width: 100% !important; text-align: center !important; justify-content: center !important; }
+            .rafting-included ul { grid-template-columns: 1fr !important; }
+            .timeline-item { flex-direction: column !important; gap: 0.3rem !important; }
+            .timeline-time { min-width: auto !important; align-self: flex-start !important; }
+        }
+
+        @media (max-width: 480px) {
+            .rafting-hero-title { font-size: 1.6rem !important; }
+            .rafting-intro-title { font-size: 1.5rem !important; }
+            .rafting-intro-features { grid-template-columns: 1fr !important; }
+            .rafting-card-title { font-size: 1.1rem !important; }
+            .rafting-card-distance { font-size: 1.1rem !important; }
         }
     </style>
 </head>
 <body data-lang="en">
     <div class="overlay" id="overlay"></div>
 
+    <!-- ===== HEADER ===== -->
     <header>
         <div class="container header-content">
-            <a href="../index.html" class="logo">
-                <div class="logo-img"><img src="../images/logo.jpeg" alt="Logo" width="60" height="60"></div>
-                <div class="logo-text"><h1>Imsfrane Cathédrale</h1><span class="lang-en">Nature Adventures</span><span class="lang-fr">Aventures Nature</span></div>
+            <a href="../index.html" class="logo" aria-label="Imsfrane Cathédrale">
+                <div class="logo-img">
+                    <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
+                </div>
+                <div class="logo-text">
+                    <h1>Imsfrane Cathédrale</h1>
+                    <span class="lang-en">Nature Adventures</span>
+                    <span class="lang-fr">Aventures Nature</span>
+                </div>
             </a>
+            
             <div class="right-controls">
-                <div class="lang-buttons"><button class="lang-btn active" onclick="setLanguage('en')">EN</button><button class="lang-btn" onclick="setLanguage('fr')">FR</button></div>
+                <div class="lang-buttons">
+                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
+                </div>
                 <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
             </div>
         </div>
     </header>
 
+    <!-- ===== NAVIGATION ===== -->
     <nav id="mainNav">
         <ul>
             <li><a href="../index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
@@ -436,185 +562,508 @@
             </li>
             <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
             <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
-            <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="store.html"><i class="fas fa-store"></i> <span class="lang-en">Store</span><span class="lang-fr">Boutique</span></a></li>
             <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
             <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
-    
-<main>
-    <div class="page-hero"></div>
 
-    <div class="container">
-        <div class="page-title">
-            <h1 class="lang-en">Rafting on Ahansal River</h1>
-            <h1 class="lang-fr">Rafting sur l'Oued Ahansal</h1>
-            <div class="location"><i class="fas fa-map-pin"></i> Imsfrane, Morocco</div>
-        </div>
-    </div>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
 
-    <!-- ⚠️ ALERTE UNAVAILABLE - BILINGUE -->
-    <div class="container">
-        <div class="alert-unavailable">
-            <i class="fas fa-calendar-times"></i>
-            <strong class="lang-en">🚣‍♂️ Rafting temporarily unavailable</strong>
-            <strong class="lang-fr">🚣‍♂️ Rafting temporairement indisponible</strong>
-            <p class="lang-en">The rafting season has ended. Activities will resume in <strong>February 2027</strong>.</p>
-            <p class="lang-fr">La saison de rafting est terminée. Les activités reprendront en <strong>Février 2027</strong>.</p>
-            <div class="return-date">
-                <i class="fas fa-calendar-alt"></i> <span class="lang-en">Return: February 2027</span><span class="lang-fr">Reprise : Février 2027</span>
+        <!-- ===== HERO SECTION ===== -->
+        <section class="rafting-hero-section">
+            <div class="rafting-hero-content">
+                <div class="rafting-hero-badge">🔥 Premium Adventure</div>
+                <h1 class="rafting-hero-title">
+                    <span class="lang-en">Rafting on <span class="gold-text">Oued Ahansal</span></span>
+                    <span class="lang-fr">Rafting sur <span class="gold-text">l'Oued Ahansal</span></span>
+                </h1>
+                <p class="rafting-hero-desc">
+                    <span class="lang-en">Experience the thrill of white water rafting in the heart of the High Atlas Mountains</span>
+                    <span class="lang-fr">Vivez le frisson du rafting en eaux vives au cœur du Haut Atlas</span>
+                </p>
+                <div class="rafting-hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">12-50</span>
+                        <span class="hero-stat-label">KM</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">2-3</span>
+                        <span class="hero-stat-label">Hours</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">⭐ 4.9</span>
+                        <span class="hero-stat-label">Rating</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">+500</span>
+                        <span class="hero-stat-label">Adventurers</span>
+                    </div>
+                </div>
+                <a href="#parcours" class="btn btn-large">
+                    <i class="fas fa-arrow-down"></i>
+                    <span class="lang-en">Explore Routes</span>
+                    <span class="lang-fr">Découvrir les Parcours</span>
+                </a>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- PRE-BOOK SECTION - BILINGUE -->
-    <div class="container">
-        <div class="prebook-section">
-            <i class="fas fa-calendar-check"></i>
-            <strong class="lang-en">📅 Reserve your spot for next season!</strong>
-            <strong class="lang-fr">📅 Réservez votre place pour la prochaine saison !</strong>
-            <p class="lang-en">You can already contact us to be notified when rafting resumes in February 2027. No payment required now.</p>
-            <p class="lang-fr">Vous pouvez dès maintenant nous contacter pour être notifié à la reprise du rafting en Février 2027. Aucun paiement requis maintenant.</p>
-            <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20%C3%AAtre%20inform%C3%A9%20de%20la%20reprise%20du%20rafting%20en%20F%C3%A9vrier%202027" target="_blank" class="btn btn-wa" style="background: #25D366; color: white; margin-top: 0.5rem;">
-                <i class="fab fa-whatsapp"></i> <span class="lang-en">Notify me</span><span class="lang-fr">Me notifier</span>
-            </a>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="intro-text">
-            <div class="intro-icon"><i class="fas fa-water"></i></div>
-            <p class="lang-en">Experience the thrill of white water rafting on the Ahansal River, in the heart of the High Atlas Mountains. Our experienced guides will take you through spectacular gorges and rapids, offering an unforgettable adventure.</p>
-            <p class="lang-fr">Vivez le frisson du rafting en eaux vives sur l'Oued Ahansal, au cœur des montagnes du Haut Atlas. Nos guides expérimentés vous emmèneront à travers des gorges et rapides spectaculaires.</p>
-        </div>
-    </div>
-
-    <!-- OFFRE 12KM -->
-    <section class="container">
-        <div class="route-block">
-            <div class="route-image">
-                <img src="../images/raft2.jpeg" alt="Rafting 12km" width="800" height="400" loading="lazy">
+        <!-- ===== INTRO SECTION ===== -->
+        <section class="container">
+            <div class="rafting-intro-grid">
+                <div class="rafting-intro-text">
+                    <span class="section-mini-title">✦ RAFTING EXPERIENCE ✦</span>
+                    <h2 class="rafting-intro-title">
+                        <span class="lang-en">The Ultimate <span class="gold-text">White Water</span> Adventure</span>
+                        <span class="lang-fr">L'Aventure Ultime en <span class="gold-text">Eaux Vives</span></span>
+                    </h2>
+                    <p class="rafting-intro-desc">
+                        <span class="lang-en">Discover the wild beauty of Oued Ahansal through an unforgettable rafting experience. Whether you're a beginner or an experienced rafter, our professional guides will take you on a journey through spectacular gorges, crystal-clear waters, and exhilarating rapids.</span>
+                        <span class="lang-fr">Découvrez la beauté sauvage de l'Oued Ahansal à travers une expérience de rafting inoubliable. Que vous soyez débutant ou rafteur expérimenté, nos guides professionnels vous emmèneront à travers des gorges spectaculaires, des eaux cristallines et des rapides exaltants.</span>
+                    </p>
+                    <div class="rafting-intro-features">
+                        <div class="intro-feature">
+                            <i class="fas fa-user-tie"></i>
+                            <span class="lang-en">Expert Guides</span>
+                            <span class="lang-fr">Guides Experts</span>
+                        </div>
+                        <div class="intro-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span class="lang-en">Premium Safety</span>
+                            <span class="lang-fr">Sécurité Premium</span>
+                        </div>
+                        <div class="intro-feature">
+                            <i class="fas fa-camera"></i>
+                            <span class="lang-en">Photos Included</span>
+                            <span class="lang-fr">Photos Incluses</span>
+                        </div>
+                        <div class="intro-feature">
+                            <i class="fas fa-water"></i>
+                            <span class="lang-en">All Equipment</span>
+                            <span class="lang-fr">Équipement Complet</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="route-content">
-                <div class="route-location"><i class="fas fa-map-pin"></i> Oued Ahansal</div>
-                <h2>Parcours Découverte - 12km</h2>
-                <p>Point de rendez-vous à votre hébergement. Distribution du matériel, puis transfert en 4x4 jusqu'au confluent. Briefing sécurité, navigation, baignade, photos. Arrivée au Pont de Tilouguite. Retour en 4x4.</p>
-                
-                <div class="route-meta">
-                    <div class="meta-item"><i class="fas fa-clock"></i> 2-3h</div>
-                    <div class="meta-item"><i class="fas fa-route"></i> 12km</div>
-                    <div class="meta-item"><i class="fas fa-tag"></i> <span style="color:#999;">400 DH</span></div>
+        </section>
+
+        <!-- ===== PARCOURS SECTION ===== -->
+        <section id="parcours" style="background: #f9f7f3; padding: 4rem 0;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <span class="section-mini-title">✦ CHOOSE YOUR ROUTE ✦</span>
+                    <h2 style="font-size: 2.8rem; color: #1e3c2c; font-family: 'Playfair Display', serif;">
+                        <span class="lang-en">Find Your <span class="gold-text">Perfect Descent</span></span>
+                        <span class="lang-fr">Trouvez votre <span class="gold-text">Descente Parfaite</span></span>
+                    </h2>
                 </div>
 
-                <div class="price-badge">
-                    <i class="fas fa-tag"></i> 400 DH <small>par personne</small>
-                </div>
-
-                <div class="journey-section">
-                    <div class="journey-title"><i class="fas fa-map-signal"></i> Déroulé de la descente</div>
-                    <div class="journey-steps">
-                        <div class="journey-step"><span class="step-time">09:00</span><div class="step-content"><div class="step-icon"><i class="fas fa-map-pin"></i></div><div class="step-text"><h4>Rendez-vous à l'hébergement</h4><p>Nous venons vous chercher</p></div></div></div>
-                        <div class="journey-step"><span class="step-time">09:30</span><div class="step-content"><div class="step-icon"><i class="fas fa-tshirt"></i></div><div class="step-text"><h4>Distribution du matériel</h4><p>Combinaisons, gilets, casques</p></div></div></div>
-                        <div class="journey-step"><span class="step-time">10:30</span><div class="step-content"><div class="step-icon"><i class="fas fa-shield-alt"></i></div><div class="step-text"><h4>Briefing sécurité</h4><p>Instructions de navigation</p></div></div></div>
-                        <div class="journey-step"><span class="step-time">11:00</span><div class="step-content"><div class="step-icon"><i class="fas fa-water"></i></div><div class="step-text"><h4>Début de la descente</h4><p>Mise à l'eau</p></div></div></div>
-                        <div class="journey-step"><span class="step-time">13:30</span><div class="step-content"><div class="step-icon"><i class="fas fa-flag-checkered"></i></div><div class="step-text"><h4>Arrivée</h4><p>Pont de Tilouguite</p></div></div></div>
+                <!-- ===== 12KM ===== -->
+                <div class="rafting-card">
+                    <div class="rafting-card-image">
+                        <img src="../images/raft2.jpeg" alt="Rafting 12km" loading="lazy">
+                        <div class="rafting-card-badge">🌿 Beginner Friendly</div>
+                    </div>
+                    <div class="rafting-card-content">
+                        <div class="rafting-card-header">
+                            <h3 class="rafting-card-title">Parcours Découverte</h3>
+                            <span class="rafting-card-distance">12 km</span>
+                        </div>
+                        <div class="rafting-card-intro">
+                            <p>
+                                <span class="lang-en">🏞️ Perfect for beginners and families. A gentle introduction to rafting with beautiful scenery.</span>
+                                <span class="lang-fr">🏞️ Parfait pour les débutants et les familles. Une initiation douce au rafting avec de beaux paysages.</span>
+                            </p>
+                        </div>
+                        <div class="rafting-card-meta">
+                            <span><i class="fas fa-clock"></i> 2-3h</span>
+                            <span><i class="fas fa-route"></i> 12km</span>
+                            <span><i class="fas fa-users"></i> 2-6 pers</span>
+                            <span class="rafting-card-price">400 DH</span>
+                        </div>
+                        <div class="rafting-card-actions">
+                            <button onclick="toggleRaftingProgramme('prog-12km', this)" class="btn-readmore">
+                                <span class="lang-en">📖 View Full Program</span>
+                                <span class="lang-fr">📖 Voir le Programme</span>
+                            </button>
+                            <a href="../pages/booking.html" class="btn">Book</a>
+                        </div>
+                        <div class="rafting-programme-detail" id="prog-12km">
+                            <div class="rafting-programme-inner">
+                                <h4><i class="fas fa-clock"></i> Programme détaillé</h4>
+                                <div class="rafting-timeline">
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">09:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Rendez-vous</strong>
+                                            <p>Nous venons vous chercher à votre hébergement</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">09:30</span>
+                                        <div class="timeline-content">
+                                            <strong>Distribution du matériel</strong>
+                                            <p>Combinaisons, gilets, casques et pagaies</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">10:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Transfert en 4x4</strong>
+                                            <p>Trajet jusqu'au point de mise à l'eau</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">10:30</span>
+                                        <div class="timeline-content">
+                                            <strong>Briefing sécurité</strong>
+                                            <p>Instructions de navigation et consignes</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">11:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Début de la descente</strong>
+                                            <p>Mise à l'eau et départ de l'aventure</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">13:30</span>
+                                        <div class="timeline-content">
+                                            <strong>Arrivée</strong>
+                                            <p>Arrivée au Pont de Tilouguite. Retour en 4x4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rafting-included">
+                                    <h5><i class="fas fa-check-circle"></i> Ce qui est inclus</h5>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Guide professionnel</li>
+                                        <li><i class="fas fa-check"></i> Équipement complet</li>
+                                        <li><i class="fas fa-check"></i> Transfert 4x4</li>
+                                        <li><i class="fas fa-check"></i> Photos de l'aventure</li>
+                                    </ul>
+                                    <div class="note-important">
+                                        <i class="fas fa-info-circle"></i> 
+                                        <span class="lang-en">⚠️ Please bring your own picnic and water bottle.</span>
+                                        <span class="lang-fr">⚠️ Merci d'apporter votre propre pique-nique et votre gourde.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="btn-unavailable">
-                    <i class="fas fa-ban"></i> <span class="lang-en">Unavailable until Feb 2027</span><span class="lang-fr">Indisponible jusqu'à Fév 2027</span>
+                <!-- ===== 30KM ===== -->
+                <div class="rafting-card">
+                    <div class="rafting-card-image">
+                        <img src="../images/15.jpeg" alt="Rafting 30km" loading="lazy">
+                        <div class="rafting-card-badge" style="background: #e6b12e; color: #1e3c2c;">🔥 Most Popular</div>
+                    </div>
+                    <div class="rafting-card-content">
+                        <div class="rafting-card-header">
+                            <h3 class="rafting-card-title">Parcours Aventure</h3>
+                            <span class="rafting-card-distance">30 km</span>
+                        </div>
+                        <div class="rafting-card-intro">
+                            <p>
+                                <span class="lang-en">🚣 For those seeking more adrenaline. Longer descent with more rapids.</span>
+                                <span class="lang-fr">🚣 Pour ceux qui cherchent plus d'adrénaline. Descente plus longue.</span>
+                            </p>
+                        </div>
+                        <div class="rafting-card-meta">
+                            <span><i class="fas fa-clock"></i> 4-5h</span>
+                            <span><i class="fas fa-route"></i> 30km</span>
+                            <span><i class="fas fa-users"></i> 2-6 pers</span>
+                            <span class="rafting-card-price">800 DH</span>
+                        </div>
+                        <div class="rafting-card-actions">
+                            <button onclick="toggleRaftingProgramme('prog-30km', this)" class="btn-readmore">
+                                <span class="lang-en">📖 View Full Program</span>
+                                <span class="lang-fr">📖 Voir le Programme</span>
+                            </button>
+                            <a href="../pages/booking.html" class="btn">Book</a>
+                        </div>
+                        <div class="rafting-programme-detail" id="prog-30km">
+                            <div class="rafting-programme-inner">
+                                <h4><i class="fas fa-clock"></i> Programme détaillé</h4>
+                                <div class="rafting-timeline">
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">08:30</span>
+                                        <div class="timeline-content">
+                                            <strong>Rendez-vous</strong>
+                                            <p>Nous venons vous chercher</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">09:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Distribution du matériel</strong>
+                                            <p>Combinaisons, gilets, casques</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">09:30</span>
+                                        <div class="timeline-content">
+                                            <strong>Transfert en 4x4</strong>
+                                            <p>Trajet jusqu'au Pont d'Isgli</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">10:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Briefing sécurité</strong>
+                                            <p>Instructions complètes pour le parcours</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">10:30</span>
+                                        <div class="timeline-content">
+                                            <strong>Début de la descente</strong>
+                                            <p>Mise à l'eau et départ</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">12:30</span>
+                                        <div class="timeline-content">
+                                            <strong>Pause déjeuner</strong>
+                                            <p>Pique-nique au bord de l'eau (à prévoir par vos soins)</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">15:30</span>
+                                        <div class="timeline-content">
+                                            <strong>Arrivée</strong>
+                                            <p>Arrivée au Pont de Tilouguite. Retour en 4x4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rafting-included">
+                                    <h5><i class="fas fa-check-circle"></i> Ce qui est inclus</h5>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Guide professionnel</li>
+                                        <li><i class="fas fa-check"></i> Équipement complet</li>
+                                        <li><i class="fas fa-check"></i> Transfert 4x4</li>
+                                        <li><i class="fas fa-check"></i> Photos de l'aventure</li>
+                                    </ul>
+                                    <div class="note-important">
+                                        <i class="fas fa-info-circle"></i> 
+                                        <span class="lang-en">⚠️ Please bring your own picnic and water bottle.</span>
+                                        <span class="lang-fr">⚠️ Merci d'apporter votre propre pique-nique et votre gourde.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- ===== 50KM ===== -->
+                <div class="rafting-card">
+                    <div class="rafting-card-image" style="background-image: url('../images/raft1.jpeg'); background-size: cover; background-position: 50% 65%; background-repeat: no-repeat;">
+                        <div class="rafting-card-badge" style="background: #1e3c2c; color: white;">⭐ Expedition</div>
+                    </div>
+                    <div class="rafting-card-content">
+                        <div class="rafting-card-header">
+                            <h3 class="rafting-card-title">Expédition</h3>
+                            <span class="rafting-card-distance">50 km</span>
+                        </div>
+                        <div class="rafting-card-intro">
+                            <p>
+                                <span class="lang-en">🏕️ The ultimate rafting experience. Two days of adventure with a night in bivouac.</span>
+                                <span class="lang-fr">🏕️ L'expérience ultime du rafting. Deux jours d'aventure avec une nuit en bivouac.</span>
+                            </p>
+                        </div>
+                        <div class="rafting-card-meta">
+                            <span><i class="fas fa-clock"></i> 2 jours</span>
+                            <span><i class="fas fa-route"></i> 50km</span>
+                            <span><i class="fas fa-users"></i> 2-6 pers</span>
+                            <span class="rafting-card-price">3000 DH</span>
+                        </div>
+                        <div class="rafting-card-actions">
+                            <button onclick="toggleRaftingProgramme('prog-50km', this)" class="btn-readmore">
+                                <span class="lang-en">📖 View Full Program</span>
+                                <span class="lang-fr">📖 Voir le Programme</span>
+                            </button>
+                            <a href="../pages/booking.html" class="btn">Book</a>
+                        </div>
+                        <div class="rafting-programme-detail" id="prog-50km">
+                            <div class="rafting-programme-inner">
+                                <h4><i class="fas fa-clock"></i> Programme détaillé - Jour 1</h4>
+                                <div class="rafting-timeline">
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">08:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Rendez-vous à Imsfrane</strong>
+                                            <p>Nous venons vous chercher à votre hébergement à Imsfrane</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">08:30</span>
+                                        <div class="timeline-content">
+                                            <strong>Distribution du matériel</strong>
+                                            <p>Équipement complet pour 2 jours</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">09:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Transfert en 4x4</strong>
+                                            <p>Trajet jusqu'au point de départ</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">09:30</span>
+                                        <div class="timeline-content">
+                                            <strong>Briefing sécurité</strong>
+                                            <p>Instructions pour l'expédition</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">10:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Début de l'expédition</strong>
+                                            <p>Mise à l'eau depuis Imsfrane pour 2 jours d'aventure</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">13:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Déjeuner</strong>
+                                            <p>Pique-nique préparé par notre équipe cuisine, installé au bord de l'eau dans la zone de Taourart</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">17:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Arrivée à Taourart</strong>
+                                            <p>Le bivouac est déjà installé par notre équipe. Dîner préparé sur place</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">19:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Dîner & veillée</strong>
+                                            <p>Repas chaud autour du feu de camp, préparé par notre équipe cuisine</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 style="margin-top: 1.5rem;"><i class="fas fa-sun"></i> Jour 2</h4>
+                                <div class="rafting-timeline">
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">07:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Petit déjeuner</strong>
+                                            <p>Préparé par notre équipe cuisine au bivouac</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">08:30</span>
+                                        <div class="timeline-content">
+                                            <strong>Reprise de la descente</strong>
+                                            <p>Suite de l'aventure vers le pont de Sidi Youssef</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">10:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Visite d'Aït Hssain</strong>
+                                            <p>Découverte du village traditionnel</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">12:30</span>
+                                        <div class="timeline-content">
+                                            <strong>Déjeuner</strong>
+                                            <p>Préparé par notre équipe cuisine au bord de l'eau</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">14:00</span>
+                                        <div class="timeline-content">
+                                            <strong>Deux options s'offrent à vous :</strong>
+                                            <p>
+                                                <strong>Option 1 :</strong> Arrêt au pont de Sidi Youssef. Fin de l'aventure. Retour en 4x4 vers Imsfrane.<br>
+                                                <strong>Option 2 :</strong> Continuation vers le barrage de Bin El Ouidane (+300 DH/personne). Le radeau est tracté sur le lac jusqu'au barrage. Retour en 4x4 vers Imsfrane.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rafting-included">
+                                    <h5><i class="fas fa-check-circle"></i> Ce qui est inclus</h5>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Guide professionnel</li>
+                                        <li><i class="fas fa-check"></i> Équipement complet</li>
+                                        <li><i class="fas fa-check"></i> Transfert 4x4 (aller et retour Imsfrane)</li>
+                                        <li><i class="fas fa-check"></i> Nuit en bivouac (tentes, matelas)</li>
+                                        <li><i class="fas fa-check"></i> Photos de l'aventure</li>
+                                        <li><i class="fas fa-check"></i> <strong>Tous les repas inclus</strong> (Déjeuner J1, Dîner J1, Petit déjeuner J2, Déjeuner J2)</li>
+                                        <li><i class="fas fa-check"></i> Équipe cuisine qui précède le groupe</li>
+                                        <li><i class="fas fa-check"></i> Installation du bivouac par l'équipe</li>
+                                    </ul>
+                                    
+                                    <div class="note-meals" style="margin-top: 1rem;">
+                                        <i class="fas fa-utensils" style="color: #28a745;"></i>
+                                        <strong>Repas inclus :</strong> 
+                                        <span class="lang-en">All meals are prepared by our cooking team who go ahead of the group and set up the bivouac.</span>
+                                        <span class="lang-fr">Tous les repas sont préparés par notre équipe cuisine qui précède le groupe et installe le bivouac.</span>
+                                    </div>
+                                    
+                                    <div class="note-option">
+                                        <i class="fas fa-route" style="color: #007bff;"></i>
+                                        <strong>Option continuation :</strong> 
+                                        <span class="lang-en">Continue to Bin El Ouidane dam instead of stopping at Sidi Youssef bridge. The raft is towed on the lake. +300 DH/person.</span>
+                                        <span class="lang-fr">Continuer jusqu'au barrage de Bin El Ouidane au lieu de s'arrêter au pont de Sidi Youssef. Le radeau est tracté sur le lac. +300 DH/personne.</span>
+                                    </div>
+                                    
+                                    <div style="margin-top: 0.5rem; background: #f8f9fa; padding: 0.8rem 1.2rem; border-radius: 10px; border-left: 4px solid #6c757d; color: #495057;">
+                                        <i class="fas fa-info-circle" style="color: #6c757d;"></i>
+                                        <span class="lang-en">⚠️ Please let us know at the time of booking if you wish to take the extension to the dam.</span>
+                                        <span class="lang-fr">⚠️ Merci de nous indiquer au moment de la réservation si vous souhaitez prendre l'extension jusqu'au barrage.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- OFFRE 30KM -->
-    <section class="container">
-        <div class="route-block">
-            <div class="route-image">
-                <img src="../images/15.jpeg" alt="Rafting 30km" loading="lazy">
-            </div>
-            <div class="route-content">
-                <div class="route-location"><i class="fas fa-map-pin"></i> Oued Ahansal</div>
-                <h2>Parcours Aventure - 30km</h2>
-                <p>Transfert en 4x4 jusqu'au Pont d'Isgli. Rafting à travers les gorges naturelles. Arrivée au Pont de Tilouguite.</p>
-                
-                <div class="route-meta">
-                    <div class="meta-item"><i class="fas fa-clock"></i> 4-5h</div>
-                    <div class="meta-item"><i class="fas fa-route"></i> 30km</div>
-                    <div class="meta-item"><i class="fas fa-tag"></i> <span style="color:#999;">800 DH</span></div>
-                </div>
-
-                <div class="price-badge">
-                    <i class="fas fa-tag"></i> 800 DH <small>par personne</small>
-                </div>
-
-                <div class="btn-unavailable">
-                    <i class="fas fa-ban"></i> <span class="lang-en">Unavailable until Feb 2027</span><span class="lang-fr">Indisponible jusqu'à Fév 2027</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- OFFRE 50KM -->
-    <section class="container">
-        <div class="route-block">
-            <div class="route-image">
-                <img src="../images/raft1.jpeg" alt="Expédition 50km" loading="lazy">
-            </div>
-            <div class="route-content">
-                <div class="route-location"><i class="fas fa-map-pin"></i> Oued Ahansal</div>
-                <h2>Expédition - 50km (2 jours)</h2>
-                <p>Nuit en bivouac au bord de l'oued. Repas inclus. Visite du village d'Aït Hssain et du Barrage Bin El Ouidane.</p>
-                
-                <div class="route-meta">
-                    <div class="meta-item"><i class="fas fa-clock"></i> 2 jours</div>
-                    <div class="meta-item"><i class="fas fa-route"></i> 50km</div>
-                    <div class="meta-item"><i class="fas fa-tag"></i> <span style="color:#999;">3000 DH</span></div>
-                </div>
-
-                <div class="price-badge">
-                    <i class="fas fa-tag"></i> 3000 DH <small>par personne (tout inclus)</small>
-                </div>
-
-                <div class="btn-unavailable">
-                    <i class="fas fa-ban"></i> <span class="lang-en">Unavailable until Feb 2027</span><span class="lang-fr">Indisponible jusqu'à Fév 2027</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <div class="container">
-        <div class="contact-section">
-            <h2 style="text-align:center; font-size:2rem; margin-bottom:1rem;">
-                <span class="lang-en">Information & Pre-booking</span>
-                <span class="lang-fr">Information & Pré-réservation</span>
-            </h2>
-            <p style="text-align:center; margin-bottom:2rem; color:#555;">
-                <span class="lang-en">Contact us to be notified when rafting resumes in February 2027.</span>
-                <span class="lang-fr">Contactez-nous pour être notifié à la reprise du rafting en Février 2027.</span>
-            </p>
-            <div class="contact-grid">
-                <div class="contact-item"><i class="fas fa-globe"></i><h4>Website</h4><a href="https://imsfrane.com">imsfrane.com</a></div>
-                <div class="contact-item"><i class="fab fa-whatsapp"></i><h4>WhatsApp</h4><a href="https://wa.me/212667772551">+212 667-772551</a></div>
-                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><h4>Location</h4><p>Imsfrane, Morocco</p></div>
-            </div>
-            <div style="text-align:center;">
-                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20%C3%AAtre%20inform%C3%A9%20de%20la%20reprise%20du%20rafting%20en%20F%C3%A9vrier%202027" class="btn btn-wa" target="_blank">
-                    <i class="fab fa-whatsapp"></i> <span class="lang-en">Notify me about rafting 2027</span><span class="lang-fr">Me notifier pour le rafting 2027</span>
+        <!-- ===== CTA SECTION ===== -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">
+                    <span class="lang-en">Ready for the <span style="color: #e6b12e;">Adventure</span>?</span>
+                    <span class="lang-fr">Prêt pour l'<span style="color: #e6b12e;">Aventure</span> ?</span>
+                </h2>
+                <p class="cta-text">
+                    <span class="lang-en">Book your rafting experience today and create memories that will last a lifetime.</span>
+                    <span class="lang-fr">Réservez votre expérience rafting aujourd'hui et créez des souvenirs qui dureront toute une vie.</span>
+                </p>
+                <a href="../pages/booking.html" class="btn btn-large">
+                    <i class="fas fa-calendar-check"></i>
+                    <span class="lang-en">Book Now</span>
+                    <span class="lang-fr">Réserver</span>
                 </a>
             </div>
-        </div>
-    </div>
-</main>
+        </section>
 
+    </main>
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer-pro">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
-                    <div class="footer-logo"><img src="../images/logo.jpeg" alt="Logo" width="60" height="60" loading="lazy"><h3>Imsfrane Cathédrale</h3></div>
-                    <p class="footer-description">Discover the magic of the Atlas Mountains at 1,868m altitude.</p>
+                    <div class="footer-logo">
+                        <img src="../images/logo.jpeg" alt="Logo" loading="lazy">
+                        <h3>Imsfrane Cathédrale</h3>
+                    </div>
+                    <p class="footer-description">
+                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
+                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
+                    </p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
@@ -622,45 +1071,114 @@
                         <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
+
                 <div class="footer-col footer-links">
-                    <h4>Quick Links</h4>
+                    <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="rafting.html">Rafting</a></li>
-                        <li><a href="camping.html">Camping</a></li>
-                        <li><a href="randonnee.html">Hiking</a></li>
-                        <li><a href="vtt.html">VTT</a></li>
-                        <li><a href="quad.html">Quad</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
+                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
+                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
+                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
                     </ul>
                 </div>
+
+                <div class="footer-col footer-info">
+                    <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
+                    <ul>
+                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+                        <li><a href="store.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Store</span><span class="lang-fr">Boutique</span></a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                    </ul>
+                </div>
+
                 <div class="footer-col footer-contact">
-                    <h4>Contact</h4>
+                    <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
                     <ul>
                         <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
                         <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom"><div class="copyright"><p>© 2026 <strong>Imsfrane Cathédrale</strong>. All Rights Reserved.</p></div></div>
+
+            <div class="footer-middle">
+                <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
+                <div class="stat-item"><div class="stat-number">50+ km</div><div class="stat-label">Sentiers</div></div>
+                <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
+                <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- ===== FLOATING BUTTONS ===== -->
     <div class="floating-buttons">
         <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
         <a href="tel:0667772551" class="floating-btn phone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
-        <a href="booking.html" class="floating-btn booking"><i class="fas fa-calendar-check"></i><span class="tooltip">Réserver</span></a>
+        <a href="store.html" class="floating-btn booking" style="background: #e6b12e;"><i class="fas fa-store"></i><span class="tooltip">Boutique</span></a>
     </div>
 
+    <!-- ===== BACK TO TOP ===== -->
     <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
-    <script src="../js/main.js"></script>
+    <!-- ===== SCRIPTS ===== -->
     <script src="../js/script.js"></script>
     
     <script>
+        window.setLanguage = function(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang.toLowerCase());
+            });
+            localStorage.setItem('preferred-language', lang);
+        };
+
+        const savedLang = localStorage.getItem('preferred-language');
+        if (savedLang) {
+            setLanguage(savedLang);
+        } else {
+            setLanguage('en');
+        }
+
         const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => { backToTop.classList.toggle('show', window.scrollY > 300); });
-        backToTop.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                backToTop.classList.toggle('show', window.scrollY > 300);
+            });
+            backToTop.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        function toggleRaftingProgramme(id, btn) {
+            const element = document.getElementById(id);
+            if (!element) return;
+            
+            element.classList.toggle('show');
+            
+            const spanEn = btn.querySelector('.lang-en');
+            const spanFr = btn.querySelector('.lang-fr');
+            
+            if (element.classList.contains('show')) {
+                if (spanEn) spanEn.textContent = '📖 Hide Program';
+                if (spanFr) spanFr.textContent = '📖 Masquer le Programme';
+            } else {
+                if (spanEn) spanEn.textContent = '📖 View Full Program';
+                if (spanFr) spanFr.textContent = '📖 Voir le Programme';
+            }
+        }
     </script>
 </body>
 </html>
