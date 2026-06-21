@@ -10,57 +10,41 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <meta name="description" content="Location de maisons meublées à Tilouguite (à 10km d'Imsfrane). Maison vue sur rivière Ahansal, douche, cuisine. De 250 à 300 DH/nuit. Piscine naturelle à 2 minutes.">
+    <meta name="keywords" content="hébergement Tilouguite, location maison Imsfrane, maison meublée Atlas, location rivière Ahansal">
+    <meta name="robots" content="index, follow">
     
     <meta property="og:title" content="Hébergement à Tilouguite - Maisons meublées Imsfrane">
     <meta property="og:description" content="Maisons meublées à louer avec vue sur la rivière Ahansal. De 250 à 300 DH/nuit.">
-    <meta property="og:image" content="https://imsfrane.com/images/babmsfrane.jpeg">
+    <meta property="og:image" content="https://imsfrane.com/images/hebergement-hero.jpg">
     <meta property="og:url" content="https://imsfrane.com/pages/hebergement.html">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Imsfrane Cathédrale">
+    <meta property="og:locale" content="fr_FR">
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
     
-    <link rel="preload" href="../css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../css/style.css"></noscript>
+    <!-- ===== STYLE UNIFIED ===== -->
+    <link rel="stylesheet" href="../css/style.css">
     
     <style>
-        /* RESET & BASE */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* ===== HEBERGEMENT PAGE SPECIFIC ===== */
+        .page-hero.hebergement-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('../images/babmsfrane.jpeg') center/cover no-repeat;
+            background-position: 50% 100%;
         }
         
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #f9f7f3;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* HERO SECTION */
-.page-hero {
-    width: 100%;
-    height: 450px;
-    background: url('../images/babmsfrane.jpeg') center/cover no-repeat;
-    background-position: 50% 100%;
-    position: relative;
-}        .page-title {
+        .page-title {
             text-align: center;
             margin: 3rem 0 1rem;
         }
         
         .page-title h1 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             color: #1e3c2c;
             font-weight: 700;
-            font-family: 'Playfair Display', serif;
         }
         
         .page-title .location {
@@ -70,39 +54,8 @@
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            margin-top: 0.5rem;
         }
         
-        /* ALERT */
-        .alert-location {
-            background: #fff3e0;
-            border-left: 5px solid #ff4444;
-            padding: 1.5rem;
-            margin: 2rem auto;
-            border-radius: 15px;
-            max-width: 900px;
-            text-align: center;
-        }
-        
-        .alert-location i {
-            color: #ff4444;
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        .alert-location strong {
-            color: #ff4444;
-            font-size: 1.1rem;
-        }
-        
-        .alert-location p {
-            color: #333;
-            margin-top: 0.5rem;
-            line-height: 1.6;
-        }
-        
-        /* INTRO */
         .intro-text {
             max-width: 800px;
             margin: 2rem auto 3rem;
@@ -111,257 +64,16 @@
         
         .intro-text p {
             font-size: 1.1rem;
-            line-height: 1.8;
+            line-height: 1.6;
             color: #555;
         }
         
         .intro-icon {
-            font-size: 2.5rem;
-            color: #e6b12e;
-            margin-bottom: 1rem;
-        }
-        
-        /* HOUSES GRID */
-        .houses-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .house-card {
-            background: white;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-        }
-        
-        .house-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 50px rgba(0,0,0,0.12);
-        }
-        
-        /* IMAGE CONTAINER avec object-fit + object-position */
-        .house-img-wrapper {
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-            background: #e8e8e8;
-        }
-        
-        .house-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        /* object-position pour chaque image */
-        .house-img-wrapper.img-1 img {
-            object-position: 50% 70%;
-        }
-        
-        .house-img-wrapper.img-2 img {
-            object-position: 50% 70%;
-        }
-        
-        .house-card:hover .house-img-wrapper img {
-            transform: scale(1.03);
-        }
-        
-        /* CONTENT */
-        .house-content {
-            padding: 2rem;
-        }
-        
-        .house-badge {
-            display: inline-block;
-            background: #e6b12e;
-            color: #1e3c2c;
-            padding: 0.3rem 1.2rem;
-            border-radius: 30px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .house-badge.house2 {
-            background: #1e3c2c;
-            color: white;
-        }
-        
-        .house-title {
-            font-size: 1.6rem;
-            color: #1e3c2c;
-            margin-bottom: 0.5rem;
-            font-family: 'Playfair Display', serif;
-        }
-        
-        .house-title i {
-            color: #e6b12e;
-            margin-right: 0.5rem;
-        }
-        
-        .house-price {
             font-size: 2rem;
-            font-weight: 800;
             color: #e6b12e;
-            margin: 0.8rem 0;
+            margin-bottom: 1rem;
         }
         
-        .house-price small {
-            font-size: 0.9rem;
-            font-weight: 400;
-            color: #666;
-        }
-        
-        .features-list {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-        
-        .features-list li {
-            margin: 0.7rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            color: #555;
-            font-size: 0.95rem;
-        }
-        
-        .features-list li i {
-            color: #e6b12e;
-            width: 22px;
-        }
-        
-        .rooms-list {
-            background: #f9f7f3;
-            border-radius: 15px;
-            padding: 1rem 1.2rem;
-            margin: 1rem 0;
-        }
-        
-        .rooms-list h4 {
-            color: #1e3c2c;
-            margin-bottom: 0.8rem;
-            font-size: 1rem;
-        }
-        
-        .rooms-list ul {
-            list-style: none;
-        }
-        
-        .rooms-list li {
-            margin: 0.4rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            color: #555;
-        }
-        
-        .rooms-list li i {
-            color: #e6b12e;
-        }
-        
-        .river-note {
-            background: #e8f5e8;
-            border-left: 5px solid #4CAF50;
-            padding: 1rem;
-            border-radius: 12px;
-            margin: 1.5rem 0;
-            font-size: 0.95rem;
-            color: #333;
-        }
-        
-        .river-note i {
-            color: #4CAF50;
-            margin-right: 0.5rem;
-        }
-        
-        /* INSTAGRAM BUTTON */
-        .btn-instagram {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
-            color: white;
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s;
-            margin-top: 1rem;
-        }
-        
-        .btn-instagram:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-        
-        .btn-instagram i {
-            font-size: 1.4rem;
-        }
-        
-        /* MITOYEN INFO */
-        .mitoyen-info {
-            text-align: center;
-            margin: 1.5rem 0;
-            padding: 1.2rem;
-            background: #f0f8f0;
-            border-radius: 15px;
-        }
-        
-        .mitoyen-info i {
-            color: #e6b12e;
-            margin-right: 0.5rem;
-        }
-        
-        /* MAP SECTION */
-        .map-section {
-            margin: 3rem 0;
-            padding: 2rem;
-            background: #f9f7f3;
-            border-radius: 30px;
-            text-align: center;
-        }
-        
-        .map-container {
-            margin-top: 1.5rem;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-        
-        .map-iframe {
-            width: 100%;
-            height: 400px;
-            border: none;
-        }
-        
-        .btn-map {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            background: #4285F4;
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            margin-top: 1rem;
-        }
-        
-        .btn-map:hover {
-            background: #3367D6;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-        
-        /* LOCATION GRID */
         .location-info {
             background: #f9f7f3;
             border-radius: 30px;
@@ -397,38 +109,34 @@
             font-size: 0.9rem;
         }
         
-        /* SWIM NOTE */
-        .swim-note {
-            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
-            color: white;
+        .map-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: #f9f7f3;
             border-radius: 30px;
-            padding: 2.5rem;
-            margin: 2rem 0;
             text-align: center;
         }
         
-        .swim-note i {
-            font-size: 3.5rem;
-            color: #e6b12e;
-            margin-bottom: 1rem;
+        .map-container {
+            margin-top: 1.5rem;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
         }
         
-        .swim-note h3 {
-            font-size: 1.8rem;
-            font-family: 'Playfair Display', serif;
+        .map-iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
         }
         
-        .swim-note p {
-            opacity: 0.9;
-            font-size: 1.05rem;
-        }
-        
-        /* BUTTONS */
-        .btn {
-            display: inline-block;
-            background: #e6b12e;
-            color: #1e3c2c;
-            padding: 0.8rem 2.5rem;
+        .btn-map {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: #4285F4;
+            color: white;
+            padding: 0.8rem 2rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -436,25 +144,12 @@
             margin-top: 1rem;
         }
         
-        .btn:hover {
-            background: #f4c542;
+        .btn-map:hover {
+            background: #3367D6;
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(230,177,46,0.3);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
-        .btn-wa {
-            background: #25D366;
-            color: white;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .btn-wa:hover {
-            background: #128C7E;
-        }
-        
-        /* CONTACT SECTION */
         .contact-section {
             background: white;
             border-radius: 30px;
@@ -496,25 +191,6 @@
             color: #e6b12e;
         }
         
-        /* SECTION TITLE */
-        .section-title {
-            text-align: center;
-            margin: 2rem 0;
-            font-size: 2.2rem;
-            color: #1e3c2c;
-            font-family: 'Playfair Display', serif;
-        }
-        
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: #e6b12e;
-            margin: 0.5rem auto;
-        }
-        
-        /* RESPONSIVE */
         @media (max-width: 992px) {
             .houses-grid {
                 grid-template-columns: 1fr;
@@ -528,7 +204,7 @@
         }
         
         @media (max-width: 768px) {
-            .page-hero {
+            .page-hero.hebergement-hero {
                 height: 300px;
             }
             .page-title h1 {
@@ -555,9 +231,6 @@
             .btn-instagram {
                 font-size: 0.85rem;
                 padding: 0.6rem 1.2rem;
-            }
-            .alert-location {
-                padding: 1rem;
             }
         }
         
@@ -589,9 +262,10 @@
 <body data-lang="en">
     <div class="overlay" id="overlay"></div>
 
+    <!-- ===== HEADER ===== -->
     <header>
         <div class="container header-content">
-            <a href="../index.html" class="logo">
+            <a href="../index.html" class="logo" aria-label="Imsfrane Cathédrale - Retour à la page d'accueil">
                 <div class="logo-img">
                     <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
                 </div>
@@ -601,21 +275,25 @@
                     <span class="lang-fr">Aventures Nature</span>
                 </div>
             </a>
+            
             <div class="right-controls">
                 <div class="lang-buttons">
-                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
+                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="Switch to English">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Passer en français">FR</button>
                 </div>
-                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu de navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
 
-    <nav id="mainNav">
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="mainNav" aria-label="Menu principal">
         <ul>
             <li><a href="../index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
             <li class="has-submenu">
-                <a href="#" onclick="toggleSubmenu(event)">
+                <a href="#" onclick="toggleSubmenu(event)" aria-expanded="false">
                     <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
                     <i class="fas fa-chevron-right arrow"></i>
                 </a>
@@ -630,302 +308,340 @@
             </li>
             <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
             <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
-            <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
             <li><a href="store.html"><i class="fas fa-store"></i> <span class="lang-en">Store</span><span class="lang-fr">Boutique</span></a></li>
             <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
             <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
-    
-<main>
-    <!-- HERO -->
-    <div class="page-hero"></div>
 
-    <!-- TITLE -->
-    <div class="container">
-        <div class="page-title">
-            <h1 class="lang-en">Accommodation - Furnished Houses</h1>
-            <h1 class="lang-fr">Hébergement - Maisons Meublées</h1>
-            <div class="location">
-                <i class="fas fa-map-pin"></i> Tilouguite, Imsfrane, Morocco
-            </div>
-        </div>
-    </div>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <div class="page-hero hebergement-hero"></div>
 
-    <!-- ALERT -->
-    <div class="container">
-        <div class="alert-location">
-            <i class="fas fa-exclamation-triangle"></i>
-            <strong>📍 IMPORTANT - À LIRE ABSOLUMENT</strong>
-            <p>
-                ⚠️ Ces maisons sont situées à <strong>Tilouguite</strong>, à <strong style="color: #ff4444;">10 kilomètres avant Imsfrane</strong>.<br>
-                Elles sont à <strong>5 minutes à pied du village</strong> où vous trouverez tout ce dont vous avez besoin (épicerie, café, etc.).<br>
-                La vue donne sur la <strong>meilleure spot de la rivière Ahansal</strong> avec une <strong>piscine naturelle</strong> très fréquentée en été.
-            </p>
-        </div>
-    </div>
-
-    <!-- INTRO -->
-    <div class="container">
-        <div class="intro-text">
-            <div class="intro-icon">
-                <i class="fas fa-home"></i>
-            </div>
-            <p class="lang-en">Two adjoining houses for rent in Tilouguite, with direct view of the Ahansal river. Perfect for families or groups who want comfort while being close to nature. Natural swimming pool at 2 minutes walk.</p>
-            <p class="lang-fr">Deux maisons mitoyennes à louer à Tilouguite, avec vue directe sur l'oued Ahansal. Parfaites pour les familles ou groupes qui veulent allier confort et nature. Piscine naturelle à 2 minutes à pied.</p>
-        </div>
-    </div>
-
-    <!-- HOUSES GRID -->
-    <div class="container">
-        <div class="houses-grid">
-            
-            <!-- HOUSE 1 -->
-            <div class="house-card">
-                <div class="house-img-wrapper img-1">
-                    <img src="../images/bab2.jpeg" alt="Appartement 01 - Vue extérieure" loading="lazy">
-                </div>
-                <div class="house-content">
-                    <span class="house-badge">🏠 APPARTEMENT 01</span>
-                    <h2 class="house-title">
-                        <i class="fas fa-building"></i> Maison Familiale
-                    </h2>
-                    <div class="house-price">
-                        300 DH <small>/nuit (jusqu'à 6 personnes)</small>
-                    </div>
-                    <ul class="features-list">
-                        <li><i class="fas fa-utensils"></i> Cuisine équipée avec vue sur la rivière</li>
-                        <li><i class="fas fa-shower"></i> Douche et toilettes</li>
-                        <li><i class="fas fa-bed"></i> Chambre pour 2 personnes</li>
-                        <li><i class="fas fa-couch"></i> Salon avec grand canapé (4-6 personnes)</li>
-                        <li><i class="fas fa-water"></i> Vue directe sur l'oued Ahansal</li>
-                    </ul>
-                    <div class="river-note">
-                        <i class="fas fa-water"></i> <strong>Vue imprenable sur la rivière</strong> - Salon et cuisine donnent directement sur l'oued
-                    </div>
-                    <a href="https://www.instagram.com/reel/DZszuG4MzP3/?igsh=MXBrejlsaGY4amdudg==" target="_blank" rel="noopener" class="btn-instagram">
-                        <i class="fab fa-instagram"></i> Voir la vidéo sur Instagram
-                    </a>
+        <div class="container">
+            <div class="page-title">
+                <h1 class="lang-en">Accommodation - Furnished Houses</h1>
+                <h1 class="lang-fr">Hébergement - Maisons Meublées</h1>
+                <div class="location">
+                    <i class="fas fa-map-pin"></i> Tilouguite, Imsfrane, Morocco
                 </div>
             </div>
-            
-            <!-- HOUSE 2 -->
-            <div class="house-card">
-                <div class="house-img-wrapper img-2">
-                    <img src="../images/bab3.jpeg" alt="Appartement 02 - Vue extérieure" loading="lazy">
+        </div>
+
+        <!-- ===== ALERT ===== -->
+        <div class="container">
+            <div class="alert-location">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong class="lang-en">📍 IMPORTANT - PLEASE READ</strong>
+                <strong class="lang-fr">📍 IMPORTANT - À LIRE ABSOLUMENT</strong>
+                <p class="lang-en">
+                    ⚠️ These houses are located in <strong>Tilouguite</strong>, <strong style="color: #ff4444;">10 kilometers before Imsfrane</strong>.<br>
+                    They are <strong>5 minutes walk from the village</strong> where you will find everything you need (grocery store, café, etc.).<br>
+                    The view overlooks the <strong>best spot on the Ahansal river</strong> with a <strong>natural swimming pool</strong> very popular in summer.
+                </p>
+                <p class="lang-fr">
+                    ⚠️ Ces maisons sont situées à <strong>Tilouguite</strong>, à <strong style="color: #ff4444;">10 kilomètres avant Imsfrane</strong>.<br>
+                    Elles sont à <strong>5 minutes à pied du village</strong> où vous trouverez tout ce dont vous avez besoin (épicerie, café, etc.).<br>
+                    La vue donne sur la <strong>meilleure spot de la rivière Ahansal</strong> avec une <strong>piscine naturelle</strong> très fréquentée en été.
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-icon">
+                    <i class="fas fa-home"></i>
                 </div>
-                <div class="house-content">
-                    <span class="house-badge house2">🏠 APPARTEMENT 02</span>
-                    <h2 class="house-title">
-                        <i class="fas fa-home"></i> Maison 3 Chambres
-                    </h2>
-                    <div class="house-price">
-                        250 DH <small>/nuit (jusqu'à 6 personnes)</small>
+                <p class="lang-en">Two adjoining houses for rent in Tilouguite, with direct view of the Ahansal river. Perfect for families or groups who want comfort while being close to nature. Natural swimming pool at 2 minutes walk.</p>
+                <p class="lang-fr">Deux maisons mitoyennes à louer à Tilouguite, avec vue directe sur l'oued Ahansal. Parfaites pour les familles ou groupes qui veulent allier confort et nature. Piscine naturelle à 2 minutes à pied.</p>
+            </div>
+        </div>
+
+        <!-- ===== HOUSES ===== -->
+        <div class="container">
+            <div class="houses-grid">
+                
+                <!-- HOUSE 1 -->
+                <div class="house-card">
+                    <div class="house-img-wrapper img-1">
+                        <img src="../images/bab2.jpeg" alt="Appartement 01 - Vue extérieure" loading="lazy">
                     </div>
-                    
-                    <div class="rooms-list">
-                        <h4><i class="fas fa-bed"></i> Composition des chambres :</h4>
-                        <ul>
-                            <li><i class="fas fa-bed"></i> <strong>Chambre 1</strong> - 2 lits jumeaux</li>
-                            <li><i class="fas fa-bed"></i> <strong>Chambre 2</strong> - 2 lits jumeaux</li>
-                            <li><i class="fas fa-heart"></i> <strong>Chambre Couple</strong> - 1 grand lit</li>
+                    <div class="house-content">
+                        <span class="house-badge">🏠 APPARTEMENT 01</span>
+                        <h2 class="house-title">
+                            <i class="fas fa-building"></i> Maison Familiale
+                        </h2>
+                        <div class="house-price">
+                            300 DH <small>/nuit (jusqu'à 6 personnes)</small>
+                        </div>
+                        <ul class="features-list">
+                            <li><i class="fas fa-utensils"></i> Cuisine équipée avec vue sur la rivière</li>
+                            <li><i class="fas fa-shower"></i> Douche et toilettes</li>
+                            <li><i class="fas fa-bed"></i> Chambre pour 2 personnes</li>
+                            <li><i class="fas fa-couch"></i> Salon avec grand canapé (4-6 personnes)</li>
+                            <li><i class="fas fa-water"></i> Vue directe sur l'oued Ahansal</li>
                         </ul>
+                        <div class="river-note">
+                            <i class="fas fa-water"></i> <strong>Vue imprenable sur la rivière</strong> - Salon et cuisine donnent directement sur l'oued
+                        </div>
+                        <a href="https://www.instagram.com/reel/DZszuG4MzP3/?igsh=MXBrejlsaGY4amdudg==" target="_blank" rel="noopener" class="btn-instagram">
+                            <i class="fab fa-instagram"></i> Voir la vidéo sur Instagram
+                        </a>
                     </div>
-                    
-                    <ul class="features-list">
-                        <li><i class="fas fa-bed"></i> Capacité : jusqu'à 6 personnes</li>
-                        <li><i class="fas fa-shower"></i> Douche et toilettes</li>
-                        <li><i class="fas fa-water"></i> À côté de la meilleure spot de la rivière</li>
-                        <li><i class="fas fa-walking"></i> 5 min à pied du village</li>
-                        <li><i class="fas fa-swimming-pool"></i> Piscine naturelle à 2 min</li>
-                    </ul>
-                    
-                    <div class="river-note">
-                        <i class="fas fa-water"></i> <strong>À côté de la meilleure spot d'Ahansal</strong> - Piscine naturelle très fréquentée en été
+                </div>
+                
+                <!-- HOUSE 2 -->
+                <div class="house-card">
+                    <div class="house-img-wrapper img-2">
+                        <img src="../images/bab3.jpeg" alt="Appartement 02 - Vue extérieure" loading="lazy">
                     </div>
-                    <a href="https://www.instagram.com/reel/DZs03NwsJKi/?igsh=Z3BpenRhc3I4YThn" target="_blank" rel="noopener" class="btn-instagram">
-                        <i class="fab fa-instagram"></i> Voir la vidéo sur Instagram
-                    </a>
+                    <div class="house-content">
+                        <span class="house-badge house2">🏠 APPARTEMENT 02</span>
+                        <h2 class="house-title">
+                            <i class="fas fa-home"></i> Maison 3 Chambres
+                        </h2>
+                        <div class="house-price">
+                            250 DH <small>/nuit (jusqu'à 6 personnes)</small>
+                        </div>
+                        
+                        <div class="rooms-list">
+                            <h4><i class="fas fa-bed"></i> Composition des chambres :</h4>
+                            <ul>
+                                <li><i class="fas fa-bed"></i> <strong>Chambre 1</strong> - 2 lits jumeaux</li>
+                                <li><i class="fas fa-bed"></i> <strong>Chambre 2</strong> - 2 lits jumeaux</li>
+                                <li><i class="fas fa-heart"></i> <strong>Chambre Couple</strong> - 1 grand lit</li>
+                            </ul>
+                        </div>
+                        
+                        <ul class="features-list">
+                            <li><i class="fas fa-bed"></i> Capacité : jusqu'à 6 personnes</li>
+                            <li><i class="fas fa-shower"></i> Douche et toilettes</li>
+                            <li><i class="fas fa-water"></i> À côté de la meilleure spot de la rivière</li>
+                            <li><i class="fas fa-walking"></i> 5 min à pied du village</li>
+                            <li><i class="fas fa-swimming-pool"></i> Piscine naturelle à 2 min</li>
+                        </ul>
+                        
+                        <div class="river-note">
+                            <i class="fas fa-water"></i> <strong>À côté de la meilleure spot d'Ahansal</strong> - Piscine naturelle très fréquentée en été
+                        </div>
+                        <a href="https://www.instagram.com/reel/DZs03NwsJKi/?igsh=Z3BpenRhc3I4YThn" target="_blank" rel="noopener" class="btn-instagram">
+                            <i class="fab fa-instagram"></i> Voir la vidéo sur Instagram
+                        </a>
+                    </div>
                 </div>
             </div>
+            
+            <div class="mitoyen-info">
+                <i class="fas fa-door-open" style="color: #e6b12e;"></i>
+                <strong>Les deux maisons sont mitoyennes</strong> (portes adjacentes) - Idéal pour les grands groupes ou familles !
+            </div>
         </div>
-        
-        <div class="mitoyen-info">
-            <i class="fas fa-door-open" style="color: #e6b12e;"></i>
-            <strong>Les deux maisons sont mitoyennes</strong> (portes adjacentes) - Idéal pour les grands groupes ou familles !
-        </div>
-    </div>
 
-    <!-- MAP -->
-    <div class="container">
-        <div class="map-section">
-            <h2 class="section-title" style="margin-top: 0;">
-                <i class="fas fa-map-marker-alt"></i> Emplacement exact
-            </h2>
-            <p>Cliquez sur la carte pour voir l'emplacement exact des maisons et obtenir l'itinéraire.</p>
-            <div class="map-container">
-                <iframe class="map-iframe" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d542.4888888888889!2d-6.416666!3d32.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda371b4ccbef319%3A0x6512f14756e1d716!2sTilouguite%2C%20Imsfrane%2C%20Morocco!5e0!3m2!1sfr!2sma!4v1700000000000" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
-            <a href="https://maps.google.com/?ftid=0xda371b4ccbef319:0x6512f14756e1d716&entry=gps" target="_blank" class="btn-map">
-                <i class="fab fa-google"></i> Ouvrir dans Google Maps
-            </a>
-        </div>
-    </div>
-
-    <!-- LOCATION & SWIMMING -->
-    <div class="container">
-        <div class="location-info">
-            <h2 class="section-title" style="margin-top: 0;">
-                <i class="fas fa-info-circle"></i> À proximité
-            </h2>
-            <div class="location-grid">
-                <div class="location-point">
-                    <i class="fas fa-map-pin"></i>
-                    <h4>Tilouguite</h4>
-                    <p>À 10km avant Imsfrane</p>
+        <!-- ===== MAP ===== -->
+        <div class="container">
+            <div class="map-section">
+                <h2 class="section-title" style="margin-top: 0;">
+                    <i class="fas fa-map-marker-alt"></i> Emplacement exact
+                </h2>
+                <p>Cliquez sur la carte pour voir l'emplacement exact des maisons et obtenir l'itinéraire.</p>
+                <div class="map-container">
+                    <iframe class="map-iframe" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d542.4888888888889!2d-6.416666!3d32.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda371b4ccbef319%3A0x6512f14756e1d716!2sTilouguite%2C%20Imsfrane%2C%20Morocco!5e0!3m2!1sfr!2sma!4v1700000000000" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
                 </div>
-                <div class="location-point">
-                    <i class="fas fa-walking"></i>
-                    <h4>5 minutes à pied</h4>
-                    <p>Du village (commerces, café)</p>
-                </div>
-                <div class="location-point">
-                    <i class="fas fa-water"></i>
-                    <h4>2 minutes à pied</h4>
-                    <p>De la piscine naturelle</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="swim-note">
-            <i class="fas fa-swimming-pool"></i>
-            <h3>🌊 Piscine Naturelle</h3>
-            <p>Le meilleur spot de baignade sur l'Oued Ahansal ! Très fréquentée en été, eau fraîche et cristalline.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem;">✨ Accès gratuit - À seulement 2 minutes à pied des maisons</p>
-        </div>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="container">
-        <div class="contact-section">
-            <h2 class="section-title" style="margin-top: 0;">
-                <span class="lang-en">Book Your Stay</span>
-                <span class="lang-fr">Réserver Votre Séjour</span>
-            </h2>
-            <p style="margin-bottom: 2rem; color: #555;">
-                <span class="lang-en">Contact us for availability and to book your accommodation in Tilouguite.</span>
-                <span class="lang-fr">Contactez-nous pour la disponibilité et pour réserver votre hébergement à Tilouguite.</span>
-            </p>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <i class="fas fa-globe"></i>
-                    <h4>Website</h4>
-                    <a href="https://imsfrane.com" target="_blank">imsfrane.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <h4>WhatsApp</h4>
-                    <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h4>Location</h4>
-                    <p>Tilouguite, Imsfrane, Azilal</p>
-                </div>
-            </div>
-            <div>
-                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20louer%20une%20maison%20%C3%A0%20Tilouguite" class="btn btn-wa" target="_blank">
-                    <i class="fab fa-whatsapp"></i> 
-                    <span class="lang-en">Book on WhatsApp</span>
-                    <span class="lang-fr">Réserver sur WhatsApp</span>
+                <a href="https://maps.google.com/?ftid=0xda371b4ccbef319:0x6512f14756e1d716&entry=gps" target="_blank" class="btn-map">
+                    <i class="fab fa-google"></i> Ouvrir dans Google Maps
                 </a>
             </div>
         </div>
-    </div>
-</main>
 
-    <footer class="footer-pro">
+        <!-- ===== LOCATION & SWIMMING ===== -->
+        <div class="container">
+            <div class="location-info">
+                <h2 class="section-title" style="margin-top: 0;">
+                    <i class="fas fa-info-circle"></i> À proximité
+                </h2>
+                <div class="location-grid">
+                    <div class="location-point">
+                        <i class="fas fa-map-pin"></i>
+                        <h4>Tilouguite</h4>
+                        <p>À 10km avant Imsfrane</p>
+                    </div>
+                    <div class="location-point">
+                        <i class="fas fa-walking"></i>
+                        <h4>5 minutes à pied</h4>
+                        <p>Du village (commerces, café)</p>
+                    </div>
+                    <div class="location-point">
+                        <i class="fas fa-water"></i>
+                        <h4>2 minutes à pied</h4>
+                        <p>De la piscine naturelle</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swim-note">
+                <i class="fas fa-swimming-pool"></i>
+                <h3>🌊 Piscine Naturelle</h3>
+                <p>Le meilleur spot de baignade sur l'Oued Ahansal ! Très fréquentée en été, eau fraîche et cristalline.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">✨ Accès gratuit - À seulement 2 minutes à pied des maisons</p>
+            </div>
+        </div>
+
+        <!-- ===== CONTACT ===== -->
+        <div class="container">
+            <div class="contact-section">
+                <h2 class="section-title" style="margin-top: 0;">
+                    <span class="lang-en">Book Your Stay</span>
+                    <span class="lang-fr">Réserver Votre Séjour</span>
+                </h2>
+                <p style="margin-bottom: 2rem; color: #555;">
+                    <span class="lang-en">Contact us for availability and to book your accommodation in Tilouguite.</span>
+                    <span class="lang-fr">Contactez-nous pour la disponibilité et pour réserver votre hébergement à Tilouguite.</span>
+                </p>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <h4>Website</h4>
+                        <a href="https://imsfrane.com" target="_blank">imsfrane.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <h4>WhatsApp</h4>
+                        <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Location</h4>
+                        <p>Tilouguite, Imsfrane, Azilal</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20louer%20une%20maison%20%C3%A0%20Tilouguite" class="btn btn-wa" target="_blank">
+                        <i class="fab fa-whatsapp"></i> 
+                        <span class="lang-en">Book on WhatsApp</span>
+                        <span class="lang-fr">Réserver sur WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-pro" aria-label="Pied de page">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Logo" width="60" height="60" loading="lazy">
+                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
-                    <p class="footer-description">Discover the magic of the Atlas Mountains at 1,868m altitude.</p>
+                    <p class="footer-description">
+                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
+                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
+                    </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-col footer-links">
-                    <h4>Quick Links</h4>
+                    <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="rafting.html">Rafting</a></li>
-                        <li><a href="camping.html">Camping</a></li>
-                        <li><a href="randonnee.html">Hiking</a></li>
-                        <li><a href="vtt.html">VTT</a></li>
-                        <li><a href="quad.html">Quad</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
+                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
+                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
+                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-info">
+                    <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
+                    <ul>
+                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+                        <li><a href="store.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Store</span><span class="lang-fr">Boutique</span></a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col footer-contact">
-                    <h4>Contact</h4>
+                    <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
                     <ul>
                         <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
                         <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
                     </ul>
                 </div>
             </div>
+
+            <div class="footer-middle">
+                <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
+                <div class="stat-item"><div class="stat-number">50+ km</div><div class="stat-label">Sentiers</div></div>
+                <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
+                <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
+            </div>
+
             <div class="footer-bottom">
                 <div class="copyright">
-                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. All Rights Reserved.</p>
+                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- FLOATING BUTTONS -->
+    <!-- ===== FLOATING BUTTONS ===== -->
     <div class="floating-buttons">
-        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-            <span class="tooltip">WhatsApp</span>
-        </a>
-        <a href="tel:0667772551" class="floating-btn phone">
-            <i class="fas fa-phone-alt"></i>
-            <span class="tooltip">Appeler</span>
-        </a>
-        <a href="booking.html" class="floating-btn booking">
-            <i class="fas fa-calendar-check"></i>
-            <span class="tooltip">Réserver</span>
-        </a>
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
+        <a href="tel:0667772551" class="floating-btn phone" aria-label="Téléphone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
+        <a href="store.html" class="floating-btn booking" style="background: #e6b12e;" aria-label="Boutique"><i class="fas fa-store"></i><span class="tooltip">Boutique</span></a>
     </div>
 
-    <a href="#" class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+    <!-- ===== BACK TO TOP ===== -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></a>
 
-    <script src="../js/main.js"></script>
+    <!-- ===== SCRIPTS ===== -->
     <script src="../js/script.js"></script>
     
     <script>
+        // ===== LANGUAGE SWITCHER =====
+        window.setLanguage = function(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang.toLowerCase());
+            });
+            localStorage.setItem('preferred-language', lang);
+        };
+
+        // Load saved language
+        const savedLang = localStorage.getItem('preferred-language');
+        if (savedLang) {
+            setLanguage(savedLang);
+        } else {
+            setLanguage('en');
+        }
+
+        // ===== BACK TO TOP =====
         const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            backToTop.classList.toggle('show', window.scrollY > 300);
-        });
-        backToTop.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                backToTop.classList.toggle('show', window.scrollY > 300);
+            });
+            backToTop.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
     </script>
 </body>
 </html>
