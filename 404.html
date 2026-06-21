@@ -5,25 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Non Trouvée - Imsfrane Cathédrale | Erreur 404</title>
     
-    <!-- تحسين الأداء - اتصال مسبق -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <meta name="description" content="Désolé, la page que vous cherchez n'existe pas ou a été déplacée. Retournez à l'accueil d'Imsfrane Cathédrale pour découvrir nos activités dans l'Atlas.">
+    <meta name="description" content="Désolé, la page que vous cherchez n'existe pas ou a été déplacée. Retournez à l'accueil d'Imsfrane Cathédrale pour découvrir nos activités et notre boutique dans l'Atlas.">
     <meta name="robots" content="noindex, follow">
     
-    <!-- Google Fonts -->
+    <meta property="og:title" content="Page Non Trouvée - Imsfrane Cathédrale | Erreur 404">
+    <meta property="og:description" content="Désolé, la page que vous cherchez n'existe pas ou a été déplacée.">
+    <meta property="og:image" content="https://imsfrane.com/images/hero.jpg">
+    <meta property="og:url" content="https://imsfrane.com/404.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Imsfrane Cathédrale">
+    <meta property="og:locale" content="fr_FR">
+    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome - محسن -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
     
-    <!-- CSS Files -->
+    <!-- ===== STYLE UNIFIED ===== -->
     <link rel="stylesheet" href="css/style.css">
     
     <style>
+        /* ===== 404 PAGE SPECIFIC ===== */
         .error-page {
             min-height: 80vh;
             display: flex;
@@ -103,25 +109,6 @@
             flex-wrap: wrap;
         }
         
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #e6b12e, #f4c542);
-            color: #1e3c2c;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(230,177,46,0.3);
-        }
-        
         .btn-outline {
             background: transparent;
             border: 2px solid #1e3c2c;
@@ -174,43 +161,77 @@
             font-size: 0.9rem;
         }
         
+        .store-suggestion {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px dashed #e6b12e;
+        }
+        
+        .store-suggestion h3 {
+            color: #1e3c2c;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .store-suggestion p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        
+        .btn-store-404 {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-store-404:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .btn-store-404 i {
+            font-size: 1.2rem;
+        }
+        
         @media (max-width: 768px) {
             .error-content {
                 padding: 2rem;
             }
-            
             .error-code {
                 font-size: 6rem;
             }
-            
             .error-title {
                 font-size: 2rem;
             }
-            
             .error-message {
                 font-size: 1rem;
             }
-            
             .error-actions {
                 flex-direction: column;
             }
-            
-            .btn {
+            .error-actions .btn {
                 width: 100%;
             }
         }
     </style>
 </head>
 <body data-lang="en">
-    <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
 
-    <!-- Header -->
+    <!-- ===== HEADER ===== -->
     <header>
         <div class="container header-content">
-            <a href="index.html" class="logo" aria-label="Accueil">
+            <a href="index.html" class="logo" aria-label="Imsfrane Cathédrale - Retour à la page d'accueil">
                 <div class="logo-img">
-                    <img src="images/logo.jpeg" alt="Logo Imsfrane Cathédrale - Aventures dans l'Atlas marocain" width="60" height="60">
+                    <img src="images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
                 </div>
                 <div class="logo-text">
                     <h1>Imsfrane Cathédrale</h1>
@@ -221,17 +242,17 @@
             
             <div class="right-controls">
                 <div class="lang-buttons">
-                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Français">FR</button>
+                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="Switch to English">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Passer en français">FR</button>
                 </div>
-                <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+                <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu de navigation">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Menu -->
+    <!-- ===== NAVIGATION ===== -->
     <nav id="mainNav" aria-label="Menu principal">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
@@ -251,71 +272,84 @@
             </li>
             <li><a href="pages/memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
             <li><a href="pages/guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
-            <li><a href="pages/blog.html"><i class="fas fa-blog"></i> <span class="lang-en">Blog</span><span class="lang-fr">Blog</span></a></li>
+            <li><a href="pages/store.html"><i class="fas fa-store"></i> <span class="lang-en">Store</span><span class="lang-fr">Boutique</span></a></li>
             <li><a href="pages/booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
             <li><a href="pages/contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
 
-<main>
-    <!-- Error Page Content -->
-    <div class="error-page">
-        <div class="error-content">
-            <div class="error-icon">
-                <i class="fas fa-compass"></i>
-            </div>
-            
-            <div class="error-code">404</div>
-            
-            <h1 class="error-title lang-en">Page Not Found</h1>
-            <h1 class="error-title lang-fr">Page Non Trouvée</h1>
-            
-            <p class="error-message lang-en">
-                Oops! The page you're looking for seems to have wandered off into the mountains. 
-                Don't worry, even the best guides get lost sometimes.
-            </p>
-            <p class="error-message lang-fr">
-                Oups! La page que vous cherchez semble s'être égarée dans les montagnes. 
-                Ne vous inquiétez pas, même les meilleurs guides se perdent parfois.
-            </p>
-            
-            <div class="error-actions">
-                <a href="index.html" class="btn">
-                    <i class="fas fa-home"></i>
-                    <span class="lang-en">Back to Home</span>
-                    <span class="lang-fr">Retour à l'Accueil</span>
-                </a>
-                <a href="pages/contact.html" class="btn btn-outline">
-                    <i class="fas fa-envelope"></i>
-                    <span class="lang-en">Contact Us</span>
-                    <span class="lang-fr">Contactez-nous</span>
-                </a>
-            </div>
-            
-            <div class="suggestions">
-                <h3 class="lang-en">You might be looking for:</h3>
-                <h3 class="lang-fr">Vous cherchez peut-être :</h3>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <div class="error-page">
+            <div class="error-content">
+                <div class="error-icon">
+                    <i class="fas fa-compass"></i>
+                </div>
                 
-                <div class="suggestions-links">
-                    <a href="pages/rafting.html">
-                        <i class="fas fa-water"></i> Rafting
+                <div class="error-code">404</div>
+                
+                <h1 class="error-title lang-en">Page Not Found</h1>
+                <h1 class="error-title lang-fr">Page Non Trouvée</h1>
+                
+                <p class="error-message lang-en">
+                    Oops! The page you're looking for seems to have wandered off into the mountains. 
+                    Don't worry, even the best guides get lost sometimes.
+                </p>
+                <p class="error-message lang-fr">
+                    Oups! La page que vous cherchez semble s'être égarée dans les montagnes. 
+                    Ne vous inquiétez pas, même les meilleurs guides se perdent parfois.
+                </p>
+                
+                <div class="error-actions">
+                    <a href="index.html" class="btn">
+                        <i class="fas fa-home"></i>
+                        <span class="lang-en">Back to Home</span>
+                        <span class="lang-fr">Retour à l'Accueil</span>
                     </a>
-                    <a href="pages/camping.html">
-                        <i class="fas fa-campground"></i> Camping
+                    <a href="pages/contact.html" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        <span class="lang-en">Contact Us</span>
+                        <span class="lang-fr">Contactez-nous</span>
                     </a>
-                    <a href="pages/randonnee.html">
-                        <i class="fas fa-hiking"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span>
-                    </a>
-                    <a href="pages/memories.html">
-                        <i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span>
+                </div>
+                
+                <div class="suggestions">
+                    <h3 class="lang-en">You might be looking for:</h3>
+                    <h3 class="lang-fr">Vous cherchez peut-être :</h3>
+                    
+                    <div class="suggestions-links">
+                        <a href="pages/rafting.html">
+                            <i class="fas fa-water"></i> Rafting
+                        </a>
+                        <a href="pages/camping.html">
+                            <i class="fas fa-campground"></i> Camping
+                        </a>
+                        <a href="pages/randonnee.html">
+                            <i class="fas fa-hiking"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span>
+                        </a>
+                        <a href="pages/memories.html">
+                            <i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ===== STORE SECTION ===== -->
+                <div class="store-suggestion">
+                    <h3>🛍️ <span class="lang-en">Discover our Store</span><span class="lang-fr">Découvrez notre Boutique</span></h3>
+                    <p class="lang-en">Natural products and handmade crafts from the Atlas Mountains. Miel, olive oil, thyme, Berber rugs, and more.</p>
+                    <p class="lang-fr">Produits naturels et artisanat des montagnes de l'Atlas. Miel, huile d'olive, thym, tapis berbères et plus.</p>
+                    
+                    <a href="pages/store.html" class="btn-store-404">
+                        <i class="fas fa-store"></i> 
+                        <span class="lang-en">Visit the Store</span>
+                        <span class="lang-fr">Visiter la Boutique</span>
                     </a>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer-pro" style="margin-top: 0;">
         <div class="container">
             <div class="footer-bottom" style="border-top: none;">
@@ -326,8 +360,26 @@
         </div>
     </footer>
 
-    <!-- JavaScript Files -->
-    <script src="js/main.js"></script>
+    <!-- ===== SCRIPTS ===== -->
     <script src="js/script.js"></script>
+    
+    <script>
+        // ===== LANGUAGE SWITCHER =====
+        window.setLanguage = function(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang.toLowerCase());
+            });
+            localStorage.setItem('preferred-language', lang);
+        };
+
+        // Load saved language
+        const savedLang = localStorage.getItem('preferred-language');
+        if (savedLang) {
+            setLanguage(savedLang);
+        } else {
+            setLanguage('en');
+        }
+    </script>
 </body>
 </html>
