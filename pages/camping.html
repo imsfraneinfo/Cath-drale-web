@@ -3,45 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camping sauvage dans l'Atlas | Location tentes à Imsfrane</title>
+    <title>Camping sauvage dans l'Atlas | Tentes traditionnelles à Imsfrane</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <meta name="description" content="Location de tentes pour camping sauvage à Imsfrane au pied de la Cathédrale. Tentes traditionnelles: 60 DH (1 pers) / 100 DH (2 pers). Matelas, couvertures inclus.">
+    <meta name="description" content="Camping sauvage à Imsfrane au pied de la Cathédrale. Tentes traditionnelles: 60-200 DH/nuit. Matelas, couvertures, feu de camp inclus. Contactez-nous.">
+    <meta name="keywords" content="camping Imsfrane, camping sauvage Atlas, tente traditionnelle, nuit sous les étoiles, camping Maroc">
+    <meta name="robots" content="index, follow">
     
-    <meta property="og:title" content="Camping à Imsfrane - Location tentes">
-    <meta property="og:description" content="Location de tentes pour camping sauvage à Imsfrane. Tentes 60 DH (1 pers) / 100 DH (2 pers). Matelas et couvertures inclus.">
+    <meta property="og:title" content="Camping à Imsfrane - Nuit sous les étoiles">
+    <meta property="og:description" content="Camping sauvage à Imsfrane. Tentes 60-200 DH/nuit. Matelas, couvertures. Nuit inoubliable dans l'Atlas.">
     <meta property="og:image" content="https://imsfrane.com/images/camping-1.jpg">
     <meta property="og:url" content="https://imsfrane.com/pages/camping.html">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Imsfrane Cathédrale">
+    <meta property="og:locale" content="fr_FR">
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
     
+    <!-- ===== STYLE UNIFIED ===== -->
     <link rel="stylesheet" href="../css/style.css">
     
     <style>
-        .page-hero {
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('../images/camping-1.jpg') center/cover no-repeat;
-            position: relative;
+        /* ===== CAMPING PAGE SPECIFIC ===== */
+        .page-hero.camping-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../images/camping-1.jpg') center/cover no-repeat;
+            background-position: 50% 50%;
         }
         
         .page-title {
             text-align: center;
-            margin: 3rem 0 2rem;
+            margin: 3rem 0 1rem;
         }
         
         .page-title h1 {
             font-size: 2.5rem;
             color: #1e3c2c;
             font-weight: 700;
-            margin-bottom: 0.5rem;
         }
         
         .page-title .location {
@@ -54,428 +57,21 @@
         }
         
         .intro-text {
-            max-width: 900px;
-            margin: 2rem auto 4rem;
+            max-width: 800px;
+            margin: 2rem auto 3rem;
             text-align: center;
         }
         
         .intro-text p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             line-height: 1.8;
             color: #555;
-            margin-bottom: 1.5rem;
         }
         
         .intro-icon {
-            font-size: 3rem;
-            color: #e6b12e;
-            margin-bottom: 1.5rem;
-        }
-        
-        .nature-badge {
-            display: inline-block;
-            background: rgba(230,177,46,0.1);
-            color: #1e3c2c;
-            padding: 0.5rem 2rem;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            border: 1px solid rgba(230,177,46,0.3);
-            margin-top: 1rem;
-        }
-        
-        .route-block {
-            margin-bottom: 5rem;
-        }
-        
-        .route-image {
-            width: 100%;
-            height: 450px;
-            overflow: hidden;
-            margin-bottom: 1.5rem;
-            border-radius: 20px;
-        }
-        
-        .route-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .route-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .route-location {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #e6b12e;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
-        
-        .route-content h2 {
-            font-size: 2.5rem;
-            color: #1e3c2c;
-            margin-bottom: 1rem;
-            font-weight: 800;
-            line-height: 1.2;
-        }
-        
-        .route-content h2 i {
-            color: #e6b12e;
-            margin-right: 0.5rem;
-        }
-        
-        .route-content p {
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-        
-        .route-meta {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin: 1.5rem 0;
-        }
-        
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #1e3c2c;
-            font-weight: 600;
-        }
-        
-        .meta-item i {
-            color: #e6b12e;
-            font-size: 1.1rem;
-        }
-        
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .pricing-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-        }
-        
-        .pricing-header {
-            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-        
-        .pricing-header i {
-            font-size: 3rem;
-            color: #e6b12e;
-            margin-bottom: 1rem;
-        }
-        
-        .pricing-header h3 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .pricing-body {
-            padding: 2rem;
-            text-align: center;
-        }
-        
-        .price {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #e6b12e;
-            margin-bottom: 0.5rem;
-        }
-        
-        .price small {
-            font-size: 1rem;
-            font-weight: 400;
-            color: #999;
-        }
-        
-        .tent-desc {
-            color: #666;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .equipment-list {
-            text-align: left;
-            margin: 1.5rem 0;
-            padding: 0 1rem;
-        }
-        
-        .equipment-list li {
-            margin: 0.5rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #555;
-        }
-        
-        .equipment-list li i {
-            color: #e6b12e;
-        }
-        
-        .journey-section {
-            background: #f9f7f3;
-            border-radius: 30px;
-            padding: 2rem;
-            margin: 2rem 0 1rem;
-            border: 1px solid rgba(230,177,46,0.2);
-        }
-        
-        .journey-title {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            margin-bottom: 1.5rem;
-            color: #1e3c2c;
-            font-size: 1.3rem;
-        }
-        
-        .journey-title i {
-            color: #e6b12e;
-            font-size: 1.5rem;
-        }
-        
-        .journey-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-        
-        .journey-step {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-        
-        .step-time {
-            min-width: 80px;
-            background: #1e3c2c;
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-align: center;
-        }
-        
-        .step-content {
-            flex: 1;
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-        
-        .step-icon {
-            width: 40px;
-            height: 40px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #e6b12e;
-            font-size: 1.2rem;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-        }
-        
-        .step-text h4 {
-            color: #1e3c2c;
-            margin-bottom: 0.3rem;
-            font-size: 1rem;
-        }
-        
-        .step-text p {
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin: 0;
-        }
-        
-        .testimonial-small {
-            background: white;
-            border-radius: 15px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-left: 5px solid #e6b12e;
-            font-style: italic;
-            color: #555;
-        }
-        
-        .info-section {
-            background: linear-gradient(135deg, #f9f7f3, #f0e8d9);
-            border-radius: 30px;
-            padding: 3rem;
-            margin: 4rem 0;
-        }
-        
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .info-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .info-card i {
             font-size: 2.5rem;
             color: #e6b12e;
             margin-bottom: 1rem;
-        }
-        
-        .info-card h4 {
-            font-size: 1.5rem;
-            color: #1e3c2c;
-            margin-bottom: 0.5rem;
-        }
-        
-        .info-card p {
-            color: #555;
-            line-height: 1.6;
-        }
-        
-        .faq-item {
-            background: white;
-            border-radius: 15px;
-            margin-bottom: 1rem;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .faq-question {
-            padding: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s;
-        }
-        
-        .faq-question:hover {
-            background: rgba(230,177,46,0.05);
-        }
-        
-        .faq-question h4 {
-            color: #1e3c2c;
-            font-size: 1.1rem;
-        }
-        
-        .faq-question i {
-            color: #e6b12e;
-            transition: transform 0.3s;
-        }
-        
-        .faq-answer {
-            padding: 0 1.5rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s;
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        .faq-answer.show {
-            padding: 0 1.5rem 1.5rem;
-            max-height: 500px;
-        }
-        
-        .cta-modern {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #1e3c2c, #2a5a3a);
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-content {
-            position: relative;
-            z-index: 2;
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .cta-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: #e6b12e;
-            color: #1e3c2c;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            margin-top: 1rem;
-        }
-        
-        .btn:hover {
-            background: #f4c542;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(230,177,46,0.3);
-        }
-        
-        .btn-wa {
-            background: #25D366;
-            color: white;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .btn-wa:hover {
-            background: #128C7E;
         }
         
         .contact-section {
@@ -483,7 +79,8 @@
             border-radius: 30px;
             padding: 3rem;
             margin: 4rem 0;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+            text-align: center;
         }
         
         .contact-grid {
@@ -506,44 +103,105 @@
         .contact-item a {
             color: #555;
             text-decoration: none;
-            transition: color 0.3s;
         }
         
-        .river-note {
-            background: #e8f5e8;
-            border: 2px dashed #4CAF50;
-            padding: 1rem;
+        .info-section {
+            background: linear-gradient(135deg, #f9f7f3, #f0e8d9);
+            border-radius: 30px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .info-card {
+            background: white;
             border-radius: 15px;
-            margin: 1.5rem 0;
+            padding: 1.5rem;
             text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .info-card i {
+            font-size: 2rem;
+            color: #e6b12e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-card h4 {
+            font-size: 1.1rem;
+            color: #1e3c2c;
+            margin-bottom: 0.3rem;
+        }
+        
+        .info-card p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+        
+        .btn-wa {
+            background: #25D366;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-wa:hover {
+            background: #128C7E;
         }
         
         @media (max-width: 992px) {
-            .pricing-grid { grid-template-columns: 1fr; }
-            .info-grid { grid-template-columns: repeat(2, 1fr); }
-            .contact-grid { grid-template-columns: repeat(2, 1fr); }
+            .pricing-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         @media (max-width: 768px) {
-            .page-hero { height: 350px; }
-            .route-image { height: 300px; }
-            .intro-text p { font-size: 1.1rem; }
-            .info-grid { grid-template-columns: 1fr; }
-            .contact-grid { grid-template-columns: 1fr; }
-            .route-content h2 { font-size: 2rem; }
-            .price { font-size: 2rem; }
-            .cta-buttons { flex-direction: column; }
-            .journey-step { flex-direction: column; }
-            .step-time { align-self: flex-start; }
+            .page-hero.camping-hero {
+                height: 300px;
+            }
+            .page-title h1 {
+                font-size: 2rem;
+            }
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .journey-step {
+                flex-direction: column;
+            }
+            .step-time {
+                align-self: flex-start;
+            }
+            .price {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body data-lang="en">
     <div class="overlay" id="overlay"></div>
 
+    <!-- ===== HEADER ===== -->
     <header>
         <div class="container header-content">
-            <a href="../index.html" class="logo">
+            <a href="../index.html" class="logo" aria-label="Imsfrane Cathédrale - Retour à la page d'accueil">
                 <div class="logo-img">
                     <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
                 </div>
@@ -553,21 +211,25 @@
                     <span class="lang-fr">Aventures Nature</span>
                 </div>
             </a>
+            
             <div class="right-controls">
                 <div class="lang-buttons">
-                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
+                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="Switch to English">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Passer en français">FR</button>
                 </div>
-                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu de navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
 
-    <nav id="mainNav">
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="mainNav" aria-label="Menu principal">
         <ul>
             <li><a href="../index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
             <li class="has-submenu">
-                <a href="#" onclick="toggleSubmenu(event)">
+                <a href="#" onclick="toggleSubmenu(event)" aria-expanded="false">
                     <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
                     <i class="fas fa-chevron-right arrow"></i>
                 </a>
@@ -582,429 +244,374 @@
             </li>
             <li><a href="memories.html"><i class="fas fa-camera"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
             <li><a href="guide.html"><i class="fas fa-map-signs"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
-            <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="store.html"><i class="fas fa-store"></i> <span class="lang-en">Store</span><span class="lang-fr">Boutique</span></a></li>
             <li><a href="booking.html"><i class="fas fa-calendar-check"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
             <li><a href="contact.html"><i class="fas fa-envelope"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
         </ul>
     </nav>
-    
-<main>
-    <div class="page-hero"></div>
 
-    <div class="container">
-        <div class="page-title">
-            <h1 class="lang-en">Camping Equipment Rental</h1>
-            <h1 class="lang-fr">Location de Matériel de Camping</h1>
-            <div class="location"><i class="fas fa-map-pin"></i> Imsfrane, Morocco</div>
-        </div>
-    </div>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <div class="page-hero camping-hero"></div>
 
-    <div class="container">
-        <div class="intro-text">
-            <div class="intro-icon"><i class="fas fa-campground"></i></div>
-            <p class="lang-en">🏕️ We rent traditional tents (mfercha) with mattresses and blankets. Camp in the wild, right by the river, with a breathtaking view of the Imsfrane rock. You bring your food, we provide the comfort.</p>
-            <p class="lang-fr">🏕️ Nous louons des tentes traditionnelles (mfercha) avec matelas et couvertures. Campez en pleine nature, au bord de la rivière, avec une vue imprenable sur le rocher d'Imsfrane. Vous apportez votre nourriture, nous fournissons le confort.</p>
-            <div class="nature-badge"><i class="fas fa-leaf"></i> 100% Wild Nature <i class="fas fa-tree"></i></div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="river-note">
-            <i class="fas fa-water" style="color: #2196F3; font-size: 2rem; margin-bottom: 0.5rem;"></i>
-            <p class="lang-en" style="font-size: 1.1rem;">🚿 <strong>Natural bathing:</strong> The river is your shower! Take a refreshing dip in the pure mountain water.</p>
-            <p class="lang-fr" style="font-size: 1.1rem;">🚿 <strong>Douche naturelle :</strong> La rivière est votre douche ! Plongez dans l'eau pure de la montagne.</p>
-        </div>
-    </div>
-
-    <!-- Camping Experience Timeline -->
-    <section class="container">
-        <div class="route-block">
-            <div class="route-image"><img src="../images/camping-1.jpg" alt="Camping au pied de la Cathédrale Imsfrane" loading="lazy"></div>
-            <div class="route-content">
-                <div class="route-location"><i class="fas fa-map-pin"></i> <span class="lang-en">By the river</span><span class="lang-fr">Bord de l'oued</span></div>
-                <h2><i class="fas fa-campground"></i> <span class="lang-en">Camp in the heart of nature</span><span class="lang-fr">Campez au cœur de la nature</span></h2>
-                <p class="lang-en">Camp in the wild, right by the river, with a breathtaking view of the Imsfrane rock. A return to basics, far from everything, close to everything. The sound of the flowing water will lull you to sleep, and the morning light on the cliffs is simply magical.</p>
-                <p class="lang-fr">Campez en pleine nature, au bord de la rivière, avec une vue imprenable sur le rocher d'Imsfrane. Un retour à l'essentiel, loin de tout, proche de tout. Le bruit de l'eau qui coule vous bercera, et la lumière du matin sur les falaises est tout simplement magique.</p>
-                
-                <div class="journey-section">
-                    <div class="journey-title">
-                        <i class="fas fa-map-signal"></i>
-                        <span class="lang-en">Your Camping Experience Step by Step</span>
-                        <span class="lang-fr">Votre Expérience Camping Étape par Étape</span>
-                    </div>
-                    <div class="journey-steps">
-                        <div class="journey-step">
-                            <span class="step-time">15:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-map-pin"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Arrival & Installation</h4>
-                                    <h4 class="lang-fr">Arrivée & Installation</h4>
-                                    <p class="lang-en">Welcome, choose your spot, we set up the tent for you</p>
-                                    <p class="lang-fr">Accueil, choix de l'emplacement, nous installons la tente pour vous</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">16:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-hiking"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Explore the Area</h4>
-                                    <h4 class="lang-fr">Exploration des Environs</h4>
-                                    <p class="lang-en">Short walk to discover the river and the Cathedral rock</p>
-                                    <p class="lang-fr">Petite balade pour découvrir la rivière et le rocher Cathédrale</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">18:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-sun"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Sunset Views</h4>
-                                    <h4 class="lang-fr">Vue du Coucher de Soleil</h4>
-                                    <p class="lang-en">Watch the sunset paint the Cathedral rock in golden colors</p>
-                                    <p class="lang-fr">Regardez le coucher du soleil colorer le rocher Cathédrale en or</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">19:30</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-fire"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Campfire</h4>
-                                    <h4 class="lang-fr">Feu de Camp</h4>
-                                    <p class="lang-en">Gather around the fire, prepare your own dinner</p>
-                                    <p class="lang-fr">Rassemblez-vous autour du feu, préparez votre dîner</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">21:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-star"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Stargazing</h4>
-                                    <h4 class="lang-fr">Observation des Étoiles</h4>
-                                    <p class="lang-en">Incredible night sky, far from light pollution</p>
-                                    <p class="lang-fr">Ciel nocturne incroyable, loin de la pollution lumineuse</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">07:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-sun"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Sunrise</h4>
-                                    <h4 class="lang-fr">Lever du Soleil</h4>
-                                    <p class="lang-en">Wake up to the beautiful sunrise over the mountains</p>
-                                    <p class="lang-fr">Réveil avec le magnifique lever de soleil sur les montagnes</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step">
-                            <span class="step-time">10:00</span>
-                            <div class="step-content">
-                                <div class="step-icon"><i class="fas fa-flag-checkered"></i></div>
-                                <div class="step-text">
-                                    <h4 class="lang-en">Check-out</h4>
-                                    <h4 class="lang-fr">Départ</h4>
-                                    <p class="lang-en">Pack your gear, leave no trace, take only memories</p>
-                                    <p class="lang-fr">Rangez votre matériel, ne laissez aucune trace, n'emportez que des souvenirs</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="container">
+            <div class="page-title">
+                <h1 class="lang-en">Wild Camping Under the Stars</h1>
+                <h1 class="lang-fr">Camping Sauvage Sous les Étoiles</h1>
+                <div class="location">
+                    <i class="fas fa-map-pin"></i> Imsfrane, Morocco
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Tent Options avec PRIX -->
-    <div class="container">
-        <h2 class="expedition-title"><span class="lang-en">Tent Rental Prices</span><span class="lang-fr">Tarifs Location de Tentes</span></h2>
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <i class="fas fa-user"></i>
-                    <h3 class="lang-en">1 Person Tent</h3>
-                    <h3 class="lang-fr">Tente 1 Personne</h3>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-icon">
+                    <i class="fas fa-campground"></i>
                 </div>
-                <div class="pricing-body">
-                    <div class="tent-desc">Traditional tent (Mfercha) + Mattress + Warm Blankets + Pillow</div>
-                    <ul class="equipment-list">
-                        <li><i class="fas fa-check"></i> Traditional Berber tent</li>
-                        <li><i class="fas fa-check"></i> Comfortable mattress</li>
-                        <li><i class="fas fa-check"></i> Warm blankets</li>
-                        <li><i class="fas fa-check"></i> Pillow included</li>
-                    </ul>
-                    <div class="price">60 DH <small>/night</small></div>
-                    <a href="booking.html" class="btn">
-                        <i class="fas fa-calendar-check"></i> <span class="lang-en">Rent now - 60 DH/night</span><span class="lang-fr">Louer - 60 DH/nuit</span>
-                    </a>
-                </div>
-            </div>
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <i class="fas fa-user-friends"></i>
-                    <h3 class="lang-en">2 Persons Tent</h3>
-                    <h3 class="lang-fr">Tente 2 Personnes</h3>
-                </div>
-                <div class="pricing-body">
-                    <div class="tent-desc">Traditional tent (Mfercha) + 2 Mattresses + Warm Blankets + Pillows</div>
-                    <ul class="equipment-list">
-                        <li><i class="fas fa-check"></i> Traditional Berber tent</li>
-                        <li><i class="fas fa-check"></i> 2 comfortable mattresses</li>
-                        <li><i class="fas fa-check"></i> Warm blankets</li>
-                        <li><i class="fas fa-check"></i> Pillows included</li>
-                    </ul>
-                    <div class="price">100 DH <small>/night</small></div>
-                    <a href="booking.html" class="btn">
-                        <i class="fas fa-calendar-check"></i> <span class="lang-en">Rent now - 100 DH/night</span><span class="lang-fr">Louer - 100 DH/nuit</span>
-                    </a>
-                </div>
+                <p class="lang-en">🏕️ Leave everything behind and dive into the wild. Here, no walls, no electricity, no noise... just you, the river, the mountain, and a sky full of stars. We provide the traditional tent (mfercha), mattresses, and blankets. You bring your soul of an adventurer.</p>
+                <p class="lang-fr">🏕️ Laissez tout derrière vous et plongez dans le sauvage. Ici, pas de murs, pas d'électricité, pas de bruit... juste vous, la rivière, la montagne, et un ciel plein d'étoiles. On vous fournit la tente traditionnelle (mfercha), les matelas, et les couvertures. Vous, vous amenez votre âme d'aventurier.</p>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 1rem; padding: 1rem; background: #f9f7f3; border-radius: 15px;">
-            <p class="lang-en"><i class="fas fa-info-circle"></i> <strong>You can also bring your own tent.</strong> Contact us for the price of the spot.</p>
-            <p class="lang-fr"><i class="fas fa-info-circle"></i> <strong>Vous pouvez aussi apporter votre propre tente.</strong> Contactez-nous pour le prix de l'emplacement.</p>
-        </div>
-    </div>
 
-    <!-- Testimonial -->
-    <div class="container">
-        <div class="testimonial-small">
-            <i class="fas fa-quote-left" style="color: #e6b12e; font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
-            <p class="lang-en">"Camping at Imsfrane was the highlight of our trip to Morocco. Falling asleep to the sound of the river and waking up to the sun hitting the Cathedral rock was magical. The tents are comfortable and the hosts are incredibly welcoming."</p>
-            <p class="lang-fr">"Le camping à Imsfrane a été le point culminant de notre voyage au Maroc. S'endormir au son de la rivière et se réveiller avec le soleil frappant le rocher de la Cathédrale était magique. Les tentes sont confortables et les hôtes sont incroyablement accueillants."</p>
-            <p style="margin-top: 1rem; font-weight: 600; color: #1e3c2c;">— Sarah & Thomas, France</p>
-        </div>
-    </div>
-
-    <!-- Practical Information -->
-    <div class="container">
-        <div class="info-section">
-            <h2 class="expedition-title"><span class="lang-en">Practical Information</span><span class="lang-fr">Informations Pratiques</span></h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <i class="fas fa-clock"></i>
-                    <h4 class="lang-en">Check-in / Check-out</h4>
-                    <h4 class="lang-fr">Arrivée / Départ</h4>
-                    <p class="lang-en">Check-in: 14:00 | Check-out: 12:00</p>
-                    <p class="lang-fr">Arrivée: 14h00 | Départ: 12h00</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-tshirt"></i>
-                    <h4 class="lang-en">What to Bring</h4>
-                    <h4 class="lang-fr">À Apporter</h4>
-                    <p class="lang-en">Warm clothes (nights are cold), torch, toiletries, food, water</p>
-                    <p class="lang-fr">Vêtements chauds (les nuits sont fraîches), lampe torche, affaires de toilette, nourriture, eau</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-info-circle"></i>
-                    <h4 class="lang-en">Important Note</h4>
-                    <h4 class="lang-fr">Note Importante</h4>
-                    <p class="lang-en">No electricity at camping spots. Bring power banks for your devices.</p>
-                    <p class="lang-fr">Pas d'électricité sur les emplacements. Apportez des batteries externes pour vos appareils.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FAQ Section -->
-    <div class="container">
-        <div class="info-section">
-            <h2 class="expedition-title"><span class="lang-en">Frequently Asked Questions</span><span class="lang-fr">Questions Fréquentes</span></h2>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <h4 class="lang-en">Is there drinking water available?</h4>
-                    <h4 class="lang-fr">Y a-t-il de l'eau potable disponible ?</h4>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p class="lang-en">We use pure river water for cooking. It's natural and clean. If you prefer bottled water, we recommend bringing your own supply.</p>
-                    <p class="lang-fr">Nous utilisons l'eau pure de la rivière pour la cuisine. Elle est naturelle et propre. Si vous préférez l'eau en bouteille, nous recommandons d'apporter votre propre réserve.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <h4 class="lang-en">Can we bring our own tent?</h4>
-                    <h4 class="lang-fr">Pouvons-nous apporter notre propre tente ?</h4>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p class="lang-en">Absolutely! You can bring your own equipment. Contact us for the price of the spot.</p>
-                    <p class="lang-fr">Absolument ! Vous pouvez apporter votre propre matériel. Contactez-nous pour le prix de l'emplacement.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <h4 class="lang-en">Where do we bathe?</h4>
-                    <h4 class="lang-fr">Où peut-on se laver ?</h4>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p class="lang-en">In the river! The water is fresh and pure. It's a natural experience. You can also bring a portable shower if you prefer.</p>
-                    <p class="lang-fr">Dans la rivière ! L'eau est fraîche et pure. C'est une expérience naturelle. Vous pouvez aussi apporter une douche portable si vous préférez.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <h4 class="lang-en">Is the camp safe for families with children?</h4>
-                    <h4 class="lang-fr">Le camp est-il sûr pour les familles avec enfants ?</h4>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p class="lang-en">Yes, the camp is very safe. Children love the adventure! Just supervise them near the river.</p>
-                    <p class="lang-fr">Oui, le camp est très sûr. Les enfants adorent l'aventure ! Il suffit de les surveiller près de la rivière.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CTA Section -->
-    <section class="cta-modern">
-        <div class="cta-content">
-            <h2>
-                <span class="lang-en">Ready to Sleep Under the Stars?</span>
-                <span class="lang-fr">Prêt à Dormir Sous les Étoiles ?</span>
+        <!-- ===== PRICING GRID ===== -->
+        <div class="container">
+            <h2 class="section-title" style="text-align:center; font-size:2rem; color:#1e3c2c; margin-bottom:2rem;">
+                <span class="lang-en">Tent Options</span>
+                <span class="lang-fr">Options de Tentes</span>
             </h2>
-            <p class="lang-en">Rent your tent now and experience the magic of the Atlas night</p>
-            <p class="lang-fr">Louez votre tente maintenant et vivez la magie de la nuit dans l'Atlas</p>
-            <div class="cta-buttons">
-                <a href="booking.html" class="btn">
-                    <i class="fas fa-calendar-check"></i>
-                    <span class="lang-en">Rent Now - From 60 DH/night</span>
-                    <span class="lang-fr">Louer - À partir de 60 DH/nuit</span>
-                </a>
-                <a href="https://wa.me/212667772551" class="btn btn-wa" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <span class="lang-en">Ask a Question</span>
-                    <span class="lang-fr">Poser une Question</span>
-                </a>
+            <div class="pricing-grid">
+                
+                <!-- 1 Person -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <i class="fas fa-user"></i>
+                        <h3>1 Personne</h3>
+                    </div>
+                    <div class="pricing-body">
+                        <p style="color:#666; font-size:0.95rem;">Tente traditionnelle + Matelas + Couverture</p>
+                        <div class="price">60 DH <small>/nuit</small></div>
+                        <a href="booking.html" class="btn">
+                            <i class="fas fa-calendar-check"></i> Réserver
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 2 Persons -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <i class="fas fa-user-friends"></i>
+                        <h3>2 Personnes</h3>
+                    </div>
+                    <div class="pricing-body">
+                        <p style="color:#666; font-size:0.95rem;">Tente traditionnelle + 2 Matelas + Couvertures</p>
+                        <div class="price">120 DH <small>/nuit</small></div>
+                        <a href="booking.html" class="btn">
+                            <i class="fas fa-calendar-check"></i> Réserver
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 3 Persons -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <i class="fas fa-users"></i>
+                        <h3>3 Personnes</h3>
+                    </div>
+                    <div class="pricing-body">
+                        <p style="color:#666; font-size:0.95rem;">Tente traditionnelle + 3 Matelas + Couvertures</p>
+                        <div class="price">150 DH <small>/nuit</small></div>
+                        <a href="booking.html" class="btn">
+                            <i class="fas fa-calendar-check"></i> Réserver
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 4 Persons -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <i class="fas fa-users"></i>
+                        <h3>4 Personnes</h3>
+                    </div>
+                    <div class="pricing-body">
+                        <p style="color:#666; font-size:0.95rem;">Tente traditionnelle + 4 Matelas + Couvertures</p>
+                        <div class="price">200 DH <small>/nuit</small></div>
+                        <a href="booking.html" class="btn">
+                            <i class="fas fa-calendar-check"></i> Réserver
+                        </a>
+                    </div>
+                </div>
+                
             </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <div class="container">
-        <div class="contact-section">
-            <h2 class="expedition-title"><span class="lang-en">Rent Your Camping Equipment</span><span class="lang-fr">Louer Votre Matériel de Camping</span></h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <i class="fas fa-globe"></i>
-                    <h4>Website</h4>
-                    <a href="https://imsfrane.com" target="_blank">imsfrane.com</a>
+        <!-- ===== TIMELINE / JOURNEY ===== -->
+        <div class="container">
+            <h2 class="section-title" style="text-align:center; font-size:2rem; color:#1e3c2c; margin-bottom:2rem;">
+                <span class="lang-en">Your Camping Experience</span>
+                <span class="lang-fr">Votre Expérience Camping</span>
+            </h2>
+            <div class="journey-section">
+                <div class="journey-steps">
+                    <div class="journey-step">
+                        <span class="step-time">15:00</span>
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-map-pin"></i></div>
+                            <div class="step-text">
+                                <h4>Arrivée & Installation</h4>
+                                <p>Accueil, choix de l'emplacement, installation de votre tente</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-step">
+                        <span class="step-time">16:00</span>
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-hiking"></i></div>
+                            <div class="step-text">
+                                <h4>Exploration</h4>
+                                <p>Découverte de la rivière et du rocher Cathédrale</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-step">
+                        <span class="step-time">18:00</span>
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-sun"></i></div>
+                            <div class="step-text">
+                                <h4>Coucher de Soleil</h4>
+                                <p>Vue magique sur le rocher Cathédrale en or</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-step">
+                        <span class="step-time">19:30</span>
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-fire"></i></div>
+                            <div class="step-text">
+                                <h4>Feu de Camp</h4>
+                                <p>Rassemblement autour du feu, partage d'histoires</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-step">
+                        <span class="step-time">21:00</span>
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-star"></i></div>
+                            <div class="step-text">
+                                <h4>Observation des Étoiles</h4>
+                                <p>Ciel incroyable, loin de la pollution lumineuse</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-step">
+                        <span class="step-time">23:00</span>
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-moon"></i></div>
+                            <div class="step-text">
+                                <h4>Nuit sous les Étoiles</h4>
+                                <p>Dormez au son de la rivière</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-step">
+                        <span class="step-time">07:00</span>
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-sun"></i></div>
+                            <div class="step-text">
+                                <h4>Lever du Soleil</h4>
+                                <p>Réveil avec une vue magnifique sur les montagnes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-step">
+                        <span class="step-time">10:00</span>
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-flag-checkered"></i></div>
+                            <div class="step-text">
+                                <h4>Départ</h4>
+                                <p>Ne laissez aucune trace, n'emportez que des souvenirs</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <h4>WhatsApp</h4>
-                    <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h4>Location</h4>
-                    <p>Imsfrane, Azilal, Morocco</p>
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <a href="booking.html" class="btn">
-                    <i class="fas fa-calendar-check"></i> <span class="lang-en">Rent Now</span><span class="lang-fr">Louer</span>
-                </a>
             </div>
         </div>
-    </div>
-</main>
 
-    <footer class="footer-pro">
+        <!-- ===== INFORMATION ===== -->
+        <div class="container">
+            <div class="info-section">
+                <h2 class="section-title" style="margin-top:0; font-size:2rem; color:#1e3c2c;">
+                    <span class="lang-en">Practical Information</span>
+                    <span class="lang-fr">Informations Pratiques</span>
+                </h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Check-in / Check-out</h4>
+                        <p>Arrivée: 14h00 | Départ: 12h00</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-tshirt"></i>
+                        <h4>À Apporter</h4>
+                        <p>Vêtements chauds, lampe torche, affaires de toilette</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-info-circle"></i>
+                        <h4>Note Importante</h4>
+                        <p>Pas d'électricité sur les emplacements. Apportez des batteries externes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CONTACT ===== -->
+        <div class="container">
+            <div class="contact-section">
+                <h2 class="section-title" style="margin-top:0; font-size:2rem; color:#1e3c2c;">
+                    <span class="lang-en">Book Your Camping</span>
+                    <span class="lang-fr">Réserver Votre Camping</span>
+                </h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <h4>Website</h4>
+                        <a href="https://imsfrane.com" target="_blank">imsfrane.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <h4>WhatsApp</h4>
+                        <a href="https://wa.me/212667772551" target="_blank">+212 667-772551</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Location</h4>
+                        <p>Imsfrane, Azilal, Morocco</p>
+                    </div>
+                </div>
+                <div style="text-align:center;">
+                    <a href="booking.html" class="btn">
+                        <i class="fas fa-calendar-check"></i> 
+                        <span class="lang-en">Book Now</span>
+                        <span class="lang-fr">Réserver</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-pro" aria-label="Pied de page">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60" loading="lazy">
+                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
-                    <p class="footer-description">Discover the magic of the Atlas Mountains at 1,868m altitude.</p>
+                    <p class="footer-description">
+                        <span class="lang-en">Discover the magic of the Atlas Mountains through unique and authentic experiences at 1,868m altitude.</span>
+                        <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
+                    </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
+
                 <div class="footer-col footer-links">
-                    <h4>Quick Links</h4>
+                    <h4><span class="lang-en">Quick Links</span><span class="lang-fr">Liens Rapides</span></h4>
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="rafting.html">Rafting</a></li>
-                        <li><a href="camping.html">Camping</a></li>
-                        <li><a href="randonnee.html">Hiking</a></li>
-                        <li><a href="vtt.html">VTT</a></li>
-                        <li><a href="quad.html">Quad</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+                        <li><a href="rafting.html"><i class="fas fa-chevron-right"></i> Rafting</a></li>
+                        <li><a href="camping.html"><i class="fas fa-chevron-right"></i> Camping</a></li>
+                        <li><a href="randonnee.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Hiking</span><span class="lang-fr">Randonnée</span></a></li>
+                        <li><a href="vtt.html"><i class="fas fa-chevron-right"></i> VTT</a></li>
+                        <li><a href="quad.html"><i class="fas fa-chevron-right"></i> Quad</a></li>
                     </ul>
                 </div>
+
+                <div class="footer-col footer-info">
+                    <h4><span class="lang-en">Information</span><span class="lang-fr">Informations</span></h4>
+                    <ul>
+                        <li><a href="guide.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Guide</span><span class="lang-fr">Guide</span></a></li>
+                        <li><a href="memories.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Memories</span><span class="lang-fr">Mémoires</span></a></li>
+                        <li><a href="store.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Store</span><span class="lang-fr">Boutique</span></a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Booking</span><span class="lang-fr">Réservation</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
+                        <li><a href="hebergement.html"><i class="fas fa-chevron-right"></i> <span class="lang-en">Accommodation</span><span class="lang-fr">Hébergement</span></a></li>
+                    </ul>
+                </div>
+
                 <div class="footer-col footer-contact">
-                    <h4>Contact Us</h4>
+                    <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
                     <ul>
                         <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
                         <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
                     </ul>
                 </div>
             </div>
+
+            <div class="footer-middle">
+                <div class="stat-item"><div class="stat-number">1,868m</div><div class="stat-label">Altitude</div></div>
+                <div class="stat-item"><div class="stat-number">50+ km</div><div class="stat-label">Sentiers</div></div>
+                <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">Aventuriers</div></div>
+                <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Avis</div></div>
+            </div>
+
             <div class="footer-bottom">
                 <div class="copyright">
-                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. All Rights Reserved.</p>
+                    <p>© 2026 <strong>Imsfrane Cathédrale</strong>. <span class="lang-en">All Rights Reserved.</span><span class="lang-fr">Tous droits réservés.</span></p>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- ===== FLOATING BUTTONS ===== -->
     <div class="floating-buttons">
-        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-            <span class="tooltip">WhatsApp</span>
-        </a>
-        <a href="tel:0667772551" class="floating-btn phone">
-            <i class="fas fa-phone-alt"></i>
-            <span class="tooltip">Appeler</span>
-        </a>
-        <a href="booking.html" class="floating-btn booking">
-            <i class="fas fa-calendar-check"></i>
-            <span class="tooltip">Réserver</span>
-        </a>
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
+        <a href="tel:0667772551" class="floating-btn phone" aria-label="Téléphone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
+        <a href="store.html" class="floating-btn booking" style="background: #e6b12e;" aria-label="Boutique"><i class="fas fa-store"></i><span class="tooltip">Boutique</span></a>
     </div>
 
-    <a href="#" class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+    <!-- ===== BACK TO TOP ===== -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></a>
 
-    <script src="../js/main.js"></script>
+    <!-- ===== SCRIPTS ===== -->
     <script src="../js/script.js"></script>
     
     <script>
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            backToTop.classList.toggle('show', window.scrollY > 300);
-        });
-        backToTop.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        window.toggleFaq = function(element) {
-            const answer = element.nextElementSibling;
-            const icon = element.querySelector('i');
-            answer.classList.toggle('show');
-            icon.style.transform = answer.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)';
+        // ===== LANGUAGE SWITCHER =====
+        window.setLanguage = function(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang.toLowerCase());
+            });
+            localStorage.setItem('preferred-language', lang);
         };
+
+        // Load saved language
+        const savedLang = localStorage.getItem('preferred-language');
+        if (savedLang) {
+            setLanguage(savedLang);
+        } else {
+            setLanguage('en');
+        }
+
+        // ===== BACK TO TOP =====
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                backToTop.classList.toggle('show', window.scrollY > 300);
+            });
+            backToTop.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
     </script>
 </body>
 </html>
