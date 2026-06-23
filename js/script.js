@@ -90,7 +90,7 @@ if (backToTop) {
 // ============================================
 // 5. HERO SLIDER (Index Page)
 // ============================================
-let currentSlide = 0;
+let currentHeroSlide = 0;  // ✅ غيرنا الاسم هنا
 const heroSlides = document.querySelectorAll('.hero-slider .slide');
 const heroDots = document.querySelectorAll('.hero-slider .dot');
 const totalHeroSlides = heroSlides.length;
@@ -104,11 +104,11 @@ function showHeroSlide(index) {
     
     heroSlides[index].classList.add('active');
     heroDots[index].classList.add('active');
-    currentSlide = index;
+    currentHeroSlide = index;  // ✅ غيرنا هنا
 }
 
 window.changeSlide = function(direction) {
-    showHeroSlide(currentSlide + direction);
+    showHeroSlide(currentHeroSlide + direction);  // ✅ غيرنا هنا
 };
 
 window.goToSlide = function(index) {
@@ -118,7 +118,7 @@ window.goToSlide = function(index) {
 // Auto advance hero slider
 if (heroSlides.length > 0) {
     setInterval(() => {
-        showHeroSlide(currentSlide + 1);
+        showHeroSlide(currentHeroSlide + 1);  // ✅ غيرنا هنا
     }, 5000);
 }
 
@@ -523,29 +523,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-console.log('✅ Imsfrane Cathédrale - Script chargé avec succès!');
 // ============================================
-// RAFTING PAGE - TOGGLE PROGRAMME DETAIL
-// ============================================
-function toggleProgramme(id, btn) {
-    const element = document.getElementById(id);
-    if (!element) return;
-    
-    element.classList.toggle('show');
-    
-    const spanEn = btn.querySelector('.lang-en');
-    const spanFr = btn.querySelector('.lang-fr');
-    
-    if (element.classList.contains('show')) {
-        if (spanEn) spanEn.textContent = '📖 Read less';
-        if (spanFr) spanFr.textContent = '📖 Lire moins';
-    } else {
-        if (spanEn) spanEn.textContent = '📖 Read more';
-        if (spanFr) spanFr.textContent = '📖 Lire plus';
-    }
-}
-// ============================================
-// RAFTING PAGE - TOGGLE PROGRAMME DETAIL
+// 14. RAFTING PAGE - TOGGLE PROGRAMME DETAIL
 // ============================================
 function toggleRaftingProgramme(id, btn) {
     const element = document.getElementById(id);
@@ -564,3 +543,5 @@ function toggleRaftingProgramme(id, btn) {
         if (spanFr) spanFr.textContent = '📖 Voir le Programme';
     }
 }
+
+console.log('✅ Imsfrane Cathédrale - Script chargé avec succès!');
