@@ -3683,3 +3683,20 @@ nav ul li.has-submenu > a {
         min-height: 250px !important;
     }
 }
+/* ===== إصلاح ألوان HOT و POPULAR ===== */
+.badge-hot {
+    background: #d32f2f !important;  /* أحمر غامق */
+    color: #ffffff !important;       /* نص أبيض */
+    font-weight: 700 !important;     /* خط غليظ */
+}
+
+.badge-new {
+    background: #1e3c2c !important;  /* أخضر غامق */
+    color: #ffffff !important;       /* نص أبيض */
+    font-weight: 700 !important;
+}
+
+.card-badge-promax {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
