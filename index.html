@@ -70,8 +70,90 @@
       "openingHours": "Mo-Su 08:00-20:00"
     }
     </script>
+    
+    <style>
+        /* ============================================================
+           ACCESSIBILITY FIXES - INDEX PAGE
+           ============================================================ */
+        
+        /* ===== SKIP LINK ===== */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #e6b12e;
+            color: #1e3c2c;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0 0 8px 8px;
+            z-index: 99999;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* ===== BADGE HOT - CONTRAST FIX ===== */
+        .badge-hot {
+            background: #d32f2f !important;
+            color: #ffffff !important;
+            font-weight: 700 !important;
+        }
+        
+        /* ===== BADGE NEW - CONTRAST FIX ===== */
+        .badge-new {
+            background: #1e3c2c !important;
+            color: #ffffff !important;
+            font-weight: 700 !important;
+        }
+        
+        /* ===== CARD BADGE ===== */
+        .card-badge-promax {
+            color: #ffffff !important;
+            font-weight: 700 !important;
+        }
+        
+        /* ===== FEATURE ITEMS - CONTRAST FIX ===== */
+        .feature-item {
+            background: #1e3c2c !important;
+            color: #ffffff !important;
+            padding: 1.5rem !important;
+            border-radius: 12px !important;
+        }
+        
+        .feature-item h3 {
+            color: #e6b12e !important;
+        }
+        
+        .feature-item p {
+            color: #f0f0f0 !important;
+        }
+        
+        .feature-item i {
+            color: #e6b12e !important;
+        }
+        
+        /* ===== FOCUS VISIBILITY ===== */
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: 3px solid #e6b12e !important;
+            outline-offset: 2px !important;
+        }
+    </style>
 </head>
 <body data-lang="en">
+    
+    <!-- ===== SKIP LINK ===== -->
+    <a href="#main-content" class="skip-link">
+        <span class="lang-en">Skip to main content</span>
+        <span class="lang-fr">Aller au contenu principal</span>
+    </a>
+    
     <div class="overlay" id="overlay"></div>
 
     <!-- ===== HEADER ===== -->
@@ -127,7 +209,7 @@
     </nav>
     
     <!-- ===== MAIN CONTENT ===== -->
-    <main> 
+    <main id="main-content"> 
         <!-- HERO SLIDER -->
         <section class="hero-slider" aria-label="Galerie d'images en diaporama">
             <div class="slides-container">
@@ -175,11 +257,11 @@
         <div class="social-under-hero">
             <div class="container">
                 <div class="social-links">
-                    <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-circle instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-circle facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-circle tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://wa.me/212667772551" target="_blank" class="social-circle whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:imsfraninfo@gmail.com" class="social-circle email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-circle instagram" aria-label="Suivez-nous sur Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-circle facebook" aria-label="Suivez-nous sur Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-circle tiktok" aria-label="Suivez-nous sur TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/212667772551" target="_blank" class="social-circle whatsapp" aria-label="Contactez-nous sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:imsfraninfo@gmail.com" class="social-circle email" aria-label="Envoyez-nous un email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -217,7 +299,7 @@
                             </div>
                             <div class="card-actions-promax">
                                 <a href="pages/camping.html" class="btn-details-promax"><span class="lang-en">Details</span><span class="lang-fr">Détails</span> <i class="fas fa-arrow-right"></i></a>
-                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20Camping" class="btn-wa-promax" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20Camping" class="btn-wa-promax" target="_blank" aria-label="Réserver le camping sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                     </div>
@@ -242,7 +324,7 @@
                             </div>
                             <div class="card-actions-promax">
                                 <a href="pages/hebergement.html" class="btn-details-promax"><span class="lang-en">View houses</span><span class="lang-fr">Voir les maisons</span> <i class="fas fa-arrow-right"></i></a>
-                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20louer%20une%20maison%20%C3%A0%20Tilouguite" class="btn-wa-promax" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20louer%20une%20maison%20%C3%A0%20Tilouguite" class="btn-wa-promax" target="_blank" aria-label="Louer une maison sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                     </div>
@@ -264,34 +346,33 @@
                             </div>
                             <div class="card-actions-promax">
                                 <a href="pages/vtt.html" class="btn-details-promax"><span class="lang-en">Details</span><span class="lang-fr">Détails</span> <i class="fas fa-arrow-right"></i></a>
-                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20VTT" class="btn-wa-promax" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20VTT" class="btn-wa-promax" target="_blank" aria-label="Réserver le VTT sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                     </div>
                     
-                  <!-- 4. QUAD -->
-<div class="activity-card-promax">
-    <div class="card-media-promax" style="background-image: url('images/quad.jpg'); background-size: cover; background-position: 50% 90%; background-repeat: no-repeat; height: 220px; width: 100%; position: relative; overflow: hidden;">
-        <!-- حذفنا <img> -->
-        <div class="card-badge-promax badge-hot lang-en">HOT</div>
-        <div class="card-badge-promax badge-hot lang-fr">CHAUD</div>
-    </div>
-    <div class="card-content-promax">
-        <div class="card-category-promax"><i class="fas fa-motorcycle"></i><span class="lang-en">Adventure</span><span class="lang-fr">Aventure</span></div>
-        <h3 class="card-title-promax">Quad</h3>
-        <div class="card-price-promax"><span class="price" data-price-key="quad-solo">250 DH</span><span class="price-unit">/h</span></div>
-        <p class="card-desc-promax lang-en">Self-drive on rugged terrain</p>
-        <p class="card-desc-promax lang-fr">Conduite libre sur pistes</p>
-        <div class="card-features-promax">
-            <span><i class="fas fa-user"></i> Solo</span>
-            <span><i class="fas fa-user-friends"></i> Biplace</span>
-        </div>
-        <div class="card-actions-promax">
-            <a href="pages/quad.html" class="btn-details-promax"><span class="lang-en">Details</span><span class="lang-fr">Détails</span><i class="fas fa-arrow-right"></i></a>
-            <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20Quad" class="btn-wa-promax" target="_blank"><i class="fab fa-whatsapp"></i><span class="sr-only">WhatsApp</span></a>
-        </div>
-    </div>
-</div>
+                    <!-- 4. QUAD -->
+                    <div class="activity-card-promax">
+                        <div class="card-media-promax" style="background-image: url('images/quad.jpg'); background-size: cover; background-position: 50% 90%; background-repeat: no-repeat; height: 220px; width: 100%; position: relative; overflow: hidden;">
+                            <div class="card-badge-promax badge-hot lang-en">HOT</div>
+                            <div class="card-badge-promax badge-hot lang-fr">CHAUD</div>
+                        </div>
+                        <div class="card-content-promax">
+                            <div class="card-category-promax"><i class="fas fa-motorcycle"></i><span class="lang-en">Adventure</span><span class="lang-fr">Aventure</span></div>
+                            <h3 class="card-title-promax">Quad</h3>
+                            <div class="card-price-promax"><span class="price" data-price-key="quad-solo">250 DH</span><span class="price-unit">/h</span></div>
+                            <p class="card-desc-promax lang-en">Self-drive on rugged terrain</p>
+                            <p class="card-desc-promax lang-fr">Conduite libre sur pistes</p>
+                            <div class="card-features-promax">
+                                <span><i class="fas fa-user"></i> Solo</span>
+                                <span><i class="fas fa-user-friends"></i> Biplace</span>
+                            </div>
+                            <div class="card-actions-promax">
+                                <a href="pages/quad.html" class="btn-details-promax"><span class="lang-en">Details</span><span class="lang-fr">Détails</span><i class="fas fa-arrow-right"></i></a>
+                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20Quad" class="btn-wa-promax" target="_blank" aria-label="Réserver le quad sur WhatsApp"><i class="fab fa-whatsapp"></i><span class="sr-only">WhatsApp</span></a>
+                            </div>
+                        </div>
+                    </div>
                     
                     <!-- 5. RANDONNÉE -->
                     <div class="activity-card-promax">
@@ -313,35 +394,35 @@
                             </div>
                             <div class="card-actions-promax">
                                 <a href="pages/randonnee.html" class="btn-details-promax"><span class="lang-en">Details</span><span class="lang-fr">Détails</span> <i class="fas fa-arrow-right"></i></a>
-                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20Randonn%C3%A9e" class="btn-wa-promax" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20Randonn%C3%A9e" class="btn-wa-promax" target="_blank" aria-label="Réserver la randonnée sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                     </div>
                     
                     <!-- 6. RAFTING -->
-<div class="activity-card-promax">
-    <div class="card-media-promax">
-        <img src="images/raft2.jpeg" alt="Rafting sur l'Oued Ahansal avec guide local" loading="lazy">
-        <div class="card-badge-promax badge-hot lang-en">🔥 POPULAR</div>
-        <div class="card-badge-promax badge-hot lang-fr">🔥 POPULAIRE</div>
-    </div>
-    <div class="card-content-promax">
-        <div class="card-category-promax"><i class="fas fa-water"></i><span class="lang-en">Water Adventure</span><span class="lang-fr">Aventure Aquatique</span></div>
-        <h3 class="card-title-promax">Rafting</h3>
-        <div class="card-price-promax"><span class="price" data-price-key="rafting">400 DH</span><span class="price-unit">/personne</span></div>
-        <p class="card-desc-promax lang-en">Exciting descent on the Ahansal River</p>
-        <p class="card-desc-promax lang-fr">Descente excitante sur l'Oued Ahansal</p>
-        <div class="card-features-promax">
-            <span><i class="fas fa-clock"></i> 2-3h</span>
-            <span><i class="fas fa-route"></i> 12km</span>
-            <span><i class="fas fa-signal"></i> Easy</span>
-        </div>
-        <div class="card-actions-promax">
-            <a href="pages/rafting.html" class="btn-details-promax"><span class="lang-en">Details</span><span class="lang-fr">Détails</span><i class="fas fa-arrow-right"></i></a>
-            <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20Rafting" class="btn-wa-promax" target="_blank"><i class="fab fa-whatsapp"></i><span class="sr-only">WhatsApp</span></a>
-        </div>
-    </div>
-</div>
+                    <div class="activity-card-promax">
+                        <div class="card-media-promax">
+                            <img src="images/raft2.jpeg" alt="Rafting sur l'Oued Ahansal avec guide local" loading="lazy">
+                            <div class="card-badge-promax badge-hot lang-en">🔥 POPULAR</div>
+                            <div class="card-badge-promax badge-hot lang-fr">🔥 POPULAIRE</div>
+                        </div>
+                        <div class="card-content-promax">
+                            <div class="card-category-promax"><i class="fas fa-water"></i><span class="lang-en">Water Adventure</span><span class="lang-fr">Aventure Aquatique</span></div>
+                            <h3 class="card-title-promax">Rafting</h3>
+                            <div class="card-price-promax"><span class="price" data-price-key="rafting">400 DH</span><span class="price-unit">/personne</span></div>
+                            <p class="card-desc-promax lang-en">Exciting descent on the Ahansal River</p>
+                            <p class="card-desc-promax lang-fr">Descente excitante sur l'Oued Ahansal</p>
+                            <div class="card-features-promax">
+                                <span><i class="fas fa-clock"></i> 2-3h</span>
+                                <span><i class="fas fa-route"></i> 12km</span>
+                                <span><i class="fas fa-signal"></i> Easy</span>
+                            </div>
+                            <div class="card-actions-promax">
+                                <a href="pages/rafting.html" class="btn-details-promax"><span class="lang-en">Details</span><span class="lang-fr">Détails</span><i class="fas fa-arrow-right"></i></a>
+                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20Rafting" class="btn-wa-promax" target="_blank" aria-label="Réserver le rafting sur WhatsApp"><i class="fab fa-whatsapp"></i><span class="sr-only">WhatsApp</span></a>
+                            </div>
+                        </div>
+                    </div>
                     
                 </div>
             </div>
@@ -409,10 +490,10 @@
                         <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram" aria-label="Suivez-nous sur Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook" aria-label="Suivez-nous sur Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok" aria-label="Suivez-nous sur TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp" aria-label="Contactez-nous sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -444,7 +525,7 @@
                     <h4><span class="lang-en">Contact Us</span><span class="lang-fr">Contactez-nous</span></h4>
                     <ul>
                         <li><i class="fas fa-phone-alt"></i> <a href="tel:0667772551">+212 667-772551</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank">WhatsApp</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212667772551" target="_blank" aria-label="Contactez-nous sur WhatsApp">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:imsfraninfo@gmail.com">imsfraninfo@gmail.com</a></li>
                         <li><i class="fas fa-map-marker-alt"></i> <span>Tilouguite, Imsfrane<br>Azilal, Morocco</span></li>
                     </ul>
@@ -468,13 +549,13 @@
 
     <!-- ===== FLOATING BUTTONS ===== -->
     <div class="floating-buttons">
-        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
-        <a href="tel:0667772551" class="floating-btn phone" aria-label="Téléphone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
-        <a href="pages/store.html" class="floating-btn booking" style="background: #e6b12e;" aria-label="Boutique"><i class="fas fa-store"></i><span class="tooltip">Boutique</span></a>
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" aria-label="Contactez-nous sur WhatsApp"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
+        <a href="tel:0667772551" class="floating-btn phone" aria-label="Appelez-nous"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
+        <a href="pages/store.html" class="floating-btn booking" style="background: #e6b12e;" aria-label="Visitez notre boutique"><i class="fas fa-store"></i><span class="tooltip">Boutique</span></a>
     </div>
 
     <!-- ===== BACK TO TOP ===== -->
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></a>
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Retour en haut de page"><i class="fas fa-arrow-up"></i></a>
 
     <!-- ===== SCRIPTS ===== -->
     <script src="js/script.js"></script>
