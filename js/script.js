@@ -1,6 +1,6 @@
 /* ============================================
    IMSFRANE CATHÉDRALE - SCRIPT UNIFIED
-   Version: 1.0
+   Version: 2.0 (Fixed)
    ============================================ */
 
 // ============================================
@@ -49,6 +49,21 @@ if (overlay) {
     overlay.addEventListener('click', toggleMenu);
 }
 
+// Close menu on link click
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('#mainNav ul li a:not(.has-submenu > a)').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // منع الانتقال إلى أعلى الصفحة إذا كان الرابط # 
+            if (this.getAttribute('href') === '#') {
+                e.preventDefault();
+            }
+            if (mainNav && mainNav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+});
+
 // ============================================
 // 3. SUBMENU TOGGLE
 // ============================================
@@ -61,17 +76,6 @@ window.toggleSubmenu = function(event) {
     if (submenu) submenu.classList.toggle('active');
     if (arrow) arrow.classList.toggle('rotated');
 };
-
-// Close menu on link click
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('#mainNav ul li a:not(.has-submenu > a)').forEach(link => {
-        link.addEventListener('click', () => {
-            if (mainNav && mainNav.classList.contains('active')) {
-                toggleMenu();
-            }
-        });
-    });
-});
 
 // ============================================
 // 4. BACK TO TOP
@@ -90,7 +94,7 @@ if (backToTop) {
 // ============================================
 // 5. HERO SLIDER (Index Page)
 // ============================================
-let currentHeroSlide = 0;  // ✅ غيرنا الاسم هنا
+let currentHeroSlide = 0;
 const heroSlides = document.querySelectorAll('.hero-slider .slide');
 const heroDots = document.querySelectorAll('.hero-slider .dot');
 const totalHeroSlides = heroSlides.length;
@@ -104,11 +108,11 @@ function showHeroSlide(index) {
     
     heroSlides[index].classList.add('active');
     heroDots[index].classList.add('active');
-    currentHeroSlide = index;  // ✅ غيرنا هنا
+    currentHeroSlide = index;
 }
 
 window.changeSlide = function(direction) {
-    showHeroSlide(currentHeroSlide + direction);  // ✅ غيرنا هنا
+    showHeroSlide(currentHeroSlide + direction);
 };
 
 window.goToSlide = function(index) {
@@ -118,7 +122,7 @@ window.goToSlide = function(index) {
 // Auto advance hero slider
 if (heroSlides.length > 0) {
     setInterval(() => {
-        showHeroSlide(currentHeroSlide + 1);  // ✅ غيرنا هنا
+        showHeroSlide(currentHeroSlide + 1);
     }, 5000);
 }
 
@@ -268,9 +272,34 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================
-// 10. BOOKING PAGE
+// 10. RAFTING PAGE - TOGGLE PROGRAMME DETAIL
+// ============================================
+window.toggleRaftingProgramme = function(id, btn) {
+    const element = document.getElementById(id);
+    if (!element) return;
+    
+    element.classList.toggle('show');
+    
+    const spanEn = btn.querySelector('.lang-en');
+    const spanFr = btn.querySelector('.lang-fr');
+    
+    if (element.classList.contains('show')) {
+        if (spanEn) spanEn.textContent = '📖 Hide Program';
+        if (spanFr) spanFr.textContent = '📖 Masquer le Programme';
+    } else {
+        if (spanEn) spanEn.textContent = '📖 View Full Program';
+        if (spanFr) spanFr.textContent = '📖 Voir le Programme';
+    }
+};
+
+// ============================================
+// 11. BOOKING PAGE - FIXED CALCULATOR
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
+    // ===== التحقق من وجود عناصر الحجز =====
+    const bookingForm = document.getElementById('bookingForm');
+    if (!bookingForm) return; // إذا لم تكن صفحة الحجز، نخرج من الدالة
+    
     // Payment selection
     let modePaiement = 'paypal';
     let total = 0;
@@ -293,11 +322,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    // ===== دالة حساب التكلفة المحسنة =====
     function calculerTotal() {
         total = 0;
         let checkboxes = document.querySelectorAll('.activity-checkbox:checked');
-        let personnes = parseInt(document.getElementById('personnes')?.value) || 1;
-        let nuits = parseInt(document.getElementById('nuits')?.value) || 1;
+        
+        // التحقق من وجود العناصر قبل استخدامها
+        const personnesEl = document.getElementById('personnes');
+        let personnes = personnesEl ? parseInt(personnesEl.value) || 1 : 1;
+        
+        const nuitsEl = document.getElementById('nuits');
+        let nuits = nuitsEl ? parseInt(nuitsEl.value) || 1 : 1;
         
         checkboxes.forEach(cb => {
             let prix = parseFloat(cb.getAttribute('data-prix')) || 0;
@@ -336,118 +371,120 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Event listeners for booking page
-    const bookingForm = document.getElementById('bookingForm');
-    if (bookingForm) {
-        document.querySelectorAll('.activity-checkbox').forEach(cb => {
-            cb.addEventListener('change', () => {
-                calculerTotal();
-                checkNightsField();
-            });
+    document.querySelectorAll('.activity-checkbox').forEach(cb => {
+        cb.addEventListener('change', () => {
+            calculerTotal();
+            checkNightsField();
         });
+    });
 
-        const personnesInput = document.getElementById('personnes');
-        if (personnesInput) {
-            personnesInput.addEventListener('change', calculerTotal);
-        }
+    const personnesInput = document.getElementById('personnes');
+    if (personnesInput) {
+        personnesInput.addEventListener('change', calculerTotal);
+    }
 
-        const nuitsInput = document.getElementById('nuits');
-        if (nuitsInput) {
-            nuitsInput.addEventListener('change', calculerTotal);
-        }
+    const nuitsInput = document.getElementById('nuits');
+    if (nuitsInput) {
+        nuitsInput.addEventListener('change', calculerTotal);
+    }
 
-        // Initialize booking page
-        if (document.getElementById('option-paypal')) {
-            selectPayment('paypal');
-        }
-        
-        const dateInput = document.getElementById('date');
-        if (dateInput) {
-            dateInput.valueAsDate = new Date();
-        }
-        
-        calculerTotal();
-        checkNightsField();
+    // Initialize booking page
+    if (document.getElementById('option-paypal')) {
+        selectPayment('paypal');
+    }
+    
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+        dateInput.valueAsDate = new Date();
+    }
+    
+    calculerTotal();
+    checkNightsField();
 
-        // Submit button
-        const btnConfirmer = document.getElementById('btn-confirmer');
-        if (btnConfirmer) {
-            btnConfirmer.addEventListener('click', function() {
-                let checkboxes = document.querySelectorAll('.activity-checkbox:checked');
-                if (checkboxes.length === 0) {
-                    alert('Veuillez choisir au moins une activité.');
-                    return;
-                }
-                
-                let date = document.getElementById('date')?.value;
-                if (!date) {
-                    alert('Veuillez choisir une date.');
-                    return;
-                }
+    // ===== زر التأكيد المحسن مع التحقق من صحة الإيميل =====
+    const btnConfirmer = document.getElementById('btn-confirmer');
+    if (btnConfirmer) {
+        btnConfirmer.addEventListener('click', function() {
+            let checkboxes = document.querySelectorAll('.activity-checkbox:checked');
+            if (checkboxes.length === 0) {
+                alert('Veuillez choisir au moins une activité.');
+                return;
+            }
+            
+            let date = document.getElementById('date')?.value;
+            if (!date) {
+                alert('Veuillez choisir une date.');
+                return;
+            }
 
-                let fullName = document.getElementById('fullName')?.value;
-                if (!fullName) {
-                    alert('Veuillez entrer votre nom.');
-                    return;
-                }
+            let fullName = document.getElementById('fullName')?.value;
+            if (!fullName || fullName.trim() === '') {
+                alert('Veuillez entrer votre nom complet.');
+                return;
+            }
 
-                let email = document.getElementById('email')?.value;
-                if (!email) {
-                    alert('Veuillez entrer votre email.');
-                    return;
-                }
+            let email = document.getElementById('email')?.value;
+            // التحقق من صحة الإيميل
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailRegex.test(email.trim())) {
+                alert('Veuillez entrer un email valide (ex: nom@domaine.com).');
+                return;
+            }
 
-                let phone = document.getElementById('phone')?.value;
-                if (!phone) {
-                    alert('Veuillez entrer votre téléphone.');
-                    return;
-                }
-                
-                let personnes = document.getElementById('personnes')?.value || 1;
-                let nuits = document.getElementById('nuits')?.value || 1;
-                let mode = modePaiement;
-                
-                let message = `*NOUVELLE DEMANDE DE RÉSERVATION*\n\n`;
-                message += `👤 *Nom:* ${fullName}\n`;
-                message += `📧 *Email:* ${email}\n`;
-                message += `📞 *Téléphone:* ${phone}\n`;
-                message += `📅 *Date souhaitée:* ${date}\n`;
-                message += `👥 *Nombre de personnes:* ${personnes}\n`;
-                
-                let hasNuit = false;
-                checkboxes.forEach(cb => {
-                    if (cb.getAttribute('data-type') === 'nuit') hasNuit = true;
-                });
-                if (hasNuit) {
-                    message += `🏠 *Nombre de nuits:* ${nuits}\n`;
-                }
-                
-                message += `\n📋 *ACTIVITÉS CHOISIES:*\n`;
-                
-                checkboxes.forEach(cb => {
-                    let nom = cb.getAttribute('data-nom');
-                    let prix = cb.getAttribute('data-prix');
-                    message += `- ${nom} : ${prix} DH\n`;
-                });
-                
-                message += `\n💰 *Montant total estimé:* ${total} DH\n\n`;
-                message += `💳 *Mode de paiement souhaité:* ${mode === 'paypal' ? 'PayPal' : 'Virement bancaire'}\n\n`;
-                message += `📍 *Maisons situées à Tilouguite (10km avant Imsfrane)*\n`;
-                message += `📌 *Merci de nous contacter pour confirmer les prix et la disponibilité.*`;
-
-                window.open(`https://wa.me/212667772551?text=${encodeURIComponent(message)}`, '_blank');
+            let phone = document.getElementById('phone')?.value;
+            if (!phone || phone.trim() === '') {
+                alert('Veuillez entrer votre numéro de téléphone.');
+                return;
+            }
+            
+            let personnes = document.getElementById('personnes')?.value || 1;
+            let nuits = document.getElementById('nuits')?.value || 1;
+            let mode = modePaiement;
+            
+            let message = `*NOUVELLE DEMANDE DE RÉSERVATION*\n\n`;
+            message += `👤 *Nom:* ${fullName.trim()}\n`;
+            message += `📧 *Email:* ${email.trim()}\n`;
+            message += `📞 *Téléphone:* ${phone.trim()}\n`;
+            message += `📅 *Date souhaitée:* ${date}\n`;
+            message += `👥 *Nombre de personnes:* ${personnes}\n`;
+            
+            let hasNuit = false;
+            checkboxes.forEach(cb => {
+                if (cb.getAttribute('data-type') === 'nuit') hasNuit = true;
             });
-        }
+            if (hasNuit) {
+                message += `🏠 *Nombre de nuits:* ${nuits}\n`;
+            }
+            
+            message += `\n📋 *ACTIVITÉS CHOISIES:*\n`;
+            
+            checkboxes.forEach(cb => {
+                let nom = cb.getAttribute('data-nom');
+                let prix = cb.getAttribute('data-prix');
+                message += `- ${nom} : ${prix} DH\n`;
+            });
+            
+            message += `\n💰 *Montant total estimé:* ${total} DH\n\n`;
+            message += `💳 *Mode de paiement souhaité:* ${mode === 'paypal' ? 'PayPal' : 'Virement bancaire'}\n\n`;
+            message += `📍 *Maisons situées à Tilouguite (10km avant Imsfrane)*\n`;
+            message += `📌 *Merci de nous contacter pour confirmer les prix et la disponibilité.*`;
+
+            window.open(`https://wa.me/212667772551?text=${encodeURIComponent(message)}`, '_blank');
+        });
     }
 });
 
 // ============================================
-// 11. MEMORIES GALLERY (Memories Page)
+// 12. MEMORIES GALLERY (Memories Page)
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-image');
     const galleryItems = document.querySelectorAll('.gallery-item img');
     let currentIndex = 0;
+
+    // إذا لم تكن هناك صور في المعرض، نخرج من الدالة
+    if (galleryItems.length === 0) return;
 
     window.openModal = function(index) {
         if (!modal || !modalImg) return;
@@ -482,33 +519,35 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================
-// 12. PROGRAMME CALCULATOR (Programme Page)
+// 13. PROGRAMME CALCULATOR (Programme Page)
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
+    // التحقق من وجود العناصر قبل استخدامها
     const raftingCheck = document.getElementById('rafting');
     const vttCheck = document.getElementById('vtt');
     const quadCheck = document.getElementById('quad');
     const totalDisplay = document.getElementById('total');
 
-    if (raftingCheck || vttCheck || quadCheck) {
-        window.calculerTotal = function() {
-            let total = 860;
-            if (raftingCheck && raftingCheck.checked) total += 400;
-            if (vttCheck && vttCheck.checked) total += 150;
-            if (quadCheck && quadCheck.checked) total += 250;
-            if (totalDisplay) totalDisplay.textContent = total + ' DH';
-        };
+    // إذا لم تكن هناك عناصر، نخرج من الدالة
+    if (!raftingCheck && !vttCheck && !quadCheck) return;
 
-        if (raftingCheck) raftingCheck.addEventListener('change', window.calculerTotal);
-        if (vttCheck) vttCheck.addEventListener('change', window.calculerTotal);
-        if (quadCheck) quadCheck.addEventListener('change', window.calculerTotal);
-        
-        window.calculerTotal();
-    }
+    window.calculerTotalProgramme = function() {
+        let total = 860;
+        if (raftingCheck && raftingCheck.checked) total += 400;
+        if (vttCheck && vttCheck.checked) total += 150;
+        if (quadCheck && quadCheck.checked) total += 250;
+        if (totalDisplay) totalDisplay.textContent = total + ' DH';
+    };
+
+    if (raftingCheck) raftingCheck.addEventListener('change', window.calculerTotalProgramme);
+    if (vttCheck) vttCheck.addEventListener('change', window.calculerTotalProgramme);
+    if (quadCheck) quadCheck.addEventListener('change', window.calculerTotalProgramme);
+    
+    window.calculerTotalProgramme();
 });
 
 // ============================================
-// 13. IMAGE OBJECT-POSITION FIX (Index Cards)
+// 14. IMAGE OBJECT-POSITION FIX (Index Cards)
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
     // Force object-position on all cards
@@ -524,24 +563,44 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================
-// 14. RAFTING PAGE - TOGGLE PROGRAMME DETAIL
+// 15. RAFTING PAGE SLIDER (FIX)
 // ============================================
-function toggleRaftingProgramme(id, btn) {
-    const element = document.getElementById(id);
-    if (!element) return;
+document.addEventListener('DOMContentLoaded', function() {
+    // التحقق من وجود السلايدر في صفحة البرنامج
+    const programmeSlider = document.getElementById('programmeSlider');
+    if (!programmeSlider) return;
     
-    element.classList.toggle('show');
-    
-    const spanEn = btn.querySelector('.lang-en');
-    const spanFr = btn.querySelector('.lang-fr');
-    
-    if (element.classList.contains('show')) {
-        if (spanEn) spanEn.textContent = '📖 Hide Program';
-        if (spanFr) spanFr.textContent = '📖 Masquer le Programme';
-    } else {
-        if (spanEn) spanEn.textContent = '📖 View Full Program';
-        if (spanFr) spanFr.textContent = '📖 Voir le Programme';
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('#programmeSlider .slide');
+    const dots = document.querySelectorAll('#programmeSlider .dot');
+    const totalSlides = slides.length;
+
+    if (slides.length === 0) return;
+
+    function showSlide(index) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
     }
-}
+
+    window.changeSlideProgramme = function(direction) {
+        showSlide(currentSlide + direction);
+    };
+
+    window.goToSlideProgramme = function(index) {
+        showSlide(index);
+    };
+
+    // Auto advance slides
+    setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 5000);
+});
 
 console.log('✅ Imsfrane Cathédrale - Script chargé avec succès!');
