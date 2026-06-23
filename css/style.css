@@ -3700,3 +3700,22 @@ nav ul li.has-submenu > a {
     color: #ffffff !important;
     font-weight: 700 !important;
 }
+/* ===== إصلاح ألوان Local Guides و Safety First ===== */
+.feature-item {
+    background: #1e3c2c !important;  /* خلفية خضراء غامقة */
+    color: #ffffff !important;       /* نص أبيض */
+    padding: 1.5rem !important;
+    border-radius: 12px !important;
+}
+
+.feature-item h3 {
+    color: #e6b12e !important;       /* عنوان بلون ذهبي */
+}
+
+.feature-item p {
+    color: #f0f0f0 !important;       /* نص أبيض فاتح */
+}
+
+.feature-item i {
+    color: #e6b12e !important;       /* الأيقونات بلون ذهبي */
+}
