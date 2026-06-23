@@ -3728,3 +3728,13 @@ select:focus {
     outline: 3px solid #e6b12e !important;  /* حدود صفراء */
     outline-offset: 2px !important;          /* مسافة بين العنصر والحدود */
 }
+/* ===== FLOATING BUTTONS - RÉGLAGE HAUTEUR ===== */
+.floating-buttons {
+    position: fixed !important;
+    bottom: 130px !important;  /* زدناها من 100px إلى 130px */
+    right: 30px !important;
+    z-index: 9999 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+}
