@@ -3719,3 +3719,12 @@ nav ul li.has-submenu > a {
 .feature-item i {
     color: #e6b12e !important;       /* الأيقونات بلون ذهبي */
 }
+/* ===== إظهار التركيز عند التنقل بالكيبورد ===== */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid #e6b12e !important;  /* حدود صفراء */
+    outline-offset: 2px !important;          /* مسافة بين العنصر والحدود */
+}
