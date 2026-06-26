@@ -3738,3 +3738,1355 @@ select:focus {
     flex-direction: column !important;
     gap: 15px !important;
 }
+/* ============================================
+   INDEX PAGE - DECATHLON STYLE
+   ============================================ */
+
+/* ===== ACTIVITIES SECTION HEADER ===== */
+.activities-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.activities-header h2 {
+    font-size: 1.8rem;
+    color: #1a2a3a;
+    font-family: 'Playfair Display', serif;
+}
+
+.activities-header h2 span {
+    color: #e6b12e;
+}
+
+.activities-header .view-all {
+    color: #e6b12e;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activities-header .view-all:hover {
+    color: #1a2a3a;
+    gap: 0.8rem;
+}
+
+/* ===== ACTIVITIES GRID ===== */
+.activities-grid-store {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* ===== ACTIVITY CARD (Decathlon Style) ===== */
+.activity-card-store {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+.activity-card-store:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: #e6b12e;
+}
+
+.activity-card-store .card-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.activity-card-store .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.activity-card-store:hover .card-image img {
+    transform: scale(1.08);
+}
+
+/* ===== BADGES ===== */
+.activity-card-store .card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+.activity-card-store .card-badge.new {
+    background: #1a2a3a;
+    color: white;
+}
+
+.activity-card-store .card-badge.hot {
+    background: #e74c3c;
+    color: white;
+}
+
+.activity-card-store .card-badge.best {
+    background: #e6b12e;
+    color: #1a2a3a;
+}
+
+/* ===== FAVORITE BUTTON ===== */
+.activity-card-store .card-fav {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 2;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.activity-card-store .card-fav:hover {
+    color: #e74c3c;
+    background: white;
+    transform: scale(1.1);
+}
+
+.activity-card-store .card-fav.active {
+    color: #e74c3c;
+}
+
+/* ===== CARD INFO ===== */
+.activity-card-store .card-info {
+    padding: 1.5rem;
+}
+
+.activity-card-store .card-category {
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.activity-card-store .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a2a3a;
+    margin-bottom: 0.3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.activity-card-store .card-desc {
+    font-size: 0.85rem;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+/* ===== RATING ===== */
+.activity-card-store .card-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.activity-card-store .card-rating .stars {
+    color: #f4c542;
+    font-size: 0.85rem;
+}
+
+.activity-card-store .card-rating .stars .empty {
+    color: #ddd;
+}
+
+.activity-card-store .card-rating .count {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* ===== PRICE ===== */
+.activity-card-store .card-price-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.8rem 0;
+}
+
+.activity-card-store .card-price-section .current {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #1a2a3a;
+}
+
+.activity-card-store .card-price-section .current span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #999;
+}
+
+.activity-card-store .card-price-section .old {
+    font-size: 1rem;
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+/* ===== FEATURES ===== */
+.activity-card-store .card-features {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.activity-card-store .card-features span {
+    font-size: 0.75rem;
+    color: #666;
+    background: #f5f5f5;
+    padding: 0.3rem 0.8rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.activity-card-store .card-features span i {
+    color: #e6b12e;
+}
+
+/* ===== BUTTONS ===== */
+.activity-card-store .card-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.activity-card-store .btn-details {
+    flex: 1;
+    background: #1a2a3a;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.activity-card-store .btn-details:hover {
+    background: #2c3e50;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 42, 58, 0.2);
+}
+
+.activity-card-store .btn-details i {
+    font-size: 0.9rem;
+}
+
+.activity-card-store .btn-wa {
+    width: 48px;
+    height: 48px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.activity-card-store .btn-wa:hover {
+    background: #128C7E;
+    transform: scale(1.05);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 992px) {
+    .activities-grid-store {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .activities-grid-store {
+        grid-template-columns: 1fr;
+    }
+    .activity-card-store .card-image {
+        height: 200px;
+    }
+    .activity-card-store .card-price-section .current {
+        font-size: 1.4rem;
+    }
+    .activities-header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .activity-card-store .card-image {
+        height: 180px;
+    }
+    .activity-card-store .card-info {
+        padding: 1rem;
+    }
+    .activity-card-store .card-title {
+        font-size: 1rem;
+    }
+    .activity-card-store .card-price-section .current {
+        font-size: 1.2rem;
+    }
+    .activity-card-store .card-actions {
+        flex-direction: column;
+    }
+    .activity-card-store .btn-wa {
+        width: 100%;
+        height: 44px;
+    }
+}
+/* ============================================
+   INDEX ACTIVITIES - SAME AS STORE
+   ============================================ */
+
+/* ===== ACTIVITIES HEADER ===== */
+.activities-header-store {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.activities-header-store h2 {
+    font-size: 1.8rem;
+    color: #1a2a3a;
+    font-family: 'Playfair Display', serif;
+}
+
+.activities-header-store h2 span {
+    color: #e6b12e;
+}
+
+.activities-header-store .view-all {
+    color: #e6b12e;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activities-header-store .view-all:hover {
+    color: #1a2a3a;
+    gap: 0.8rem;
+}
+
+/* ===== ACTIVITIES GRID ===== */
+.activities-grid-store {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* ===== ACTIVITY CARD (SAME AS STORE) ===== */
+.activity-card-store {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+.activity-card-store:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: #e6b12e;
+}
+
+.activity-card-store .product-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.activity-card-store .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.activity-card-store:hover .product-image img {
+    transform: scale(1.08);
+}
+
+/* ===== BADGES ===== */
+.activity-card-store .product-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+.activity-card-store .product-badge.new {
+    background: #1a2a3a;
+    color: white;
+}
+
+.activity-card-store .product-badge.sale {
+    background: #e74c3c;
+    color: white;
+}
+
+.activity-card-store .product-badge.best {
+    background: #e6b12e;
+    color: #1a2a3a;
+}
+
+/* ===== FAVORITE ===== */
+.activity-card-store .product-fav {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 2;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.activity-card-store .product-fav:hover {
+    color: #e74c3c;
+    background: white;
+    transform: scale(1.1);
+}
+
+.activity-card-store .product-fav.active {
+    color: #e74c3c;
+}
+
+/* ===== PRODUCT INFO ===== */
+.activity-card-store .product-info {
+    padding: 1.5rem;
+}
+
+.activity-card-store .product-category {
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.activity-card-store .product-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a2a3a;
+    margin-bottom: 0.3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.activity-card-store .product-description {
+    font-size: 0.85rem;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+/* ===== RATING ===== */
+.activity-card-store .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.activity-card-store .product-rating .stars {
+    color: #f4c542;
+    font-size: 0.85rem;
+}
+
+.activity-card-store .product-rating .stars .empty {
+    color: #ddd;
+}
+
+.activity-card-store .product-rating .count {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* ===== PRICE ===== */
+.activity-card-store .product-price-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.8rem 0;
+}
+
+.activity-card-store .product-price-section .current {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #1a2a3a;
+}
+
+.activity-card-store .product-price-section .current span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #999;
+}
+
+.activity-card-store .product-price-section .old {
+    font-size: 1rem;
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+/* ===== STOCK ===== */
+.activity-card-store .product-stock {
+    font-size: 0.75rem;
+    color: #27ae60;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* ===== BUTTONS ===== */
+.activity-card-store .product-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.activity-card-store .btn-details {
+    flex: 1;
+    background: #1a2a3a;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.activity-card-store .btn-details:hover {
+    background: #2c3e50;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 42, 58, 0.2);
+}
+
+.activity-card-store .btn-details i {
+    font-size: 0.9rem;
+}
+
+.activity-card-store .btn-wa {
+    width: 48px;
+    height: 48px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.activity-card-store .btn-wa:hover {
+    background: #128C7E;
+    transform: scale(1.05);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 992px) {
+    .activities-grid-store {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .activities-grid-store {
+        grid-template-columns: 1fr;
+    }
+    .activity-card-store .product-image {
+        height: 200px;
+    }
+    .activity-card-store .product-price-section .current {
+        font-size: 1.4rem;
+    }
+    .activities-header-store h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .activity-card-store .product-image {
+        height: 180px;
+    }
+    .activity-card-store .product-info {
+        padding: 1rem;
+    }
+    .activity-card-store .product-name {
+        font-size: 1rem;
+    }
+    .activity-card-store .product-price-section .current {
+        font-size: 1.2rem;
+    }
+    .activity-card-store .product-actions {
+        flex-direction: column;
+    }
+    .activity-card-store .btn-wa {
+        width: 100%;
+        height: 44px;
+    }
+}
+/* ============================================
+   INDEX ACTIVITIES - STORE STYLE
+   ============================================ */
+
+/* ===== ACTIVITIES SECTION ===== */
+.activities-store-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+/* ===== HEADER WITH FILTERS ===== */
+.activities-store-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.activities-store-header h2 {
+    font-size: 2.2rem;
+    color: #1a2a3a;
+    font-family: 'Playfair Display', serif;
+}
+
+.activities-store-header h2 span {
+    color: #e6b12e;
+}
+
+.activities-store-header p {
+    color: #999;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+}
+
+/* ===== FILTER TABS ===== */
+.activities-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.activities-filters .filter-tab {
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    border: 2px solid #e8e8e8;
+    background: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+
+.activities-filters .filter-tab:hover {
+    border-color: #e6b12e;
+    color: #e6b12e;
+}
+
+.activities-filters .filter-tab.active {
+    background: #1a2a3a;
+    border-color: #1a2a3a;
+    color: white;
+}
+
+/* ===== ACTIVITIES GRID ===== */
+.activities-store-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* ===== ACTIVITY CARD (SAME AS STORE) ===== */
+.activity-store-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+.activity-store-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: #e6b12e;
+}
+
+.activity-store-card .card-image {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.activity-store-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.activity-store-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+/* ===== BADGES ===== */
+.activity-store-card .card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+.activity-store-card .card-badge.new {
+    background: #1a2a3a;
+    color: white;
+}
+
+.activity-store-card .card-badge.sale {
+    background: #e74c3c;
+    color: white;
+}
+
+.activity-store-card .card-badge.best {
+    background: #e6b12e;
+    color: #1a2a3a;
+}
+
+/* ===== FAVORITE ===== */
+.activity-store-card .card-fav {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 2;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.activity-store-card .card-fav:hover {
+    color: #e74c3c;
+    background: white;
+    transform: scale(1.1);
+}
+
+.activity-store-card .card-fav.active {
+    color: #e74c3c;
+}
+
+/* ===== CARD INFO ===== */
+.activity-store-card .card-info {
+    padding: 1.2rem 1.5rem 1.5rem;
+}
+
+.activity-store-card .card-category {
+    font-size: 0.7rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.activity-store-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a2a3a;
+    margin-bottom: 0.3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.activity-store-card .card-desc {
+    font-size: 0.82rem;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+}
+
+/* ===== RATING ===== */
+.activity-store-card .card-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.activity-store-card .card-rating .stars {
+    color: #f4c542;
+    font-size: 0.8rem;
+}
+
+.activity-store-card .card-rating .stars .empty {
+    color: #ddd;
+}
+
+.activity-store-card .card-rating .count {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+/* ===== PRICE ===== */
+.activity-store-card .card-price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.6rem 0;
+}
+
+.activity-store-card .card-price .current {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #1a2a3a;
+}
+
+.activity-store-card .card-price .current span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #999;
+}
+
+.activity-store-card .card-price .old {
+    font-size: 0.9rem;
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+/* ===== STOCK ===== */
+.activity-store-card .card-stock {
+    font-size: 0.7rem;
+    color: #27ae60;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+/* ===== BUTTONS ===== */
+.activity-store-card .card-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.activity-store-card .btn-details {
+    flex: 1;
+    background: #1a2a3a;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.activity-store-card .btn-details:hover {
+    background: #2c3e50;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 42, 58, 0.2);
+}
+
+.activity-store-card .btn-details i {
+    font-size: 0.85rem;
+}
+
+.activity-store-card .btn-wa {
+    width: 44px;
+    height: 44px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.activity-store-card .btn-wa:hover {
+    background: #128C7E;
+    transform: scale(1.05);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 992px) {
+    .activities-store-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .activities-store-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .activity-store-card .card-image {
+        height: 200px;
+    }
+    .activity-store-card .card-price .current {
+        font-size: 1.3rem;
+    }
+    .activities-filters {
+        gap: 0.3rem;
+    }
+    .activities-filters .filter-tab {
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .activity-store-card .card-image {
+        height: 180px;
+    }
+    .activity-store-card .card-info {
+        padding: 1rem;
+    }
+    .activity-store-card .card-title {
+        font-size: 1rem;
+    }
+    .activity-store-card .card-price .current {
+        font-size: 1.1rem;
+    }
+    .activity-store-card .card-actions {
+        flex-direction: column;
+    }
+    .activity-store-card .btn-wa {
+        width: 100%;
+        height: 40px;
+    }
+}
+/* ============================================
+   INDEX ACTIVITIES - 2 PER ROW (FIXED)
+   ============================================ */
+
+/* ===== ACTIVITIES SECTION ===== */
+.activities-2col {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+/* ===== HEADER ===== */
+.activities-header-2col {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.activities-header-2col h2 {
+    font-size: 2.2rem;
+    color: #1a2a3a;
+    font-family: 'Playfair Display', serif;
+}
+
+.activities-header-2col h2 span {
+    color: #e6b12e;
+}
+
+.activities-header-2col p {
+    color: #999;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+}
+
+/* ===== GRID - 2 COLUMNS ===== */
+.activities-grid-2col {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2rem !important;
+}
+
+/* ===== ACTIVITY CARD ===== */
+.activity-card-2col {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.activity-card-2col:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: #e6b12e;
+}
+
+/* ===== IMAGE ===== */
+.activity-card-2col .card-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.activity-card-2col .card-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.6s ease;
+}
+
+.activity-card-2col:hover .card-image img {
+    transform: scale(1.08);
+}
+
+/* ===== BADGES ===== */
+.activity-card-2col .card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.activity-card-2col .card-badge.new {
+    background: #1a2a3a;
+    color: white;
+}
+
+.activity-card-2col .card-badge.sale {
+    background: #e74c3c;
+    color: white;
+}
+
+.activity-card-2col .card-badge.best {
+    background: #e6b12e;
+    color: #1a2a3a;
+}
+
+/* ===== FAVORITE ===== */
+.activity-card-2col .card-fav {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 2;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.activity-card-2col .card-fav:hover {
+    color: #e74c3c;
+    transform: scale(1.1);
+}
+
+.activity-card-2col .card-fav.active {
+    color: #e74c3c;
+}
+
+/* ===== CARD INFO ===== */
+.activity-card-2col .card-info {
+    padding: 1.2rem 1.5rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-card-2col .card-category {
+    font-size: 0.7rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.activity-card-2col .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a2a3a;
+    margin-bottom: 0.3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.activity-card-2col .card-desc {
+    font-size: 0.82rem;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+}
+
+/* ===== RATING ===== */
+.activity-card-2col .card-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.activity-card-2col .card-rating .stars {
+    color: #f4c542;
+    font-size: 0.8rem;
+}
+
+.activity-card-2col .card-rating .stars .empty {
+    color: #ddd;
+}
+
+.activity-card-2col .card-rating .count {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+/* ===== PRICE ===== */
+.activity-card-2col .card-price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.6rem 0;
+}
+
+.activity-card-2col .card-price .current {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #1a2a3a;
+}
+
+.activity-card-2col .card-price .current span {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #999;
+}
+
+.activity-card-2col .card-price .old {
+    font-size: 0.9rem;
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+/* ===== STOCK ===== */
+.activity-card-2col .card-stock {
+    font-size: 0.7rem;
+    color: #27ae60;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+/* ===== BUTTONS ===== */
+.activity-card-2col .card-actions {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: auto;
+}
+
+.activity-card-2col .btn-details {
+    flex: 1;
+    background: #1a2a3a;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.activity-card-2col .btn-details:hover {
+    background: #2c3e50;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 42, 58, 0.2);
+}
+
+.activity-card-2col .btn-details i {
+    font-size: 0.85rem;
+}
+
+.activity-card-2col .btn-wa {
+    width: 44px;
+    height: 44px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.activity-card-2col .btn-wa:hover {
+    background: #128C7E;
+    transform: scale(1.05);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .activities-grid-2col {
+        grid-template-columns: 1fr !important;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .activity-card-2col .card-image {
+        height: 200px;
+    }
+    .activity-card-2col .card-price .current {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .activity-card-2col .card-image {
+        height: 180px;
+    }
+    .activity-card-2col .card-info {
+        padding: 1rem;
+    }
+    .activity-card-2col .card-title {
+        font-size: 1rem;
+    }
+    .activity-card-2col .card-price .current {
+        font-size: 1.1rem;
+    }
+    .activity-card-2col .card-actions {
+        flex-direction: column;
+    }
+    .activity-card-2col .btn-wa {
+        width: 100%;
+        height: 40px;
+    }
+}
