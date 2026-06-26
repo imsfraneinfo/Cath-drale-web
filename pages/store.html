@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique Artisanale - Produits de l'Atlas | Imsfrane Cathédrale</title>
+    <title>Boutique Imsfrane - Produits de l'Atlas</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <meta name="description" content="Produits naturels de l'Atlas: miel pur, huile d'olive, thym. Qualité supérieure.">
-    <meta name="keywords" content="boutique Imsfrane, produits naturels Atlas, miel Maroc, huile d'olive, zaatar">
+    <meta name="description" content="Boutique Imsfrane - Produits naturels de l'Atlas: miel, huile d'olive, thym et artisanat berbère.">
+    <meta name="keywords" content="boutique Imsfrane, produits naturels Atlas, miel Maroc, huile d'olive, zaatar, artisanat berbère">
     <meta name="robots" content="index, follow">
     
-    <meta property="og:title" content="Boutique Artisanale - Produits de l'Atlas">
-    <meta property="og:description" content="Produits naturels de la région d'Imsfrane.">
+    <meta property="og:title" content="Boutique Imsfrane - Produits de l'Atlas">
+    <meta property="og:description" content="Produits naturels et artisanat des montagnes de l'Atlas.">
     <meta property="og:image" content="https://imsfrane.com/images/store-hero.jpg">
     <meta property="og:url" content="https://imsfrane.com/pages/store.html">
     <meta property="og:type" content="website">
@@ -23,249 +23,526 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <!-- ===== STYLE UNIFIED ===== -->
     <link rel="stylesheet" href="../css/style.css">
     
     <style>
-        /* ===== STORE PAGE SPECIFIC ===== */
-        .page-hero.store-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../images/hero.jpeg') center/cover no-repeat;
-            background-position: 50% 30%;
-        }
-        
-        .hero-text-overlay {
-            position: absolute;
-            bottom: 15%;
-            left: 0;
-            right: 0;
-            text-align: center;
+        /* ============================================
+           STORE PAGE - DECATHLON INSPIRED
+           ============================================ */
+
+        /* ===== STORE HEADER ===== */
+        .store-header {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
+            padding: 2rem 0 1.5rem;
             color: white;
-            z-index: 10;
-            padding: 0 20px;
         }
-        
-        .hero-tagline {
-            font-size: 1.2rem;
-            letter-spacing: 4px;
-            margin-bottom: 0.5rem;
-            font-weight: 300;
+
+        .store-header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
-        
-        .hero-quote {
+
+        .store-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .store-logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #e6b12e;
+            object-fit: cover;
+        }
+
+        .store-logo h1 {
             font-size: 1.8rem;
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            max-width: 800px;
-            margin: 0 auto;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .page-title {
-            text-align: center;
-            margin: 3rem 0 1rem;
-        }
-        
-        .page-title h1 {
-            font-size: 2.5rem;
-            color: #1e3c2c;
             font-weight: 700;
+            font-family: 'Playfair Display', serif;
         }
-        
-        .page-title .subtitle {
+
+        .store-logo h1 span {
             color: #e6b12e;
+        }
+
+        .store-logo small {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.7;
+            font-weight: 300;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* ===== SEARCH BAR ===== */
+        .store-search {
+            display: flex;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50px;
+            padding: 0.3rem;
+            max-width: 400px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+        }
+
+        .store-search input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 0.8rem 1.2rem;
+            color: white;
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .store-search input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .store-search button {
+            background: #e6b12e;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            color: #1a2a3a;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .store-search button:hover {
+            background: #f4c542;
+            transform: scale(1.02);
+        }
+
+        /* ===== CART ICON ===== */
+        .store-cart {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .store-cart:hover {
+            color: #e6b12e;
+        }
+
+        .store-cart .badge {
+            position: absolute;
+            top: -8px;
+            right: -12px;
+            background: #e74c3c;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== CATEGORY FILTER ===== */
+        .store-filters {
+            background: white;
+            padding: 1rem 0;
+            border-bottom: 2px solid #f0f0f0;
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .filter-scroll {
+            display: flex;
+            gap: 0.8rem;
+            overflow-x: auto;
+            padding: 0.5rem 0;
+            scrollbar-width: none;
+        }
+
+        .filter-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            border: 2px solid #e8e8e8;
+            background: white;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .filter-btn:hover {
+            border-color: #e6b12e;
+            color: #e6b12e;
+        }
+
+        .filter-btn.active {
+            background: #1a2a3a;
+            border-color: #1a2a3a;
+            color: white;
+        }
+
+        .filter-btn i {
+            margin-right: 0.5rem;
+        }
+
+        /* ===== PRODUCTS GRID ===== */
+        .products-section {
+            padding: 3rem 0;
+            background: #f8f9fa;
+        }
+
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .products-header h2 {
+            font-size: 1.8rem;
+            color: #1a2a3a;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .products-header h2 span {
+            color: #e6b12e;
+        }
+
+        .products-count {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* ===== PRODUCT CARD (DECATHLON STYLE) ===== */
+        .product-card-store {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            position: relative;
+            border: 1px solid #f0f0f0;
+        }
+
+        .product-card-store:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            border-color: #e6b12e;
+        }
+
+        .product-card-store .product-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+
+        .product-card-store .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card-store:hover .product-image img {
+            transform: scale(1.08);
+        }
+
+        /* ===== BADGES ===== */
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 2;
+        }
+
+        .product-badge.new {
+            background: #1a2a3a;
+            color: white;
+        }
+
+        .product-badge.sale {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .product-badge.best {
+            background: #e6b12e;
+            color: #1a2a3a;
+        }
+
+        /* ===== FAVORITE BUTTON ===== */
+        .product-fav {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
             font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 2;
+            border: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .product-fav:hover {
+            color: #e74c3c;
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .product-fav.active {
+            color: #e74c3c;
+        }
+
+        /* ===== PRODUCT INFO ===== */
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-category {
+            font-size: 0.75rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a2a3a;
+            margin-bottom: 0.3rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .product-description {
+            font-size: 0.85rem;
+            color: #777;
+            line-height: 1.5;
+            margin-bottom: 0.8rem;
+        }
+
+        /* ===== RATING ===== */
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .product-rating .stars {
+            color: #f4c542;
+            font-size: 0.85rem;
+        }
+
+        .product-rating .stars .empty {
+            color: #ddd;
+        }
+
+        .product-rating .count {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* ===== PRICE ===== */
+        .product-price-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 0.8rem 0;
+        }
+
+        .product-price-section .current {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #1a2a3a;
+        }
+
+        .product-price-section .current span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #999;
+        }
+
+        .product-price-section .old {
+            font-size: 1rem;
+            color: #bbb;
+            text-decoration: line-through;
+        }
+
+        /* ===== STOCK ===== */
+        .product-stock {
+            font-size: 0.75rem;
+            color: #27ae60;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .product-stock .out {
+            color: #e74c3c;
+        }
+
+        /* ===== BUTTONS ===== */
+        .product-actions-store {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .btn-add-cart {
+            flex: 1;
+            background: #1a2a3a;
+            color: white;
+            padding: 0.8rem;
+            border-radius: 12px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            margin-top: 0.5rem;
+            font-family: 'Inter', sans-serif;
         }
-        
-        .category-section {
-            margin: 3rem 0;
+
+        .btn-add-cart:hover {
+            background: #2c3e50;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26,42,58,0.2);
         }
-        
-        .category-title {
-            font-size: 2rem;
-            color: #1e3c2c;
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            border-left: 5px solid #e6b12e;
-            padding-left: 1rem;
-            font-family: 'Playfair Display', serif;
+
+        .btn-add-cart i {
+            font-size: 1rem;
         }
-        
-        .category-title i {
-            color: #e6b12e;
-        }
-        
-        .category-desc {
-            color: #666;
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-            font-size: 0.9rem;
-        }
-        
-        .info-section {
-            background: linear-gradient(135deg, #f9f7f3, #f0e8d9);
-            border-radius: 30px;
-            padding: 2.5rem;
-            margin: 3rem 0;
-            text-align: center;
-        }
-        
-        .info-section i {
-            font-size: 2.5rem;
-            color: #e6b12e;
-            margin-bottom: 1rem;
-        }
-        
-        .info-section h3 {
-            color: #1e3c2c;
-            margin-bottom: 0.5rem;
-            font-size: 1.5rem;
-            font-family: 'Playfair Display', serif;
-        }
-        
-        .info-section p {
-            color: #555;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-        
-        .payment-icons {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .payment-icons i {
-            font-size: 2rem;
-            color: #555;
-            transition: color 0.3s;
-        }
-        
-        .payment-icons i:hover {
-            color: #e6b12e;
-        }
-        
-        .contact-section {
-            background: white;
-            border-radius: 30px;
-            padding: 2.5rem;
-            margin: 3rem 0;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        
-        .contact-section h3 {
-            color: #1e3c2c;
-            margin-top: 0.5rem;
-            font-size: 1.8rem;
-            font-family: 'Playfair Display', serif;
-        }
-        
-        .contact-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
-        }
-        
-        .btn-wa-large {
+
+        .btn-whatsapp-store {
+            width: 48px;
+            height: 48px;
             background: #25D366;
             color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.4rem;
+            cursor: pointer;
             transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
         }
-        
-        .btn-wa-large:hover {
+
+        .btn-whatsapp-store:hover {
             background: #128C7E;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: scale(1.05);
         }
-        
-        .btn-wa-large.email {
-            background: #1e3c2c;
-        }
-        
-        .btn-wa-large.email:hover {
-            background: #2a5a3a;
-        }
-        
-        .footer-note {
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #eee;
-            font-size: 0.8rem;
-            color: #999;
-        }
-        
-        .footer-note p {
-            margin: 0.3rem 0;
-        }
-        
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+
         @media (max-width: 992px) {
-            .hero-quote {
-                font-size: 1.2rem;
-            }
-            .features-grid-store {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .page-hero.store-hero {
-                height: 300px;
-            }
-            .page-title h1 {
-                font-size: 2rem;
-            }
-            .category-title {
-                font-size: 1.5rem;
-            }
-            .contact-buttons {
+            .store-header-top {
                 flex-direction: column;
+                align-items: stretch;
             }
-            .btn-wa-large {
+            .store-search {
+                max-width: 100%;
+            }
+            .store-logo {
                 justify-content: center;
             }
-            .hero-quote {
-                display: none;
-            }
-            .features-grid-store {
-                grid-template-columns: 1fr;
-            }
-            .products-grid {
-                grid-template-columns: 1fr;
+            .store-cart {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
             }
         }
-        
-        @media (max-width: 480px) {
-            .product-image {
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            .product-card-store .product-image {
                 height: 200px;
             }
-            .product-title {
-                font-size: 1rem;
+            .product-price-section .current {
+                font-size: 1.4rem;
             }
-            .product-price {
+            .filter-scroll {
+                gap: 0.5rem;
+            }
+            .filter-btn {
+                padding: 0.4rem 1rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+            .product-info {
+                padding: 1rem;
+            }
+            .product-name {
+                font-size: 0.95rem;
+            }
+            .product-price-section .current {
                 font-size: 1.2rem;
+            }
+            .btn-add-cart {
+                font-size: 0.75rem;
+                padding: 0.6rem;
+            }
+            .btn-whatsapp-store {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+            .product-card-store .product-image {
+                height: 160px;
             }
         }
     </style>
@@ -276,7 +553,7 @@
     <!-- ===== HEADER ===== -->
     <header>
         <div class="container header-content">
-            <a href="../index.html" class="logo" aria-label="Imsfrane Cathédrale - Retour à la page d'accueil">
+            <a href="../index.html" class="logo" aria-label="Imsfrane Cathédrale">
                 <div class="logo-img">
                     <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" width="60" height="60">
                 </div>
@@ -289,10 +566,10 @@
             
             <div class="right-controls">
                 <div class="lang-buttons">
-                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="Switch to English">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Passer en français">FR</button>
+                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
                 </div>
-                <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu de navigation">
+                <button class="menu-toggle" id="menuToggle">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -300,11 +577,11 @@
     </header>
 
     <!-- ===== NAVIGATION ===== -->
-    <nav id="mainNav" aria-label="Menu principal">
+    <nav id="mainNav">
         <ul>
             <li><a href="../index.html"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
             <li class="has-submenu">
-                <a href="#" onclick="toggleSubmenu(event)" aria-expanded="false">
+                <a href="#" onclick="toggleSubmenu(event)">
                     <span><i class="fas fa-hiking"></i> <span class="lang-en">Activities</span><span class="lang-fr">Activités</span></span>
                     <i class="fas fa-chevron-right arrow"></i>
                 </a>
@@ -325,211 +602,207 @@
         </ul>
     </nav>
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <main>
-        <!-- ===== HERO ===== -->
-        <div class="page-hero store-hero">
-            <div class="hero-text-overlay">
-                <div class="hero-tagline lang-en">✦ FROM ATLAS PEAKS TO YOUR TABLE ✦</div>
-                <div class="hero-tagline lang-fr">✦ DES SOMMETS DE L'ATLAS À VOTRE TABLE ✦</div>
-                <div class="hero-quote lang-en">"Where nature meets authenticity"</div>
-                <div class="hero-quote lang-fr">"Là où la nature rencontre l'authenticité"</div>
-            </div>
-        </div>
-
-        <!-- ===== SLOGANS BAR ===== -->
-        <div class="slogans-bar">
-            <div class="slogans-scroll">
-                <span><i class="fas fa-certificate"></i> 100% Halal</span>
-                <span><i class="fas fa-hand-sparkles"></i> Fait main / Handmade</span>
-                <span><i class="fas fa-truck-fast"></i> Livraison rapide / Fast delivery</span>
-                <span><i class="fas fa-star-of-life"></i> Qualité premium / Premium quality</span>
-                <span><i class="fas fa-gift"></i> Cadeau de la nature / Gift from nature</span>
-                <span><i class="fas fa-certificate"></i> 100% Halal</span>
-                <span><i class="fas fa-hand-sparkles"></i> Fait main / Handmade</span>
-                <span><i class="fas fa-truck-fast"></i> Livraison rapide / Fast delivery</span>
-                <span><i class="fas fa-star-of-life"></i> Qualité premium / Premium quality</span>
-                <span><i class="fas fa-gift"></i> Cadeau de la nature / Gift from nature</span>
-            </div>
-        </div>
-
+    <!-- ===== STORE HEADER ===== -->
+    <div class="store-header">
         <div class="container">
-            <div class="page-title">
-                <h1 class="lang-en">🏺 Natural Products</h1>
-                <h1 class="lang-fr">🏺 Produits Naturels</h1>
-                <div class="subtitle">
-                    <i class="fas fa-map-pin"></i> Imsfrane - Tilouguite, Morocco
+            <div class="store-header-top">
+                <div class="store-logo">
+                    <img src="../images/logo.jpeg" alt="Store Logo">
+                    <div>
+                        <h1>Imsfrane <span>Store</span></h1>
+                        <small>🌿 Produits naturels de l'Atlas</small>
+                    </div>
+                </div>
+
+                <div class="store-search">
+                    <input type="text" placeholder="🔍 Rechercher un produit..." id="searchInput">
+                    <button onclick="filterProducts()"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="store-cart" onclick="alert('🛒 Votre panier est vide pour le moment. Contactez-nous sur WhatsApp pour commander !')">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge">0</span>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- ===== FEATURES ===== -->
+    <!-- ===== FILTERS ===== -->
+    <div class="store-filters">
         <div class="container">
-            <div class="features-grid-store">
-                <div class="feature-item-store">
-                    <i class="fas fa-certificate"></i>
-                    <h4>100% Halal</h4>
-                    <p>Certifié halal</p>
-                </div>
-                <div class="feature-item-store">
-                    <i class="fas fa-hand-sparkles"></i>
-                    <h4>Fait main</h4>
-                    <p>Artisanat authentique</p>
-                </div>
-                <div class="feature-item-store">
-                    <i class="fas fa-leaf"></i>
-                    <h4>Naturel</h4>
-                    <p>Sans additifs</p>
-                </div>
-                <div class="feature-item-store">
-                    <i class="fas fa-truck-fast"></i>
-                    <h4>Livraison</h4>
-                    <p>Partout au Maroc</p>
-                </div>
-                <div class="feature-item-store">
-                    <i class="fas fa-medal"></i>
-                    <h4>Qualité</h4>
-                    <p>Premium garantie</p>
-                </div>
+            <div class="filter-scroll">
+                <button class="filter-btn active" data-filter="all" onclick="filterProducts('all', this)">
+                    <i class="fas fa-th-large"></i> Tout
+                </button>
+                <button class="filter-btn" data-filter="honey" onclick="filterProducts('honey', this)">
+                    <i class="fas fa-jar"></i> Miel
+                </button>
+                <button class="filter-btn" data-filter="oil" onclick="filterProducts('oil', this)">
+                    <i class="fas fa-flask"></i> Huiles
+                </button>
+                <button class="filter-btn" data-filter="herbs" onclick="filterProducts('herbs', this)">
+                    <i class="fas fa-leaf"></i> Épices & Thym
+                </button>
+                <button class="filter-btn" data-filter="craft" onclick="filterProducts('craft', this)">
+                    <i class="fas fa-hand-sparkles"></i> Artisanat
+                </button>
+                <button class="filter-btn" data-filter="promo" onclick="filterProducts('promo', this)">
+                    <i class="fas fa-tag"></i> Promotions
+                </button>
             </div>
         </div>
+    </div>
 
-        <!-- ===== PRODUCTS ===== -->
+    <!-- ===== PRODUCTS ===== -->
+    <section class="products-section">
         <div class="container">
-            <div class="category-section">
-                <h2 class="category-title">
-                    <i class="fas fa-leaf"></i> 
-                    <span class="lang-en">Natural Products</span>
-                    <span class="lang-fr">Produits Naturels</span>
-                </h2>
-                <div class="category-desc lang-en">🍯 From the heart of the Atlas Mountains — pure, organic, and authentic</div>
-                <div class="category-desc lang-fr">🍯 Du cœur des montagnes de l'Atlas — purs, biologiques et authentiques</div>
+            <div class="products-header">
+                <h2>🛍️ Nos <span>Produits</span></h2>
+                <span class="products-count" id="productCount">3 produits</span>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
                 
-                <div class="products-grid">
-                    
-                    <!-- ===== PRODUCT 1: MIEL ===== -->
-                    <div class="product-card">
-                        <div class="product-badge-new">🇲🇦 Produit rare</div>
-                        <div class="product-image">
-                            <img src="../images/tamnt.jpeg" alt="Miel naturel pur de l'Atlas" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Miel Naturel</h3>
-                            <p class="product-description lang-en">Pure natural honey from the Atlas Mountains. Rare and authentic flavor.</p>
-                            <p class="product-description lang-fr">Miel 100% naturel des montagnes de l'Atlas. Saveur rare et authentique.</p>
-                            <div class="product-price">700 DH <small>/kg</small></div>
-                            <div class="product-actions">
-                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20commander%20du%20Miel%20Naturel%20700DH" class="btn-store" target="_blank" rel="noopener">
-                                    <i class="fab fa-whatsapp"></i> <span class="lang-en">Order</span><span class="lang-fr">Commander</span>
-                                </a>
-                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20le%20Miel" class="btn-store-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
+                <!-- ===== PRODUCT 1: MIEL ===== -->
+                <div class="product-card-store" data-category="honey promo">
+                    <div class="product-image">
+                        <img src="../images/tamnt.jpeg" alt="Miel naturel pur de l'Atlas" loading="lazy">
+                        <span class="product-badge best">⭐ Meilleure Vente</span>
+                        <button class="product-fav" onclick="this.classList.toggle('active')">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">🍯 Miel</div>
+                        <h3 class="product-name">Miel Naturel de l'Atlas</h3>
+                        <p class="product-description">Miel 100% pur, récolté à la main dans les montagnes. Saveur unique et authentique.</p>
+                        
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
+                            <span class="count">(24 avis)</span>
+                        </div>
+
+                        <div class="product-price-section">
+                            <span class="current">700 <span>DH</span></span>
+                            <span class="old">850 DH</span>
+                        </div>
+
+                        <div class="product-stock">✅ En stock</div>
+
+                        <div class="product-actions-store">
+                            <button class="btn-add-cart" onclick="addToCart('Miel Naturel', 700)">
+                                <i class="fas fa-shopping-bag"></i> Ajouter
+                            </button>
+                            <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20commander%20du%20Miel%20Naturel%20700DH" class="btn-whatsapp-store" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
                         </div>
                     </div>
-                    
-                    <!-- ===== PRODUCT 2: ZIT BELDIYA ===== -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="../images/zit.jpeg" alt="Huile d'olive vierge extra" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Zit Beldiya</h3>
-                            <p class="product-description lang-en">Extra virgin olive oil, cold pressed, 100% natural.</p>
-                            <p class="product-description lang-fr">Huile d'olive vierge extra, pressée à froid, 100% naturelle.</p>
-                            <div class="product-price">40 DH <small>/L</small></div>
-                            <div class="product-actions">
-                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20commander%20de%20l'huile%20d'olive%2060DH" class="btn-store" target="_blank" rel="noopener">
-                                    <i class="fab fa-whatsapp"></i> <span class="lang-en">Order</span><span class="lang-fr">Commander</span>
-                                </a>
-                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20l'huile%20d'olive" class="btn-store-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
+                </div>
+
+                <!-- ===== PRODUCT 2: ZIT BELDIYA ===== -->
+                <div class="product-card-store" data-category="oil">
+                    <div class="product-image">
+                        <img src="../images/zit.jpeg" alt="Huile d'olive vierge extra" loading="lazy">
+                        <span class="product-badge new">🆕 Nouveau</span>
+                        <button class="product-fav" onclick="this.classList.toggle('active')">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">🫒 Huile</div>
+                        <h3 class="product-name">Zit Beldiya - Huile d'Olive</h3>
+                        <p class="product-description">Huile d'olive vierge extra, pressée à froid, 100% naturelle et sans additifs.</p>
+                        
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                             </div>
+                            <span class="count">(18 avis)</span>
+                        </div>
+
+                        <div class="product-price-section">
+                            <span class="current">40 <span>DH</span></span>
+                            <span class="old">60 DH</span>
+                        </div>
+
+                        <div class="product-stock">✅ En stock</div>
+
+                        <div class="product-actions-store">
+                            <button class="btn-add-cart" onclick="addToCart('Huile d\'Olive Beldiya', 40)">
+                                <i class="fas fa-shopping-bag"></i> Ajouter
+                            </button>
+                            <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20commander%20de%20l'huile%20d'olive%2040DH" class="btn-whatsapp-store" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
                         </div>
                     </div>
-                    
-                    <!-- ===== PRODUCT 3: ZAATAR ===== -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="../images/zaatar.jpeg" alt="Thym naturel séché de l'Atlas" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Zaatar</h3>
-                            <p class="product-description lang-en">Wild mountain thyme, hand-picked, naturally dried.</p>
-                            <p class="product-description lang-fr">Thym sauvage des montagnes, récolté à la main, séché naturellement.</p>
-                            <div class="product-price">45 DH <small>/100g</small></div>
-                            <div class="product-actions">
-                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20commander%20du%20thym%2045DH" class="btn-store" target="_blank" rel="noopener">
-                                    <i class="fab fa-whatsapp"></i> <span class="lang-en">Order</span><span class="lang-fr">Commander</span>
-                                </a>
-                                <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20le%20thym" class="btn-store-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
+                </div>
+
+                <!-- ===== PRODUCT 3: ZAATAR ===== -->
+                <div class="product-card-store" data-category="herbs promo">
+                    <div class="product-image">
+                        <img src="../images/zaatar.jpeg" alt="Thym naturel séché de l'Atlas" loading="lazy">
+                        <span class="product-badge sale">🔥 Promotion</span>
+                        <button class="product-fav" onclick="this.classList.toggle('active')">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">🌿 Épices</div>
+                        <h3 class="product-name">Zaatar - Thym Sauvage</h3>
+                        <p class="product-description">Thym sauvage des montagnes, récolté à la main, séché naturellement au soleil.</p>
+                        
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
+                            <span class="count">(31 avis)</span>
+                        </div>
+
+                        <div class="product-price-section">
+                            <span class="current">45 <span>DH</span></span>
+                            <span class="old">60 DH</span>
+                        </div>
+
+                        <div class="product-stock">✅ En stock</div>
+
+                        <div class="product-actions-store">
+                            <button class="btn-add-cart" onclick="addToCart('Zaatar - Thym Sauvage', 45)">
+                                <i class="fas fa-shopping-bag"></i> Ajouter
+                            </button>
+                            <a href="https://wa.me/212667772551?text=Bonjour%2C%20je%20souhaite%20commander%20du%20thym%2045DH%20le%20kg" class="btn-whatsapp-store" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
                         </div>
                     </div>
-                    
                 </div>
-            </div>
-        </div>
 
-        <!-- ===== INFO LIVRAISON ===== -->
-        <div class="container">
-            <div class="info-section">
-                <i class="fas fa-truck"></i>
-                <h3><span class="lang-en">🚚 Delivery & Pickup</span><span class="lang-fr">🚚 Livraison & Retrait</span></h3>
-                <p class="lang-en">📦 Pickup available at Tilouguite (Imsfrane)<br>🚚 Delivery available in Rabat and Casablanca (on order, contact us for price)<br>💳 Payment: Bank transfer or cash on pickup</p>
-                <p class="lang-fr">📦 Retrait disponible à Tilouguite (Imsfrane)<br>🚚 Livraison possible sur Rabat et Casablanca (sur commande, nous contacter pour le prix)<br>💳 Paiement : Virement bancaire ou espèces au retrait</p>
-                
-                <div class="payment-icons">
-                    <i class="fab fa-cc-visa" title="Visa" aria-label="Visa"></i>
-                    <i class="fab fa-cc-mastercard" title="Mastercard" aria-label="Mastercard"></i>
-                    <i class="fab fa-paypal" title="PayPal" aria-label="PayPal"></i>
-                    <i class="fas fa-university" title="Bank transfer" aria-label="Bank transfer"></i>
-                    <i class="fas fa-money-bill-wave" title="Cash" aria-label="Cash"></i>
-                </div>
             </div>
         </div>
-
-        <!-- ===== CONTACT ===== -->
-        <div class="container">
-            <div class="contact-section">
-                <i class="fas fa-shopping-cart" style="font-size: 2.5rem; color: #e6b12e;"></i>
-                <h3>
-                    <span class="lang-en">Place Your Order</span>
-                    <span class="lang-fr">Passez Votre Commande</span>
-                </h3>
-                <p class="lang-en">📞 Contact us on WhatsApp to order. We're available 7/7.</p>
-                <p class="lang-fr">📞 Contactez-nous sur WhatsApp pour commander. Disponibles 7/7.</p>
-                
-                <div class="contact-buttons">
-                    <a href="https://wa.me/212667772551" class="btn-wa-large" target="_blank" rel="noopener" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i> +212 667-772551
-                    </a>
-                    <a href="mailto:imsfraninfo@gmail.com" class="btn-wa-large email" aria-label="Email">
-                        <i class="fas fa-envelope"></i> imsfraninfo@gmail.com
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="footer-note">
-                <p>© 2026 Imsfrane Cathédrale — Tous droits réservés</p>
-                <p>🏔️ De l'Atlas avec amour 🤲</p>
-            </div>
-        </div>
-    </main>
+    </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer-pro" aria-label="Pied de page">
+    <footer class="footer-pro">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="../images/logo.jpeg" alt="Logo Imsfrane Cathédrale" loading="lazy">
+                        <img src="../images/logo.jpeg" alt="Logo" loading="lazy">
                         <h3>Imsfrane Cathédrale</h3>
                     </div>
                     <p class="footer-description">
@@ -537,10 +810,10 @@
                         <span class="lang-fr">Découvrez la magie des montagnes de l'Atlas à travers des expériences uniques et authentiques à 1,868m d'altitude.</span>
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/imsfrane_cathedrale" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BRARgWsKv/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@imsfrane_cathedrale" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/212667772551" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -596,15 +869,113 @@
 
     <!-- ===== FLOATING BUTTONS ===== -->
     <div class="floating-buttons">
-        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
-        <a href="tel:0667772551" class="floating-btn phone" aria-label="Téléphone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
-        <a href="store.html" class="floating-btn booking" style="background: #e6b12e;" aria-label="Boutique"><i class="fas fa-store"></i><span class="tooltip">Boutique</span></a>
+        <a href="https://wa.me/212667772551" class="floating-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
+        <a href="tel:0667772551" class="floating-btn phone"><i class="fas fa-phone-alt"></i><span class="tooltip">Appeler</span></a>
+        <a href="store.html" class="floating-btn booking" style="background: #e6b12e;"><i class="fas fa-store"></i><span class="tooltip">Boutique</span></a>
     </div>
 
     <!-- ===== BACK TO TOP ===== -->
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></a>
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
     <!-- ===== SCRIPTS ===== -->
     <script src="../js/script.js"></script>
+    
+    <script>
+        // ===== LANGUAGE SWITCHER =====
+        window.setLanguage = function(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang.toLowerCase());
+            });
+            localStorage.setItem('preferred-language', lang);
+        };
+
+        const savedLang = localStorage.getItem('preferred-language');
+        if (savedLang) {
+            setLanguage(savedLang);
+        } else {
+            setLanguage('en');
+        }
+
+        // ===== BACK TO TOP =====
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                backToTop.classList.toggle('show', window.scrollY > 300);
+            });
+            backToTop.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // ===== FILTER PRODUCTS =====
+        window.filterProducts = function(category, btn) {
+            const products = document.querySelectorAll('.product-card-store');
+            const searchInput = document.getElementById('searchInput');
+            const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+
+            let visibleCount = 0;
+
+            products.forEach(product => {
+                const categories = product.dataset.category || '';
+                const name = product.querySelector('.product-name')?.textContent.toLowerCase() || '';
+                const desc = product.querySelector('.product-description')?.textContent.toLowerCase() || '';
+
+                let show = true;
+
+                // Filter by category
+                if (category && category !== 'all') {
+                    if (!categories.includes(category)) {
+                        show = false;
+                    }
+                }
+
+                // Filter by search
+                if (searchTerm && show) {
+                    if (!name.includes(searchTerm) && !desc.includes(searchTerm)) {
+                        show = false;
+                    }
+                }
+
+                product.style.display = show ? 'block' : 'none';
+                if (show) visibleCount++;
+            });
+
+            // Update count
+            const countEl = document.getElementById('productCount');
+            if (countEl) {
+                countEl.textContent = visibleCount + ' produit' + (visibleCount > 1 ? 's' : '');
+            }
+        };
+
+        // ===== SEARCH INPUT =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const activeBtn = document.querySelector('.filter-btn.active');
+                    const category = activeBtn ? activeBtn.dataset.filter : 'all';
+                    filterProducts(category, activeBtn);
+                });
+            }
+        });
+
+        // ===== ADD TO CART =====
+        let cartCount = 0;
+
+        window.addToCart = function(name, price) {
+            cartCount++;
+            const badge = document.querySelector('.store-cart .badge');
+            if (badge) {
+                badge.textContent = cartCount;
+            }
+            alert('🛒 ' + name + ' ajouté au panier ! (' + price + ' DH)\n\n📞 Contactez-nous sur WhatsApp pour finaliser votre commande.');
+        };
+    </script>
 </body>
 </html>
