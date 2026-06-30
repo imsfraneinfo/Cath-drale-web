@@ -604,3 +604,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 console.log('✅ Imsfrane Cathédrale - Script chargé avec succès!');
+// ============================================
+// FILTER ACTIVITIES (INDEX PAGE)
+// ============================================
+
+window.filterActivities = function(category, btn) {
+    const cards = document.querySelectorAll('.activity-store-card');
+    
+    // تحديث الزر النشط
+    document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    
+    let visibleCount = 0;
+    
+    cards.forEach(card => {
+        const cardCategory = card.dataset.category || '';
+        let show = true;
+        
+        if (category && category !== 'all') {
+            if (cardCategory !== category) {
+                show = false;
+            }
+        }
+        
+        card.style.display = show ? 'block' : 'none';
+        if (show) visibleCount++;
+    });
+};
